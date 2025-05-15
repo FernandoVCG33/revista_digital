@@ -1,1 +1,32 @@
-/**/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    color: #4c433c;
+    font-family: 'Lora', serif;
+}
+
+/* HEADER */
+.tambo-header {
+    padding: 2rem 1rem;
+    border-bottom: 1px solid #b09f8f;
+    background-color: #3a3a3a;
+    text-align: center;
+}
+
+.tambo-header .container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.titulo {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
