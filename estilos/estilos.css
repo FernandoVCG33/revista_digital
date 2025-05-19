@@ -86,3 +86,11 @@ cursor: pointer;
 .button:hover {
 background-color: var(--color-primary-dark);
 }
+
+/*Estilo card Fer*/
+.cards{
+    width: 25%;
+    background-color: #0056b3;
+    margin: 150px auto;
+    height: 150px;
+}
