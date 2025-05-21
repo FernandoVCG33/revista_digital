@@ -25,41 +25,35 @@
             </ul>
         </nav>
     </header>
+<main>
+  <section id="perfil-usuario">
+    <h2>Perfil del Usuario</h2>
+    <div class="info-usuario">
+      <p><strong>Nombre:</strong> Juan Pérez</p>
+      <p><strong>Correo electrónico:</strong> juanperez@example.com</p>
+      <!-- Aquí podrías poner una opción para editar los datos -->
+      <button type="button">Editar información</button>
+    </div>
+  </section>
 
-    <!-- CONTENIDO DE MI AGENDA -->
-    <main>
-        <section>
-            <h2>Mi Agenda Cultural</h2>
-            <p>Aquí encontrarás los eventos que has guardado para no perderte nada en La Paz.</p>
-        </section>
+  <section id="preferencias">
+    <h2>Preferencias del Usuario</h2>
+    <form>
+      <label for="experiencia">Tipo de experiencias preferidas:</label>
+      <select id="experiencia" name="experiencia">
+        <option value="arte">Teatro</option>
+        <option value="Danza">Danza</option>
+        <option value="Museo">Museos</option>
+        <option value="musica">Musica</option>
+      </select>
+      <button type="submit">Guardar preferencias</button>
+    </form>
+  </section>
 
-        <section>
-            <h3>Viernes, 24 xde mayo</h3>
-
-            <article>
-                <h4>Concierto Sinfónico</h4>
-                <p>Hora: 19:00</p>
-                <p>Lugar: Teatro Municipal Alberto Saavedra Pérez</p>
-            </article>
-
-            <article>
-                <h4>Obra de Teatro: “La Chaskañawi”</h4>
-                <p>Hora: 20:30</p>
-                <p>Lugar: Teatro Nuna</p>
-            </article>
-        </section>
-
-        <section>
-            <h3>Sábado, 25 de mayo</h3>
-
-            <article>
-                <h4>Festival de Danza Andina</h4>
-                <p>Hora: 15:00</p>
-                <p>Lugar: Plaza San Francisco</p>
-            </article>
-        </section>
-    </main>
-
+  <section id="acciones-cuenta">
+    <button type="button" onclick="cerrarSesion()">Cerrar sesión</button>
+  </section>
+</main>
       <!--pie de pagina-->
     <footer class="pie">
         <div>
@@ -71,7 +65,6 @@
             </ul>
         </div>
     </footer>
-
     <script src="Script/funciones.js"></script>
 </body>
 </html>
