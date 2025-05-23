@@ -195,3 +195,148 @@ main, section {
 .footer-nav li a:hover {
   color: var(--color-primary);
 }
+
+/* Card en codigo (Diseño del equipo de UX) */
+.card-container {
+  display: flex;
+  justify-content: center;
+  padding: var(--spacing-xl) 0;
+}
+
+.card-evento {
+  width: 240px;
+  background-color: var(--color-gray-200);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--box-shadow-md);
+  overflow: hidden;
+  font-family: var(--font-family-base);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.card-evento:hover {
+  transform: scale(1.03);
+}
+
+.card-imagen-bloque {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  height: 180px;
+}
+
+.card-titulo {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 40px;
+  font-weight: var(--font-weight-black);
+  margin: 0;
+  padding: var(--spacing-sm) var(--spacing-xs);
+  background-color: transparent;
+  color: var(--color-black);
+  align-self: stretch;
+  margin-right: 10px;
+}
+
+.card-imagen {
+  flex: 1;
+  background-color: var(--color-gray-100);
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  position: relative;
+  padding: 0; 
+  margin: 0;
+  text-align: center;
+  overflow: hidden; 
+}
+
+.imagen-placeholder {
+  font-size: var(--font-size-sm);
+  color: var(--color-black);
+  margin: 0;
+}
+
+.card-subtitulo {
+  position: absolute;
+  bottom: var(--spacing-sm);
+  left: 0;
+  width: 100%;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-normal);
+  color: var(--color-black);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: var(--spacing-xxs);
+}
+
+.card-detalle {
+  padding: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.card-fecha {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  gap: var(--spacing-xs);
+  color: var(--color-black);
+}
+
+.card-dia {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-black);
+}
+
+.card-mes {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-normal);
+}
+
+.card-dia-nombre {
+  width: 100%;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-light);
+  margin-top: -4px;
+}
+
+.card-descripcion {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-800);
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.card-evento:hover .card-descripcion {
+  max-height: 100px;
+  opacity: 1;
+}
+
+.card-boton {
+  align-self: flex-end;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--border-radius-sm);
+  padding: var(--spacing-xs) var(--spacing-lg);
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+}
+
+.card-boton:hover {
+  background-color: var(--color-gray-900);
+}
+
+.card-img-real {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
