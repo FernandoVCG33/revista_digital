@@ -195,3 +195,67 @@ main, section {
 .footer-nav li a:hover {
   color: var(--color-primary);
 }
+
+/* Estilos generales para el header */
+.tambo-header {
+  background-image: url(''); /*Imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  padding: 40px 0;
+  color: white;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  color: var(--color-gray-900);
+}
+
+/* Contenedor general para centrar contenido y controlar márgenes */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Título "TAMBO" */
+.titulo {
+  font-size: 3rem;
+  margin: 0;
+  color: #000000;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  color: var(--color-gray-900);
+
+}
+
+/* Barra de navegación */
+.tambo-nav {
+  background-color: #A0A07D; /* Color segun figma */
+  margin-top: 30px;
+  padding: 15px 30px;
+  border-radius: 6px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Lista de navegación */
+.tambo-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Enlaces del menú */
+.tambo-nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.tambo-nav a:hover {
+  color: #eeeeee;
+}
