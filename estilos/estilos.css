@@ -1,13 +1,15 @@
-
+@font-face {
+    font-family: 'Melodrama', cursive ;
+    src: url("../tipografia_melodrama/Fonts/TTF/Melodrama-Variable.ttf");
+}
 :root {
 /*  Colores */
---color-primary: #007bff;
---color-primary-light: #66b2ff;
---color-primary-dark: #0056b3;
+--color-primary: #F7F7EC;
+--color-primary-purple: #4C2634;
 
---color-secondary: #6c757d;
---color-secondary-light: #a2a9b1;
---color-secondary-dark: #494f54;
+--color-secondary: #8C5067;
+--color-secondary-green-dark: #BABA2B;
+--color-secondary-green-light: #DADA60;
 
 --color-white: #ffffff;
 --color-black: #000000;
