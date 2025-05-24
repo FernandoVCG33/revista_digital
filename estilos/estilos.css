@@ -1,6 +1,10 @@
+/* FUENTE */
 @font-face {
-    font-family: 'Melodrama', cursive ;
-    src: url("../tipografia_melodrama/Fonts/TTF/Melodrama-Variable.ttf");
+  font-family: 'Melodrama';
+  src: url('/tipografia_melodrama/Fonts/WEB/fonts/Melodrama-Light.woff') format('woff');
+  font-weight: lighter;
+  font-display: swap;
+  font-style: normal;
 }
 :root {
 /*  Colores */
@@ -25,6 +29,7 @@
 --color-gray-900: #212529;
 
 /* Tipografía */
+--font-family-mia: 'MiFuente';
 --font-family-base: "Raleway", sans-serif;
 --font-family-alt: 'Space Grotesk', sans-serif;
 --font-family-deco: 'Fascinate', cursive;
@@ -109,91 +114,87 @@ main, section {
   flex: 1;
 }
 
+/* Contenedor principal del footer */
 .pie {
-  background-color: var(--color-secondary-green-dark);
+  background-color: var(--color-primary-purple);
   color: var(--color-white);
-  padding: var(--spacing-xl) var(--spacing-lg);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  padding: 50px var(--spacing-xl) 40px;
+  font-size: var(--font-size-sm);
+  font-weight: lighter;
+
 }
 
-/* Logo como texto */
-.footer-logo {
-  width: 100%;
+
+.footer-content {
+  display: flex;
   justify-content: center;
-  align-items: center; 
-  margin-bottom: var(--spacing-md);
+  align-items: center;
+  gap: 92px; 
+  flex-wrap: wrap;
+}
+
+
+/*LOGO*/
+.footer-logo {
+  grid-column: 1;
+  text-align: left;
 }
 
 .footer-title {
-  font-family: var(--font-family-base);
-  font-size: var(--font-size-xxl);
-  font-weight: var(--font-weight-black);
-  color: var(--color-primary);
-  text-transform: uppercase;
+  font-family:'Melodrama';
+  font-weight: bolder;
+  font-size: 2em;
 }
 
-/* Copyright debajo del logo */
-.footer-copy {
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-bold);
-  margin-bottom: var(--spacing-md);
-}
 
-/* Ajustar la posición del correo */
-.footer-email {
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-bold);
-  margin-bottom: var(--spacing-md);
-}
 
 /* Redes sociales */
 .footer-social {
+  grid-column: 3;
+  justify-self: end;
   display: flex;
-  gap: var(--spacing-lg);
-  justify-content: center;
-  margin-bottom: var(--spacing-lg);
+  gap: var(--spacing-md);
+  font-family: var(--font-primary);
+  font-size: 1em;
 }
 
-.footer-social a {
-  color: var(--color-white);
-  font-size: var(--font-size-xl);
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.footer-social a:hover {
-  transform: scale(1.2);
-  color: var(--color-gray-300);
-}
-
-/* Barra de enlaces */
+/* Navegación */
 .footer-nav-container {
-  background-color: var(--color-secondary);
-  width: 100vw;
-  padding: var(--spacing-md) 0;
-}
-
-/* Asegurar que los enlaces estén bien alineados */
-.footer-nav {
-  list-style: none;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: var(--spacing-lg);
+  align-items: center;
+  height: 100%;
+}
+
+.footer-nav {
+  display: flex;
+  align-items: center;
+  margin: 0;
   padding: 0;
+  list-style: none;
+}
+.footer-nav {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
 }
 
-.footer-nav li a {
+.footer-nav li {
+  display: flex;
+  align-items: center;
+}
+
+.footer-nav li:not(:last-child)::after {
+  content: "|";
   color: var(--color-gray-300);
-  text-decoration: none;
-  font-size: var(--font-size-sm);
-  transition: color 0.3s ease;
+  margin-left: var(--spacing-sm);
+  margin-right: var(--spacing-sm);
 }
 
-.footer-nav li a:hover {
-  color: var(--color-primary);
+/* Copyright abajo de las redes sociales */
+.footer-copy {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  text-align: right;
 }
 
 /* Card en codigo (Diseño del equipo de UX) */
@@ -342,69 +343,117 @@ main, section {
 }
 /*Fin de card en codigo (Diseño del equipo de UX) */
 
-/* Estilos generales para el header */
+/* Estilos generales del header */
 .tambo-header {
-  background-image: url(''); /*Imagen de fondo */
-  background-size: cover;
-  background-position: center;
-  padding: 40px 0;
-  color: white;
-  font-family: var(--font-family-base);
-  font-size: var(--font-size-base);
-  color: var(--color-gray-900);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-secondary-green-dark);
+    padding: var(--spacing-xl);
+    width: 100%;
+    height: 122px;
+    position: relative;
 }
 
-/* Contenedor general para centrar contenido y controlar márgenes */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
+/* Contenedor para el título */
+.titulo-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: var(--spacing-md) var(--spacing-lg);
+    z-index: 1;
 }
 
-/* Título "TAMBO" */
 .titulo {
-  font-size: 3rem;
-  margin: 0;
-  color: #000000;
-  font-family: var(--font-family-base);
-  font-size: var(--font-size-base);
-  color: var(--color-gray-900);
-
+    font-family: 'Melodrama';
+    font-size: var(--font-size-xxl);
+    font-weight: var(--font-weight-normal);
+    color: var(--color-primary-dark);
+    margin: 0;
 }
 
-/* Barra de navegación */
+/* Barra de navegación*/
 .tambo-nav {
-  background-color: #A0A07D; /* Color segun figma */
-  margin-top: 30px;
-  padding: 15px 30px;
-  border-radius: 6px;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xl);
+    padding: var(--spacing-md) var(--spacing-lg);
+    width: 33%;
+    justify-content: flex-start;
+    backdrop-filter: blur(5px);
 }
 
-/* Lista de navegación */
 .tambo-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 40px;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 44px;
+    margin: 0;
+    padding: 0;
 }
 
-/* Enlaces del menú */
+
 .tambo-nav a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  font-size: 1rem;
-  transition: color 0.3s ease;
+    text-decoration: none;
+    color: var(--color-primary-purple);
+    font-weight: var(--font-weight-light);
+    font-size: var(--font-size-base);
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .tambo-nav a:hover {
-  color: #eeeeee;
+    color: var(--color-primary);
+    transform: scale(1.05);
 }
+
+/* Íconos de usuario y notificaciones */
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    width: 33%;
+    justify-content: flex-end;
+}
+
+.nav-icons img {
+    width: 46px;
+    height: 46px;
+}
+
+.nav-icons i {
+    font-size: var(--font-size-xl);
+    color: var(--color-primary);
+    transition: transform 0.3s ease;
+}
+
+.nav-icons i:hover {
+    transform: scale(1.2);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .tambo-header {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .titulo-container {
+        position: static;
+        transform: none;
+        margin: var(--spacing-sm) 0;
+    }
+
+    .tambo-nav {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-icons {
+        justify-content: center;
+        width: 100%;
+        margin-top: var(--spacing-sm);
+    }
+}
+
 
 /*inicio de carrusel*/
 .prox{
