@@ -11,96 +11,82 @@
 <body>
     <!-- HEADER -->
     <header class="tambo-header">
-        <div class="container">
-            <h1 class="titulo">TAMBO</h1>
+        <div class="titulo-container">
+            <h1 class="titulo">Tambo</h1>
         </div>
-        <!-- NAV con secciones culturales -->
-          <nav class="tambo-nav">
+
+        <nav class="tambo-nav">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="eventos/eventos.html">Eventos</a></li>
-                <li><a href="login.html">Login</a></li>
                 <li><a href="mi_agenda.html">Mi Agenda</a></li>
                 <li><a href="categorias.html">Categorías</a></li>
-                <li><a href="cuenta.html">Cuenta</a></li>
             </ul>
         </nav>
+        <div class="nav-icons">
+            <a href="#">
+                <img src="imagenes/bell.png" alt="Notificaciones" class="icon-img">
+            </a>
+            <a href="cuenta.html">
+                <img src="imagenes/user.png" alt="Cuenta" class="icon-img">
+            </a>
+        </div>
+
     </header>
 
     <!-- CONTENIDO DE MI AGENDA -->
-    <main>
-        <section>
-            <h2>Mi Agenda Cultural</h2>
-            <p>Aquí encontrarás los eventos que has guardado para no perderte nada en La Paz.</p>
-        </section>
-
-        <section>
-            <h3>Viernes, 24 xde mayo</h3>
-
-            <article>
-                <h4>Concierto Sinfónico</h4>
-                <p>Hora: 19:00</p>
-                <p>Lugar: Teatro Municipal Alberto Saavedra Pérez</p>
-            </article>
-
-            <article>
-                <h4>Obra de Teatro: “La Chaskañawi”</h4>
-                <p>Hora: 20:30</p>
-                <p>Lugar: Teatro Nuna</p>
-            </article>
-        </section>
-
-        <section>
-            <h3>Sábado, 25 de mayo</h3>
-
-            <article>
-                <h4>Festival de Danza Andina</h4>
-                <p>Hora: 15:00</p>
-                <p>Lugar: Plaza San Francisco</p>
-            </article>
-        </section>
-        <section>
-            <ul>
-                <li><a href="feedback.html">Información</a></li>
-            </ul>
-        </section>
-        
-    </main>
-
-    <!--pie de pagina-->
-    <footer class="pie">
-        <div class="footer-content">
-            <!-- Logo como texto grande -->
-            <div class="footer-logo">
-                <h1 class="footer-title">TAMBO</h1>
+    <main class="agenda-container">
+        <h2 class="agenda-title">Agenda Mayo</h2>
+        <div class="calendar">
+            <div class="calendar-header">
+                <div>Lunes</div>
+                <div>Martes</div>
+                <div>Miércoles</div>
+                <div>Jueves</div>
+                <div>Viernes</div>
+                <div>Sábado</div>
+                <div>Domingo</div>
             </div>
-
-            <!-- Copyright debajo del logo -->
-            <div class="footer-copy">
-                © 2025 Tambo - Guía Cultural Paceña
-            </div>
-
-            <!-- Correo debajo del copyright -->
-            <div class="footer-email">
-                <p>contacto@tambo.com</p>
-            </div>
-
-            <!-- Redes sociales debajo del correo -->
-            <div class="footer-social">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <div class="calendar-grid">
+                <!-- Repite esto para cada día -->
+                <div class="day">28</div>
+                <div class="day">29</div>
+                <div class="day">30</div>
+                <div class="day">01<br><img src="imagenes/evento1.jpg" alt="Evento"></div>
+                <div class="day">02</div>
+                <div class="day">03</div>
+                <div class="day">04</div>
+                <!-- Continúa según sea necesario -->
             </div>
         </div>
+        <a href="index.html" class="btn-volver">Volver al inicio</a>
+    </main>
 
-        <!-- Barra inferior con los enlaces -->
-        <div class="footer-nav-container">
-            <ul class="footer-nav">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="eventos/eventos.html">Eventos</a></li>
-                <li><a href="mi_agenda.html">Mi Agenda</a></li>
-                <li><a href="cuenta.html">Cuenta</a></li>
-            </ul>
+    <!-- FOOTER -->
+    <footer class="pie">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h1 class="footer-title">Tambo</h1>
+            </div>
+
+            <div class="footer-nav-container">
+                <ul class="footer-nav">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="eventos/eventos.html">Eventos</a></li>
+                    <li><a href="mi_agenda.html">Mi Agenda</a></li>
+                    <li><a href="categorias.html">Categorías</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <img src="imagenes/Github.png" alt="Github">
+                <img src="imagenes/X.png" alt="X">
+                <img src="imagenes/instagram.png" alt="instagram">
+                <img src="imagenes/facebook.png" alt="facebook">
+            </div>
+        </div>
+        <div class="footer-copy">
+            © 2025 Tambo - Guía Cultural Paceña
         </div>
     </footer>
 

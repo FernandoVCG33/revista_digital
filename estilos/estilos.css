@@ -1,6 +1,10 @@
+/* FUENTE */
 @font-face {
-    font-family: 'Melodrama', cursive ;
-    src: url("../tipografia_melodrama/Fonts/TTF/Melodrama-Variable.ttf");
+  font-family: 'Melodrama';
+  src: url('/tipografia_melodrama/Fonts/WEB/fonts/Melodrama-Light.woff') format('woff');
+  font-weight: lighter;
+  font-display: swap;
+  font-style: normal;
 }
 :root {
 /*  Colores */
@@ -25,6 +29,7 @@
 --color-gray-900: #212529;
 
 /* Tipografía */
+--font-family-mia: 'MiFuente';
 --font-family-base: "Raleway", sans-serif;
 --font-family-alt: 'Space Grotesk', sans-serif;
 --font-family-deco: 'Fascinate', cursive;
@@ -109,93 +114,165 @@ main, section {
   flex: 1;
 }
 
+/* Contenedor principal del footer */
 .pie {
-  background-color: var(--color-secondary-green-dark);
+  background-color: var(--color-primary-purple);
   color: var(--color-white);
-  padding: var(--spacing-xl) var(--spacing-lg);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  padding: 50px var(--spacing-xl) 40px;
+  font-size: var(--font-size-sm);
+  font-weight: lighter;
+
 }
 
-/* Logo como texto */
-.footer-logo {
-  width: 100%;
+
+.footer-content {
+  display: flex;
   justify-content: center;
-  align-items: center; 
-  margin-bottom: var(--spacing-md);
+  align-items: center;
+  gap: 92px; 
+  flex-wrap: wrap;
+}
+
+
+/*LOGO*/
+.footer-logo {
+  grid-column: 1;
+  text-align: left;
 }
 
 .footer-title {
-  font-family: var(--font-family-base);
-  font-size: var(--font-size-xxl);
-  font-weight: var(--font-weight-black);
-  color: var(--color-primary);
-  text-transform: uppercase;
+  font-family:'Melodrama';
+  font-weight: bolder;
+  font-size: 2em;
 }
 
-/* Copyright debajo del logo */
-.footer-copy {
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-bold);
-  margin-bottom: var(--spacing-md);
-}
 
-/* Ajustar la posición del correo */
-.footer-email {
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-bold);
-  margin-bottom: var(--spacing-md);
-}
 
 /* Redes sociales */
 .footer-social {
+  grid-column: 3;
+  justify-self: end;
   display: flex;
-  gap: var(--spacing-lg);
-  justify-content: center;
-  margin-bottom: var(--spacing-lg);
+  gap: var(--spacing-md);
+  font-family: var(--font-primary);
+  font-size: 1em;
 }
 
-.footer-social a {
-  color: var(--color-white);
-  font-size: var(--font-size-xl);
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.footer-social a:hover {
-  transform: scale(1.2);
-  color: var(--color-gray-300);
-}
-
-/* Barra de enlaces */
+/* Navegación */
 .footer-nav-container {
-  background-color: var(--color-secondary);
-  width: 100vw;
-  padding: var(--spacing-md) 0;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
-/* Asegurar que los enlaces estén bien alineados */
 .footer-nav {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
   list-style: none;
+}
+.footer-nav {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+
+.footer-nav li {
+  display: flex;
+  align-items: center;
+}
+
+.footer-nav li:not(:last-child)::after {
+  content: "|";
+  color: var(--color-gray-300);
+  margin-left: var(--spacing-sm);
+  margin-right: var(--spacing-sm);
+}
+
+/* Copyright abajo de las redes sociales */
+.footer-copy {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  text-align: right;
+}
+
+/* Card en codigo (Diseño del equipo de UX) */
+.card-container {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: var(--spacing-lg);
-  padding: 0;
+  padding: var(--spacing-xl) 0;
 }
 
-.footer-nav li a {
-  color: var(--color-gray-300);
-  text-decoration: none;
+.card-evento {
+  width: 240px;
+  background-color: var(--color-gray-200);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--box-shadow-md);
+  overflow: hidden;
+  font-family: var(--font-family-base);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.card-evento:hover {
+  transform: scale(1.03);
+}
+
+.card-imagen-bloque {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  height: 180px;
+}
+
+.card-titulo {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 40px;
+  font-weight: var(--font-weight-black);
+  margin: 0;
+  padding: var(--spacing-sm) var(--spacing-xs);
+  background-color: transparent;
+  color: var(--color-black);
+  align-self: stretch;
+  margin-right: 10px;
+}
+
+.card-imagen {
+  flex: 1;
+  background-color: var(--color-gray-100);
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  position: relative;
+  padding: 0; 
+  margin: 0;
+  text-align: center;
+  overflow: hidden; 
+}
+
+.imagen-placeholder {
   font-size: var(--font-size-sm);
-  transition: color 0.3s ease;
+  color: var(--color-black);
+  margin: 0;
 }
 
-.footer-nav li a:hover {
-  color: var(--color-primary);
+.card-subtitulo {
+  position: absolute;
+  bottom: var(--spacing-sm);
+  left: 0;
+  width: 100%;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-normal);
+  color: var(--color-black);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: var(--spacing-xxs);
 }
 
+/* HEAD */ 
 /* Estilos generales para el header */
 .tambo-header {
   background-image: url(''); /*Imagen de fondo */
@@ -259,3 +336,378 @@ main, section {
 .tambo-nav a:hover {
   color: #eeeeee;
 }
+
+.card-detalle {
+  padding: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.card-fecha {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  gap: var(--spacing-xs);
+  color: var(--color-black);
+}
+
+.card-dia {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-black);
+}
+
+.card-mes {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-normal);
+}
+
+.card-dia-nombre {
+  width: 100%;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-light);
+  margin-top: -4px;
+}
+
+.card-descripcion {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-800);
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.card-evento:hover .card-descripcion {
+  max-height: 100px;
+  opacity: 1;
+}
+
+.card-boton {
+  align-self: flex-end;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--border-radius-sm);
+  padding: var(--spacing-xs) var(--spacing-lg);
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+}
+
+.card-boton:hover {
+  background-color: var(--color-gray-900);
+}
+
+.card-img-real {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+/*Fin de card en codigo (Diseño del equipo de UX) */
+
+/* Estilos generales del header */
+.tambo-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-secondary-green-dark);
+    padding: var(--spacing-xl);
+    width: 100%;
+    height: 122px;
+    position: relative;
+}
+
+/* Contenedor para el título */
+.titulo-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: var(--spacing-md) var(--spacing-lg);
+    z-index: 1;
+}
+
+.titulo {
+    font-family: 'Melodrama';
+    font-size: var(--font-size-xxl);
+    font-weight: var(--font-weight-normal);
+    color: var(--color-primary-dark);
+    margin: 0;
+}
+
+/* Barra de navegación*/
+.tambo-nav {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xl);
+    padding: var(--spacing-md) var(--spacing-lg);
+    width: 33%;
+    justify-content: flex-start;
+    backdrop-filter: blur(5px);
+}
+
+.tambo-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 44px;
+    margin: 0;
+    padding: 0;
+}
+
+
+.tambo-nav a {
+    text-decoration: none;
+    color: var(--color-primary-purple);
+    font-weight: var(--font-weight-light);
+    font-size: var(--font-size-base);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.tambo-nav a:hover {
+    color: var(--color-primary);
+    transform: scale(1.05);
+}
+
+/* Íconos de usuario y notificaciones */
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    width: 33%;
+    justify-content: flex-end;
+}
+
+.nav-icons img {
+    width: 46px;
+    height: 46px;
+}
+
+.nav-icons i {
+    font-size: var(--font-size-xl);
+    color: var(--color-primary);
+    transition: transform 0.3s ease;
+}
+
+.nav-icons i:hover {
+    transform: scale(1.2);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .tambo-header {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .titulo-container {
+        position: static;
+        transform: none;
+        margin: var(--spacing-sm) 0;
+    }
+
+    .tambo-nav {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-icons {
+        justify-content: center;
+        width: 100%;
+        margin-top: var(--spacing-sm);
+    }
+}
+
+
+/*inicio de carrusel*/
+.prox{
+  margin: auto;
+  display: flex;
+  width: 100%;
+  height: 430px;
+  margin-bottom: 50px;
+  img{
+    width: 0;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition:  0.5s ease;
+  }
+  img:hover{
+    cursor: crosshair;
+    width: 300px;
+     opacity: 1;
+     filter: contrast(120%);
+  }
+  
+}
+/*fin de carrusel*/
+/*inicio banner*/
+/* Inicio banner */
+.banner {
+    margin-top: 0;
+    position: relative;
+    width: 100%;
+    height: 400px; /* Altura fija recomendada */
+    background: url(https://pohcdn.com/sites/default/files/styles/paragraph__live_banner__lb_image__1880bp/public/live_banner/La-Paz.jpg) no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text {
+    background-color: #21252995;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 40px 60px;
+    border-radius: 8px;
+    text-align: center;
+    height: 400px;
+}
+
+.text h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+
+}
+/* Fin de banner */
+
+/* Estructura de mi_agenda */
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #f8f6ed;
+    margin: 0;
+    padding: 0;
+}
+
+.tambo-header, .pie {
+    background-color: #f8f6ed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.titulo-container h1 {
+    font-size: 2.5rem;
+    color: #3d1c29;
+}
+
+.tambo-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+.tambo-nav a {
+    text-decoration: none;
+    color: #3d1c29;
+    font-weight: 500;
+}
+
+.nav-icons img {
+    width: 24px;
+    margin-left: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+main.agenda-container {
+    padding: 2rem;
+    text-align: center;
+}
+
+.agenda-title {
+    font-size: 3rem;
+    color: #3d1c29;
+    margin-bottom: 2rem;
+}
+
+.calendar {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.calendar-header {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+    background-color: #ccc;
+}
+
+.day {
+    background-color: #f8f6ed;
+    min-height: 100px;
+    padding: 0.5rem;
+    text-align: left;
+    font-size: 0.9rem;
+    border: 1px solid #ddd;
+}
+
+.day img {
+    width: 100%;
+    height: auto;
+    margin-top: 0.5rem;
+}
+
+.btn-volver {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.5rem 1rem;
+    background-color: #3d1c29;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+.footer-title {
+    font-size: 1.5rem;
+    color: #3d1c29;
+}
+
+.footer-nav-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: #3d1c29;
+}
+
+.footer-social img {
+    width: 24px;
+    margin: 0 0.5rem;
+}
+
+.footer-copy {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.8rem;
+    color: #555;
+}
+
+/* fin estilos mi_agenda */
