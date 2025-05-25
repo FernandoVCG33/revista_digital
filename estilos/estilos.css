@@ -1,7 +1,7 @@
 /* FUENTE */
 @font-face {
   font-family: 'Melodrama';
-  src: url('/tipografia_melodrama/Fonts/WEB/fonts/Melodrama-Light.woff') format('woff');
+  src: url('/tipografia_melodrama/Fonts/WEB/fonts/Melodrama-Bold.woff') format('woff');
   font-weight: lighter;
   font-display: swap;
   font-style: normal;
@@ -41,6 +41,8 @@
 --font-size-lg: 18px;
 --font-size-xl: 24px;
 --font-size-xxl: 32px;
+--font-size-titulo: 47.8px;
+--font-size-nav: 19.2px;
 
 --font-weight-light: 300;
 --font-weight-normal: 400;
@@ -119,7 +121,7 @@ main, section {
   background-color: var(--color-primary-purple);
   color: var(--color-white);
   padding: 50px var(--spacing-xl) 40px;
-  font-size: var(--font-size-sm);
+  font-size: 16px;
   font-weight: lighter;
 
 }
@@ -131,6 +133,7 @@ main, section {
   align-items: center;
   gap: 92px; 
   flex-wrap: wrap;
+  
 }
 
 
@@ -138,12 +141,15 @@ main, section {
 .footer-logo {
   grid-column: 1;
   text-align: left;
+  width: 206px;
+  height: 82px;
+
 }
 
 .footer-title {
   font-family:'Melodrama';
   font-weight: bolder;
-  font-size: 2em;
+  font-size:var(--font-size-titulo);
 }
 
 
@@ -155,7 +161,9 @@ main, section {
   display: flex;
   gap: var(--spacing-md);
   font-family: var(--font-primary);
-  font-size: 1em;
+  font-size: 33px;
+  width: 177px;
+  height: 33px;
 }
 
 /* Navegación */
@@ -163,6 +171,8 @@ main, section {
   display: flex;
   align-items: center;
   height: 100%;
+  width: 406px;
+  height:33px;
 }
 
 .footer-nav {
@@ -195,6 +205,7 @@ main, section {
   grid-column: 1 / -1;
   grid-row: 2;
   text-align: right;
+  font-size: 13.3px;
 }
 
 /* Card en codigo (Diseño del equipo de UX) */
@@ -366,9 +377,9 @@ main, section {
 
 .titulo {
     font-family: 'Melodrama';
-    font-size: var(--font-size-xxl);
+    font-size: 47px;
     font-weight: var(--font-weight-normal);
-    color: var(--color-primary-dark);
+    color: var(--color-primary-purple);
     margin: 0;
 }
 
@@ -378,7 +389,8 @@ main, section {
     align-items: center;
     gap: var(--spacing-xl);
     padding: var(--spacing-md) var(--spacing-lg);
-    width: 33%;
+    width: 612px;
+    min-height: 29px;
     justify-content: flex-start;
     backdrop-filter: blur(5px);
 }
@@ -395,8 +407,8 @@ main, section {
 .tambo-nav a {
     text-decoration: none;
     color: var(--color-primary-purple);
-    font-weight: var(--font-weight-light);
-    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-normal);
+    font-size:var(--font-size-nav);
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
@@ -429,6 +441,22 @@ main, section {
     transform: scale(1.2);
 }
 
+#zona-usuario button {
+  background-color: rgba(106, 80, 88, 1);
+  color: var(--color-primary);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 36px;
+  cursor: pointer;
+  font-weight: 19.2px;
+  width: 174px;
+  height: 49px;
+}
+
+#zona-usuario button:hover {
+  background-color: var(--color-primary-purple);
+}
+
 /* Responsividad */
 @media (max-width: 768px) {
     .tambo-header {
@@ -453,6 +481,24 @@ main, section {
         margin-top: var(--spacing-sm);
     }
 }
+
+/* Estilos especiales para el header en index.html */
+.tambo-header-home {
+    background-color: transparent; 
+}
+/* cambia color del título */
+.tambo-header-home .titulo {
+    color: var(--color-primary-purple); 
+}
+/* links nav */
+.tambo-header-home .tambo-nav a {
+    color: var(--color-primary-purple); 
+}
+/* hover links nav, si quieres */
+.tambo-header-home .tambo-nav a:hover {
+    color:#AFAFAF; 
+}
+
 
 
 /*inicio de carrusel*/
@@ -511,3 +557,172 @@ main, section {
 
 }
 /* Fin de banner */
+
+/* CUENTA */
+
+/* Contenedor principal  */
+.cuenta-principal {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  background: var(--color-primary);
+  padding: 20px;
+  font-family:var(--font-family-base);
+}
+
+/* Lado izquierdo (perfil) */
+.perfil-izquierdo {
+  width: 300px;
+  background: #fff;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  padding: 30px 20px;
+  border-radius: 10px;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.perfil-izquierdo img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
+}
+
+.usuario-nombre {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 10px 0;
+  text-transform: capitalize;
+}
+
+.ubicacion,
+.email {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 8px;
+}
+
+.botones-perfil {
+  margin-top: 20px;
+
+}
+
+.agenda-btn {
+  background: var(--color-secondary);
+  color: #fff;
+  padding: 10px;
+  border: none;
+  width: 227px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.agenda-btn i {
+  margin-right: 5px;
+}
+
+.agenda-btn:hover {
+  background: var(--color-primary-purple);
+}
+
+.cerrar-sesion-btn {
+  background: rgba(140, 80, 103, 1);
+  border: none;
+  color: var(--color-primary);
+  margin-top: 15px;
+  padding: 10px;
+  width: 227px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+  align-content: center;
+
+}
+
+.cerrar-sesion-btn:hover {
+  background: var(--color-primary-purple);
+
+}
+
+/* Lado derecho (contenido)  */
+.perfil-derecho {
+  flex: 1;
+  background: #fff;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 20px;
+
+}
+
+/*  Pestañas  */
+.nav-pestanas ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-bottom: 2px solid #eee;
+}
+
+.nav-pestanas ul li {
+  padding: 12px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-pestanas ul li:hover,
+.nav-pestanas ul li.activa {
+  color: var(--color-primary-purple);
+  border-bottom: 3px solid var(--color-primary-purple);
+}
+
+/* Contenido pestañas */
+.contenido-pestanas > div {
+  display: none;
+  animation: fadeIn 0.3s ease-in-out forwards;
+  padding: 20px;
+}
+
+.contenido-pestanas > div.activa {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Preferencias  */
+.preferencias label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.preferencias input[type="checkbox"] {
+  margin-right: 8px;
+  transform: scale(1.2);
+  accent-color:var(--color-primary-purple);
+}
+
+.contenido-pestanas > div {
+  display: none;
+}
+
+.contenido-pestanas > div.activa {
+  display: block;
+}
+
+.nav-pestanas ul li.activa {
+  font-weight: bold;
+  border-bottom: 2px solid var(--color-primary-purple);
+}
