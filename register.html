@@ -52,7 +52,9 @@
                 <label for="">Contraseña</label>
                 <input type="password">
             </div>
-            <a href="">Crear cuenta</a>
+            
+            <button type="button" id="crearCuentaBtn">Crear cuenta</button>
+
             <p>
                 Terminos y condiciones 
             </p>
@@ -96,5 +98,19 @@
         </div>
     </footer>
     <!--Fin de pie de pagina-->
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const btnCrear = document.getElementById("crearCuentaBtn");
+
+    if (btnCrear) {
+      btnCrear.addEventListener("click", () => {
+        // Simula que el usuario se registró
+        localStorage.setItem("usuarioRegistrado", "true");
+        // Redirige al index (o a donde desees)
+        window.location.href = "index.html";
+      });
+    }
+  });
+</script>
 </body>
 </html>

@@ -37,35 +37,56 @@
         </div>
     </header>
     <!--Fin de  HEADER -->
-<main>
-  <section id="perfil-usuario">
-    <h2>Perfil del Usuario</h2>
-    <div class="info-usuario">
-      <p><strong>Nombre:</strong> Juan Pérez</p>
-      <p><strong>Correo electrónico:</strong> juanperez@example.com</p>
-      <!-- Aquí podrías poner una opción para editar los datos -->
-      <button type="button">Editar información</button>
+
+<main class="cuenta-principal">
+
+  <section class="perfil-izquierdo">
+    <img src="imagenes/avatar.jpeg" alt="Avatar usuario" />
+    <h3 class="usuario-nombre"> Isabela Montiel </h3>
+    <p class="ubicacion"><i class="fa fa-map-marker"></i> Bolivia</p>
+    <p class="email"><i class="fa fa-map-marker"></i> isamontiel@gmail.com</p>
+
+    
+
+    <div class="botones-perfil">
+    <a href="mi_agenda.html" class="agenda-btn"><i class="fa fa-calendar"></i> Ir a Agenda</a>    </div>
+
+    <button class="cerrar-sesion-btn" >
+      Cerrar sesión
+    </button>
+  </section>
+
+  <section class="perfil-derecho">
+    <nav class="nav-pestanas">
+      <ul>
+        
+        <li>Reviews</li>
+        <li>Preferencias</li>
+      </ul>
+    </nav>
+
+    <div class="contenido-pestanas">
+      <div class="reviews">
+        <p>Contenido de Reviews aquí.</p>
+      </div>
+      <div class="preferencias">
+        <h4>Preferencias</h4>
+        <label><input type="checkbox" name="experiencia" value="aventura"> Interactiva</label><br>
+        <label><input type="checkbox" name="experiencia" value="cultural"> Contemplativa</label><br>
+        <label><input type="checkbox" name="experiencia" value="gastronomica"> Sensorial</label><br>
+        <label><input type="checkbox" name="experiencia" value="relajacion"> Ritual o Ancestral </label><br>
+        <label><input type="checkbox" name="experiencia" value="relajacion"> Formativa</label><br>
+        <label><input type="checkbox" name="experiencia" value="relajacion"> Experimentaciòn</label><br>
+
+
+
+        
+      </div>
     </div>
   </section>
 
-  <section id="preferencias">
-    <h2>Preferencias del Usuario</h2>
-    <form>
-      <label for="experiencia">Tipo de experiencias preferidas:</label>
-      <select id="experiencia" name="experiencia">
-        <option value="arte">Teatro</option>
-        <option value="Danza">Danza</option>
-        <option value="Museo">Museos</option>
-        <option value="musica">Musica</option>
-      </select>
-      <button type="submit">Guardar preferencias</button>
-    </form>
-  </section>
-
-  <section id="acciones-cuenta">
-    <button type="button" onclick="cerrarSesion()">Cerrar sesión</button>
-  </section>
 </main>
+
     <!--pie de pagina-->
     <footer class="pie">
         <div class="footer-content">
@@ -105,5 +126,6 @@
     </footer>
     <!--Fin de pie de pagina-->
     <script src="Script/funciones.js"></script>
+
 </body>
 </html>
