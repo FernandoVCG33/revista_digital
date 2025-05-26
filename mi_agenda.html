@@ -11,12 +11,10 @@
 <body>
     <!-- HEADER -->
     <header class="tambo-header">
-        <!-- Título centrado -->
         <div class="titulo-container">
             <h1 class="titulo">Tambo</h1>
         </div>
 
-        <!-- NAV con secciones culturales -->
         <nav class="tambo-nav">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
@@ -25,8 +23,6 @@
                 <li><a href="categorias.html">Categorías</a></li>
             </ul>
         </nav>
-
-        <!-- Íconos de notificación y cuenta -->
         <div class="nav-icons">
             <a href="#">
                 <img src="imagenes/bell.png" alt="Notificaciones" class="icon-img">
@@ -35,87 +31,132 @@
                 <img src="imagenes/user.png" alt="Cuenta" class="icon-img">
             </a>
         </div>
+
     </header>
-    <!--Fin de  HEADER -->
 
     <!-- CONTENIDO DE MI AGENDA -->
-    <main>
-        <section>
-            <h2>Mi Agenda Cultural</h2>
-            <p>Aquí encontrarás los eventos que has guardado para no perderte nada en La Paz.</p>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="calendario-main">
+        <section class="calendario-mes">
+            <header class="calendario-header">
+                <button class="nav-mes anterior">‹</button>
+                <h2 class="nombre-mes">Mayo 2025</h2>
+                <button class="nav-mes siguiente">›</button>
+            </header>
+
+            <div class="calendario-tabla">
+                <!-- Nombres de días -->
+                <div class="cal-dia nombre-dia">Lun</div>
+                <div class="cal-dia nombre-dia">Mar</div>
+                <div class="cal-dia nombre-dia">Mié</div>
+                <div class="cal-dia nombre-dia">Jue</div>
+                <div class="cal-dia nombre-dia">Vie</div>
+                <div class="cal-dia nombre-dia">Sáb</div>
+                <div class="cal-dia nombre-dia">Dom</div>
+
+                <!-- Días del mes (ejemplo: Mayo 2025 inicia en jueves) -->
+                <div class="cal-dia empty"></div>
+                <div class="cal-dia empty"></div>
+                <div class="cal-dia empty"></div>
+                <div class="cal-dia">1</div>
+                <div class="cal-dia">2</div>
+                <div class="cal-dia">3</div>
+                <div class="cal-dia">4</div>
+
+                <div class="cal-dia">5</div>
+                <div class="cal-dia">6</div>
+                <div class="cal-dia">7</div>
+                <div class="cal-dia">8</div>
+                <div class="cal-dia">9</div>
+                <div class="cal-dia">10</div>
+                <div class="cal-dia">11</div>
+
+                <div class="cal-dia">12</div>
+                <div class="cal-dia">13</div>
+                <div class="cal-dia">14</div>
+                <div class="cal-dia">15</div>
+                <div class="cal-dia">16</div>
+                <div class="cal-dia">17</div>
+                <div class="cal-dia">18</div>
+
+                <div class="cal-dia">19</div>
+                <div class="cal-dia">20</div>
+                <div class="cal-dia">21</div>
+                <div class="cal-dia">22</div>
+                <div class="cal-dia">23</div>
+                <div class="cal-dia dia-evento">24</div>
+                <div class="cal-dia">25</div>
+
+                <div class="cal-dia">26</div>
+                <div class="cal-dia">27</div>
+                <div class="cal-dia">28</div>
+                <div class="cal-dia">29</div>
+                <div class="cal-dia">30</div>
+                <div class="cal-dia">31</div>
+                <div class="cal-dia empty"></div>
+            </div>
         </section>
-
-        <section>
-            <h3>Viernes, 24 xde mayo</h3>
-
-            <article>
-                <h4>Concierto Sinfónico</h4>
-                <p>Hora: 19:00</p>
-                <p>Lugar: Teatro Municipal Alberto Saavedra Pérez</p>
-            </article>
-
-            <article>
-                <h4>Obra de Teatro: “La Chaskañawi”</h4>
-                <p>Hora: 20:30</p>
-                <p>Lugar: Teatro Nuna</p>
-            </article>
-        </section>
-
-        <section>
-            <h3>Sábado, 25 de mayo</h3>
-
-            <article>
-                <h4>Festival de Danza Andina</h4>
-                <p>Hora: 15:00</p>
-                <p>Lugar: Plaza San Francisco</p>
-            </article>
-        </section>
-        <section>
-            <ul>
-                <li><a href="feedback.html">Información</a></li>
-            </ul>
-        </section>
-        
     </main>
 
+
     <!--pie de pagina-->
+=======
+    <main class="agenda-container">
+        <h2 class="agenda-title">Agenda Mayo</h2>
+        <div class="calendar">
+            <div class="calendar-header">
+                <div>Lunes</div>
+                <div>Martes</div>
+                <div>Miércoles</div>
+                <div>Jueves</div>
+                <div>Viernes</div>
+                <div>Sábado</div>
+                <div>Domingo</div>
+            </div>
+            <div class="calendar-grid">
+                <!-- Repite esto para cada día -->
+                <div class="day">28</div>
+                <div class="day">29</div>
+                <div class="day">30</div>
+                <div class="day">01<br><img src="imagenes/evento1.jpg" alt="Evento"></div>
+                <div class="day">02</div>
+                <div class="day">03</div>
+                <div class="day">04</div>
+                <!-- Continúa según sea necesario -->
+            </div>
+        </div>
+        <a href="index.html" class="btn-volver">Volver al inicio</a>
+    </main>
+
+    <!-- FOOTER -->
+>>>>>>> e59b5eefa06e8cc686483c473f2a0dd01e97c125
     <footer class="pie">
         <div class="footer-content">
-            <!-- Logo -->
             <div class="footer-logo">
                 <h1 class="footer-title">Tambo</h1>
             </div>
 
-            <!-- Navegación -->
             <div class="footer-nav-container">
-            <ul class="footer-nav">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="eventos/eventos.html">Eventos</a></li>
-                <li><a href="mi_agenda.html">Mi Agenda</a></li>
-                <li><a href="categorias.html">Categorías</a></li>
-
-
-            </ul>
+                <ul class="footer-nav">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="eventos/eventos.html">Eventos</a></li>
+                    <li><a href="mi_agenda.html">Mi Agenda</a></li>
+                    <li><a href="categorias.html">Categorías</a></li>
+                </ul>
             </div>
 
-            <!-- Redes sociales -->
             <div class="footer-social">
-
-            <img src="imagenes/Github.png" alt="Github" >
-            <img src="imagenes/X.png" alt="X">
-            <img src="imagenes/instagram.png" alt="instagram">
-            <img src="imagenes/facebook.png" alt="facebook" >
-
-
+                <img src="imagenes/Github.png" alt="Github">
+                <img src="imagenes/X.png" alt="X">
+                <img src="imagenes/instagram.png" alt="instagram">
+                <img src="imagenes/facebook.png" alt="facebook">
             </div>
         </div>
-
-        <!-- ⬇️ Este bloque ahora está fuera del "footer-content" ⬇️ -->
         <div class="footer-copy">
             © 2025 Tambo - Guía Cultural Paceña
         </div>
     </footer>
-    <!--Fin de pie de pagina-->
 
     <script src="Script/funciones.js"></script>
 </body>

@@ -287,6 +287,71 @@ section {
   padding: var(--spacing-xxs);
 }
 
+/* HEAD */ 
+/* Estilos generales para el header */
+.tambo-header {
+  background-image: url(''); /*Imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  padding: 40px 0;
+  color: white;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  color: var(--color-gray-900);
+}
+
+/* Contenedor general para centrar contenido y controlar márgenes */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Título "TAMBO" */
+.titulo {
+  font-size: 3rem;
+  margin: 0;
+  color: #000000;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  color: var(--color-gray-900);
+
+}
+
+/* Barra de navegación */
+.tambo-nav {
+  background-color: #A0A07D; /* Color segun figma */
+  margin-top: 30px;
+  padding: 15px 30px;
+  border-radius: 6px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Lista de navegación */
+.tambo-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Enlaces del menú */
+.tambo-nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.tambo-nav a:hover {
+  color: #eeeeee;
+}
+
 .card-detalle {
   padding: var(--spacing-md);
   display: flex;
@@ -611,6 +676,141 @@ ul.componentes li {
   
 }
 /* Fin de banner */
+
+/* Estructura de mi_agenda */
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #f8f6ed;
+    margin: 0;
+    padding: 0;
+}
+
+.tambo-header, .pie {
+    background-color: #f8f6ed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.titulo-container h1 {
+    font-size: 2.5rem;
+    color: #3d1c29;
+}
+
+.tambo-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+.tambo-nav a {
+    text-decoration: none;
+    color: #3d1c29;
+    font-weight: 500;
+}
+
+.nav-icons img {
+    width: 24px;
+    margin-left: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+main.agenda-container {
+    padding: 2rem;
+    text-align: center;
+}
+
+.agenda-title {
+    font-size: 3rem;
+    color: #3d1c29;
+    margin-bottom: 2rem;
+}
+
+.calendar {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.calendar-header {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+    background-color: #ccc;
+}
+
+.day {
+    background-color: #f8f6ed;
+    min-height: 100px;
+    padding: 0.5rem;
+    text-align: left;
+    font-size: 0.9rem;
+    border: 1px solid #ddd;
+}
+
+.day img {
+    width: 100%;
+    height: auto;
+    margin-top: 0.5rem;
+}
+
+.btn-volver {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.5rem 1rem;
+    background-color: #3d1c29;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+.footer-title {
+    font-size: 1.5rem;
+    color: #3d1c29;
+}
+
+.footer-nav-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: #3d1c29;
+}
+
+.footer-social img {
+    width: 24px;
+    margin: 0 0.5rem;
+}
+
+.footer-copy {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.8rem;
+    color: #555;
+}
+
+/* fin estilos mi_agenda */
 
 /* CUENTA */
 
@@ -940,6 +1140,70 @@ ul.componentes li {
   border-color: #fff;
 }
 
+/* Estilos generales para el header */
+.tambo-header {
+  background-image: url(''); /*Imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  padding: 40px 0;
+  color: white;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  color: var(--color-gray-900);
+}
+
+/* Contenedor general para centrar contenido y controlar márgenes */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Título "TAMBO" */
+.titulo {
+  font-size: 3rem;
+  margin: 0;
+  color: #000000;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  color: var(--color-gray-900);
+
+}
+
+/* Barra de navegación */
+.tambo-nav {
+  background-color: #A0A07D; /* Color segun figma */
+  margin-top: 30px;
+  padding: 15px 30px;
+  border-radius: 6px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Lista de navegación */
+.tambo-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Enlaces del menú */
+.tambo-nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.tambo-nav a:hover {
+  color: #eeeeee;
+}
+
 .popup-form {
   display: flex;
   flex-direction: column;
@@ -1026,3 +1290,64 @@ ul.componentes li {
   display: none;
 }
 /* FIN Ventana emergente login/registro SPA */
+/* inicio mi_agenda */
+
+.calendario-main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.calendario-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.nombre-mes {
+    
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-mes {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.calendario-tabla {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+}
+
+.cal-dia {
+    text-align: center;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.nombre-dia {
+    font-weight: bold;
+    background-color: #eaeaea;
+}
+
+.empty {
+    background-color: transparent;
+}
+
+.dia-evento {
+    background-color: #ffd54f;
+    font-weight: bold;
+}
+
+/* Fin mi_agenda */
