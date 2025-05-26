@@ -786,7 +786,6 @@ ul.componentes li {
   border-bottom: 2px solid var(--color-primary-purple);
 }
 
-<<<<<<< HEAD
 /*inicio de carrusel*/
 .carrusel {
   margin: auto;
@@ -882,7 +881,6 @@ ul.componentes li {
   background-size: cover;
 }
 /*fin de carrusel*/
-=======
 
 
 /* Ventana emergente login/registro SPA */
@@ -1028,5 +1026,3 @@ ul.componentes li {
   display: none;
 }
 /* FIN Ventana emergente login/registro SPA */
-
->>>>>>> e641a721f11365f8e5fdba93b9824ee7ed746c88
