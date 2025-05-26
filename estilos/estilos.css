@@ -852,6 +852,7 @@ main, section {
 .hidden {
   display: none;
 }
+
 /* Fin Ventana emergente login/registro SPA */
 
 /*inicio de carrusel*/
@@ -1025,3 +1026,7 @@ ul.componentes li {
   
 }
 /* Fin de banner */
+
+/* FIN Ventana emergente login/registro SPA */
+/* inicio mi_agenda */
+/* Fin mi_agenda */
