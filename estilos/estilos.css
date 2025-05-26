@@ -1026,3 +1026,52 @@ ul.componentes li {
   
 }
 /* Fin de banner */
+/*inicio de carrusel ventos*/
+.carrusel_eventos {
+  background-color: red; 
+  margin: auto;
+  width: 100%;
+  margin-top: 150px;
+  margin-top: 50px;
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 45px;
+}
+
+.card_eve{
+  color: var(--color-gray-300);
+  position: relative;
+  background-color: rgba(87, 3, 3, 0.888);
+  background: url(https://pohcdn.com/sites/default/files/styles/paragraph__live_banner__lb_image__1880bp/public/live_banner/La-Paz.jpg) no-repeat center;
+  background-size: cover;
+  display: flex;
+  width: 30%;
+  height: 484px;
+  padding: 8px 16px;
+  flex-grow: 2;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 3px;
+  transition: all 0.3s ease-in;
+}
+.card_eve:hover{
+  width: 35%;
+  color: white;
+}
+.ev2{
+  background:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJMOO61J3JDLuJnBirxCs8GBVeN-X0MX43Og&s) no-repeat center;
+  background-size: cover;
+}
+.ev3{
+  background: url(https://www.bcb.gob.bo/webdocs/styles/medium/public/SalaDePrensa/medios/392653063_760x520.JPG?itok=CbGdE-Br) no-repeat center;
+  background-size: cover;
+}
+.proximos_eventos{
+  width: 35%;
+  background-color: var(--color-primary-purple);
+  font-weight: 200;
+  color: var(--color-secondary-green-light);
+  padding: 8px 16px;
+}
+/*fin de carruseld e eventos*/
