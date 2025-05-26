@@ -1,1 +1,126 @@
-/* Funciones*/
+//Cuenta pestañas y preferencias
+document.addEventListener("DOMContentLoaded", function () {
+  const tabs = document.querySelectorAll('.nav-pestanas ul li');
+  const reviews = document.querySelector('.reviews');
+  const preferencias = document.querySelector('.preferencias');
+
+  // Inicial mostrar solo Reviews con clase activa
+  reviews.classList.add('activa');
+  preferencias.classList.remove('activa');
+  tabs[0].classList.add('activa');
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => {
+      // Quitar activa de todas las tabs y contenidos
+      tabs.forEach(t => t.classList.remove('activa'));
+      reviews.classList.remove('activa');
+      preferencias.classList.remove('activa');
+
+      // Activar la tab clickeada
+      tab.classList.add('activa');
+
+      // Mostrar el contenido correspondiente
+      if (index === 0) {
+        reviews.classList.add('activa');
+      } else if (index === 1) {
+        preferencias.classList.add('activa');
+      }
+    });
+  });
+});
+
+//Redirige el formulario y cambia el boton por los iconos
+document.addEventListener("DOMContentLoaded", () => {
+  const zonaUsuario = document.getElementById("zona-usuario");
+
+  const usuarioLogueado = localStorage.getItem("usuarioLogueado") === "true";
+
+  if (!usuarioLogueado) {
+    zonaUsuario.innerHTML = `<button id="btn-registrar">Regístrate</button>`;
+
+    document.getElementById("btn-registrar").addEventListener("click", () => {
+      localStorage.setItem("usuarioLogueado", "true");
+      // Redirige al formulario de registro real
+      window.location.href = "register.html";
+    });
+  } else {
+    zonaUsuario.innerHTML = `
+      <a href="notificaciones.html"><img src="imagenes/bell.png" alt="Notificaciones" class="icon-img"></a>
+      <a href="cuenta.html"><img src="imagenes/user.png" alt="Cuenta" class="icon-img"></a>
+    `;
+  }
+});
+
+
+  //cierra sesiòn y vuelve al inicio
+document.addEventListener("DOMContentLoaded", () => {
+  const cerrarSesionBtn = document.querySelector(".cerrar-sesion-btn");
+  if (cerrarSesionBtn) {
+    cerrarSesionBtn.addEventListener("click", () => {
+      localStorage.removeItem("usuarioLogueado"); 
+      window.location.href = "index.html";    
+    });
+  }
+});
+
+
+// Cambiar el header del index
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector('.tambo-header');
+  if (!header) return;
+
+  const path = window.location.pathname;
+  if (path.endsWith('index.html') || path === '/' || path === '') {
+    header.classList.add('tambo-header-home');
+  }
+});
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const popupContainer = document.getElementById("popupContainer");
+  const closeBtn = document.getElementById("closeBtn");
+  const loginTab = document.getElementById("loginTab");
+  const registerTab = document.getElementById("registerTab");
+  const loginForm = document.getElementById("loginForm");
+  const registerForm = document.getElementById("registerForm");
+  const popupSubtitle = document.getElementById("popupSubtitle");
+  const goToRegister = document.getElementById("goToRegister");
+
+  // Botón registrate en index
+  const registerButton = document.getElementById("btn_registrate");
+  if (registerButton) {
+    registerButton.addEventListener("click", () => {
+      popupContainer.style.display = "flex";
+      registerTab.click();
+    });
+  }
+
+  loginTab.addEventListener("click", () => {
+    loginTab.classList.add("active");
+    registerTab.classList.remove("active");
+    loginForm.classList.remove("hidden");
+    registerForm.classList.add("hidden");
+    popupSubtitle.innerText = "Bienvenido de vuelta!";
+  });
+
+  registerTab.addEventListener("click", () => {
+    registerTab.classList.add("active");
+    loginTab.classList.remove("active");
+    loginForm.classList.add("hidden");
+    registerForm.classList.remove("hidden");
+    popupSubtitle.innerText = "Crea tu cuenta";
+  });
+
+  closeBtn.addEventListener("click", () => {
+    popupContainer.style.display = "none";
+  });
+
+  goToRegister.addEventListener("click", (e) => {
+    e.preventDefault();
+    registerTab.click();
+  });
+  
+  
+});
