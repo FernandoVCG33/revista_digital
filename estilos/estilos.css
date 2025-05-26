@@ -1077,35 +1077,6 @@ ul.componentes li {
 /*fin de carruseld e eventos*/
 
 /* Inicio mi_agenda */
-@font-face {
-  font-family: 'Melodrama-Light';
-  src: url('../fonts/Melodrama-Light.woff2') format('woff2'),
-       url('../fonts/Melodrama-Light.woff') format('woff'),
-       url('../fonts/Melodrama-Light.ttf') format('truetype');
-  font-weight: 300;
-  font-display: swap;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Melodrama-Semibold';
-  src: url('../fonts/Melodrama-Semibold.woff2') format('woff2'),
-       url('../fonts/Melodrama-Semibold.woff') format('woff'),
-       url('../fonts/Melodrama-Semibold.ttf') format('truetype');
-  font-weight: 600;
-  font-display: swap;
-  font-style: normal;
-}
-
-html,
-
-body { 
-  background: #F7F7EC;
-  padding: 40px 0;
-  box-sizing: border-box;
-  font-family: 'Melodrama-light';
-  color: #4C2F26; /* color general*/
-}
 
 .calendar {
   margin: 0 auto;  
