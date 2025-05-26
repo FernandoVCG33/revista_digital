@@ -511,7 +511,7 @@ main, section {
 
 .text {
     background-color: #21252995;
-    width: 100%;
+    width: 85%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -525,6 +525,7 @@ main, section {
 .text h1 {
     font-size: 2.5rem;
     font-weight: 600;
+    color: var(--color-gray-100);
 
 }
 /* Fin de banner */
@@ -973,7 +974,7 @@ main, section {
 
 .text {
   background-color: #21252995;
-  width: 100%;
+  width: 99%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -986,6 +987,7 @@ main, section {
 }
 
 .text h1 {
+  font-family: var(--font-size-base);
   font-size: 2.5rem;
   font-weight: 600;
 
@@ -1058,11 +1060,13 @@ ul.componentes li {
   background-size: cover;
 }
 .proximos_eventos{
+  font-size: 20pt;
+  margin-top: 40px;
   width: 35%;
   background-color: var(--color-primary-purple);
   font-weight: 200;
-  color: var(--color-secondary-green-light);
-  padding: 8px 16px;
+  color: #ffffff;
+  padding: 25px 16px;
 }
 .eventostitulo{
   font-size: 20pt;
