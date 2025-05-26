@@ -123,6 +123,8 @@ document.addEventListener("DOMContentLoaded", () => {
       registerTab.click();
     });
   }
+
+  //  MANEJO DEL LOGIN
  loginForm.addEventListener("submit", (e) => {
     e.preventDefault(); // Evita el envío real del formulario
 
@@ -139,5 +141,19 @@ document.addEventListener("DOMContentLoaded", () => {
       <a href="cuenta.html"><img src="imagenes/user.png" alt="Cuenta" class="icon-img"></a>
     `;
   });
+
+//  MANEJO DEL REGISTRO
+  registerForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    localStorage.setItem("usuarioLogueado", "true");
+
+    popupContainer.style.display = "none";
+
+    const zonaUsuario = document.getElementById("zona-usuario");
+    zonaUsuario.innerHTML = `
+      <a href="notificaciones.html"><img src="imagenes/bell.png" alt="Notificaciones" class="icon-img"></a>
+      <a href="cuenta.html"><img src="imagenes/user.png" alt="Cuenta" class="icon-img"></a>
+    `;
+  });
 });
-  
