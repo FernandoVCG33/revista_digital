@@ -8,13 +8,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Mi agenda</title>
 </head>
-<body>
-    <!-- HEADER -->
++<body>      
     <header class="tambo-header">
+        <!-- Título centrado -->
         <div class="titulo-container">
             <h1 class="titulo">Tambo</h1>
         </div>
 
+        <!-- NAV con secciones culturales -->
         <nav class="tambo-nav">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
@@ -23,140 +24,95 @@
                 <li><a href="categorias.html">Categorías</a></li>
             </ul>
         </nav>
-        <div class="nav-icons">
-            <a href="#">
-                <img src="imagenes/bell.png" alt="Notificaciones" class="icon-img">
-            </a>
-            <a href="cuenta.html">
-                <img src="imagenes/user.png" alt="Cuenta" class="icon-img">
-            </a>
-        </div>
-
+        <!-- Zona donde el JS inserta el botón o los iconos -->
+        <div class="nav-icons" id="zona-usuario"></div>
+        <!-- Aquí JS inserta el botón registrar o los iconos de usuario -->
     </header>
+    <!--Fin de  HEADER -->
 
-    <!-- CONTENIDO DE MI AGENDA -->
-
-    <!-- CONTENIDO PRINCIPAL -->
-    <main class="calendario-main">
-        <section class="calendario-mes">
-            <header class="calendario-header">
-                <button class="nav-mes anterior">‹</button>
-                <h2 class="nombre-mes">Mayo 2025</h2>
-                <button class="nav-mes siguiente">›</button>
-            </header>
-
-            <div class="calendario-tabla">
-                <!-- Nombres de días -->
-                <div class="cal-dia nombre-dia">Lun</div>
-                <div class="cal-dia nombre-dia">Mar</div>
-                <div class="cal-dia nombre-dia">Mié</div>
-                <div class="cal-dia nombre-dia">Jue</div>
-                <div class="cal-dia nombre-dia">Vie</div>
-                <div class="cal-dia nombre-dia">Sáb</div>
-                <div class="cal-dia nombre-dia">Dom</div>
-
-                <!-- Días del mes (ejemplo: Mayo 2025 inicia en jueves) -->
-                <div class="cal-dia empty"></div>
-                <div class="cal-dia empty"></div>
-                <div class="cal-dia empty"></div>
-                <div class="cal-dia">1</div>
-                <div class="cal-dia">2</div>
-                <div class="cal-dia">3</div>
-                <div class="cal-dia">4</div>
-
-                <div class="cal-dia">5</div>
-                <div class="cal-dia">6</div>
-                <div class="cal-dia">7</div>
-                <div class="cal-dia">8</div>
-                <div class="cal-dia">9</div>
-                <div class="cal-dia">10</div>
-                <div class="cal-dia">11</div>
-
-                <div class="cal-dia">12</div>
-                <div class="cal-dia">13</div>
-                <div class="cal-dia">14</div>
-                <div class="cal-dia">15</div>
-                <div class="cal-dia">16</div>
-                <div class="cal-dia">17</div>
-                <div class="cal-dia">18</div>
-
-                <div class="cal-dia">19</div>
-                <div class="cal-dia">20</div>
-                <div class="cal-dia">21</div>
-                <div class="cal-dia">22</div>
-                <div class="cal-dia">23</div>
-                <div class="cal-dia dia-evento">24</div>
-                <div class="cal-dia">25</div>
-
-                <div class="cal-dia">26</div>
-                <div class="cal-dia">27</div>
-                <div class="cal-dia">28</div>
-                <div class="cal-dia">29</div>
-                <div class="cal-dia">30</div>
-                <div class="cal-dia">31</div>
-                <div class="cal-dia empty"></div>
-            </div>
-        </section>
-    </main>
-
-
-    <!--pie de pagina-->
-
-    <main class="agenda-container">
-        <h2 class="agenda-title">Agenda Mayo</h2>
-        <div class="calendar">
-            <div class="calendar-header">
-                <div>Lunes</div>
-                <div>Martes</div>
-                <div>Miércoles</div>
-                <div>Jueves</div>
-                <div>Viernes</div>
-                <div>Sábado</div>
-                <div>Domingo</div>
-            </div>
-            <div class="calendar-grid">
-                <!-- Repite esto para cada día -->
-                <div class="day">28</div>
-                <div class="day">29</div>
-                <div class="day">30</div>
-                <div class="day">01<br><img src="imagenes/evento1.jpg" alt="Evento"></div>
-                <div class="day">02</div>
-                <div class="day">03</div>
-                <div class="day">04</div>
-                <!-- Continúa según sea necesario -->
-            </div>
+    </header>  
+    <div class="calendar-container">
+    <div class="calendar-header">
+        <h3>Agenda</h3>
+        <h1>
+        Noviembre
+        </h1>
+    </div>
+    <div class="calendar"><span class="day-name">Lunes</span><span class="day-name">Martes</span><span class="day-name">Miercoles</span><span class="day-name">Jueves</span><span class="day-name">Viernes</span><span class="day-name">Sábado</span><span class="day-name">Domingo</span>
+        <div  class="day day--disabled">30</div>
+        <div class="day day--disabled">31</div>
+        <div class="day">1</div>
+        <div class="day">2</div>
+        <div class="day">3</div>
+        <div class="day">4</div>
+        <div class="day">5</div>
+        <div class="day">6</div>
+        <div class="day">7</div>
+        <div class="day">8</div>
+        <div class="day">9</div>
+        <div class="day">10</div>
+        <div class="day">11</div>
+        <div class="day">12</div>
+        <div class="day">13</div>
+        <div class="day">14</div>
+        <div class="day">15</div>
+        <div class="day">16</div>
+        <div class="day">17</div>
+        <div class="day">18</div>
+        <div class="day">19</div>
+        <div class="day">20</div>
+        <div class="day">21</div>
+        <div class="day">22</div>
+        <div class="day">23</div>
+        <div class="day">24</div>
+        <div class="day">25</div>
+        <div class="day">26</div>
+        <div class="day">27</div>
+        <div class="day">28</div>
+        <div class="day">29</div>
+        <div class="day">30</div>
+        <div class="day">31</div>
+        <div class="day day--disabled">1</div>
+        <div class="day day--disabled">2</div>
         </div>
-        <a href="index.html" class="btn-volver">Volver al inicio</a>
-    </main>
-
-    <!-- FOOTER -->
+        </section>
     <footer class="pie">
         <div class="footer-content">
+            <!-- Logo -->
             <div class="footer-logo">
                 <h1 class="footer-title">Tambo</h1>
             </div>
 
+            <!-- Navegación -->
             <div class="footer-nav-container">
                 <ul class="footer-nav">
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="eventos/eventos.html">Eventos</a></li>
                     <li><a href="mi_agenda.html">Mi Agenda</a></li>
                     <li><a href="categorias.html">Categorías</a></li>
+
+
                 </ul>
             </div>
 
+            <!-- Redes sociales -->
             <div class="footer-social">
+
                 <img src="imagenes/Github.png" alt="Github">
                 <img src="imagenes/X.png" alt="X">
                 <img src="imagenes/instagram.png" alt="instagram">
                 <img src="imagenes/facebook.png" alt="facebook">
+
+
             </div>
         </div>
+
+        <!-- ⬇️ Este bloque ahora está fuera del "footer-content" ⬇️ -->
         <div class="footer-copy">
             © 2025 Tambo - Guía Cultural Paceña
         </div>
     </footer>
-
-    <script src="Script/funciones.js"></script>
+    </div>
+    </div>
 </body>
 </html>
