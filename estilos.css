@@ -760,7 +760,6 @@ main, section {
 }
 
 .popup-subtitle {
-  font-family: 'Melodrama', serif;
   font-size: 22px;
   margin: 10px 0 30px;
 }
@@ -845,21 +844,12 @@ main, section {
   margin: 0 10px;
 }
 
-.iconos-sociales {
+.social-icons {
   display: flex;
-  justify-content: center;
-  gap: 25px;
-  margin-top: 10px;
+  justify-content: space-around;
+  font-size: 24px;
+  color: white;
 }
-
-.icono-social {
-  width: 28px;
-  height: 28px;
-  cursor: pointer;
-  filter: invert(1);
-  margin-right: 12px; 
-}
-
 
 .close-btn {
   position: absolute;
@@ -871,5 +861,3 @@ main, section {
 .hidden {
   display: none;
 }
-/* FIN Ventana emergente login/registro SPA */
-
