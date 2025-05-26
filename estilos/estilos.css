@@ -1324,8 +1324,8 @@ ul.componentes li {
     font-size: 3rem;
 }
 
-h1 {
-    font-size: 7em;  
+.calendar-header {
+    font-size: 50px;  
     font-family: 'Melodrama-Semibold';
     margin: 0;
     color: #4C2F26;
