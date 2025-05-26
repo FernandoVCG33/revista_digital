@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const usuarioLogueado = localStorage.getItem("usuarioLogueado") === "true";
 
   if (!usuarioLogueado) {
-    zonaUsuario.innerHTML = `<button id="btn-registrar">Regístrate</button>`;
+    zonaUsuario.innerHTML = `<button id="btn_registrate">Regístrate</button>`;
 
     document.getElementById("btn-registrar").addEventListener("click", () => {
       localStorage.setItem("usuarioLogueado", "true");
@@ -117,10 +117,27 @@ document.addEventListener("DOMContentLoaded", () => {
     popupContainer.style.display = "none";
   });
 
-  goToRegister.addEventListener("click", (e) => {
-    e.preventDefault();
-    registerTab.click();
+  if (goToRegister) {
+    goToRegister.addEventListener("click", (e) => {
+      e.preventDefault();
+      registerTab.click();
+    });
+  }
+ loginForm.addEventListener("submit", (e) => {
+    e.preventDefault(); // Evita el envío real del formulario
+
+    // Simulamos login exitoso
+    localStorage.setItem("usuarioLogueado", "true");
+
+    // Cerrar ventana emergente
+    popupContainer.style.display = "none";
+
+    // Actualizar el header
+    const zonaUsuario = document.getElementById("zona-usuario");
+    zonaUsuario.innerHTML = `
+      <a href="notificaciones.html"><img src="imagenes/bell.png" alt="Notificaciones" class="icon-img"></a>
+      <a href="cuenta.html"><img src="imagenes/user.png" alt="Cuenta" class="icon-img"></a>
+    `;
   });
-  
-  
 });
+  
