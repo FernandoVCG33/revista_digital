@@ -13,21 +13,33 @@
 <body>
     <!-- HEADER -->
     <header class="tambo-header">
-        <div class="container">
-            <h1 class="titulo">TAMBO</h1>
+        <!-- Título centrado -->
+        <div class="titulo-container">
+            <h1 class="titulo">Tambo</h1>
         </div>
+
         <!-- NAV con secciones culturales -->
-          <nav class="tambo-nav">
+        <nav class="tambo-nav">
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="eventos.html">Eventos</a></li>
-                <li><a href="../login.html">Login</a></li>
                 <li><a href="../mi_agenda.html">Mi Agenda</a></li>
                 <li><a href="../categorias.html">Categorías</a></li>
-                <li><a href="../cuenta.html">Cuenta</a></li>
             </ul>
         </nav>
+
+        <!-- Íconos de notificación y cuenta -->
+        <div class="nav-icons">
+            <a href="#">
+                <img src="../imagenes/bell.png" alt="Notificaciones" class="icon-img">
+            </a>
+            <a href="cuenta.html">
+                <img src="../imagenes/user.png" alt="Cuenta" class="icon-img">
+            </a>
+        </div>
+        
     </header>
+    <!--Fin de  HEADER -->
     <!-- Main basico "propuesta"-->
     <main>
     <section>
@@ -48,39 +60,41 @@
     <!--pie de pagina-->
     <footer class="pie">
         <div class="footer-content">
-            <!-- Logo como texto grande -->
+            <!-- Logo -->
             <div class="footer-logo">
-                <h1 class="footer-title">TAMBO</h1>
+                <h1 class="footer-title">Tambo</h1>
             </div>
 
-            <!-- Copyright debajo del logo -->
-            <div class="footer-copy">
-                © 2025 Tambo - Guía Cultural Paceña
+            <!-- Navegación -->
+            <div class="footer-nav-container">
+            <ul class="footer-nav">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="eventos.html">Eventos</a></li>
+                <li><a href="../mi_agenda.html">Mi Agenda</a></li>
+                <li><a href="../categorias.html">Categorías</a></li>
+
+
+            </ul>
             </div>
 
-            <!-- Correo debajo del copyright -->
-            <div class="footer-email">
-                <p>contacto@tambo.com</p>
-            </div>
-
-            <!-- Redes sociales debajo del correo -->
+            <!-- Redes sociales -->
             <div class="footer-social">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-x-twitter"></i></a>
+
+            <img src="../imagenes/Github.png" alt="Github" >
+            <img src="../imagenes/X.png" alt="X">
+            <img src="../imagenes/instagram.png" alt="instagram">
+            <img src="../imagenes/facebook.png" alt="facebook" >
+
+
             </div>
         </div>
 
-        <!-- Barra inferior con los enlaces -->
-        <div class="footer-nav-container">
-            <ul class="footer-nav">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="eventos/eventos.html">Eventos</a></li>
-                <li><a href="mi_agenda.html">Mi Agenda</a></li>
-                <li><a href="cuenta.html">Cuenta</a></li>
-            </ul>
+        <!-- ⬇️ Este bloque ahora está fuera del "footer-content" ⬇️ -->
+        <div class="footer-copy">
+            © 2025 Tambo - Guía Cultural Paceña
         </div>
     </footer>
+    <!--Fin de pie de pagina-->
     <script src="Script/funciones.js"></script>
 </body>
 </html>

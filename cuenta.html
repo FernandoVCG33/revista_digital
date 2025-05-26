@@ -11,86 +11,121 @@
 <body>
     <!-- HEADER -->
     <header class="tambo-header">
-        <div class="container">
-            <h1 class="titulo">TAMBO</h1>
+        <!-- Título centrado -->
+        <div class="titulo-container">
+            <h1 class="titulo">Tambo</h1>
         </div>
+
         <!-- NAV con secciones culturales -->
-          <nav class="tambo-nav">
+        <nav class="tambo-nav">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="eventos/eventos.html">Eventos</a></li>
-                <li><a href="login.html">Login</a></li>
                 <li><a href="mi_agenda.html">Mi Agenda</a></li>
                 <li><a href="categorias.html">Categorías</a></li>
-                <li><a href="cuenta.html">Cuenta</a></li>
             </ul>
         </nav>
+
+        <!-- Íconos de notificación y cuenta -->
+        <div class="nav-icons">
+            <a href="#">
+                <img src="imagenes/bell.png" alt="Notificaciones" class="icon-img">
+            </a>
+            <a href="cuenta.html">
+                <img src="imagenes/user.png" alt="Cuenta" class="icon-img">
+            </a>
+        </div>
     </header>
-<main>
-  <section id="perfil-usuario">
-    <h2>Perfil del Usuario</h2>
-    <div class="info-usuario">
-      <p><strong>Nombre:</strong> Juan Pérez</p>
-      <p><strong>Correo electrónico:</strong> juanperez@example.com</p>
-      <!-- Aquí podrías poner una opción para editar los datos -->
-      <button type="button">Editar información</button>
+    <!--Fin de  HEADER -->
+
+<main class="cuenta-principal">
+
+  <section class="perfil-izquierdo">
+    <img src="imagenes/avatar.jpeg" alt="Avatar usuario" />
+    <h3 class="usuario-nombre"> Isabela Montiel </h3>
+    <p class="ubicacion"><i class="fa fa-map-marker"></i> Bolivia</p>
+    <p class="email"><i class="fa fa-map-marker"></i> isamontiel@gmail.com</p>
+
+    
+
+    <div class="botones-perfil">
+    <a href="mi_agenda.html" class="agenda-btn"><i class="fa fa-calendar"></i> Ir a Agenda</a>    </div>
+
+    <button class="cerrar-sesion-btn" >
+      Cerrar sesión
+    </button>
+  </section>
+
+  <section class="perfil-derecho">
+    <nav class="nav-pestanas">
+      <ul>
+        
+        <li>Reviews</li>
+        <li>Preferencias</li>
+      </ul>
+    </nav>
+
+    <div class="contenido-pestanas">
+      <div class="reviews">
+        <p>Contenido de Reviews aquí.</p>
+      </div>
+      <div class="preferencias">
+        <h4>Preferencias</h4>
+        <label><input type="checkbox" name="experiencia" value="aventura"> Interactiva</label><br>
+        <label><input type="checkbox" name="experiencia" value="cultural"> Contemplativa</label><br>
+        <label><input type="checkbox" name="experiencia" value="gastronomica"> Sensorial</label><br>
+        <label><input type="checkbox" name="experiencia" value="relajacion"> Ritual o Ancestral </label><br>
+        <label><input type="checkbox" name="experiencia" value="relajacion"> Formativa</label><br>
+        <label><input type="checkbox" name="experiencia" value="relajacion"> Experimentaciòn</label><br>
+
+
+
+        
+      </div>
     </div>
   </section>
 
-  <section id="preferencias">
-    <h2>Preferencias del Usuario</h2>
-    <form>
-      <label for="experiencia">Tipo de experiencias preferidas:</label>
-      <select id="experiencia" name="experiencia">
-        <option value="arte">Teatro</option>
-        <option value="Danza">Danza</option>
-        <option value="Museo">Museos</option>
-        <option value="musica">Musica</option>
-      </select>
-      <button type="submit">Guardar preferencias</button>
-    </form>
-  </section>
-
-  <section id="acciones-cuenta">
-    <button type="button" onclick="cerrarSesion()">Cerrar sesión</button>
-  </section>
 </main>
+
     <!--pie de pagina-->
     <footer class="pie">
         <div class="footer-content">
-            <!-- Logo como texto grande -->
+            <!-- Logo -->
             <div class="footer-logo">
-                <h1 class="footer-title">TAMBO</h1>
+                <h1 class="footer-title">Tambo</h1>
             </div>
 
-            <!-- Copyright debajo del logo -->
-            <div class="footer-copy">
-                © 2025 Tambo - Guía Cultural Paceña
-            </div>
-
-            <!-- Correo debajo del copyright -->
-            <div class="footer-email">
-                <p>contacto@tambo.com</p>
-            </div>
-
-            <!-- Redes sociales debajo del correo -->
-            <div class="footer-social">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-x-twitter"></i></a>
-            </div>
-        </div>
-
-        <!-- Barra inferior con los enlaces -->
-        <div class="footer-nav-container">
+            <!-- Navegación -->
+            <div class="footer-nav-container">
             <ul class="footer-nav">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="eventos/eventos.html">Eventos</a></li>
                 <li><a href="mi_agenda.html">Mi Agenda</a></li>
-                <li><a href="cuenta.html">Cuenta</a></li>
+                <li><a href="categorias.html">Categorías</a></li>
+
+
             </ul>
+            </div>
+
+            <!-- Redes sociales -->
+            <div class="footer-social">
+
+            <img src="imagenes/Github.png" alt="Github" >
+            <img src="imagenes/X.png" alt="X">
+            <img src="imagenes/instagram.png" alt="instagram">
+            <img src="imagenes/facebook.png" alt="facebook" >
+
+
+            </div>
+        </div>
+
+        <!-- ⬇️ Este bloque ahora está fuera del "footer-content" ⬇️ -->
+        <div class="footer-copy">
+            © 2025 Tambo - Guía Cultural Paceña
         </div>
     </footer>
+    <!--Fin de pie de pagina-->
     <script src="Script/funciones.js"></script>
+
 </body>
 </html>

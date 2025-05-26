@@ -13,71 +13,98 @@
 <body>
     <!-- HEADER -->
     <header class="tambo-header">
-        <div class="container">
-            <h1 class="titulo">TAMBO</h1>
+        <!-- Título centrado -->
+        <div class="titulo-container">
+            <h1 class="titulo">Tambo</h1>
         </div>
+
         <!-- NAV con secciones culturales -->
-          <nav class="tambo-nav">
+        <nav class="tambo-nav">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="eventos/eventos.html">Eventos</a></li>
-                <li><a href="login.html">Login</a></li>
                 <li><a href="mi_agenda.html">Mi Agenda</a></li>
                 <li><a href="categorias.html">Categorías</a></li>
-                <li><a href="cuenta.html">Cuenta</a></li>
             </ul>
         </nav>
+
+        <!-- Íconos de notificación y cuenta -->
+        <div class="nav-icons">
+            <a href="#">
+                <img src="imagenes/bell.png" alt="Notificaciones" class="icon-img">
+            </a>
+            <a href="cuenta.html">
+                <img src="imagenes/user.png" alt="Cuenta" class="icon-img">
+            </a>
+        </div>
     </header>
-    <!-- Main basico "propuesta"-->
+    <!--Fin de  HEADER -->
     <main>
-    <section>
-        <article>
-        <!-- Contenido del primer artículo -->
-        </article>
-    </section>
-    <section>
-        <article>
-        <!-- Contenido del segundo artículo -->
-        
-        </article>
-    </section>
+        <!--Inicio de card-->
+        <section class="card-container">
+            <div class="card-evento">
+                <div class="card-imagen-bloque">
+                    <h2 class="card-titulo">TITULO</h2>
+                    <div class="card-imagen">
+                        <span class="card-subtitulo">Subtitulo</span>
+                        <img src="imagenes/imagen_referencial_card.jpg" alt="Evento cultural" class="card-img-real">
+                    </div>
+                </div>
+                <div class="card-detalle">
+                    <div class="card-fecha">
+                        <span class="card-dia">21</span>
+                        <span class="card-mes">Mayo</span>
+                        <span class="card-dia-nombre">Miércoles</span>
+                    </div>
+                    <p class="card-descripcion">
+                        At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+                        deleniti atque
+                    </p>
+                    <button class="card-boton">Botón</button>
+                </div>
+            </div>
+        </section>
     </main>
+        <!--Fin de card-->
+        
     <!--pie de pagina-->
     <footer class="pie">
         <div class="footer-content">
-            <!-- Logo como texto grande -->
+            <!-- Logo -->
             <div class="footer-logo">
-                <h1 class="footer-title">TAMBO</h1>
+                <h1 class="footer-title">Tambo</h1>
             </div>
 
-            <!-- Copyright debajo del logo -->
-            <div class="footer-copy">
-                © 2025 Tambo - Guía Cultural Paceña
-            </div>
-
-            <!-- Correo debajo del copyright -->
-            <div class="footer-email">
-                <p>contacto@tambo.com</p>
-            </div>
-
-            <!-- Redes sociales debajo del correo -->
-            <div class="footer-social">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-x-twitter"></i></a>
-            </div>
-        </div>
-
-        <!-- Barra inferior con los enlaces -->
-        <div class="footer-nav-container">
+            <!-- Navegación -->
+            <div class="footer-nav-container">
             <ul class="footer-nav">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="eventos/eventos.html">Eventos</a></li>
                 <li><a href="mi_agenda.html">Mi Agenda</a></li>
-                <li><a href="cuenta.html">Cuenta</a></li>
+                <li><a href="categorias.html">Categorías</a></li>
+
+
             </ul>
+            </div>
+
+            <!-- Redes sociales -->
+            <div class="footer-social">
+
+            <img src="imagenes/Github.png" alt="Github" >
+            <img src="imagenes/X.png" alt="X">
+            <img src="imagenes/instagram.png" alt="instagram">
+            <img src="imagenes/facebook.png" alt="facebook" >
+
+
+            </div>
+        </div>
+
+        <!-- ⬇️ Este bloque ahora está fuera del "footer-content" ⬇️ -->
+        <div class="footer-copy">
+            © 2025 Tambo - Guía Cultural Paceña
         </div>
     </footer>
+    <!--Fin de pie de pagina-->
     <script src="Script/funciones.js"></script>
 </body>
 </html>
