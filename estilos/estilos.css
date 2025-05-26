@@ -287,7 +287,6 @@ section {
   padding: var(--spacing-xxs);
 }
 
-<<<<<<< HEAD
 /* HEAD */ 
 /* Estilos generales para el header */
 .tambo-header {
@@ -353,8 +352,6 @@ section {
   color: #eeeeee;
 }
 
-=======
->>>>>>> 8e65d768518edde1b71856f78d35bca279de97cb
 .card-detalle {
   padding: var(--spacing-md);
   display: flex;
@@ -680,7 +677,6 @@ ul.componentes li {
 }
 /* Fin de banner */
 
-<<<<<<< HEAD
 /* Estructura de mi_agenda */
 
 body {
@@ -815,7 +811,7 @@ main.agenda-container {
 }
 
 /* fin estilos mi_agenda */
-=======
+
 /* CUENTA */
 
 /* Contenedor principal  */
@@ -1144,7 +1140,6 @@ main.agenda-container {
   border-color: #fff;
 }
 
-<<<<<<< HEAD
 /* Estilos generales para el header */
 .tambo-header {
   background-image: url(''); /*Imagen de fondo */
@@ -1208,7 +1203,7 @@ main.agenda-container {
 .tambo-nav a:hover {
   color: #eeeeee;
 }
-=======
+
 .popup-form {
   display: flex;
   flex-direction: column;
@@ -1295,8 +1290,6 @@ main.agenda-container {
   display: none;
 }
 /* FIN Ventana emergente login/registro SPA */
-
-<<<<<<< HEAD
 /* inicio mi_agenda */
 
 .calendario-main {
@@ -1358,11 +1351,3 @@ main.agenda-container {
 }
 
 /* Fin mi_agenda */
-=======
-<<<<<<< HEAD
->>>>>>> upstream/main
-=======
->>>>>>> e641a721f11365f8e5fdba93b9824ee7ed746c88
->>>>>>> f07071d8d0b6975baccb17af1a869b2ef47fcbd1
->>>>>>> 8e65d768518edde1b71856f78d35bca279de97cb
->>>>>>> e59b5eefa06e8cc686483c473f2a0dd01e97c125
