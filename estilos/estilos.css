@@ -6,113 +6,116 @@
   font-display: swap;
   font-style: normal;
 }
+
 :root {
-/*  Colores */
---color-primary: #F7F7EC;
---color-primary-purple: #4C2634;
+  /*  Colores */
+  --color-primary: #F7F7EC;
+  --color-primary-purple: #4C2634;
 
---color-secondary: #8C5067;
---color-secondary-green-dark: #BABA2B;
---color-secondary-green-light: #DADA60;
+  --color-secondary: #8C5067;
+  --color-secondary-green-dark: #BABA2B;
+  --color-secondary-green-light: #DADA60;
 
---color-white: #ffffff;
---color-black: #000000;
+  --color-white: #ffffff;
+  --color-black: #000000;
 
---color-gray-100: #f8f9fa;
---color-gray-200: #e9ecef;
---color-gray-300: #dee2e6;
---color-gray-400: #ced4da;
---color-gray-500: #adb5bd;
---color-gray-600: #6c757d;
---color-gray-700: #495057;
---color-gray-800: #343a40;
---color-gray-900: #212529;
+  --color-gray-100: #f8f9fa;
+  --color-gray-200: #e9ecef;
+  --color-gray-300: #dee2e6;
+  --color-gray-400: #ced4da;
+  --color-gray-500: #adb5bd;
+  --color-gray-600: #6c757d;
+  --color-gray-700: #495057;
+  --color-gray-800: #343a40;
+  --color-gray-900: #212529;
 
-/* Tipografía */
---font-family-mia: 'MiFuente';
---font-family-base: "Raleway", sans-serif;
---font-family-alt: 'Space Grotesk', sans-serif;
---font-family-deco: 'Fascinate', cursive;
---font-family-neutral: 'Onest', sans-serif;
+  /* Tipografía */
+  --font-family-mia: 'MiFuente';
+  --font-family-base: "Raleway", sans-serif;
+  --font-family-alt: 'Space Grotesk', sans-serif;
+  --font-family-deco: 'Fascinate', cursive;
+  --font-family-neutral: 'Onest', sans-serif;
 
---font-size-xs: 12px;
---font-size-sm: 14px;
---font-size-base: 16px;
---font-size-lg: 18px;
---font-size-xl: 24px;
---font-size-xxl: 32px;
---font-size-titulo: 47.8px;
---font-size-nav: 19.2px;
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 24px;
+  --font-size-xxl: 32px;
+  --font-size-titulo: 47.8px;
+  --font-size-nav: 19.2px;
 
---font-weight-light: 300;
---font-weight-normal: 400;
---font-weight-bold: 700;
---font-weight-black: 900;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
 
-/* Layout */
---container-max-width: 1200px;
---section-padding: 64px;
+  /* Layout */
+  --container-max-width: 1200px;
+  --section-padding: 64px;
 
---spacing-xxs: 2px;
---spacing-xs: 4px;
---spacing-sm: 8px;
---spacing-md: 16px;
---spacing-lg: 24px;
---spacing-xl: 32px;
---spacing-xxl: 48px;
+  --spacing-xxs: 2px;
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 48px;
 
-/*  Bordes y sombras */
---border-radius-sm: 4px;
---border-radius-md: 8px;
---border-radius-lg: 16px;
+  /*  Bordes y sombras */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 16px;
 
---box-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
---box-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
---box-shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.15);
+  --box-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --box-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --box-shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.15);
 
 }
 
 /* Estilos base de ejemplo */
 body {
-font-family: var(--font-family-base);
-font-size: var(--font-size-base);
-color: var(--color-gray-900);
-background-color: var(--color-white);
-margin: 0;
-padding: 0;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  color: var(--color-gray-900);
+  background-color: var(--color-white);
+  margin: 0;
+  padding: 0;
 }
 
 .button {
-padding: var(--spacing-sm) var(--spacing-md);
-border-radius: var(--border-radius-md);
-background-color: var(--color-primary);
-color: var(--color-white);
-border: none;
-cursor: pointer;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  cursor: pointer;
 }
 
 .button:hover {
-background-color: var(--color-primary-dark);
+  background-color: var(--color-primary-dark);
 }
 
 /*Estilo card Fer*/
-.cards{
-    width: 25%;
-    background-color: #0056b3;
-    margin: 150px auto;
-    height: 150px;
+.cards {
+  width: 25%;
+  background-color: #0056b3;
+  margin: 150px auto;
+  height: 150px;
 }
 
 /* FOOTER */
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   display: flex;
   flex-direction: column;
 }
 
-main, section {
+main,
+section {
   flex: 1;
 }
 
@@ -131,9 +134,9 @@ main, section {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 92px; 
+  gap: 92px;
   flex-wrap: wrap;
-  
+
 }
 
 
@@ -147,9 +150,9 @@ main, section {
 }
 
 .footer-title {
-  font-family:'Melodrama';
+  font-family: 'Melodrama';
   font-weight: bolder;
-  font-size:var(--font-size-titulo);
+  font-size: var(--font-size-titulo);
 }
 
 
@@ -172,7 +175,7 @@ main, section {
   align-items: center;
   height: 100%;
   width: 406px;
-  height:33px;
+  height: 33px;
 }
 
 .footer-nav {
@@ -182,9 +185,10 @@ main, section {
   padding: 0;
   list-style: none;
 }
+
 .footer-nav {
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
 }
 
@@ -257,12 +261,12 @@ main, section {
   background-color: var(--color-gray-100);
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
   position: relative;
-  padding: 0; 
+  padding: 0;
   margin: 0;
   text-align: center;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .imagen-placeholder {
@@ -352,93 +356,94 @@ main, section {
   object-fit: cover;
   display: block;
 }
+
 /*Fin de card en codigo (Diseño del equipo de UX) */
 
 /* Estilos generales del header */
 .tambo-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--color-secondary-green-dark);
-    padding: var(--spacing-xl);
-    width: 100%;
-    height: 122px;
-    position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-secondary-green-dark);
+  padding: var(--spacing-xl);
+  width: 100%;
+  height: 122px;
+  position: relative;
 }
 
 /* Contenedor para el título */
 .titulo-container {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: var(--spacing-md) var(--spacing-lg);
-    z-index: 1;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: var(--spacing-md) var(--spacing-lg);
+  z-index: 1;
 }
 
 .titulo {
-    font-family: 'Melodrama';
-    font-size: 47px;
-    font-weight: var(--font-weight-normal);
-    color: var(--color-primary-purple);
-    margin: 0;
+  font-family: 'Melodrama';
+  font-size: 47px;
+  font-weight: var(--font-weight-normal);
+  color: var(--color-primary-purple);
+  margin: 0;
 }
 
 /* Barra de navegación*/
 .tambo-nav {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-xl);
-    padding: var(--spacing-md) var(--spacing-lg);
-    width: 612px;
-    min-height: 29px;
-    justify-content: flex-start;
-    backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xl);
+  padding: var(--spacing-md) var(--spacing-lg);
+  width: 612px;
+  min-height: 29px;
+  justify-content: flex-start;
+  backdrop-filter: blur(5px);
 }
 
 .tambo-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 44px;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 44px;
+  margin: 0;
+  padding: 0;
 }
 
 
 .tambo-nav a {
-    text-decoration: none;
-    color: var(--color-primary-purple);
-    font-weight: var(--font-weight-normal);
-    font-size:var(--font-size-nav);
-    transition: color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+  color: var(--color-primary-purple);
+  font-weight: var(--font-weight-normal);
+  font-size: var(--font-size-nav);
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .tambo-nav a:hover {
-    color: var(--color-primary);
-    transform: scale(1.05);
+  color: var(--color-primary);
+  transform: scale(1.05);
 }
 
 /* Íconos de usuario y notificaciones */
 .nav-icons {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-md);
-    width: 33%;
-    justify-content: flex-end;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  width: 33%;
+  justify-content: flex-end;
 }
 
 .nav-icons img {
-    width: 46px;
-    height: 46px;
+  width: 46px;
+  height: 46px;
 }
 
 .nav-icons i {
-    font-size: var(--font-size-xl);
-    color: var(--color-primary);
-    transition: transform 0.3s ease;
+  font-size: var(--font-size-xl);
+  color: var(--color-primary);
+  transition: transform 0.3s ease;
 }
 
 .nav-icons i:hover {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 #zona-usuario button {
@@ -459,102 +464,151 @@ main, section {
 
 /* Responsividad */
 @media (max-width: 768px) {
-    .tambo-header {
-        flex-direction: column;
-        height: auto;
-    }
+  .tambo-header {
+    flex-direction: column;
+    height: auto;
+  }
 
-    .titulo-container {
-        position: static;
-        transform: none;
-        margin: var(--spacing-sm) 0;
-    }
+  .titulo-container {
+    position: static;
+    transform: none;
+    margin: var(--spacing-sm) 0;
+  }
 
-    .tambo-nav {
-        width: 100%;
-        justify-content: center;
-    }
+  .tambo-nav {
+    width: 100%;
+    justify-content: center;
+  }
 
-    .nav-icons {
-        justify-content: center;
-        width: 100%;
-        margin-top: var(--spacing-sm);
-    }
+  .nav-icons {
+    justify-content: center;
+    width: 100%;
+    margin-top: var(--spacing-sm);
+  }
 }
 
 /* Estilos especiales para el header en index.html */
 .tambo-header-home {
-    background-color: transparent; 
+  background-color: transparent;
 }
+
 /* cambia color del título */
 .tambo-header-home .titulo {
-    color: var(--color-primary-purple); 
+  color: var(--color-primary-purple);
 }
+
 /* links nav */
 .tambo-header-home .tambo-nav a {
-    color: var(--color-primary-purple); 
+  color: var(--color-primary-purple);
 }
+
 /* hover links nav, si quieres */
 .tambo-header-home .tambo-nav a:hover {
-    color:#AFAFAF; 
+  color: #AFAFAF;
 }
 
 
 
 /*inicio de carrusel*/
-.prox{
+.prox {
   margin: auto;
   display: flex;
   width: 100%;
   height: 430px;
   margin-bottom: 50px;
-  img{
+
+  img {
     width: 0;
     flex-grow: 1;
     object-fit: cover;
     opacity: .8;
-    transition:  0.5s ease;
+    transition: 0.5s ease;
   }
-  img:hover{
+
+  img:hover {
     cursor: crosshair;
     width: 300px;
-     opacity: 1;
-     filter: contrast(120%);
+    opacity: 1;
+    filter: contrast(120%);
   }
-  
+
 }
+
 /*fin de carrusel*/
-/*inicio banner*/
+
 /* Inicio banner */
+.banner .ver_mas {
+  text-decoration: none;
+  color: aliceblue;
+  background-color: var(--color-primary-purple);
+  padding: 8px 16px;
+  border-radius: 10px;
+  display: flex;
+  align-self: flex-end;
+  transition: all 0.3s ease-in;
+}
+
+.ver_mas:hover {
+  background-color: var(--color-secondary);
+}
+
 .banner {
-    margin-top: 0;
-    position: relative;
-    width: 100%;
-    height: 400px; /* Altura fija recomendada */
-    background: url(https://pohcdn.com/sites/default/files/styles/paragraph__live_banner__lb_image__1880bp/public/live_banner/La-Paz.jpg) no-repeat center center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  margin-top: 0;
+  position: relative;
+  margin: auto;
+  width: 80%;
+  height: 300px;
+  /* Altura fija recomendada */
+  background: url(../imagenes/banner.png) no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .text {
-    background-color: #21252995;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    padding: 40px 60px;
-    border-radius: 8px;
-    text-align: center;
-    height: 400px;
+  background-color: #21252995;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: white;
+  padding: 40px 60px;
+  border-radius: 8px;
+  text-align: center;
+  height: 100%;
 }
 
 .text h1 {
-    font-size: 2.5rem;
-    font-weight: 600;
+  font-size: 2.5rem;
+  font-weight: 600;
 
+}
+
+ul.componentes {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 2rem;
+  /* espacio entre los rectángulos */
+  justify-content: center;
+  margin-top: 50px;
+}
+
+ul.componentes li {
+  width: 41px;
+  height: 9px;
+  background-color: #d9d9d9;
+  /* gris como en la imagen */
+  border-radius: 6px;
+  /* bordes redondeados */
+}
+@media (width <=880px) {
+  .banner{
+    width: 100%;
+  }
+  
 }
 /* Fin de banner */
 
@@ -567,7 +621,7 @@ main, section {
   width: 100%;
   background: var(--color-primary);
   padding: 20px;
-  font-family:var(--font-family-base);
+  font-family: var(--font-family-base);
 }
 
 /* Lado izquierdo (perfil) */
@@ -685,19 +739,24 @@ main, section {
 }
 
 /* Contenido pestañas */
-.contenido-pestanas > div {
+.contenido-pestanas>div {
   display: none;
   animation: fadeIn 0.3s ease-in-out forwards;
   padding: 20px;
 }
 
-.contenido-pestanas > div.activa {
+.contenido-pestanas>div.activa {
   display: block;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 /* Preferencias  */
@@ -711,14 +770,14 @@ main, section {
 .preferencias input[type="checkbox"] {
   margin-right: 8px;
   transform: scale(1.2);
-  accent-color:var(--color-primary-purple);
+  accent-color: var(--color-primary-purple);
 }
 
-.contenido-pestanas > div {
+.contenido-pestanas>div {
   display: none;
 }
 
-.contenido-pestanas > div.activa {
+.contenido-pestanas>div.activa {
   display: block;
 }
 
@@ -727,6 +786,103 @@ main, section {
   border-bottom: 2px solid var(--color-primary-purple);
 }
 
+<<<<<<< HEAD
+/*inicio de carrusel*/
+.carrusel {
+  margin: auto;
+  width: 95%;
+  margin-top: 150px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  gap: 25px;
+  margin-bottom: 45px;
+}
+
+.card_home {
+  color: var(--color-gray-300);
+  position: relative;
+  background-color: rgba(87, 3, 3, 0.888);
+  background: url(https://pohcdn.com/sites/default/files/styles/paragraph__live_banner__lb_image__1880bp/public/live_banner/La-Paz.jpg) no-repeat center;
+  background-size: cover;
+  display: flex;
+  width: 410px;
+  height: 321px;
+  padding: 8px 16px;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 3px;
+}
+
+.over {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  /* negro con 50% de opacidad */
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.over:hover {
+  background-color: transparent;
+}
+
+.titulo {
+  color: var(--color-gray-300);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  align-self: stretch;
+}
+
+.especificaciones {
+  display: flex;
+  align-items: flex-end;
+  gap: 9px;
+  align-self: stretch;
+}
+
+.fecha {
+  display: flex;
+  align-items: flex-end;
+}
+
+.mas {
+  display: flex;
+  width: 61px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1px;
+}
+
+.mayo {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+}
+
+.detalles {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.c2{
+  background:url(../imagenes/carrusel.png) no-repeat center;
+  background-size: cover;
+}
+.c3{
+  background: url(../imagenes/carrusel.png) no-repeat center;
+  background-size: cover;
+}
+/*fin de carrusel*/
+=======
 
 
 /* Ventana emergente login/registro SPA */
@@ -938,4 +1094,8 @@ main, section {
 }
 /* FIN Ventana emergente login/registro SPA */
 
+<<<<<<< HEAD
 >>>>>>> upstream/main
+=======
+>>>>>>> e641a721f11365f8e5fdba93b9824ee7ed746c88
+>>>>>>> f07071d8d0b6975baccb17af1a869b2ef47fcbd1
