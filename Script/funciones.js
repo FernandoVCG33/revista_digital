@@ -76,3 +76,51 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const popupContainer = document.getElementById("popupContainer");
+  const closeBtn = document.getElementById("closeBtn");
+  const loginTab = document.getElementById("loginTab");
+  const registerTab = document.getElementById("registerTab");
+  const loginForm = document.getElementById("loginForm");
+  const registerForm = document.getElementById("registerForm");
+  const popupSubtitle = document.getElementById("popupSubtitle");
+  const goToRegister = document.getElementById("goToRegister");
+
+  // Botón registrate en index
+  const registerButton = document.getElementById("btn_registrate");
+  if (registerButton) {
+    registerButton.addEventListener("click", () => {
+      popupContainer.style.display = "flex";
+      registerTab.click();
+    });
+  }
+
+  loginTab.addEventListener("click", () => {
+    loginTab.classList.add("active");
+    registerTab.classList.remove("active");
+    loginForm.classList.remove("hidden");
+    registerForm.classList.add("hidden");
+    popupSubtitle.innerText = "Bienvenido de vuelta!";
+  });
+
+  registerTab.addEventListener("click", () => {
+    registerTab.classList.add("active");
+    loginTab.classList.remove("active");
+    loginForm.classList.add("hidden");
+    registerForm.classList.remove("hidden");
+    popupSubtitle.innerText = "Crea tu cuenta";
+  });
+
+  closeBtn.addEventListener("click", () => {
+    popupContainer.style.display = "none";
+  });
+
+  goToRegister.addEventListener("click", (e) => {
+    e.preventDefault();
+    registerTab.click();
+  });
+  
+  
+});
