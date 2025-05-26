@@ -359,7 +359,7 @@ main, section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--color-secondary-green-dark);
+    background-color: var(--color-primary-purple);
     padding: var(--spacing-xl);
     width: 100%;
     height: 122px;
@@ -379,7 +379,7 @@ main, section {
     font-family: 'Melodrama';
     font-size: 47px;
     font-weight: var(--font-weight-normal);
-    color: var(--color-primary-purple);
+    color: var(--color-primary);
     margin: 0;
 }
 
@@ -406,14 +406,14 @@ main, section {
 
 .tambo-nav a {
     text-decoration: none;
-    color: var(--color-primary-purple);
+    color: var(--color-primary);
     font-weight: var(--font-weight-normal);
     font-size:var(--font-size-nav);
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .tambo-nav a:hover {
-    color: var(--color-primary);
+    color: var(--color-secondary);
     transform: scale(1.05);
 }
 
@@ -454,7 +454,7 @@ main, section {
 }
 
 #zona-usuario button:hover {
-  background-color: var(--color-primary-purple);
+  background-color: var(--color-secondary);
 }
 
 /* Responsividad */
