@@ -175,3 +175,21 @@ botones.forEach(boton => {
   });
 });
 /*fin de banner de home */
+
+/*inicio banner evento especifico */
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelectorAll('.evento-hero-carrusel .slide');
+  const dots = document.querySelectorAll('.carrusel-indicadores .dot');
+  let current = 0;
+
+  if (slides.length > 0) {
+    setInterval(() => {
+      slides[current].classList.remove('activo');
+      dots[current].classList.remove('activo');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('activo');
+      dots[current].classList.add('activo');
+    }, 2000);
+  }
+});
+/*fin banner evento especifico */

@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>Nombre del Evento</title>
+    <title> Categorias</title>
 </head>
 <body>
     <!-- HEADER -->
@@ -18,75 +18,238 @@
             <h1 class="titulo">Tambo</h1>
         </div>
 
-         <!-- Menú hamburguesa -->
-        <input type="checkbox" id="menu-toggle" class="menu-toggle">
-        <label for="menu-toggle" class="menu-icon">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
-
         <!-- NAV con secciones culturales -->
         <nav class="tambo-nav">
-            <div id="menuUserIcon">
-                <a href="cuenta.html">
-                <img src="imagenes/user2.png" alt="Usuario" class="icon-img" />
-                </a>
-            </div>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="eventos.html">Eventos</a></li>
                 <li><a href="mi_agenda.html">Mi Agenda</a></li>
                 <li><a href="categorias.html">Categorías</a></li>
-            </ul>            
+            </ul>
         </nav>
-        <!-- Zona donde el JS inserta el botón o los iconos -->
-        <div class="nav-icons" id="zona-usuario"></div>
-        <!-- Aquí JS inserta el botón registrar o los iconos de usuario -->
+
+        <!-- Íconos de notificación y cuenta -->
+        <div class="nav-icons">
+            <a href="#">
+                <img src="imagenes/bell.png" alt="Notificaciones" class="icon-img">
+            </a>
+            <a href="cuenta.html">
+                <img src="imagenes/user.png" alt="Cuenta" class="icon-img">
+            </a>
+        </div>
     </header>
     <!--Fin de  HEADER -->
-
-    <!-- MAIN -->
+    
     <main>
-        <section>
-            <article>
-                <h1>Informacion</h1>
+    <section>
+<article>
+<!-- CARRUSEL HERO INICIAL CORREGIDO -->
+<section class="evento-hero-carrusel">
+  <div class="slide activo" style="background-image: url('imagenes/carrusel_evento_especifico.jpg');"></div>
+  <div class="slide" style="background-image: url('imagenes/carrusel_evento_especifico2.jpg');"></div>
+  <div class="slide" style="background-image: url('imagenes/carrusel_evento_especifico3.jpg');"></div>
 
-                <img src="" alt="Imagen del evento">
+  <!-- Texto común visible en todas las imágenes -->
+  <div class="hero-texto">
+    <h1 class="hero-titulo">PÁNICO</h1>
+    <h2 class="hero-subtitulo">MANUEL GARCÍA</h2>
+    <p class="hero-categoria">Música</p>
+  </div>
 
-                <p>Texto informativo</p>
+  <!-- Indicadores -->
+  <div class="carrusel-indicadores">
+    <span class="dot activo"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+</section>
 
-                <p><strong>Fecha:</strong> 10 de junio de 2025</p>
-                <p><strong>Horario:</strong> 16:00 - 22:00</p>
-                <p><strong>Duración:</strong> 6 horas</p>
 
-                <p>
-                    <strong>Ubicación:</strong>
-                    <a href="https://maps.google.com" target="_blank">Centro Cultural Simón I. Patiño, Cochabamba</a>
-                </p>
+<!-- LUGAR -->
+<section class="evento-lugar-nuevo container">
+  <div class="columna-indice">
+    <ul>
+      <li class="activo">Donde</li>
+      <li>Cuando</li>
+      <li>Como</li>
+      <li>Cuanto</li>
+      <li>Quienes</li>
+    </ul>
+    <div class="linea-vertical"></div>
+  </div>
 
-                <p><strong>Experiencia sugerida:</strong> Recorre primero la galería de instalaciones interactivas.</p>
+  <div class="contenido-lugar">
+    <h2 class="subtitulo-lugar">Lugar</h2>
+    <p class="descripcion-lugar">Teatro Municipal Alberto Saavedra Pérez</p>
+    <p class="descripcion-lugar1">En la calle Genaro Sanjinés, esquina de la Indaburo, a media cuadra de la plaza Murillo</p>
+    <img class="imagen-lugar" src="imagenes/imagen_teatro_municipal.jpg" alt="Teatro Municipal">
+    <a href="https://www.google.com/maps" target="_blank" class="google-maps-link">
+      <img src="#" alt="" class="gps-icon"> Google maps
+    </a>
+  </div>
+</section>
 
-                <p><strong>Recomendaciones:</strong> Lleva ropa cómoda, tu celular con batería y auriculares.</p>
+<!-- HORARIOS -->
+<section class="evento-horarios-nuevo container">
+  <div class="columna-indice">
+    <ul>
+      <li>Donde</li>
+      <li class="activo">Cuando</li>
+      <li>Como</li>
+      <li>Cuanto</li>
+      <li>Quienes</li>
+    </ul>
+    <div class="linea-vertical"></div>
+  </div>
 
-                <form action="evento.ics" method="get">
-                    <button type="submit">Guardar en mi agenda</button>
-                </form>
-            </article>
-        </section>
+  <div class="contenido-horarios">
+    <h2 class="subtitulo-horarios">Horarios</h2>
+    <p class="descripcion-horarios">Tienes chance de ir en estos horarios</p>
+    <table class="tabla-horarios">
+      <thead>
+        <tr>
+          <th colspan="3">Únicamente presentaciones en la noche</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Viernes</td><td>7 de junio</td><td>19:30</td></tr>
+        <tr><td>Sábado</td><td>8 de junio</td><td>19:30</td></tr>
+        <tr><td>Domingo</td><td>9 de junio</td><td>17:00</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 
-        <section>
-            <article>
-                <h2>Eventos similares que podrían gustarte:</h2>
-                <ul>
-                    <li><a href="#">Taller de Realidad Aumentada Creativa</a></li>
-                    <li><a href="#">Exposición: “Luz y Código”</a></li>
-                    <li><a href="#">Noche de Video Mapping</a></li>
-                </ul>
-            </article>
-        </section>
+<!-- TRANSPORTE -->
+<section class="evento-transporte-nuevo container">
+  <div class="columna-indice">
+    <ul>
+      <li>Donde</li>
+      <li>Cuando</li>
+      <li class="activo">Como</li>
+      <li>Cuanto</li>
+      <li>Quienes</li>
+    </ul>
+    <div class="linea-vertical"></div>
+  </div>
+
+  <div class="contenido-transporte">
+    <h2 class="subtitulo-transporte">Transporte</h2>
+    <p class="descripcion-transporte">Para que no te me estreses</p>
+
+    <table class="tabla-transporte">
+      <thead>
+        <tr><th colspan="2">Usa la línea roja del teleférico!</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Tomar de</td><td>########</td></tr>
+        <tr><td>Transbordo</td><td>########</td></tr>
+        <tr><td>Quedarse en</td><td>########</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- PRECIOS -->
+<section class="evento-precios-nuevo container">
+  <div class="columna-indice">
+    <ul>
+      <li>Donde</li>
+      <li>Cuando</li>
+      <li>Como</li>
+      <li class="activo">Cuanto</li>
+      <li>Quienes</li>
+    </ul>
+    <div class="linea-vertical"></div>
+  </div>
+
+  <div class="contenido-precios">
+    <h2 class="subtitulo-precios">Precios</h2>
+    <p class="descripcion-precios">Que no te duela el bolsillo, la entrada cuesta:</p>
+
+    <table class="tabla-precios">
+      <thead>
+        <tr><th colspan="2">Según el sitio web podríamos pagar</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Entrada General</td><td>Bs. 30</td>
+        <tr><td>Estudiantes</td><td>Bs. 20</td><td>Y los niños<br>pequeños<br>entran gratis!</td></tr>
+        <tr><td>Adultos mayores</td><td>Bs. 15</td>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+
+<!-- RESTRICCIONES DE EDAD -->
+<section class="evento-edad-nuevo container">
+  <div class="columna-indice">
+    <ul>
+      <li>Donde</li>
+      <li>Cuando</li>
+      <li>Como</li>
+      <li>Cuanto</li>
+      <li class="activo">Quienes</li>
+    </ul>
+  </div>
+
+  <div class="contenido-edad">
+    <h2 class="subtitulo-edad">Restricciones de edad</h2>
+    <p class="descripcion-edad">No digo que no puedas...pero no te van a dejar entrar</p>
+    <p class="mensaje-edad">Este evento no tiene restricciones<br>de edad! No tienes excusa</p>
+  </div>
+</section>
+
+<!-- FRASE CENTRAL -->
+<section class="evento-frase-central">
+  <h2 class="frase-final">Despéjate un cacho,<br>vamos juntos!</h2>
+</section>
+
+<!-- MOODBOARD VISUAL -->
+<section class="evento-moodboard-nuevo container">
+  <h2 class="moodboard-titulo">¿Aun no te convence?</h2>
+  <p class="moodboard-subtitulo">Mira todo lo que hay!</p>
+<div class="moodboard-grid-wrapper">
+<div class="moodboard-grid">
+  <div class="mood-item"><img src="imagenes/moodboard1.jpg" /></div>
+  <div class="mood-item"><img src="imagenes/moodboard2.jpg" /></div>
+  <div class="mood-item"><img src="imagenes/moodboard3.jpg" /></div>
+  <div class="mood-item tall"><img src="imagenes/moodboard4.jpg" /></div>
+  <div class="mood-item"><img src="imagenes/moodboard5.jpg" /></div>
+  <div class="mood-item wide"><img src="imagenes/moodboard6.jpg" /></div>
+  <div class="mood-item wide"><img src="imagenes/moodboard7.jpg" /></div>
+  <div class="mood-item"><img src="imagenes/moodboard8.jpg" /></div>
+  <div class="mood-item tall"><img src="imagenes/moodboard9.jpg" /></div>
+  <div class="mood-item tall"><img src="imagenes/moodboard10.jpg" /></div>
+  <div class="mood-item"><img src="imagenes/moodboard11.jpg" /></div>
+  <div class="mood-item"><img src="imagenes/moodboard12.jpg" /></div>
+  <div class="mood-item"><img src="imagenes/moodboard13.jpg" /></div>
+  <div class="mood-item wide"><img src="imagenes/moodboard14.jpg" /></div>
+    <!-- Repite con diferentes clases según la orientación de la imagen -->
+</div>
+</div>
+</section>
+
+
+  <!-- 9. Comentarios -->
+  <section class="evento-comentarios container">
+    <h2>Comentarios del público</h2>
+    <div class="comentarios-lista">
+      <article class="comentario">
+        <p>“Una experiencia inolvidable, súper recomendado.” – Carla M.</p>
+      </article>
+      <article class="comentario">
+        <p>“La música, la luz, la vibra... increíble.” – Jorge R.</p>
+      </article>
+    </div>
+    <button class="btn-comentar">Agregar comentario</button>
+  </section>
+</article>
+
+    </section>
     </main>
 
+        
     <!--pie de pagina-->
     <footer class="pie">
         <div class="footer-content">
@@ -125,5 +288,6 @@
         </div>
     </footer>
     <!--Fin de pie de pagina-->
+    <script src="Script/funciones.js"></script>
 </body>
 </html>
