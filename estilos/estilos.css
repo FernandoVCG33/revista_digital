@@ -1403,7 +1403,7 @@ ul.componentes li {
 
 .agenda-carrusel::-webkit-scrollbar {
   display: none; /* Chrome, Safari */
-=======
+}
 .calendar-header {
     font-size: 50px;  
     font-family: 'Melodrama-Semibold';
@@ -1418,5 +1418,4 @@ ul.componentes li {
     font-size: 18px;
     color:#4C2F26 ;
     text-align: center;
-
 }
