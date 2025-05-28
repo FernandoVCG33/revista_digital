@@ -1082,7 +1082,6 @@ ul.componentes li {
   padding: 3rem 2rem 1rem;
 }
 
-
 .agenda-subtitulo {
   font-size: 1.2rem;
   color: #7a4e67;
@@ -1157,16 +1156,18 @@ align-items: flex-start;
   }
 }
 
-.carrusel{
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 1rem;
-    padding: 1rem 0;
-    scrollbar-width: none;
+.agenda-carrusel{
+  background-color: red; 
+  margin: auto;
+  width: 100%;
+  margin-top: 150px;
+  margin-top: 50px;
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 45px;
 }
 
-.carrusel::-webkit-scrollbar {
+.agenda-carrusel::-webkit-scrollbar {
   display: none; /* Chrome, Safari */
 }
 
