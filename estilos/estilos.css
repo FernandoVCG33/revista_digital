@@ -81,7 +81,32 @@ body {
   background-color: var(--color-primary);
   margin: 0;
   padding: 0;
+  height: 100%;
+  width: 100%;
 }
+
+/*Animacion home*/
+@keyframes banner_home_1 {
+    0%{
+        background: url(https://images.pexels.com/photos/1509534/pexels-photo-1509534.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2) center no-repeat ;
+   background-size: cover;
+    }
+    33%{
+        background: url(https://images.pexels.com/photos/1269968/pexels-photo-1269968.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2) center no-repeat ;
+   background-size: cover;
+    }
+    66% {
+        background: url(https://images.pexels.com/photos/32247341/pexels-photo-32247341/free-photo-of-estatuas-decorativas-de-elefantes-en-un-jardin.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2) center no-repeat ;
+   background-size: cover;
+    }
+    99%{
+        background: url(https://images.pexels.com/photos/32239862/pexels-photo-32239862/free-photo-of-mujer-tulumayo.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2) center no-repeat ;
+   background-size: cover;
+    }
+   
+}
+/*Fin de animacion home*/
+
 
 .button {
   padding: var(--spacing-sm) var(--spacing-md);
@@ -1124,16 +1149,12 @@ h5 {
 
 .banner {
   position: relative;
-  margin: auto;
-  margin-top: 40px;
-  width: 85%;
-  max-height: 500px;
-  background: url(../imagenes/banner_def.png) no-repeat center center;
+  background: url(../imagenes/banner.png) no-repeat center center;
   background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-image 0.5s ease-in-out;
+  animation:  banner_home_1 9s 0.2s infinite normal forwards running; 
 }
 
 .text {
