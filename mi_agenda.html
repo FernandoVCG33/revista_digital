@@ -2,60 +2,55 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../estilos/reset.css">
-    <link rel="stylesheet" href="../estilos/estilos.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <title>Eventos</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../estilos/reset.css">
+  <link rel="stylesheet" href="estilos/estilos.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <title>Eventos</title>
 </head>
 
-<body>      
-=======
-
 <body>
-    <!-- HEADER -->
+  <!-- HEADER -->
 
-    <header class="tambo-header">
-        <!-- Título centrado -->
-        <h1 class="titulo">Tambo</h1>
-        <div class="titulo-container">
-        </div>
+  <header class="tambo-header">
+    <!-- Título centrado -->
+    <h1 class="titulo">Tambo</h1>
+    <div class="titulo-container">
+    </div>
 
-         <!-- Menú hamburguesa -->
-        <input type="checkbox" id="menu-toggle" class="menu-toggle">
-        <label for="menu-toggle" class="menu-icon">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
+    <!-- Menú hamburguesa -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
 
-        <!-- NAV con secciones culturales -->
-        <nav class="tambo-nav">
-            <div id="menuUserIcon">
-                <a href="cuenta.html">
-                <img src="imagenes/user2.png" alt="Usuario" class="icon-img" />
-                </a>
-            </div>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="eventos.html">Eventos</a></li>
-                <li><a href="mi_agenda.html">Mi Agenda</a></li>
-                <li><a href="categorias.html">Categorías</a></li>
-            </ul>            
-        </nav>
-        <!-- Zona donde el JS inserta el botón o los iconos -->
-        <div class="nav-icons" id="zona-usuario"></div>
-        <!-- Aquí JS inserta el botón registrar o los iconos de usuario -->
-    </header>
-    <!--Fin de  HEADER -->
+    <!-- NAV con secciones culturales -->
+    <nav class="tambo-nav">
+      <div id="menuUserIcon">
+        <a href="cuenta.html">
+          <img src="imagenes/user2.png" alt="Usuario" class="icon-img" />
+        </a>
+      </div>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="eventos.html">Eventos</a></li>
+        <li><a href="mi_agenda.html">Mi Agenda</a></li>
+        <li><a href="categorias.html">Categorías</a></li>
+      </ul>
+    </nav>
+    <!-- Zona donde el JS inserta el botón o los iconos -->
+    <div class="nav-icons" id="zona-usuario"></div>
+    <!-- Aquí JS inserta el botón registrar o los iconos de usuario -->
+  </header>
+  <!--Fin de  HEADER -->
 
-
-    </header>  
-    <!-- CONTENIDO PRINCIPAL -->
+  <!-- CONTENIDO PRINCIPAL -->
   <main>
     <!-- TÍTULO -->
     <section class="agenda-header">
@@ -65,14 +60,16 @@
 
 
     <div class="calendar-container">
-    <div class="calendar-header">
+      <div class="calendar-header">
         <h3>Agenda</h3>
         <h1>
-        Noviembre
+          Noviembre
         </h1>
-    </div>
-    <div class="calendar"><span class="day-name">Lunes</span><span class="day-name">Martes</span><span class="day-name">Miercoles</span><span class="day-name">Jueves</span><span class="day-name">Viernes</span><span class="day-name">Sábado</span><span class="day-name">Domingo</span>
-        <div  class="day day--disabled">30</div>
+      </div>
+      <div class="calendar"><span class="day-name">Lunes</span><span class="day-name">Martes</span><span
+          class="day-name">Miercoles</span><span class="day-name">Jueves</span><span
+          class="day-name">Viernes</span><span class="day-name">Sábado</span><span class="day-name">Domingo</span>
+        <div class="day day--disabled">30</div>
         <div class="day day--disabled">31</div>
         <div class="day">1</div>
         <div class="day">2</div>
@@ -107,132 +104,131 @@
         <div class="day">31</div>
         <div class="day day--disabled">1</div>
         <div class="day day--disabled">2</div>
-        </div>
-        </section>
-    <!--pie de pagina-->
-    <footer class="pie">
+      </div>
+      </section>
+      <!--pie de pagina-->
+      <footer class="pie">
         <div class="footer-content">
-            <!-- Logo -->
-            <div class="footer-logo">
-                <h1 class="footer-title">Tambo</h1>
-            </div>
+          <!-- Logo -->
+          <div class="footer-logo">
+            <h1 class="footer-title">Tambo</h1>
+          </div>
 
-            <!-- Navegación -->
-            <div class="footer-nav-container">
-                <ul class="footer-nav">
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="eventos.html">Eventos</a></li>
-                    <li><a href="../mi_agenda.html">Mi Agenda</a></li>
-                    <li><a href="../categorias.html">Categorías</a></li>
-
-
-    <!-- EVENTO DEL JUEVES 08 -->
-    <section class="dia-evento">
-      <div class="encabezado-dia">
-        <p class="dia-semana">Jueves</p>
-        <p class="numero-dia">08</p>
-        <a href="#" class="ver-actividades">Ver actividades</a>
-      </div>
-      <div class="galeria-eventos carrusel">
-        <article class="evento">
-          <img src="imagenes/jueves 08-1.jpg" alt="Danza contemporánea" />
-        </article>
-        <article class="evento">
-          <img src="imagenes/jueves 08-2.jpg" alt="Exposición de arte" />
-        </article>
-      </div>
-    </section>
+          <!-- Navegación -->
+          <div class="footer-nav-container">
+            <ul class="footer-nav">
+              <li><a href="../index.html">Inicio</a></li>
+              <li><a href="eventos.html">Eventos</a></li>
+              <li><a href="../mi_agenda.html">Mi Agenda</a></li>
+              <li><a href="../categorias.html">Categorías</a></li>
 
 
-    <!-- EVENTO DEL MARTES 13 -->
-    <section class="dia-evento">
-      <div class="encabezado-dia">
-        <p class="dia-semana">Martes</p>
-        <p class="numero-dia">13</p>
-        <a href="#" class="ver-actividades">Ver actividades</a>
-      </div>
-      <div class="galeria-eventos">
-        <article class="evento">
-          <img src="imagenes/martes 13-1.jpg" alt="Festival musical" />
-        </article>
-        <article class="evento">
-          <img src="imagenes/martes 13-2.jpg" alt="Obra teatral" />
-        </article>
-        <article class="evento">
-          <img src="imagenes/jueves 08-2.jpg" alt="Exposición de arte" />
-        </article>
-      </div>
-    </section>
+              <!-- EVENTO DEL JUEVES 08 -->
+              <section class="dia-evento">
+                <div class="encabezado-dia">
+                  <p class="dia-semana">Jueves</p>
+                  <p class="numero-dia">08</p>
+                  <a href="#" class="ver-actividades">Ver actividades</a>
+                </div>
+                <div class="galeria-eventos carrusel">
+                  <article class="evento">
+                    <img src="imagenes/jueves 08-1.jpg" alt="Danza contemporánea" />
+                  </article>
+                  <article class="evento">
+                    <img src="imagenes/jueves 08-2.jpg" alt="Exposición de arte" />
+                  </article>
+                </div>
+              </section>
 
 
-
-                <img src="../imagenes/Github.png" alt="Github">
-                <img src="../imagenes/X.png" alt="X">
-                <img src="../imagenes/instagram.png" alt="instagram">
-                <img src="../imagenes/facebook.png" alt="facebook">
-
-
-      <!-- EVENTO DEL MIERCOLES 21 -->
-    <section class="dia-evento">
-      <div class="encabezado-dia">
-        <p class="dia-semana">Miercoles</p>
-        <p class="numero-dia">21</p>
-        <a href="#" class="ver-actividades">Ver actividades</a>
-      </div>
-      <div class="galeria-eventos">
-        <article class="evento">
-          <img src="imagenes/miercoles 21-1.png" alt="Concierto" />
-        </article>
-        <article class="evento">
-          <img src="imagenes/miercoles 21-2.jpg" alt="Feria artesanal" />
-        </article>
-      </div>
-    </section>
+              <!-- EVENTO DEL MARTES 13 -->
+              <section class="dia-evento">
+                <div class="encabezado-dia">
+                  <p class="dia-semana">Martes</p>
+                  <p class="numero-dia">13</p>
+                  <a href="#" class="ver-actividades">Ver actividades</a>
+                </div>
+                <div class="galeria-eventos">
+                  <article class="evento">
+                    <img src="imagenes/martes 13-1.jpg" alt="Festival musical" />
+                  </article>
+                  <article class="evento">
+                    <img src="imagenes/martes 13-2.jpg" alt="Obra teatral" />
+                  </article>
+                  <article class="evento">
+                    <img src="imagenes/jueves 08-2.jpg" alt="Exposición de arte" />
+                  </article>
+                </div>
+              </section>
 
 
 
-        <!-- EVENTO DEL VIERNES 23 -->
-    <section class="dia-evento">
-      <div class="encabezado-dia">
-        <p class="dia-semana">Viernes</p>
-        <p class="numero-dia">23</p>
-        <a href="#" class="ver-actividades">Ver actividades</a>
-      </div>
-      <div class="galeria-eventos">
-        <article class="evento">
-          <img src="imagenes/viernes 23-1.jpg" alt="Exposición fotografica" />
-        </article>
-        <article class="evento">
-          <img src="imagenes/viernes 23-2.jpg" alt="Danza Folklorica" />
-        </article>
-      </div>
-    </section>
+              <img src="../imagenes/Github.png" alt="Github">
+              <img src="../imagenes/X.png" alt="X">
+              <img src="../imagenes/instagram.png" alt="instagram">
+              <img src="../imagenes/facebook.png" alt="facebook">
 
 
-            <!-- EVENTO DEL LUNES 26 -->
-    <section class="dia-evento">
-      <div class="encabezado-dia">
-        <p class="dia-semana">Lunes</p>
-        <p class="numero-dia">26</p>
-        <a href="#" class="ver-actividades">Ver actividades</a>
-      </div>
-      <div class="galeria-eventos">
-        <article class="evento">
-          <img src="imagenes/lunes 26.png" alt="Concierto" />
-        </article>
-      </div>
-    </section>
+              <!-- EVENTO DEL MIERCOLES 21 -->
+              <section class="dia-evento">
+                <div class="encabezado-dia">
+                  <p class="dia-semana">Miercoles</p>
+                  <p class="numero-dia">21</p>
+                  <a href="#" class="ver-actividades">Ver actividades</a>
+                </div>
+                <div class="galeria-eventos">
+                  <article class="evento">
+                    <img src="imagenes/miercoles 21-1.png" alt="Concierto" />
+                  </article>
+                  <article class="evento">
+                    <img src="imagenes/miercoles 21-2.jpg" alt="Feria artesanal" />
+                  </article>
+                </div>
+              </section>
+
+
+
+              <!-- EVENTO DEL VIERNES 23 -->
+              <section class="dia-evento">
+                <div class="encabezado-dia">
+                  <p class="dia-semana">Viernes</p>
+                  <p class="numero-dia">23</p>
+                  <a href="#" class="ver-actividades">Ver actividades</a>
+                </div>
+                <div class="galeria-eventos">
+                  <article class="evento">
+                    <img src="imagenes/viernes 23-1.jpg" alt="Exposición fotografica" />
+                  </article>
+                  <article class="evento">
+                    <img src="imagenes/viernes 23-2.jpg" alt="Danza Folklorica" />
+                  </article>
+                </div>
+              </section>
+
+
+              <!-- EVENTO DEL LUNES 26 -->
+              <section class="dia-evento">
+                <div class="encabezado-dia">
+                  <p class="dia-semana">Lunes</p>
+                  <p class="numero-dia">26</p>
+                  <a href="#" class="ver-actividades">Ver actividades</a>
+                </div>
+                <div class="galeria-eventos">
+                  <article class="evento">
+                    <img src="imagenes/lunes 26.png" alt="Concierto" />
+                  </article>
+                </div>
+              </section>
   </main>
 
 
-        <!-- ⬇️ Este bloque ahora está fuera del "footer-content" ⬇️ -->
-        <div class="footer-copy">
-            © 2025 Tambo - Guía Cultural Paceña
-        </div>
-    </footer>
-    <!--Fin de pie de pagina-->
-    <script src="Script/funciones.js"></script>
+  <!-- ⬇️ Este bloque ahora está fuera del "footer-content" ⬇️ -->
+  <div class="footer-copy">
+    © 2025 Tambo - Guía Cultural Paceña
+  </div>
+  </footer>
+  <!--Fin de pie de pagina-->
+  <script src="Script/funciones.js"></script>
 
 </body>
-
 </html>
