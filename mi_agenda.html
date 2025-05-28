@@ -13,12 +13,16 @@
     <title>Eventos</title>
 </head>
 
+<body>      
+=======
+
 <body>
     <!-- HEADER -->
+
     <header class="tambo-header">
         <!-- Título centrado -->
+        <h1 class="titulo">Tambo</h1>
         <div class="titulo-container">
-            <h1 class="titulo">Tambo</h1>
         </div>
 
          <!-- Menú hamburguesa -->
@@ -48,6 +52,18 @@
         <!-- Aquí JS inserta el botón registrar o los iconos de usuario -->
     </header>
     <!--Fin de  HEADER -->
+
+
+    </header>  
+    <!-- CONTENIDO PRINCIPAL -->
+  <main>
+    <!-- TÍTULO -->
+    <section class="agenda-header">
+      <h2 class="agenda-subtitulo">Agenda</h2>
+      <h1 class="agenda-mes">Mayo</h1>
+    </section>
+
+
     <div class="calendar-container">
     <div class="calendar-header">
         <h3>Agenda</h3>
@@ -110,11 +126,45 @@
                     <li><a href="../categorias.html">Categorías</a></li>
 
 
-                </ul>
-            </div>
+    <!-- EVENTO DEL JUEVES 08 -->
+    <section class="dia-evento">
+      <div class="encabezado-dia">
+        <p class="dia-semana">Jueves</p>
+        <p class="numero-dia">08</p>
+        <a href="#" class="ver-actividades">Ver actividades</a>
+      </div>
+      <div class="galeria-eventos carrusel">
+        <article class="evento">
+          <img src="imagenes/jueves 08-1.jpg" alt="Danza contemporánea" />
+        </article>
+        <article class="evento">
+          <img src="imagenes/jueves 08-2.jpg" alt="Exposición de arte" />
+        </article>
+      </div>
+    </section>
 
-            <!-- Redes sociales -->
-            <div class="footer-social">
+
+    <!-- EVENTO DEL MARTES 13 -->
+    <section class="dia-evento">
+      <div class="encabezado-dia">
+        <p class="dia-semana">Martes</p>
+        <p class="numero-dia">13</p>
+        <a href="#" class="ver-actividades">Ver actividades</a>
+      </div>
+      <div class="galeria-eventos">
+        <article class="evento">
+          <img src="imagenes/martes 13-1.jpg" alt="Festival musical" />
+        </article>
+        <article class="evento">
+          <img src="imagenes/martes 13-2.jpg" alt="Obra teatral" />
+        </article>
+        <article class="evento">
+          <img src="imagenes/jueves 08-2.jpg" alt="Exposición de arte" />
+        </article>
+      </div>
+    </section>
+
+
 
                 <img src="../imagenes/Github.png" alt="Github">
                 <img src="../imagenes/X.png" alt="X">
@@ -122,8 +172,58 @@
                 <img src="../imagenes/facebook.png" alt="facebook">
 
 
-            </div>
-        </div>
+      <!-- EVENTO DEL MIERCOLES 21 -->
+    <section class="dia-evento">
+      <div class="encabezado-dia">
+        <p class="dia-semana">Miercoles</p>
+        <p class="numero-dia">21</p>
+        <a href="#" class="ver-actividades">Ver actividades</a>
+      </div>
+      <div class="galeria-eventos">
+        <article class="evento">
+          <img src="imagenes/miercoles 21-1.png" alt="Concierto" />
+        </article>
+        <article class="evento">
+          <img src="imagenes/miercoles 21-2.jpg" alt="Feria artesanal" />
+        </article>
+      </div>
+    </section>
+
+
+
+        <!-- EVENTO DEL VIERNES 23 -->
+    <section class="dia-evento">
+      <div class="encabezado-dia">
+        <p class="dia-semana">Viernes</p>
+        <p class="numero-dia">23</p>
+        <a href="#" class="ver-actividades">Ver actividades</a>
+      </div>
+      <div class="galeria-eventos">
+        <article class="evento">
+          <img src="imagenes/viernes 23-1.jpg" alt="Exposición fotografica" />
+        </article>
+        <article class="evento">
+          <img src="imagenes/viernes 23-2.jpg" alt="Danza Folklorica" />
+        </article>
+      </div>
+    </section>
+
+
+            <!-- EVENTO DEL LUNES 26 -->
+    <section class="dia-evento">
+      <div class="encabezado-dia">
+        <p class="dia-semana">Lunes</p>
+        <p class="numero-dia">26</p>
+        <a href="#" class="ver-actividades">Ver actividades</a>
+      </div>
+      <div class="galeria-eventos">
+        <article class="evento">
+          <img src="imagenes/lunes 26.png" alt="Concierto" />
+        </article>
+      </div>
+    </section>
+  </main>
+
 
         <!-- ⬇️ Este bloque ahora está fuera del "footer-content" ⬇️ -->
         <div class="footer-copy">
@@ -132,6 +232,7 @@
     </footer>
     <!--Fin de pie de pagina-->
     <script src="Script/funciones.js"></script>
+
 </body>
 
 </html>
