@@ -1077,292 +1077,97 @@ ul.componentes li {
 /*fin de carruseld e eventos*/
 
 /* Inicio mi_agenda */
-@font-face {
-  font-family: 'Melodrama-Light';
-  src: url('../fonts/Melodrama-Light.woff2') format('woff2'),
-       url('../fonts/Melodrama-Light.woff') format('woff'),
-       url('../fonts/Melodrama-Light.ttf') format('truetype');
-  font-weight: 300;
-  font-display: swap;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Melodrama-Semibold';
-  src: url('../fonts/Melodrama-Semibold.woff2') format('woff2'),
-       url('../fonts/Melodrama-Semibold.woff') format('woff'),
-       url('../fonts/Melodrama-Semibold.ttf') format('truetype');
-  font-weight: 600;
-  font-display: swap;
-  font-style: normal;
-}
-
-html,
-
-body { 
-  background: #F7F7EC;
-  padding: 40px 0;
-  box-sizing: border-box;
-  font-family: 'Melodrama-light';
-  color: #4C2F26; /* color general*/
-}
-
-.calendar {
-  margin: 0 auto;  
-  display: grid;
-  width: 100%;
-  grid-template-columns: repeat(7,120px);
-  grid-template-rows: 120px;
-  grid-auto-rows:120px;
-  overflow: auto;
-  color: #8C5067;
-
-  &-container {
-    width: 90%;
-    margin: auto;
-    overflow: hidden;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    background: #fff;
-    max-width: 1200px;
-    
-}
-
-  &-header {
-    text-align: center;
-    padding: 20px 0;
-    background: linear-gradient(
-      to bottom,
-      rgb(250, 251, 253) 0%,
-      rgba(255, 255, 255, 0) 100%
-    );
-    border-bottom: 1px solid rgba(166, 168, 179, 0.12);
-
-    h3 {
-        color: var(--variante, );
-        font-family: Melodrama;
-        font-size: 49.77px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 150%; /* 74.655px */
-        letter-spacing: -0.547px;
-     
-        };
-    }
-
-    .button {
-      background: 0;
-      border: 0;
-      padding: 0;
-      color: rgba(#51565d, 0.7);
-      cursor: pointer;
-      outline: 0;
-    }
-  }
-
-.day {
-  border: 0.3px solid #8C5067;  
+.agenda-header {
   text-align: left;
-  padding: 14px 20px;
-  letter-spacing: 1px;
-  font-family: 'Melodrama-Semibold';
-  font-size: 12px;
-  box-sizing: border-box;
-  color: #4C2634;
+  padding: 3rem 2rem 1rem;
+}
+
+
+.agenda-subtitulo {
+  font-size: 1.2rem;
+  color: #7a4e67;
+}
+
+.agenda-mes {
+  font-size: 6rem;
+  font-weight: 800;
+  color: #471b2f;
+  margin-top: -10px;
+}
+
+/* ========== SECCIÓN POR DÍA ========== */
+.dia-evento {
+  padding: 2rem;
+}
+
+.encabezado-dia {
+display: flex;
+width: 1375px;
+justify-content: space-between;
+align-items: flex-start;
+}
+
+.dia-semana {
+  font-size: 1.2rem;
+  color: #7a7a7a;
+}
+
+.numero-dia {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #41532b;
+  margin-left: 1rem;
+}
+
+.ver-actividades {
+  font-size: 1rem;
+  color: #6b6b6b;
+  text-decoration: none;
+}
+
+/* ========== GALERÍA DE EVENTOS ========== */
+.galeria-eventos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.evento img {
+  width: auto;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
   position: relative;
-  pointer-events: none;
-  z-index: 1;
+  transition: transform 0.5s ease; /* Suaviza la animación */
+  display: block;
+}
 
-  &:nth-of-type(7n + 7) {
-    border-right: 1;
+.evento:hover img {
+  transform: scale(1.1); /* Aplica zoom suave */
+}
+
+@media (max-width: 480px) {
+  .galeria-eventos {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
   }
 
-  &:nth-of-type(n + 1):nth-of-type(-n + 7) {
-    grid-row: 2;
-  }
-
-  &:nth-of-type(n + 8):nth-of-type(-n + 14) {
-    grid-row: 3;
-  }
-
-  &:nth-of-type(n + 15):nth-of-type(-n + 21) {
-    grid-row: 4;
-  }
-
-  &:nth-of-type(n + 22):nth-of-type(-n + 28) {
-    grid-row: 5;
-  }
-
-  &:nth-of-type(n + 29):nth-of-type(-n + 35) {
-    grid-row: 6;
-  }
-
-  &:nth-of-type(7n + 1) {
-    grid-column: 1/1;
-  }
-
-  &:nth-of-type(7n + 2) {
-    grid-column: 2/2;
-  }
-
-  &:nth-of-type(7n + 3) {
-    grid-column: 3/3;
-  }
-
-  &:nth-of-type(7n + 4) {
-    grid-column: 4/4;
-  }
-
-  &:nth-of-type(7n + 5) {
-    grid-column: 5/5;
-  }
-
-  &:nth-of-type(7n + 6) {
-    grid-column: 6/6;
-  }
-  &:nth-of-type(7n + 7) {
-    grid-column: 7/7;
-  }
-
-  &-name {
-    font-family: 'Melodrama-Semibold';
-    font-size: 12px;
-    text-transform: uppercase;
-    color: #99a1a7;
-    text-align: center;
-    border-bottom: 1px solid rgba(166, 168, 179, 0.12);
-    line-height: 50px;
-    font-weight: 500;
-  }
-
-  &--disabled {
-    color: rgba(#98a0a6, 0.6);
-    background-color: #ffffff;
-    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23f9f9fa' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
-    cursor: not-allowed;
+  .evento img {
+    aspect-ratio: 4 / 3; /* Ajuste opcional para pantallas pequeñas */
   }
 }
 
-.task {
-  border-left-width: 3px;
-  padding: 8px 12px;
-  margin: 10px;
-  border-left-style: solid;
-  font-size: 14px;
-  position: relative;
-
-  &--warning {
-    border-left-color: #fdb44d;
-    grid-column: 4 / span 3;
-    grid-row: 3;
-    background: #fef0db;
-    align-self: center;
-    color: darken(#fdb44d, 12%);
-    margin-top: -5px;
-  }
-
-  &--danger {
-    border-left-color: #fa607e;
-    grid-column: 2 / span 3;
-    grid-row: 3;
-    margin-top: 15px;
-    background: rgba(#fdc5d0, 0.7);
-    align-self: end;
-    color: darken(#fa607e, 12%);
-  }
-
-  &--info {
-    border-left-color: #4786ff;
-    grid-column: 6 / span 2;
-    grid-row: 5;
-    margin-top: 15px;
-    background: rgba(#dae7ff, 0.7);
-    align-self: end;
-    color: darken(#4786ff, 12%);
-  }
-
-  &--primary {
-    background: #4786ff;
-    border: 0;
-    border-radius: 4px;
-    grid-column: 3 / span 3;
-    grid-row: 4;
-    align-self: end;
-    color: #fff;
-    box-shadow: 0 10px 14px rgba(#4786ff, 0.4);
-  }
-
-  &__detail {
-    position: absolute;
-    left: 0;
-    top: calc(100% + 10px);
-    background: #fff;
-    border: 1px solid rgba(166, 168, 179, 0.2);
-    color: #000;
-    padding: 20px;
-    box-sizing: border-box;
-    border-radius: 4px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-    z-index: 2;
-
-    &:after,
-    &:before {
-      bottom: 100%;
-      left: 30%;
-      border: solid transparent;
-      content: " ";
-      height: 0;
-      width: 0;
-      position: absolute;
-      pointer-events: none;
-    }
-
-    &:before {
-      border-bottom-color: rgba(166, 168, 179, 0.2);
-      border-width: 8px;
-      margin-left: -8px;
-    }
-
-    &:after {
-      border-bottom-color: #fff;
-      border-width: 6px;
-      margin-left: -6px;
-    }
-
-    h2 {
-      font-size: 15px;
-      margin: 0;
-      color: #51565d;
-    }
-
-    p {
-      margin-top: 4px;
-      font-size: 12px;
-      margin-bottom: 0;
-      font-weight: 500;
-      color: rgba(#51565d, 0.7);
-    }
-  }
+.carrusel{
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: none;
 }
 
-.task_task--warning{
-    margin-top: auto;
-    font-size: 3rem;
+.carrusel::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
 }
 
-h1 {
-    font-size: 7em;  
-    font-family: 'Melodrama-Semibold';
-    margin: 0;
-    color: #4C2F26;
-    font-weight: 3000;
-    letter-spacing: -1.1%;
-    }
-
-.day-name {
-    font-family: 'Melodrama-Semibold';
-    font-size: 18px;
-    color:#4C2F26 ;
-    text-align: center;
-}
 /* Fin de mi_agenda */ 
