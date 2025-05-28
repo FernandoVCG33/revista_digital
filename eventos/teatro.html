@@ -11,33 +11,38 @@
     <title>Eventos-Teatro</title>
 </head>
 <body>
-    <!-- HEADER -->
+   <!-- HEADER -->
     <header class="tambo-header">
         <!-- Título centrado -->
         <div class="titulo-container">
             <h1 class="titulo">Tambo</h1>
         </div>
 
+         <!-- Menú hamburguesa -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
         <!-- NAV con secciones culturales -->
         <nav class="tambo-nav">
+            <div id="menuUserIcon">
+                <a href="../cuenta.html">
+                <img src="../imagenes/user2.png" alt="Usuario" class="icon-img" />
+                </a>
+            </div>
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
-                <li><a href="eventos.html">Eventos</a></li>
+                <li><a href="../eventos.html">Eventos</a></li>
                 <li><a href="../mi_agenda.html">Mi Agenda</a></li>
                 <li><a href="../categorias.html">Categorías</a></li>
-            </ul>
+            </ul>            
         </nav>
-
-        <!-- Íconos de notificación y cuenta -->
-        <div class="nav-icons">
-            <a href="#">
-                <img src="../imagenes/bell.png" alt="Notificaciones" class="icon-img">
-            </a>
-            <a href="../cuenta.html">
-                <img src="../imagenes/user.png" alt="Cuenta" class="icon-img">
-            </a>
-        </div>
-        
+        <!-- Zona donde el JS inserta el botón o los iconos -->
+        <div class="nav-icons" id="zona-usuario"></div>
+        <!-- Aquí JS inserta el botón registrar o los iconos de usuario -->
     </header>
     <!--Fin de  HEADER -->
     <!-- Main basico "propuesta"-->
@@ -95,6 +100,6 @@
         </div>
     </footer>
     <!--Fin de pie de pagina-->
-    <script src="Script/funciones.js"></script>
+    <script src="../Script/funciones.js"></script>
 </body>
 </html>

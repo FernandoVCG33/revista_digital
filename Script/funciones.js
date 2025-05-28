@@ -52,13 +52,13 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-  //cierra sesiòn y vuelve al inicio
+//cierra sesiòn y vuelve al inicio
 document.addEventListener("DOMContentLoaded", () => {
   const cerrarSesionBtn = document.querySelector(".cerrar-sesion-btn");
   if (cerrarSesionBtn) {
     cerrarSesionBtn.addEventListener("click", () => {
-      localStorage.removeItem("usuarioLogueado"); 
-      window.location.href = "index.html";    
+      localStorage.removeItem("usuarioLogueado");
+      window.location.href = "index.html";
     });
   }
 });
@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   //  MANEJO DEL LOGIN
- loginForm.addEventListener("submit", (e) => {
+  loginForm.addEventListener("submit", (e) => {
     e.preventDefault(); // Evita el envío real del formulario
 
     // Simulamos login exitoso
@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
   });
 
-//  MANEJO DEL REGISTRO
+  //  MANEJO DEL REGISTRO
   registerForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -157,3 +157,21 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
   });
 });
+
+
+
+
+
+
+
+/*Banner del home */
+const botones = document.querySelectorAll('.componentes li');
+const banner = document.querySelector('.banner');
+
+botones.forEach(boton => {
+  boton.addEventListener('click', () => {
+    const nuevaImagen = boton.getAttribute('data-image');
+    banner.style.backgroundImage = nuevaImagen;
+  });
+});
+/*fin de banner de home */

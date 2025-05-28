@@ -77,7 +77,7 @@ body {
 font-family: var(--font-family-base);
 font-size: var(--font-size-base);
 color: var(--color-gray-900);
-background-color: var(--color-white);
+background-color: var(--color-primary);
 margin: 0;
 padding: 0;
 }
@@ -118,12 +118,14 @@ main, section {
 
 /* Contenedor principal del footer */
 .pie {
-  background-color: var(--color-primary-purple);
-  color: var(--color-white);
+  background-color: var(--color-primary);
+  color: var(--color-black);
   padding: 50px var(--spacing-xl) 40px;
   font-size: 16px;
   font-weight: lighter;
-
+  border-top: 4px solid var(--color-primary-purple);
+  height: 128px;
+  
 }
 
 
@@ -164,6 +166,7 @@ main, section {
   font-size: 33px;
   width: 177px;
   height: 33px;
+  
 }
 
 /* Navegación */
@@ -181,6 +184,10 @@ main, section {
   margin: 0;
   padding: 0;
   list-style: none;
+  font-size: 16px;
+  font-weight: normal;
+
+
 }
 .footer-nav {
   display: flex;
@@ -194,18 +201,42 @@ main, section {
 }
 
 .footer-nav li:not(:last-child)::after {
-  content: "|";
-  color: var(--color-gray-300);
-  margin-left: var(--spacing-sm);
-  margin-right: var(--spacing-sm);
+  content: "";
+  display: inline-block;
+  height: 25px; 
+  width: 1px;
+  background-color: var(--color-black);
+  margin-left: 22px;
+  margin-right: 22px;
 }
+
 
 /* Copyright abajo de las redes sociales */
 .footer-copy {
   grid-column: 1 / -1;
   grid-row: 2;
   text-align: right;
-  font-size: 13.3px;
+  font-size: 16px;
+  font-weight: normal;
+  
+}
+
+@media (max-width: 768px) {
+  .footer-nav-container,
+  .footer-social {
+    display: none;
+  }
+
+  .footer-logo {
+    text-align: center;
+    width: 100%;
+  }
+
+  .footer-copy {
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;
+  }
 }
 
 /* Card en codigo (Diseño del equipo de UX) */
@@ -216,12 +247,13 @@ main, section {
 }
 
 .card-evento {
-  width: 240px;
-  background-color: var(--color-gray-200);
+  width: 236px;
+  height: 368px;
+  background-color: #E1E3D4;
   border-radius: var(--border-radius-md);
   box-shadow: var(--box-shadow-md);
   overflow: hidden;
-  font-family: var(--font-family-base);
+  font-family: "Raleway", sans-serif;
   display: flex;
   flex-direction: column;
   transition: transform 0.3s ease;
@@ -229,27 +261,30 @@ main, section {
 }
 
 .card-evento:hover {
-  transform: scale(1.03);
+  transform: scale(1.05);
+  height: 518px;
 }
 
 .card-imagen-bloque {
   display: flex;
   flex-direction: row;
   position: relative;
-  height: 180px;
+  height: 210px;
 }
 
 .card-titulo {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
-  font-size: 40px;
-  font-weight: var(--font-weight-black);
+  font-family: "Raleway", sans-serif;
+  font-weight: 450;
+  font-size: 33px;
   margin: 0;
   padding: var(--spacing-sm) var(--spacing-xs);
   background-color: transparent;
-  color: var(--color-black);
+  color: #4C2634;
   align-self: stretch;
-  margin-right: 10px;
+  margin-right: 1px;
+  line-height: 1.2;
 }
 
 .card-imagen {
@@ -276,7 +311,7 @@ main, section {
   bottom: var(--spacing-sm);
   left: 0;
   width: 100%;
-  font-size: var(--font-size-sm);
+  font-size: 19px;
   font-weight: var(--font-weight-normal);
   color: var(--color-black);
   background-color: rgba(255, 255, 255, 0.8);
@@ -297,53 +332,39 @@ main, section {
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
   gap: var(--spacing-xs);
-  color: var(--color-black);
 }
 
 .card-dia {
-  font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-black);
+  font-size: 55px;
+  font-weight: 500;
+  color: #4C2634;
 }
 
 .card-mes {
-  font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-normal);
+  font-size: 44px;
+  font-weight: 500;
 }
 
 .card-dia-nombre {
   width: 100%;
-  font-size: var(--font-size-sm);
+  font-size: 19px;
   font-weight: var(--font-weight-light);
-  margin-top: -4px;
+  margin-top: -15px;
 }
 
 .card-descripcion {
-  font-size: var(--font-size-sm);
+  font-size: 14px;
   color: var(--color-gray-800);
   max-height: 0;
   opacity: 0;
   overflow: hidden;
   transition: max-height 0.3s ease, opacity 0.3s ease;
+  line-height: 1.2;
 }
 
 .card-evento:hover .card-descripcion {
-  max-height: 100px;
+  max-height: 100%;
   opacity: 1;
-}
-
-.card-boton {
-  align-self: flex-end;
-  background-color: var(--color-black);
-  color: var(--color-white);
-  border: none;
-  border-radius: var(--border-radius-sm);
-  padding: var(--spacing-xs) var(--spacing-lg);
-  font-size: var(--font-size-sm);
-  cursor: pointer;
-}
-
-.card-boton:hover {
-  background-color: var(--color-gray-900);
 }
 
 .card-img-real {
@@ -359,11 +380,12 @@ main, section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--color-primary-purple);
+    background-color: transparent;
     padding: var(--spacing-xl);
     width: 100%;
     height: 122px;
     position: relative;
+    border-bottom: 5px solid var(--color-primary-purple);
 }
 
 /* Contenedor para el título */
@@ -379,11 +401,13 @@ main, section {
     font-family: 'Melodrama';
     font-size: 47px;
     font-weight: var(--font-weight-normal);
-    color: var(--color-primary);
+    color: var(--color-black);
     margin: 0;
 }
-
-/* Barra de navegación*/
+.titulo > h3, h5{
+  color: var(--color-white);
+}
+/* Barra de navegación */
 .tambo-nav {
     display: flex;
     align-items: center;
@@ -403,12 +427,11 @@ main, section {
     padding: 0;
 }
 
-
 .tambo-nav a {
     text-decoration: none;
-    color: var(--color-primary);
+    color: var(--color-black);
     font-weight: var(--font-weight-normal);
-    font-size:var(--font-size-nav);
+    font-size: var(--font-size-nav);
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
@@ -417,7 +440,7 @@ main, section {
     transform: scale(1.05);
 }
 
-/* Íconos de usuario y notificaciones */
+/* Íconos de usuario y botón */
 .nav-icons {
     display: flex;
     align-items: center;
@@ -426,61 +449,169 @@ main, section {
     justify-content: flex-end;
 }
 
-.nav-icons img {
-    width: 46px;
-    height: 46px;
-}
 
-.nav-icons i {
-    font-size: var(--font-size-xl);
+.nav-icons button {
+    background-color: var(--color-primary-purple);
     color: var(--color-primary);
-    transition: transform 0.3s ease;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 36px;
+    cursor: pointer;
+    font-size: 19.2px;
+    width: 174px;
+    height: 49px;
 }
 
-.nav-icons i:hover {
-    transform: scale(1.2);
+.nav-icons button:hover {
+    background-color: var(--color-secondary);
 }
 
-#zona-usuario button {
-  background-color: rgba(106, 80, 88, 1);
-  color: var(--color-primary);
-  border: none;
-  padding: 8px 16px;
-  border-radius: 36px;
+
+
+/* Estilos del botón hamburguesa */
+.menu-toggle {
+    display: none;
+}
+
+.menu-toggle:checked + .menu-icon span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-toggle:checked + .menu-icon span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle:checked + .menu-icon span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
   cursor: pointer;
-  font-weight: 19.2px;
-  width: 174px;
-  height: 49px;
+  z-index: 1001;
+  padding: 10px;
 }
 
-#zona-usuario button:hover {
-  background-color: var(--color-secondary);
+.menu-icon span {
+  width: 30px;
+  height: 3px;
+  background-color: var(--color-black);
+  border-radius: 3px;
+  transition: all 0.3s ease;
 }
-
-/* Responsividad */
+#menuUserIcon {
+  display: none;
+}
+/* Responsive */
 @media (max-width: 768px) {
     .tambo-header {
-        flex-direction: column;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: var(--spacing-md);
         height: auto;
+        
     }
 
     .titulo-container {
-        position: static;
-        transform: none;
-        margin: var(--spacing-sm) 0;
-    }
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+  }
+
+    .menu-icon {
+    position: absolute;
+    top: 25px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 1001;
+    padding: 10px;
+    transition: left 0.3s ease;
+}
 
     .tambo-nav {
-        width: 100%;
-        justify-content: center;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 350px;
+    height: 100vh;
+    background-color: var(--color-primary-purple);
+    padding: 100px 20px 20px;
+    transition: left 0.3s ease;
+    z-index: 1000;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+    .tambo-nav ul {
+      flex-direction: column;
+      gap: 40px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
     }
 
+     .menu-toggle:checked + .menu-icon + .tambo-nav {
+      left: 0;
+  }
+
+    .menu-toggle:checked + .menu-icon span {
+    background-color: white;
+  }
+
+    .menu-toggle:checked + .menu-icon {
+    left: 280px;
+  }
+
     .nav-icons {
-        justify-content: center;
-        width: 100%;
-        margin-top: var(--spacing-sm);
+      margin-left: auto;
+      order: 2;
     }
+
+    .nav-icons button {
+      width: auto;
+        height: 40px;
+        padding: 0 16px;
+    }
+
+    .tambo-nav a {
+      color: var(--color-primary);
+      font-size: 18px;
+      text-decoration: none;
+  }
 }
+
+
+@media (max-width: 768px) {
+
+  #menuUserIcon {
+    display: block;
+    align-self: flex-start;
+    margin-bottom: 40px;
+    margin-top: -30px; /* lo sube un poco */
+  }
+  /* Ocultamos el ícono user dentro de nav-icons */
+  .nav-icons a[href="cuenta.html"] {
+    display: none;
+  }
+
+  /* Mostramos el ícono campana siempre */
+  .nav-icons a[href="notificaciones.html"] {
+    display: inline-block;
+  }
+
+  
+}
+
+
+
+
 
 /*inicio de carrusel*/
 .prox{
@@ -511,7 +642,7 @@ main, section {
     margin-top: 0;
     position: relative;
     width: 100%;
-    height: 400px; /* Altura fija recomendada */
+   
     background: url(https://pohcdn.com/sites/default/files/styles/paragraph__live_banner__lb_image__1880bp/public/live_banner/La-Paz.jpg) no-repeat center center;
     background-size: cover;
     display: flex;
@@ -521,7 +652,7 @@ main, section {
 
 .text {
     background-color: #21252995;
-    width: 100%;
+    width: 85%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -535,6 +666,7 @@ main, section {
 .text h1 {
     font-size: 2.5rem;
     font-weight: 600;
+    color: var(--color-gray-100);
 
 }
 /* Fin de banner */
@@ -875,7 +1007,7 @@ main, section {
   background: url(https://pohcdn.com/sites/default/files/styles/paragraph__live_banner__lb_image__1880bp/public/live_banner/La-Paz.jpg) no-repeat center;
   background-size: cover;
   display: flex;
-  width: 410px;
+  width: 550px;
   height: 321px;
   padding: 8px 16px;
   flex-direction: column;
@@ -900,14 +1032,7 @@ main, section {
   background-color: transparent;
 }
 
-.titulo {
-  color: var(--color-gray-300);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
-  align-self: stretch;
-}
+
 
 .especificaciones {
   display: flex;
@@ -941,12 +1066,12 @@ main, section {
   flex-direction: column;
   align-items: flex-start;
 }
-.c2{
-  background:url(../imagenes/carrusel.png) no-repeat center;
+.c1{
+  background:url(../imagenes/card_home_1.png) no-repeat center;
   background-size: cover;
 }
-.c3{
-  background: url(../imagenes/carrusel.png) no-repeat center;
+.c2{
+  background: url(../imagenes/card_home_2.png) no-repeat center;
   background-size: cover;
 }
 /*fin de carrusel*/
@@ -968,17 +1093,17 @@ main, section {
 }
 
 .banner {
-  margin-top: 0;
   position: relative;
   margin: auto;
-  width: 80%;
-  height: 300px;
-  /* Altura fija recomendada */
-  background: url(../imagenes/banner.png) no-repeat center center;
+  margin-top: 40px;
+  width: 85%;
+  max-height: 500px;
+  background: url(../imagenes/banner_def.png) no-repeat center center;
   background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-image 0.5s ease-in-out;
 }
 
 .text {
@@ -996,9 +1121,13 @@ main, section {
 }
 
 .text h1 {
-  font-size: 2.5rem;
-  font-weight: 600;
-
+  font-family: var(--font-size-base);
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 400;
+}
+.text h3{
+  font-weight: 100;
 }
 
 ul.componentes {
@@ -1012,15 +1141,44 @@ ul.componentes {
 }
 
 ul.componentes li {
+  cursor: pointer;
   width: 41px;
   height: 9px;
   background-color: #d9d9d9;
   /* gris como en la imagen */
-  border-radius: 6px;
+  border-radius: 1px;
   /* bordes redondeados */
 }
+ul.componentes {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+ul.componentes li {
+  width: 40px;
+  height: 8px;
+  background-color: #d9d9d9;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
 @media (width <=880px) {
   .banner{
+    width: 100%;
+    height: 850px;
+  }
+  .carrusel{
+    width: 100%;
+  }
+  .carrusel .card_home{
     width: 100%;
   }
   
@@ -1068,11 +1226,22 @@ ul.componentes li {
   background-size: cover;
 }
 .proximos_eventos{
+  font-size: 20pt;
+  margin-top: 40px;
   width: 35%;
   background-color: var(--color-primary-purple);
   font-weight: 200;
-  color: var(--color-secondary-green-light);
-  padding: 8px 16px;
+  color: #ffffff;
+  padding: 25px 16px;
+}
+.eventostitulo{
+  font-size: 20pt;
+  margin-top: 40px;
+  width: 35%;
+  background-color: var(--color-primary-purple);
+  font-weight: 200;
+  color: #ffffff;
+  padding: 25px 16px;
 }
 /*fin de carruseld e eventos*/
 
@@ -1093,6 +1262,7 @@ ul.componentes li {
   color: #471b2f;
   margin-top: -10px;
 }
+=======
 
 /* ========== SECCIÓN POR DÍA ========== */
 .dia-evento {
@@ -1167,8 +1337,25 @@ align-items: flex-start;
   margin-bottom: 45px;
 }
 
+
 .agenda-carrusel::-webkit-scrollbar {
   display: none; /* Chrome, Safari */
+=======
+.calendar-header {
+    font-size: 50px;  
+    font-family: 'Melodrama-Semibold';
+    margin: 0;
+    color: #4C2F26;
+    font-weight: 3000;
+    letter-spacing: -1.1%;
+    }
+
+.day-name {
+    font-family: 'Melodrama-Semibold';
+    font-size: 18px;
+    color:#4C2F26 ;
+    text-align: center;
+
 }
 
 /* Fin de mi_agenda */ 
