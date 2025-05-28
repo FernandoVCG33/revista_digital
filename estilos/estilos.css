@@ -404,7 +404,9 @@ main, section {
     color: var(--color-black);
     margin: 0;
 }
-
+.titulo > h3, h5{
+  color: var(--color-white);
+}
 /* Barra de navegación */
 .tambo-nav {
     display: flex;
