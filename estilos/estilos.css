@@ -1246,15 +1246,22 @@ ul.componentes li {
 /*fin de carruseld e eventos*/
 
 /* Inicio mi_agenda */
+
+/* ========== HEADER ========== */
+
+
+/* ========== TITULAR ========== */
 .agenda-header {
   text-align: left;
   padding: 3rem 2rem 1rem;
 }
 
+
 .agenda-subtitulo {
   font-size: 1.2rem;
   color: #7a4e67;
 }
+
 
 .agenda-mes {
   font-size: 6rem;
@@ -1262,12 +1269,13 @@ ul.componentes li {
   color: #471b2f;
   margin-top: -10px;
 }
-=======
+
 
 /* ========== SECCIÓN POR DÍA ========== */
 .dia-evento {
   padding: 2rem;
 }
+
 
 .encabezado-dia {
 display: flex;
@@ -1276,10 +1284,12 @@ justify-content: space-between;
 align-items: flex-start;
 }
 
+
 .dia-semana {
   font-size: 1.2rem;
   color: #7a7a7a;
 }
+
 
 .numero-dia {
   font-size: 3rem;
@@ -1288,11 +1298,13 @@ align-items: flex-start;
   margin-left: 1rem;
 }
 
+
 .ver-actividades {
   font-size: 1rem;
   color: #6b6b6b;
   text-decoration: none;
 }
+
 
 /* ========== GALERÍA DE EVENTOS ========== */
 .galeria-eventos {
@@ -1300,6 +1312,9 @@ align-items: flex-start;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
 }
+
+
+
 
 .evento img {
   width: auto;
@@ -1311,9 +1326,11 @@ align-items: flex-start;
   display: block;
 }
 
+
 .evento:hover img {
   transform: scale(1.1); /* Aplica zoom suave */
 }
+
 
 @media (max-width: 480px) {
   .galeria-eventos {
@@ -1321,41 +1338,25 @@ align-items: flex-start;
     gap: 0.5rem;
   }
 
+
   .evento img {
     aspect-ratio: 4 / 3; /* Ajuste opcional para pantallas pequeñas */
   }
 }
 
-.agenda-carrusel{
-  background-color: red; 
-  margin: auto;
-  width: 100%;
-  margin-top: 150px;
-  margin-top: 50px;
-  display: flex;
-  flex-flow: row wrap;
-  margin-bottom: 45px;
+
+.carrusel-agenda{
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: none;
 }
 
 
-.agenda-carrusel::-webkit-scrollbar {
+.carrusel-agenda::-webkit-scrollbar {
   display: none; /* Chrome, Safari */
-=======
-.calendar-header {
-    font-size: 50px;  
-    font-family: 'Melodrama-Semibold';
-    margin: 0;
-    color: #4C2F26;
-    font-weight: 3000;
-    letter-spacing: -1.1%;
-    }
-
-.day-name {
-    font-family: 'Melodrama-Semibold';
-    font-size: 18px;
-    color:#4C2F26 ;
-    text-align: center;
-
 }
 
 /* Fin de mi_agenda */ 
