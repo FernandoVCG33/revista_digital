@@ -1284,10 +1284,14 @@ ul.componentes li {
   color: #ffffff;
   padding: 25px 16px;
 }
+
 /*fin de carruseld e eventos*/
 
-
 /* Inicio mi_agenda */
+
+/* ========== HEADER ========== */
+
+
 /* ========== TITULAR ========== */
 .agenda-header {
   text-align: left;
@@ -1314,17 +1318,20 @@ ul.componentes li {
   padding: 2rem;
 }
 
+
 .encabezado-dia {
-display: flex;
-width: 1375px;
-justify-content: space-between;
-align-items: flex-start;
+  display: flex;
+  width: 1375px;
+  justify-content: space-between;
+  align-items: flex-start;
 }
+
 
 .dia-semana {
   font-size: 1.2rem;
   color: #7a7a7a;
 }
+
 
 .numero-dia {
   font-size: 3rem;
@@ -1333,11 +1340,13 @@ align-items: flex-start;
   margin-left: 1rem;
 }
 
+
 .ver-actividades {
   font-size: 1rem;
   color: #6b6b6b;
   text-decoration: none;
 }
+
 
 /* ========== GALERÍA DE EVENTOS ========== */
 .galeria-eventos {
@@ -1346,18 +1355,24 @@ align-items: flex-start;
   gap: 1rem;
 }
 
+
+
+
 .evento img {
   width: auto;
   height: auto;
   border-radius: 10px;
   object-fit: cover;
   position: relative;
-  transition: transform 0.5s ease; /* Suaviza la animación */
+  transition: transform 0.5s ease;
+  /* Suaviza la animación */
   display: block;
 }
 
+
 .evento:hover img {
-  transform: scale(1.1); /* Aplica zoom suave */
+  transform: scale(1.1);
+  /* Aplica zoom suave */
 }
 
 
@@ -1369,498 +1384,38 @@ align-items: flex-start;
 
 
   .evento img {
-    aspect-ratio: 4 / 3; /* Ajuste opcional para pantallas pequeñas */
+    aspect-ratio: 4 / 3;
+    /* Ajuste opcional para pantallas pequeñas */
   }
 }
 
-
-.carrusel-agenda{
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 1rem;
-    padding: 1rem 0;
-    scrollbar-width: none;
+.agenda-carrusel{
+  background-color: red; 
+  margin: auto;
+  width: 100%;
+  margin-top: 150px;
+  margin-top: 50px;
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 45px;
 }
 
 
-.carrusel-agenda::-webkit-scrollbar {
+.agenda-carrusel::-webkit-scrollbar {
   display: none; /* Chrome, Safari */
 }
+.calendar-header {
+    font-size: 50px;  
+    font-family: 'Melodrama-Semibold';
+    margin: 0;
+    color: #4C2F26;
+    font-weight: 3000;
+    letter-spacing: -1.1%;
+    }
 
-/* Fin de mi_agenda */ 
-
-
-
-/*ESTILOS PARA EVENTO ESPECIFICO*/
-/* === HERO CARRUSEL INICIAL === */
-.evento-hero-carrusel {
-  position: relative;
-  width: 100%;
-  height: 970px;
-  overflow: hidden;
+.day-name {
+    font-family: 'Melodrama-Semibold';
+    font-size: 18px;
+    color:#4C2F26 ;
+    text-align: center;
 }
-
-.slide {
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: opacity 1s ease;
-  z-index: 0;
-}
-
-.slide.activo {
-  opacity: 1;
-  z-index: 1;
-}
-
-/* Texto flotante fijo */
-.hero-texto {
-  position: absolute;
-  bottom: 350px;
-  left: 80px;
-  z-index: 2;
-  color: var(--color-white);
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-}
-
-.hero-titulo {
-  font-family: 'Melodrama';
-  font-size: 220px;
-  line-height: 1.1;
-}
-
-.hero-subtitulo {
-  font-family: "Raleway", sans-serif;
-  font-weight: 200;
-  font-size: 50px;
-  line-height: 1.2;
-}
-
-.hero-categoria {
-  font-family: "Raleway", sans-serif;
-  margin-top: var(--spacing-md);
-  font-size: 30px
-}
-
-/* Indicadores */
-.carrusel-indicadores {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: var(--spacing-sm);
-  z-index: 3;
-}
-
-.dot {
-  width: 30px;
-  height: 6px;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 4px;
-  transition: all 0.3s ease;
-}
-
-.dot.activo {
-  background-color: var(--color-secondary-green-dark);
-  opacity: 1;
-}
-
- /* ===== ESTRUCTURA LATERAL CON ÍNDICE ===== */
-.evento-lugar-nuevo,
-.evento-horarios-nuevo {
-  display: flex;
-  gap: 48px;
-  margin-bottom: var(--spacing-xxl);
-  align-items: flex-start;
-}
-
-/* COLUMNA DE SECCIONES LATERALES */
-.columna-indice {
-  margin-top: 200px;
-  margin-bottom: 400px;
-  width: 120px;
-  position: relative;
-  padding: 0px 100px;
-}
-
-.columna-indice ul {
-  list-style: none;
-  padding: 0 100px;
-  margin: 0;
-  font-family: "Raleway", sans-serif;
-}
-
-.columna-indice li {
-  margin-bottom: 12px;
-  font-size: 25pt;
-  color: var(--color-gray-400);
-}
-
-.columna-indice li.activo {
-  color: #8C5067;
-  font-weight: bold;
-}
-
-.linea-vertical {
-  position: absolute;
-  top: 110%;
-  left: 130%;
-  transform: translateX(-50%);
-  width: 2px;
-  height: 600px;
-  background-color: var(--color-black);
-}
-
-/* ===== LUGAR ===== */
-.contenido-lugar {
-  flex: 1;
-  margin-left: 20%;
-  margin-top: 150px;
-}
-
-.subtitulo-lugar {
-  font-family: 'Melodrama';
-  font-size: 115px;
-  color: #4D4D0F;
-  margin-bottom: var(--spacing-sm);
-  text-align: right;
-  padding-right: 3.5rem;
-}
-
-.descripcion-lugar {
-  font-family: "Raleway", sans-serif;
-  font-size: 23px;
-  margin-bottom: var(--spacing-md);
-  text-align: right;
-  padding-right: 3.5rem;
-}
-
-.descripcion-lugar1 {
-  font-family: "Raleway", sans-serif;
-  font-size: 23px;
-  line-height: 0.001;
-  text-align: right;
-  padding-right: 3.5rem;
-}
-.imagen-lugar {
-  margin-top: 90px;
-  overflow: visible;
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-  display: block;
-  padding-right: 3.5rem;
-}
-
-.google-maps-link {
-  margin-top: 70px;
-  text-align: center;
-  gap: 8px;
-  font-size: 30px;
-  text-decoration: none;
-  color: #4D0F26;
-  font-weight: 500;
-}
-
-/* ===== HORARIOS ===== */
-.contenido-horarios {
-  flex: 1;
-  margin-top: 150px;
-}
-
-.subtitulo-horarios {
-  font-family: 'Melodrama';
-  font-size: 115px;
-  color: #4D4D0F;
-  margin-bottom: var(--spacing-sm);
-  text-align: right;
-  padding-right: 3.5rem;
-}
-
-.descripcion-horarios {
-  font-family: "Raleway", sans-serif;
-  font-size: 23px;
-  margin-bottom: var(--spacing-md);
-  text-align: right;
-  padding-right: 3.5rem;
-}
-
-.tabla-horarios {
-  margin-top: 10px;
-  float: right;
-  padding-right: 3.5rem;
-  width: 77%;
-  height: 400px;
-  font-size: 25pt;
-  font-family: "Raleway", sans-serif;
-}
-
-.tabla-horarios th {
-  background-color: var(--color-secondary-green-light);
-  color: var(--color-primary-purple);
-  padding: var(--spacing-sm);
-  vertical-align: middle;
-  text-align: center;
-  font-weight: var(--font-weight-normal);
-}
-
-.tabla-horarios td {
-  background-color: #dadb6a9f;
-  color: var(--color-primary-purple);
-  padding: var(--spacing-sm);
-  border-bottom: 1px solid #d5d666;
-  vertical-align: middle;
-  text-align: center;
-}
-
-/* ==== TRANSPORTE ==== */
-.evento-transporte-nuevo {
-  display: flex;
-  gap: 48px;
-  margin-bottom: var(--spacing-xxl);
-}
-
-.contenido-transporte {
-  flex: 1;
-  margin-top: 250px;
-}
-
-.subtitulo-transporte {
-  font-family: 'Melodrama';
-  font-size: 115px;
-  color: #4D4D0F;
-  margin-bottom: var(--spacing-sm);
-  text-align: right;
-  padding-right: 3.5rem;
-}
-
-.descripcion-transporte {
-  font-family: "Raleway", sans-serif;
-  font-size: 23px;
-  margin-bottom: var(--spacing-md);
-  text-align: right;
-  padding-right: 3.5rem;
-}
-
-.tabla-transporte {
-  margin-top: 10px;
-  float: right;
-  padding-right: 3.5rem;
-  width: 77%;
-  height: 400px;
-  font-size: 25pt;
-  font-family: "Raleway", sans-serif;
-}
-
-.tabla-transporte th {
-  background-color: var(--color-secondary-green-light);
-  color: var(--color-primary-purple);
-  padding: var(--spacing-sm);
-  vertical-align: middle;
-  text-align: center;
-  font-weight: var(--font-weight-normal);
-}
-
-.tabla-transporte td {
-  background-color: #dadb6a9f;
-  color: var(--color-primary-purple);
-  padding: var(--spacing-sm);
-  border-bottom: 1px solid #d5d666;
-  vertical-align: middle;
-  text-align: center;
-}
-
-/* ==== PRECIOS ==== */
-.evento-precios-nuevo {
-  display: flex;
-  gap: 48px;
-  margin-bottom: var(--spacing-xxl);
-}
-
-.contenido-precios {
-  flex: 1;
-  margin-top: 150px;
-}
-
-.subtitulo-precios {
-  font-family: 'Melodrama';
-  font-size: 115px;
-  color: #4D4D0F;
-  margin-bottom: var(--spacing-sm);
-  text-align: right;
-  padding-right: 3.5rem;
-}
-
-.descripcion-precios {
-  font-family: "Raleway", sans-serif;
-  font-size: 23px;
-  margin-bottom: var(--spacing-md);
-  text-align: right;
-  padding-right: 3.5rem;
-}
-
-.tabla-precios {
-  margin-top: 10px;
-  float: right;
-  padding-right: 3.5rem;
-  width: 77%;
-  height: 400px;
-  font-size: 25pt;
-  font-family: "Raleway", sans-serif;
-}
-
-.tabla-precios th {
-  background-color: var(--color-secondary-green-light);
-  color: var(--color-primary-purple);
-  padding: var(--spacing-sm);
-  vertical-align: middle;
-  text-align: center;
-  font-weight: var(--font-weight-normal);
-}
-
-.tabla-precios td {
-  background-color: #dadb6a9f;
-  color: var(--color-primary-purple);
-  padding: var(--spacing-sm);
-  border-bottom: 1px solid #d5d666;
-  vertical-align: middle;
-  text-align: center;
-}
-
-/* ==== RESTRICCIONES DE EDAD ==== */
-.evento-edad-nuevo {
-  display: flex;
-  gap: 48px;
-  margin-bottom: var(--spacing-xxl);
-}
-
-.contenido-edad {
-  flex: 1;
-  margin-top: 250px;
-}
-
-.subtitulo-edad {
-  font-family: 'Melodrama';
-  font-size: 115px;
-  color: #4D4D0F;
-  margin-bottom: var(--spacing-sm);
-  text-align: right;
-  padding-right: 3.5rem;
-}
-
-.descripcion-edad {
-  font-family: "Raleway", sans-serif;
-  font-size: 23px;
-  margin-bottom: var(--spacing-md);
-  text-align: right;
-  padding-right: 3.5rem;
-}
-
-.mensaje-edad {
-  margin-top: 50px;
-  font-family: "Raleway", sans-serif;
-  font-size: 40px;
-  margin-bottom: var(--spacing-md);
-  text-align: right;
-  padding-right: 3.5rem;
-}
-
-/* ==== FRASE CENTRAL ANIMADA ==== */
-.evento-frase-central {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: var(--spacing-xxl) var(--spacing-xl);
-  background-color: transparent;
-}
-
-.frase-final {
-  font-family: "Raleway", sans-serif;
-  font-size: 60px;
-  font-weight: 300;
-  text-align: center;
-  color: #B5AEB2;
-  animation: fadeFloat 5s ease-in-out infinite alternate;
-}
-
-@keyframes fadeFloat {
-  0% { opacity: 0.8; transform: translateY(0); }
-  100% { opacity: 1; transform: translateY(-5px); }
-}
-
-/* ==== MOODBOARD VISUAL ==== */
-.evento-moodboard-nuevo {
-  margin-bottom: var(--spacing-xxl);
-}
-
-.moodboard-titulo {
-  margin-top: 320px;
-  font-family: 'Melodrama';
-  font-size: 80px;
-  color: #4D4D0F;
-  margin-bottom: var(--spacing-xs);
-  padding-left: 4rem;
-}
-
-.moodboard-subtitulo {
-  font-size: 50px;
-  color: var(--color-gray-700);
-  margin-bottom: var(--spacing-md);
-  padding-left: 4rem;
-}
-
-.moodboard-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
-  gap: var(--spacing-md);
-}
-
-.mood-item {
-  overflow: hidden;
-  border-radius: var(--border-radius-sm);
-  box-shadow: var(--box-shadow-sm);
-}
-
-.mood-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.3s ease;
-}
-
-.mood-item:hover img {
-  transform: scale(1.03);
-}
-
-/* Tamaños personalizados según la imagen */
-.mood-item.tall {
-  grid-row: span 2;
-}
-
-.mood-item.wide {
-  grid-column: span 2;
-}
-
-/* ESCALA REDUCIDA DEL MOODBOARD */
-.moodboard-grid {
-  transform: scale(0.96);
-  transform-origin: top left;
-  margin-bottom: var(--spacing-md);
-}
-
-.moodboard-grid-wrapper {
-  justify-content: center;
-  padding-left: 4rem;
-} 
- /*FIN ESTILOS PARA EVENTO ESPECIFICO XD*/
