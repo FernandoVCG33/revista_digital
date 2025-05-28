@@ -42,23 +42,23 @@
     <!-- inicio  de Hero-->
     <section class="banner">
         <div class="text">
-            <h1>Danza</h1>
+            <h1>Raices</h1>
             <h3>Movimiento del alma</h3>
-            <a href="#" class="ver_mas">Mas informacion</a>
+          
         </div>
-    </section>
-    <!--Fin de hero-->
-    <section>
         <ul class="componentes">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li data-image="url(../imagenes/banner.png)"></li>
+            <li data-image="url(../imagenes/banner2.jpg)"></li>
+            <li data-image="url(../imagenes/banner3.jpg)"></li>
+            <li data-image="url(../imagenes/banner4.jpg)"></li>
         </ul>
     </section>
+    <!--Fin de hero-->
+
+
     <!--Inicio de Carrusel-->
     <section class="carrusel">
-        <div class="card_home" class="c1">
+        <div class="card_home c1">
             <div class="over"></div>
             <div class="titulo">
                 <h3>Borges</h3>
@@ -81,7 +81,7 @@
                 </div>
             </div>
         </div>
-        <div class="card_home c2" >
+        <div class="card_home c2">
             <div class="over"></div>
             <div class="titulo">
                 <h3>Pascal</h3>
@@ -104,33 +104,11 @@
                 </div>
             </div>
         </div>
-        <div class="card_home c3 ">
-            <div class="over"></div>
-            <div class="titulo">
-                <h3>Monedas</h3>
-                <h5>Edwin Rojas</h5>
-            </div>
-            <div class="especificaciones">
-                <div class="fecha">
-                    <strong></strong>
-                    <div class="mas">
-                        <div class="mayo">
-                            <p>7 Junio</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="detalles">
-                    <ul>
-                        <li><strong>BCB</strong></li>
-                        <li><strong>14:00</strong></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+
     </section>
     <!--fin de carrusel-->
-     <!--Fin de hero-->
-    
+    <!--Fin de hero-->
+
 
 
     <!--pie de pagina-->
@@ -173,57 +151,67 @@
     <!--Fin de pie de pagina-->
     <script src="Script/funciones.js"></script>
 
-<!-- Ventana emergente login/registro -->
-<div class="popup-container" id="popupContainer" style="display: none;">
-  <div class="popup">
-    <span class="close-btn" id="closeBtn">&times;</span>
-    <h1 class="popup-title">Tambo</h1>
-    <h2 class="popup-subtitle" id="popupSubtitle">Bienvenido de vuelta!</h2>
+    <!-- Ventana emergente login/registro -->
+    <div class="popup-container" id="popupContainer" style="display: none;">
+        <div class="popup">
+            <span class="close-btn" id="closeBtn">&times;</span>
+            <h1 class="popup-title">Tambo</h1>
+            <h2 class="popup-subtitle" id="popupSubtitle">Bienvenido de vuelta!</h2>
 
-    <div class="tab-buttons">
-      <button id="loginTab" class="tab-button active">Ingresar</button>
-      <button id="registerTab" class="tab-button">Registrarse</button>
+            <div class="tab-buttons">
+                <button id="loginTab" class="tab-button active">Ingresar</button>
+                <button id="registerTab" class="tab-button">Registrarse</button>
+            </div>
+
+            <form id="loginForm" class="popup-form">
+                <input type="text" placeholder="Username/Email" required />
+                <div class="password-wrapper">
+                    <input type="password" placeholder="Contraseña" required />
+                    <span class="toggle-password">&#128065;</span>
+                </div>
+                <button type="submit" class="submit-btn">Ingresar</button>
+                <div class="form-links">
+                    <a href="#">Olvide mi contraseña</a>
+                </div>
+                <div class="divider">
+                    <hr /><span>Otros métodos</span>
+                    <hr />
+                </div>
+                <div id="otros-metodos" class="iconos-sociales">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/google.svg" alt="Google"
+                        class="icono-social" data-tab="social-login" />
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/facebook.svg" alt="Facebook"
+                        class="icono-social" data-tab="social-login" />
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg" alt="Instagram"
+                        class="icono-social" data-tab="social-login" />
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/x.svg" alt="X" class="icono-social"
+                        data-tab="social-login" />
+                </div>
+
+            </form>
+
+            <form id="registerForm" class="popup-form hidden">
+                <input type="text" placeholder="Nombre completo" required />
+                <input type="email" placeholder="Correo electrónico" required />
+                <input type="password" placeholder="Contraseña" required />
+                <button type="submit" class="submit-btn">Registrarse</button>
+                <div class="divider">
+                    <hr /><span>Otros métodos</span>
+                    <hr />
+                </div>
+                <div id="otros-metodos" class="iconos-sociales">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/google.svg" alt="Google"
+                        class="icono-social" data-tab="social-login" />
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/facebook.svg" alt="Facebook"
+                        class="icono-social" data-tab="social-login" />
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg" alt="Instagram"
+                        class="icono-social" data-tab="social-login" />
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/x.svg" alt="X" class="icono-social"
+                        data-tab="social-login" />
+                </div>
+            </form>
+        </div>
     </div>
-
-    <form id="loginForm" class="popup-form">
-      <input type="text" placeholder="Username/Email" required />
-      <div class="password-wrapper">
-        <input type="password" placeholder="Contraseña" required />
-        <span class="toggle-password">&#128065;</span>
-      </div>
-      <button type="submit" class="submit-btn">Ingresar</button>
-      <div class="form-links">
-        <a href="#">Olvide mi contraseña</a>
-      </div>
-      <div class="divider">
-        <hr /><span>Otros métodos</span><hr />
-      </div>
-      <div id="otros-metodos" class="iconos-sociales">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/google.svg" alt="Google" class="icono-social" data-tab="social-login" />
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/facebook.svg" alt="Facebook" class="icono-social" data-tab="social-login" />
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg" alt="Instagram" class="icono-social" data-tab="social-login" />
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/x.svg" alt="X" class="icono-social" data-tab="social-login" />
-      </div>
-      
-    </form>
-
-    <form id="registerForm" class="popup-form hidden">
-      <input type="text" placeholder="Nombre completo" required />
-      <input type="email" placeholder="Correo electrónico" required />
-      <input type="password" placeholder="Contraseña" required />
-      <button type="submit" class="submit-btn">Registrarse</button>
-            <div class="divider">
-        <hr /><span>Otros métodos</span><hr />
-      </div>
-      <div id="otros-metodos" class="iconos-sociales">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/google.svg" alt="Google" class="icono-social" data-tab="social-login" />
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/facebook.svg" alt="Facebook" class="icono-social" data-tab="social-login" />
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg" alt="Instagram" class="icono-social" data-tab="social-login" />
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/x.svg" alt="X" class="icono-social" data-tab="social-login" />
-      </div>
-    </form>
-  </div>
-</div>
 
 </body>
 
