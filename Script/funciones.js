@@ -45,7 +45,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   } else {
     zonaUsuario.innerHTML = `
-      <a href="notificaciones.html"><img src="imagenes/bell.png" alt="Notificaciones" class="icon-img"></a>
       <a href="cuenta.html"><img src="imagenes/user.png" alt="Cuenta" class="icon-img"></a>
     `;
   }
@@ -75,6 +74,16 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const footer = document.querySelector('footer');
+  const path = window.location.pathname;
+
+  if (!footer) return;
+
+  if (path.endsWith('index.html') || path === '/' || path === '') {
+    footer.classList.add('footer-home');
+  }
+});
 
 
 
@@ -137,7 +146,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Actualizar el header
     const zonaUsuario = document.getElementById("zona-usuario");
     zonaUsuario.innerHTML = `
-      <a href="notificaciones.html"><img src="imagenes/bell.png" alt="Notificaciones" class="icon-img"></a>
       <a href="cuenta.html"><img src="imagenes/user.png" alt="Cuenta" class="icon-img"></a>
     `;
   });
@@ -152,7 +160,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const zonaUsuario = document.getElementById("zona-usuario");
     zonaUsuario.innerHTML = `
-      <a href="notificaciones.html"><img src="imagenes/bell.png" alt="Notificaciones" class="icon-img"></a>
       <a href="cuenta.html"><img src="imagenes/user.png" alt="Cuenta" class="icon-img"></a>
     `;
   });

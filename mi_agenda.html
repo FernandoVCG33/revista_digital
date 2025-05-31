@@ -23,22 +23,30 @@
 <body>      
     <header class="tambo-header">
         <!-- Título centrado -->
-        <h1 class="titulo">Tambo</h1>
         <div class="titulo-container">
+            <h1 class="titulo">Tambo</h1>
         </div>
+
+         <!-- Menú hamburguesa -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
 
         <!-- NAV con secciones culturales -->
         <nav class="tambo-nav">
+            <div id="menuUserIcon">
+                <a href="cuenta.html">
+                <img src="imagenes/user2.png" alt="Usuario" class="icon-img" />
+                </a>
+            </div>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="eventos.html">Eventos</a></li>
                 <li><a href="mi_agenda.html">Mi Agenda</a></li>
-
-                <li><a href="categorias.html">Categorías</a></li>
-            </ul>
-
             </ul>            
-
         </nav>
         <!-- Zona donde el JS inserta el botón o los iconos -->
         <div class="nav-icons" id="zona-usuario"></div>
