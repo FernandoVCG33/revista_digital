@@ -1317,13 +1317,16 @@ ul.componentes li {
 .encabezado-dia {
 display: flex;
 width: 1375px;
+max-width: 100%;
 justify-content: space-between;
-align-items: flex-start;
+align-items: end;
 }
 
 .dia-semana {
   font-size: 1.2rem;
   color: #7a7a7a;
+  display: inline-block;
+  margin-right: 15px;
 }
 
 .numero-dia {
@@ -1331,6 +1334,7 @@ align-items: flex-start;
   font-weight: bold;
   color: #41532b;
   margin-left: 1rem;
+  display: inline-block;
 }
 
 .ver-actividades {
@@ -1346,19 +1350,39 @@ align-items: flex-start;
   gap: 1rem;
 }
 
-.evento img {
-  width: auto;
-  height: auto;
+.evento{
+  overflow: hidden;
   border-radius: 10px;
+}
+
+.evento img {
+  width: 100%;
   object-fit: cover;
-  position: relative;
-  transition: transform 0.5s ease; /* Suaviza la animación */
+  transition: transform 0.3s ease;
   display: block;
 }
 
 .evento:hover img {
-  transform: scale(1.1); /* Aplica zoom suave */
+  transform: scale(1.03);
 }
+
+.evento_agenda{
+  position: relative;
+}
+
+.evento_agenda .titulo{
+  position: absolute;
+  bottom: 10px;
+  left: 25px;
+}
+
+.nombre_agenda h2.agenda-subtitulo, 
+.nombre_agenda h1.agenda-mes,
+.nombre_agenda .dia-evento .dia-semana,
+.nombre_agenda .dia-evento .numero-dia{
+  font-family: 'Melodrama';
+}
+
 
 
 @media (max-width: 480px) {
@@ -1373,21 +1397,20 @@ align-items: flex-start;
   }
 }
 
-
-.carrusel-agenda{
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 1rem;
-    padding: 1rem 0;
-    scrollbar-width: none;
+.js_carrusel{
+  display: block !important;
+}
+.js_carrusel article{
+  display: inline-block;
+  width: calc(50% - 15px);
+  margin-right: 10px;
 }
 
-
-.carrusel-agenda::-webkit-scrollbar {
-  display: none; /* Chrome, Safari */
+.js_carrusel .dot{
+width: 41px !important;
+height: 9px !important;
+border-radius: 10px !important;
 }
-
 /* Fin de mi_agenda */ 
 
 

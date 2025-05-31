@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,48 +7,37 @@
     <link rel="stylesheet" href="estilos/estilos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <title>Tambo - Guía Cultural Paceña</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Mi agenda</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <!-- JavaScript -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 </head>
-
-<body>
-    <!-- HEADER -->
+<body>      
     <header class="tambo-header">
         <!-- Título centrado -->
+        <h1 class="titulo">Tambo</h1>
         <div class="titulo-container">
-            <h1 class="titulo">Tambo</h1>
         </div>
-
-         <!-- Menú hamburguesa -->
-        <input type="checkbox" id="menu-toggle" class="menu-toggle">
-        <label for="menu-toggle" class="menu-icon">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
 
         <!-- NAV con secciones culturales -->
         <nav class="tambo-nav">
-            <div id="menuUserIcon">
-                <a href="cuenta.html">
-                <img src="imagenes/user2.png" alt="Usuario" class="icon-img" />
-                </a>
-            </div>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="eventos.html">Eventos</a></li>
                 <li><a href="mi_agenda.html">Mi Agenda</a></li>
                 <li><a href="categorias.html">Categorías</a></li>
-            </ul>            
+            </ul>
         </nav>
         <!-- Zona donde el JS inserta el botón o los iconos -->
         <div class="nav-icons" id="zona-usuario"></div>
         <!-- Aquí JS inserta el botón registrar o los iconos de usuario -->
     </header>
     <!--Fin de  HEADER -->
-  <!-- CONTENIDO PRINCIPAL -->
-  <main>
+    
+    <!-- CONTENIDO PRINCIPAL -->
+  <main class="nombre_agenda">
     <!-- TÍTULO -->
     <section class="agenda-header">
       <h2 class="agenda-subtitulo">Agenda</h2>
@@ -60,13 +48,21 @@
     <!-- EVENTO DEL JUEVES 08 -->
     <section class="dia-evento">
       <div class="encabezado-dia">
+        <div>
         <p class="dia-semana">Jueves</p>
         <p class="numero-dia">08</p>
+        </div>
         <a href="#" class="ver-actividades">Ver actividades</a>
       </div>
-      <div class="galeria-eventos carrusel-agenda">
+      <div class="galeria-eventos">
         <article class="evento">
+          <div class="evento_agenda">
           <img src="imagenes/jueves 08-1.jpg" alt="Danza contemporánea" />
+          <div class="titulo">
+              <h3>Borges</h3>
+              <h5>Ariadna Mendez</h5>
+          </div>
+          </div>
         </article>
         <article class="evento">
           <img src="imagenes/jueves 08-2.jpg" alt="Exposición de arte" />
@@ -74,15 +70,16 @@
       </div>
     </section>
 
-
     <!-- EVENTO DEL MARTES 13 -->
     <section class="dia-evento">
       <div class="encabezado-dia">
+        <div>
         <p class="dia-semana">Martes</p>
         <p class="numero-dia">13</p>
+        </div>
         <a href="#" class="ver-actividades">Ver actividades</a>
       </div>
-      <div class="galeria-eventos">
+      <div class="galeria-eventos js_carrusel" data-flickity='{ "cellAlign": "left", "contain": true }'> <!-- El carrusel-->
         <article class="evento">
           <img src="imagenes/martes 13-1.jpg" alt="Festival musical" />
         </article>
@@ -95,12 +92,13 @@
       </div>
     </section>
 
-
       <!-- EVENTO DEL MIERCOLES 21 -->
     <section class="dia-evento">
       <div class="encabezado-dia">
+        <div>
         <p class="dia-semana">Miercoles</p>
         <p class="numero-dia">21</p>
+        </div>
         <a href="#" class="ver-actividades">Ver actividades</a>
       </div>
       <div class="galeria-eventos">
@@ -117,8 +115,10 @@
         <!-- EVENTO DEL VIERNES 23 -->
     <section class="dia-evento">
       <div class="encabezado-dia">
+        <div>
         <p class="dia-semana">Viernes</p>
         <p class="numero-dia">23</p>
+        </div>
         <a href="#" class="ver-actividades">Ver actividades</a>
       </div>
       <div class="galeria-eventos">
@@ -135,58 +135,53 @@
             <!-- EVENTO DEL LUNES 26 -->
     <section class="dia-evento">
       <div class="encabezado-dia">
+        <div>
         <p class="dia-semana">Lunes</p>
         <p class="numero-dia">26</p>
+        </div>
         <a href="#" class="ver-actividades">Ver actividades</a>
       </div>
       <div class="galeria-eventos">
         <article class="evento">
-          <img src="imagenes/lunes 26.png" alt="Concierto" />
+          <img src="imagenes/lunes 26-1.png" alt="Concierto" />
         </article>
       </div>
     </section>
   </main>
+  <!--pie de pagina-->
+  <footer class="pie">
+      <div class="footer-content">
+          <!-- Logo -->
+          <div class="footer-logo">
+              <h1 class="footer-title">Tambo</h1>
+          </div>
+          <!-- Navegación -->
+          <div class="footer-nav-container">
+          <ul class="footer-nav">
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="eventos/eventos.html">Eventos</a></li>
+              <li><a href="mi_agenda.html">Mi Agenda</a></li>
+              <li><a href="categorias.html">Categorías</a></li>
 
+          </ul>
+          </div>
 
-    <!--pie de pagina-->
-    <footer class="pie">
-        <div class="footer-content">
-            <!-- Logo -->
-            <div class="footer-logo">
-                <h1 class="footer-title">Tambo</h1>
-            </div>
+          <!-- Redes sociales -->
+          <div class="footer-social">
+          <img src="imagenes/Github.png" alt="Github" >
+          <img src="imagenes/X.png" alt="X">
+          <img src="imagenes/instagram.png" alt="instagram">
+          <img src="imagenes/facebook.png" alt="facebook" >
 
-            <!-- Navegación -->
-            <div class="footer-nav-container">
-            <ul class="footer-nav">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="eventos/eventos.html">Eventos</a></li>
-                <li><a href="mi_agenda.html">Mi Agenda</a></li>
-                <li><a href="categorias.html">Categorías</a></li>
+          </div>
+      </div>
 
-
-            </ul>
-            </div>
-
-            <!-- Redes sociales -->
-            <div class="footer-social">
-
-            <img src="imagenes/Github.png" alt="Github" >
-            <img src="imagenes/X.png" alt="X">
-            <img src="imagenes/instagram.png" alt="instagram">
-            <img src="imagenes/facebook.png" alt="facebook" >
-
-
-            </div>
-        </div>
-
-        <!-- ⬇️ Este bloque ahora está fuera del "footer-content" ⬇️ -->
-        <div class="footer-copy">
-            © 2025 Tambo - Guía Cultural Paceña
-        </div>
-    </footer>
-    <!--Fin de pie de pagina-->
-    <script src="Script/funciones.js"></script>
-
+      <!-- ⬇️ Este bloque ahora está fuera del "footer-content" ⬇️ -->
+      <div class="footer-copy">
+          © 2025 Tambo - Guía Cultural Paceña
+      </div>
+  </footer>
+  <!--Fin de pie de pagina-->
+  <script src="Script/funciones.js"></script>
 </body>
 </html>
