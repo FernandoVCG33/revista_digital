@@ -87,24 +87,33 @@ body {
 
 /*Animacion home*/
 @keyframes banner_home_1 {
-    0%{
-        background: url(https://images.pexels.com/photos/1509534/pexels-photo-1509534.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2) center no-repeat ;
-   background-size: cover;
-    }
-    33%{
-        background: url(https://images.pexels.com/photos/1269968/pexels-photo-1269968.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2) center no-repeat ;
-   background-size: cover;
-    }
-    66% {
-        background: url(https://images.pexels.com/photos/32247341/pexels-photo-32247341/free-photo-of-estatuas-decorativas-de-elefantes-en-un-jardin.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2) center no-repeat ;
-   background-size: cover;
-    }
-    99%{
-        background: url(https://images.pexels.com/photos/32239862/pexels-photo-32239862/free-photo-of-mujer-tulumayo.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2) center no-repeat ;
-   background-size: cover;
-    }
-   
+  0% {
+    background: url(../imagenes/Bannerf1.png) center no-repeat scroll;
+    background-size: cover;
+  }
+
+  25% {
+    background: url(../imagenes/Bannerf2.png) center no-repeat scroll;
+    background-size: cover;
+  }
+
+  50% {
+    background: url(../imagenes/Bannerf3.png) center no-repeat scroll;
+    background-size: cover;
+  }
+
+  75% {
+    background: url(../imagenes/Bannerf4.png) center no-repeat scroll;
+    background-size: cover;
+  }
+
+  scroll 100% {
+    background: url(../imagenes/Bannerf1.png) center no-repeat scroll;
+    background-size: cover;
+  }
+
 }
+
 /*Fin de animacion home*/
 
 
@@ -681,17 +690,7 @@ h5 {
 /*fin de carrusel*/
 /*inicio banner*/
 /* Inicio banner */
-.banner {
-  margin-top: 0;
-  position: relative;
-  width: 100%;
 
-  background: url(https://pohcdn.com/sites/default/files/styles/paragraph__live_banner__lb_image__1880bp/public/live_banner/La-Paz.jpg) no-repeat center center;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 .text {
   background-color: #21252995;
@@ -1148,13 +1147,11 @@ h5 {
 }
 
 .banner {
-  position: relative;
-  background: url(../imagenes/banner.png) no-repeat center center;
+  width: 100%;
+  height: 100vh;
+  background: url(../imagenes/Bannerf1.png) no-repeat center scroll;
   background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation:  banner_home_1 9s 0.2s infinite normal forwards running; 
+  animation: banner_home_1 12s infinite ease-in-out;
 }
 
 .text {
@@ -1171,15 +1168,57 @@ h5 {
   height: 100%;
 }
 
-.text h1 {
-  font-family: var(--font-size-base);
-  text-transform: uppercase;
-  font-size: 4rem;
-  font-weight: 400;
+.home_evento {
+  position: relative;
+  width: 600px;
+  height: 250px;
+  background: url('tu-imagen.jpg') center center / cover no-repeat;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-weight: lighter;
 }
 
-.text h3 {
-  font-weight: 100;
+.home_fecha {
+  font-size: 72px;
+  line-height: 1;
+}
+
+.home_mes_dia {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-weight: 300;
+}
+
+.home_mes {
+  font-size: 48px;
+}
+
+.home_sabado {
+  font-size: 28px;
+  margin-top: -10px;
+}
+
+.home_lugar_hora {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.home_icono_ubicacion::before {
+  content: "📍";
+  margin-right: 4px;
+}
+
+.home_hora {
+ 
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-weight: bold;
 }
 
 ul.componentes {
@@ -1410,8 +1449,8 @@ ul.componentes li {
   }
 }
 
-.agenda-carrusel{
-  background-color: red; 
+.agenda-carrusel {
+  background-color: red;
   margin: auto;
   width: 100%;
   margin-top: 150px;
@@ -1423,20 +1462,22 @@ ul.componentes li {
 
 
 .agenda-carrusel::-webkit-scrollbar {
-  display: none; /* Chrome, Safari */
+  display: none;
+  /* Chrome, Safari */
 }
+
 .calendar-header {
-    font-size: 50px;  
-    font-family: 'Melodrama-Semibold';
-    margin: 0;
-    color: #4C2F26;
-    font-weight: 3000;
-    letter-spacing: -1.1%;
-    }
+  font-size: 50px;
+  font-family: 'Melodrama-Semibold';
+  margin: 0;
+  color: #4C2F26;
+  font-weight: 3000;
+  letter-spacing: -1.1%;
+}
 
 .day-name {
-    font-family: 'Melodrama-Semibold';
-    font-size: 18px;
-    color:#4C2F26 ;
-    text-align: center;
+  font-family: 'Melodrama-Semibold';
+  font-size: 18px;
+  color: #4C2F26;
+  text-align: center;
 }
