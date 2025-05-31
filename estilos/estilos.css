@@ -164,9 +164,7 @@ section {
 
 }
 .pie_home{
-  position: fixed;
-  bottom: 0;
-  left: 0;
+  
   background-color: transparent;
 }
 
@@ -1196,15 +1194,14 @@ h5 {
 }
 
 .home_evento {
-  position: relative;
   width: 600px;
   height: 250px;
-  background: url('tu-imagen.jpg') center center / cover no-repeat;
   color: white;
-  padding: 20px;
-  box-sizing: border-box;
+  margin-left: 45px;
   overflow: hidden;
   font-weight: lighter;
+  margin-top: 250px;
+  margin-bottom: 250px;
 }
 
 .home_fecha {
@@ -1255,7 +1252,7 @@ ul.componentes {
   gap: 2rem;
   /* espacio entre los rectángulos */
   justify-content: center;
-  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 ul.componentes li {
@@ -1268,19 +1265,7 @@ ul.componentes li {
   /* bordes redondeados */
 }
 
-ul.componentes {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
 
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
-}
 
 ul.componentes li {
   width: 40px;
