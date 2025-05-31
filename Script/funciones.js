@@ -193,3 +193,49 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 /*fin banner evento especifico */
+
+
+/*INICIO informacion.html */
+document.addEventListener("DOMContentLoaded", function () {
+  // Solo aplicar efecto en informacion.html
+  if (document.body.classList.contains("modo-informacion")) {
+    const header = document.querySelector(".tambo-header");
+    const heroCarrusel = document.querySelector(".evento-hero-carrusel");
+
+    function verificarTransparencia() {
+      const heroBottom = heroCarrusel.getBoundingClientRect().bottom;
+      if (heroBottom <= 1050) {
+        header.classList.add("header-solido");
+      } else {
+        header.classList.remove("header-solido");
+      }
+    }
+
+    window.addEventListener("scroll", verificarTransparencia);
+    verificarTransparencia();
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Solo aplica si estamos en informacion.html
+  if (document.body.classList.contains("modo-informacion")) {
+    const header = document.querySelector(".tambo-header");
+    const hero = document.querySelector(".evento-hero-carrusel");
+
+    const ajustarHeader = () => {
+      if (window.scrollY > hero.offsetHeight - 100) {
+        header.classList.remove("header-transparente");
+        header.style.borderBottom = "5px solid #4C2634"; // vuelve el borde
+      } else {
+        header.classList.add("header-transparente");
+        header.style.borderBottom = "none"; // quita el borde
+      }
+    };
+
+    window.addEventListener("scroll", ajustarHeader);
+    ajustarHeader(); // Ejecuta una vez al cargar
+  }
+});
+
+/*FIN informacion.html */
+

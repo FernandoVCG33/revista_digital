@@ -13,7 +13,7 @@
     <title>Tambo - Guía Cultural Paceña</title>
 </head>
 
-<body>
+<body class="banner">
     <!-- HEADER -->
     <header class="tambo-header">
         <!-- Título centrado -->
@@ -21,7 +21,7 @@
             <h1 class="titulo">Tambo</h1>
         </div>
 
-         <!-- Menú hamburguesa -->
+        <!-- Menú hamburguesa -->
         <input type="checkbox" id="menu-toggle" class="menu-toggle">
         <label for="menu-toggle" class="menu-icon">
             <span></span>
@@ -33,91 +33,41 @@
         <nav class="tambo-nav">
             <div id="menuUserIcon">
                 <a href="cuenta.html">
-                <img src="imagenes/user2.png" alt="Usuario" class="icon-img" />
+                    <img src="imagenes/user2.png" alt="Usuario" class="icon-img" />
                 </a>
             </div>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="eventos.html">Eventos</a></li>
                 <li><a href="mi_agenda.html">Mi Agenda</a></li>
-                <li><a href="categorias.html">Categorías</a></li>
-            </ul>            
+            </ul>
         </nav>
         <!-- Zona donde el JS inserta el botón o los iconos -->
         <div class="nav-icons" id="zona-usuario"></div>
         <!-- Aquí JS inserta el botón registrar o los iconos de usuario -->
     </header>
     <!--Fin de  HEADER -->
-
-    <!-- inicio  de Hero-->
-    <section class="banner">
-        <div class="text">
-            <h1>Raices</h1>
-            <h3>Movimiento del alma</h3>
-          
+    <!--contenido-->
+    <div class="home_evento">
+        <div class="home_mes_dia">
+            <div class="home_fecha">31</div>
+            <div class="home_mes">Mayo</div>
         </div>
-        <ul class="componentes">
-            <li data-image="url(../imagenes/banner.png)"></li>
-            <li data-image="url(../imagenes/banner2.jpg)"></li>
-            <li data-image="url(../imagenes/banner3.jpg)"></li>
-            <li data-image="url(../imagenes/banner4.jpg)"></li>
-        </ul>
-    </section>
-    <!--Fin de hero-->
-
-
-    <!--Inicio de Carrusel-->
-    <section class="carrusel">
-        <div class="card_home c1">
-            <div class="over"></div>
-            <div class="titulo">
-                <h3>Borges</h3>
-                <h5>Adriana mendes</h5>
-            </div>
-            <div class="especificaciones">
-                <div class="fecha">
-                    <strong>3</strong>
-                    <div class="mas">
-                        <div class="mayo">
-                            <p>1 Mayo</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="detalles">
-                    <ul>
-                        <li><strong>Teatro Municipal</strong></li>
-                        <li><strong>19:00</strong></li>
-                    </ul>
-                </div>
-            </div>
+        <div class="home_sabado">Sábado</div>
+        <div class="home_lugar_hora">
+            <div class="home_icono_ubicacion">Teatro Municipal</div>
+            <div class="home_hora">20:00</div>
         </div>
-        <div class="card_home c2">
-            <div class="over"></div>
-            <div class="titulo">
-                <h3>Pascal</h3>
-                <h5>Ramon Perez</h5>
-            </div>
-            <div class="especificaciones">
-                <div class="fecha">
-                    <strong></strong>
-                    <div class="mas">
-                        <div class="mayo">
-                            <p>1 Junio</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="detalles">
-                    <ul>
-                        <li><strong>Museo Nacional</strong></li>
-                        <li><strong>16:00</strong></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+    </div>
 
-    </section>
-    <!--fin de carrusel-->
-    <!--Fin de hero-->
+    <ul class="componentes">
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+
+
 
 
 
