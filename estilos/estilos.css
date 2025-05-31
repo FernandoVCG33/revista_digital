@@ -75,14 +75,12 @@
 
 /* Estilos base de ejemplo */
 body {
+  padding-top: 122px;
   font-family: var(--font-family-base);
   font-size: var(--font-size-base);
   color: var(--color-gray-900);
   background-color: var(--color-primary);
   margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
 }
 
 /*Animacion home*/
@@ -420,11 +418,14 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: transparent;
+  background-color: var(--color-primary); /* mejor que transparente si es fijo */
   padding: var(--spacing-xl);
   width: 100%;
   height: 122px;
-  position: relative;
+  position: fixed; /* CAMBIO CLAVE */
+  top: 0; /* ancla al tope */
+  left: 0;
+  z-index: 999; /* asegúrate que quede encima */
   border-bottom: 5px solid var(--color-primary-purple);
 }
 
@@ -905,7 +906,7 @@ h5 {
 }
 
 .popup {
-  background-color: #898967;
+  background-color: #F7F7EC;
   padding: 40px;
   width: 90%;
   max-width: 400px;
@@ -918,11 +919,13 @@ h5 {
 
 .popup-title {
   font-family: 'Melodrama', serif;
+  color: #4C2634;
   font-size: 36px;
   margin-bottom: 0;
 }
 
 .popup-subtitle {
+  color: #4C2634;
   font-family: 'Melodrama', serif;
   font-size: 22px;
   margin: 10px 0 30px;
@@ -937,31 +940,34 @@ h5 {
 .tab-button {
   background: transparent;
   border: none;
+  font-family: "Raleway", sans-serif;
   font-size: 16px;
   padding: 10px;
   margin: 0 10px;
-  color: #fff;
+  color: #4C2634;
   cursor: pointer;
   border-bottom: 2px solid transparent;
 }
 
 .tab-button.active {
-  border-color: #fff;
+  border-color: #4C2634;
 }
 
 .popup-form {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  color: #4C2634;
 }
 
 .popup-form input {
+  font-family: "Raleway", sans-serif;;
   padding: 15px;
   font-size: 16px;
   border: none;
   border-radius: 4px;
   background-color: #5c4452;
-  color: #fff;
+  color: #ffffff;
 }
 
 .password-wrapper {
@@ -976,6 +982,7 @@ h5 {
 }
 
 .submit-btn {
+  font-family: "Raleway", sans-serif;;
   padding: 15px;
   font-size: 18px;
   background-color: #8C5067;
@@ -986,6 +993,7 @@ h5 {
 }
 
 .form-links {
+  font-family: "Raleway", sans-serif;;
   display: flex;
   justify-content: space-between;
   font-size: 14px;
@@ -1001,7 +1009,7 @@ h5 {
 .divider hr {
   flex: 1;
   border: none;
-  border-top: 1px solid white;
+  border-top: 1px solid #8C5067;
 }
 
 .divider span {
@@ -1016,19 +1024,20 @@ h5 {
 }
 
 .icono-social {
+  color: #8C5067;
   width: 28px;
   height: 28px;
   cursor: pointer;
-  filter: invert(1);
   margin-right: 12px;
 }
 
 
 .close-btn {
+  color: #8C5067;
   position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 28px;
+  top: 0px;
+  right: 35px;
+  font-size: 68px;
   cursor: pointer;
 }
 
@@ -1481,3 +1490,582 @@ ul.componentes li {
   color: #4C2F26;
   text-align: center;
 }
+
+/*ESTILOS PARA EVENTO ESPECIFICO*/
+/* === HERO CARRUSEL INICIAL === */
+body.modo-informacion .tambo-header:not(.header-solido) {
+  background-color: transparent;
+}
+
+body.modo-informacion .tambo-header:not(.header-solido) a,
+body.modo-informacion .tambo-header:not(.header-solido) .icon-img {
+  color: white;
+  filter: brightness(0) invert(1);
+}
+
+body.modo-informacion .tambo-header:not(.header-solido) .titulo {
+  color: white;
+  filter: brightness(0) invert(1);
+}
+
+.evento-hero-carrusel {
+  margin-top: -130px;
+  position: relative;
+  width: 100%;
+  height: 1100px;
+  overflow: hidden;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease;
+  z-index: 0;
+}
+
+.slide.activo {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Texto flotante fijo */
+.hero-texto {
+  position: absolute;
+  bottom: 350px;
+  left: 80px;
+  z-index: 2;
+  color: var(--color-white);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.hero-titulo {
+  font-family: 'Melodrama';
+  font-size: 220px;
+  line-height: 1.1;
+}
+
+.hero-subtitulo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 200;
+  font-size: 50px;
+  line-height: 1.2;
+}
+
+.hero-categoria {
+  font-family: "Raleway", sans-serif;
+  margin-top: var(--spacing-md);
+  font-size: 30px
+}
+
+/* Indicadores */
+.carrusel-indicadores {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: var(--spacing-sm);
+  z-index: 3;
+}
+
+.dot {
+  width: 30px;
+  height: 6px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.dot.activo {
+  background-color: var(--color-secondary-green-dark);
+  opacity: 1;
+}
+
+ /* ===== ESTRUCTURA LATERAL CON ÍNDICE ===== */
+.evento-lugar-nuevo,
+.evento-horarios-nuevo {
+  display: flex;
+  gap: 48px;
+  margin-bottom: var(--spacing-xxl);
+  align-items: flex-start;
+}
+
+/* COLUMNA DE SECCIONES LATERALES */
+.columna-indice {
+  margin-top: 200px;
+  margin-bottom: 400px;
+  width: 120px;
+  position: relative;
+  padding: 0px 100px;
+}
+
+.columna-indice ul {
+  list-style: none;
+  padding: 0 100px;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+}
+
+.columna-indice li {
+  margin-bottom: 12px;
+  font-size: 25pt;
+  color: var(--color-gray-400);
+}
+
+.columna-indice li.activo {
+  color: #8C5067;
+  font-weight: bold;
+}
+
+.linea-vertical {
+  position: absolute;
+  top: 110%;
+  left: 130%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 600px;
+  background-color: var(--color-black);
+}
+
+/* ===== LUGAR ===== */
+.contenido-lugar {
+  flex: 1;
+  margin-left: 20%;
+  margin-top: 150px;
+}
+
+.subtitulo-lugar {
+  font-family: 'Melodrama';
+  font-size: 115px;
+  color: #4D4D0F;
+  margin-bottom: var(--spacing-sm);
+  text-align: right;
+  padding-right: 3.5rem;
+}
+
+.descripcion-lugar {
+  font-family: "Raleway", sans-serif;
+  font-size: 23px;
+  margin-bottom: var(--spacing-md);
+  text-align: right;
+  padding-right: 3.5rem;
+}
+
+.descripcion-lugar1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 23px;
+  line-height: 0.001;
+  text-align: right;
+  padding-right: 3.5rem;
+}
+.imagen-lugar {
+  margin-top: 90px;
+  overflow: visible;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+  padding-right: 3.5rem;
+}
+
+.google-maps-link {
+  margin-top: 70px;
+  text-align: center;
+  gap: 8px;
+  font-size: 30px;
+  text-decoration: none;
+  color: #4D0F26;
+  font-weight: 500;
+}
+
+/* ===== HORARIOS ===== */
+.contenido-horarios {
+  flex: 1;
+  margin-top: 150px;
+}
+
+.subtitulo-horarios {
+  font-family: 'Melodrama';
+  font-size: 115px;
+  color: #4D4D0F;
+  margin-bottom: var(--spacing-sm);
+  text-align: right;
+  padding-right: 3.5rem;
+}
+
+.descripcion-horarios {
+  font-family: "Raleway", sans-serif;
+  font-size: 23px;
+  margin-bottom: var(--spacing-md);
+  text-align: right;
+  padding-right: 3.5rem;
+}
+
+.tabla-horarios {
+  margin-top: 10px;
+  float: right;
+  padding-right: 3.5rem;
+  width: 77%;
+  height: 400px;
+  font-size: 25pt;
+  font-family: "Raleway", sans-serif;
+}
+
+.tabla-horarios th {
+  background-color: var(--color-secondary-green-light);
+  color: var(--color-primary-purple);
+  padding: var(--spacing-sm);
+  vertical-align: middle;
+  text-align: center;
+  font-weight: var(--font-weight-normal);
+}
+
+.tabla-horarios td {
+  background-color: #dadb6a9f;
+  color: var(--color-primary-purple);
+  padding: var(--spacing-sm);
+  border-bottom: 1px solid #d5d666;
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* ==== TRANSPORTE ==== */
+.evento-transporte-nuevo {
+  display: flex;
+  gap: 48px;
+  margin-bottom: var(--spacing-xxl);
+}
+
+.contenido-transporte {
+  flex: 1;
+  margin-top: 250px;
+}
+
+.subtitulo-transporte {
+  font-family: 'Melodrama';
+  font-size: 115px;
+  color: #4D4D0F;
+  margin-bottom: var(--spacing-sm);
+  text-align: right;
+  padding-right: 3.5rem;
+}
+
+.descripcion-transporte {
+  font-family: "Raleway", sans-serif;
+  font-size: 23px;
+  margin-bottom: var(--spacing-md);
+  text-align: right;
+  padding-right: 3.5rem;
+}
+
+.tabla-transporte {
+  margin-top: 10px;
+  float: right;
+  padding-right: 3.5rem;
+  width: 77%;
+  height: 400px;
+  font-size: 25pt;
+  font-family: "Raleway", sans-serif;
+}
+
+.tabla-transporte th {
+  background-color: var(--color-secondary-green-light);
+  color: var(--color-primary-purple);
+  padding: var(--spacing-sm);
+  vertical-align: middle;
+  text-align: center;
+  font-weight: var(--font-weight-normal);
+}
+
+.tabla-transporte td {
+  background-color: #dadb6a9f;
+  color: var(--color-primary-purple);
+  padding: var(--spacing-sm);
+  border-bottom: 1px solid #d5d666;
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* ==== PRECIOS ==== */
+.evento-precios-nuevo {
+  display: flex;
+  gap: 48px;
+  margin-bottom: var(--spacing-xxl);
+}
+
+.contenido-precios {
+  flex: 1;
+  margin-top: 150px;
+}
+
+.subtitulo-precios {
+  font-family: 'Melodrama';
+  font-size: 115px;
+  color: #4D4D0F;
+  margin-bottom: var(--spacing-sm);
+  text-align: right;
+  padding-right: 3.5rem;
+}
+
+.descripcion-precios {
+  font-family: "Raleway", sans-serif;
+  font-size: 23px;
+  margin-bottom: var(--spacing-md);
+  text-align: right;
+  padding-right: 3.5rem;
+}
+
+.tabla-precios {
+  margin-top: 10px;
+  float: right;
+  padding-right: 3.5rem;
+  width: 77%;
+  height: 400px;
+  font-size: 25pt;
+  font-family: "Raleway", sans-serif;
+}
+
+.tabla-precios th {
+  background-color: var(--color-secondary-green-light);
+  color: var(--color-primary-purple);
+  padding: var(--spacing-sm);
+  vertical-align: middle;
+  text-align: center;
+  font-weight: var(--font-weight-normal);
+}
+
+.tabla-precios td {
+  background-color: #dadb6a9f;
+  color: var(--color-primary-purple);
+  padding: var(--spacing-sm);
+  border-bottom: 1px solid #d5d666;
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* ==== RESTRICCIONES DE EDAD ==== */
+.evento-edad-nuevo {
+  display: flex;
+  gap: 48px;
+  margin-bottom: var(--spacing-xxl);
+}
+
+.contenido-edad {
+  flex: 1;
+  margin-top: 250px;
+}
+
+.subtitulo-edad {
+  font-family: 'Melodrama';
+  font-size: 115px;
+  color: #4D4D0F;
+  margin-bottom: var(--spacing-sm);
+  text-align: right;
+  padding-right: 3.5rem;
+}
+
+.descripcion-edad {
+  font-family: "Raleway", sans-serif;
+  font-size: 23px;
+  margin-bottom: var(--spacing-md);
+  text-align: right;
+  padding-right: 3.5rem;
+}
+
+.mensaje-edad {
+  margin-top: 50px;
+  font-family: "Raleway", sans-serif;
+  font-size: 40px;
+  margin-bottom: var(--spacing-md);
+  text-align: right;
+  padding-right: 3.5rem;
+}
+
+/* ==== FRASE CENTRAL ANIMADA ==== */
+.evento-frase-central {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing-xxl) var(--spacing-xl);
+  background-color: transparent;
+}
+
+.frase-final {
+  font-family: "Raleway", sans-serif;
+  font-size: 60px;
+  font-weight: 300;
+  text-align: center;
+  color: #B5AEB2;
+  animation: fadeFloat 5s ease-in-out infinite alternate;
+}
+
+@keyframes fadeFloat {
+  0% { opacity: 0.8; transform: translateY(0); }
+  100% { opacity: 1; transform: translateY(-5px); }
+}
+
+/* ==== MOODBOARD VISUAL ==== */
+.evento-moodboard-nuevo {
+  margin-bottom: var(--spacing-xxl);
+}
+
+.moodboard-titulo {
+  margin-top: 320px;
+  font-family: 'Melodrama';
+  font-size: 80px;
+  color: #4D4D0F;
+  margin-bottom: var(--spacing-xs);
+  padding-left: 4rem;
+}
+
+.moodboard-subtitulo {
+  font-size: 50px;
+  color: var(--color-gray-700);
+  margin-bottom: var(--spacing-md);
+  padding-left: 4rem;
+}
+
+.moodboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.mood-item {
+  overflow: hidden;
+  border-radius: var(--border-radius-sm);
+  box-shadow: var(--box-shadow-sm);
+}
+
+.mood-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.mood-item:hover img {
+  transform: scale(1.03);
+}
+
+/* Tamaños personalizados según la imagen */
+.mood-item.tall {
+  grid-row: span 2;
+}
+
+.mood-item.wide {
+  grid-column: span 2;
+}
+
+/* ESCALA REDUCIDA DEL MOODBOARD */
+.moodboard-grid {
+  transform: scale(0.96);
+  transform-origin: top left;
+  margin-bottom: var(--spacing-md);
+}
+
+.moodboard-grid-wrapper {
+  justify-content: center;
+  padding-left: 4rem;
+}
+
+
+/* ==== GUÍA DEL EVENTO ==== */
+.evento-guia {
+  margin-top: var(--spacing-xxl);
+  margin-bottom: var(--spacing-xxl);
+}
+
+.guia-titulo {
+  margin-top: 50px;
+  font-family: 'Melodrama';
+  font-size: 80px;
+  color: #4D4D0F;
+  margin-bottom: var(--spacing-xs);
+  padding-left: 4rem;
+}
+
+.guia-subtitulo {
+  font-size: 50px;
+  color: var(--color-gray-700);
+  margin-bottom: var(--spacing-md);
+  padding-left: 4rem;
+}
+
+.guia-seccion {
+  display: flex;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xxl);
+}
+
+.guia-lateral {
+  width: 180px;
+  position: relative;
+}
+
+.guia-etiqueta {
+  color: var(--color-primary-purple);
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-sm);
+  font-weight: var(--font-weight-bold);
+}
+
+.guia-linea {
+  position: absolute;
+  left: 10px;
+  top: 40px;
+  width: 1px;
+  height: calc(100% - 40px);
+  background-color: var(--color-gray-500);
+}
+
+.guia-contenido {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+  flex: 1;
+}
+
+.guia-bloque blockquote {
+  font-style: italic;
+  color: var(--color-gray-700);
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0 0 var(--spacing-sm);
+}
+
+.guia-bloque {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  max-width: 800px;
+}
+
+.guia-bloque img {
+  width: 100%;
+  border-radius: var(--border-radius-sm);
+  object-fit: cover;
+  box-shadow: var(--box-shadow-sm);
+}
+
+.guia-bloque p {
+  font-size: var(--font-size-base);
+  color: var(--color-gray-900);
+  line-height: 1.6;
+}
+
+.guia-bloque strong {
+  color: var(--color-primary-purple);
+}
+
+ /*FIN ESTILOS PARA EVENTO ESPECIFICO XD*/
