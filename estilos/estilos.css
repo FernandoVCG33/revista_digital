@@ -1413,7 +1413,6 @@ width: 1375px;
 max-width: 100%;
 justify-content: space-between;
 align-items: end;
-=======
   display: flex;
   width: 1375px;
   justify-content: space-between;
@@ -1456,7 +1455,7 @@ align-items: end;
 
 .evento{
   overflow: hidden;
-=======
+}
 
 
 
