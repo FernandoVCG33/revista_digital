@@ -3,6 +3,7 @@
   font-family: 'Melodrama';
   src: url('/tipografia_melodrama/Fonts/WEB/fonts/Melodrama-Bold.woff') format('woff');
   src: url('/tipografia_melodrama/Fonts/WEB/fonts/Melodrama-Light.woff') format('woff');
+
   font-weight: lighter;
   font-display: swap;
   font-style: normal;
@@ -154,19 +155,31 @@ section {
 
 /* Contenedor principal del footer */
 .pie {
-  background-color: var(--color-primary);
-  color: var(--color-black);
-  padding: 50px var(--spacing-xl) 40px;
+  background-color:transparent;
+  height: 130px;
+  color: var(--color-primary-purple);
+  padding: 20px var(--spacing-xl) 20px;
   font-size: 16px;
   font-weight: lighter;
-  border-top: 4px solid var(--color-primary-purple);
-  height: 128px;
-
+  border-top: 2px solid var(--color-primary-purple);
+  min-height: 62px;
+  position: static;
 }
+
 .pie_home{
   
   background-color: transparent;
+=======
+.footer-home.pie {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  border-top:0;
+
 }
+
 
 .footer-content {
   display: flex;
@@ -268,16 +281,52 @@ section {
     display: none;
   }
 
+  .pie{
+    height: 61px;       
+    padding-top: 5px;    
+    padding-bottom: 5px;  /
+  }
+
+  .footer-content{
+    height: 61px;
+  }
+
   .footer-logo {
     text-align: center;
     width: 100%;
+    margin-bottom: 5px;
+    margin-top: 0px;
+  }
+  .footer-title{
+    font-size: 2px;
   }
 
   .footer-copy {
     text-align: center;
-    font-size: 14px;
-    padding: 10px;
+    font-size: 13px;
+    margin-top: 5px;
   }
+}
+
+
+.footer-home .footer-title {
+  color: var(--color-primary);
+}
+
+.footer-home .footer-social img {
+  filter: brightness(0) invert(1);
+}
+
+.footer-home .footer-nav a {
+  color: var(--color-primary); 
+}
+
+.footer-home .footer-nav li:not(:last-child)::after {
+  background-color: var(--color-primary); 
+}
+
+.footer-home .footer-copy{
+  color: var(--color-primary)
 }
 
 /* Card en codigo (Diseño del equipo de UX) */
@@ -426,24 +475,32 @@ section {
   padding: var(--spacing-xl);
   width: 100%;
   height: 122px;
-  position: fixed; /* CAMBIO CLAVE */
-  top: 0; /* ancla al tope */
+  position: fixed;
+  top: 0; 
   left: 0;
-  z-index: 999; /* asegúrate que quede encima */
-  border-bottom: 5px solid var(--color-primary-purple);
+  z-index: 999; 
+  border-bottom: 2px solid var(--color-primary-purple);
 }
 
 .header_home{
   background-color: transparent;
   border: none;
 }
-.header_home > .titulo-container > h1, .tambo-nav > ul > li > a {
+.header_home .titulo-container h1,
+.header_home .tambo-nav a {
   color: var(--color-primary);
   background-color: none;
 }
 .header_home > .titulo-container > h1{
-  font-size: 65px;
   font-weight: normal;
+}
+
+.header_home img {
+  filter: brightness(0) invert(1);
+}
+
+.header_home > .menu-icon > span{
+  background-color: var(--color-primary);
 }
 /* Contenedor para el título */
 .titulo-container {
@@ -458,13 +515,13 @@ section {
   font-family: 'Melodrama';
   font-size: 47px;
   font-weight: var(--font-weight-normal);
-  color: var(--color-black);
+  color: var(--color-primary-purple);
   margin: 0;
 }
 
 .titulo>h3,
 h5 {
-  color: var(--color-white);
+  color: var(--color-primary-purple);
 }
 
 /* Barra de navegación */
@@ -489,7 +546,7 @@ h5 {
 
 .tambo-nav a {
   text-decoration: none;
-  color: var(--color-black);
+  color: var(--color-primary-purple);
   font-weight: var(--font-weight-normal);
   font-size: var(--font-size-nav);
   transition: color 0.3s ease, transform 0.3s ease;
@@ -534,7 +591,7 @@ h5 {
 }
 
 .menu-toggle:checked+.menu-icon span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+  transform: rotate(45deg) translate(3px, 3px);
 }
 
 .menu-toggle:checked+.menu-icon span:nth-child(2) {
@@ -558,8 +615,8 @@ h5 {
 
 .menu-icon span {
   width: 30px;
-  height: 3px;
-  background-color: var(--color-black);
+  height: 1.5px;
+  background-color: var(--color-primary-purple);
   border-radius: 3px;
   transition: all 0.3s ease;
 }
@@ -569,26 +626,34 @@ h5 {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .tambo-header {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: var(--spacing-md);
-    height: auto;
+    padding: var(--spacing-xl);
+    height: 58px; 
+    min-height: 58px;
 
   }
 
   .titulo-container {
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 55%;
+    left: 30%;
+    transform: translate(-50%, -50%);
     margin: 0;
+    z-index: 2;
   }
 
-  .menu-icon {
+    .titulo-container h1 {
+    font-size: 24px;
+  }
+  
+
+ .menu-icon {
     position: absolute;
-    top: 25px;
+    top: 16px;
     left: 20px;
     display: flex;
     flex-direction: column;
@@ -598,7 +663,6 @@ h5 {
     padding: 10px;
     transition: left 0.3s ease;
   }
-
   .tambo-nav {
     position: fixed;
     top: 0;
@@ -636,44 +700,41 @@ h5 {
   .nav-icons {
     margin-left: auto;
     order: 2;
+    width: 157px;
   }
 
-  .nav-icons button {
-    width: auto;
-    height: 40px;
+   .nav-icons button {
+    width: 157px;
+    height: 21px;
     padding: 0 16px;
+    font-size: 12px;
+    border-radius: 5px;
   }
-
   .tambo-nav a {
     color: var(--color-primary);
     font-size: 18px;
     text-decoration: none;
   }
-}
 
-
-@media (max-width: 768px) {
-
-  #menuUserIcon {
+    #menuUserIcon {
     display: block;
     align-self: flex-start;
     margin-bottom: 40px;
     margin-top: -30px;
-    /* lo sube un poco */
   }
 
   /* Ocultamos el ícono user dentro de nav-icons */
   .nav-icons a[href="cuenta.html"] {
     display: none;
   }
-
-  /* Mostramos el ícono campana siempre */
-  .nav-icons a[href="notificaciones.html"] {
-    display: inline-block;
+   .header_home img {
+    filter: none;
   }
-
+  
 
 }
+
+
 
 
 
@@ -1361,7 +1422,6 @@ ul.componentes li {
 
 /* Inicio mi_agenda */
 
-/* ========== HEADER ========== */
 
 
 /* ========== TITULAR ========== */
