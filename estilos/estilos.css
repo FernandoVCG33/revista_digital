@@ -163,7 +163,12 @@ section {
   height: 128px;
 
 }
-
+.pie_home{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: transparent;
+}
 
 .footer-content {
   display: flex;
@@ -430,6 +435,18 @@ section {
   border-bottom: 5px solid var(--color-primary-purple);
 }
 
+.header_home{
+  background-color: transparent;
+  border: none;
+}
+.header_home > .titulo-container > h1, .tambo-nav > ul > li > a {
+  color: var(--color-primary);
+  background-color: none;
+}
+.header_home > .titulo-container > h1{
+  font-size: 65px;
+  font-weight: normal;
+}
 /* Contenedor para el título */
 .titulo-container {
   position: absolute;
