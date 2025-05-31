@@ -1407,16 +1407,26 @@ ul.componentes li {
 
 
 .encabezado-dia {
+
+display: flex;
+width: 1375px;
+max-width: 100%;
+justify-content: space-between;
+align-items: end;
+=======
   display: flex;
   width: 1375px;
   justify-content: space-between;
   align-items: flex-start;
+
 }
 
 
 .dia-semana {
   font-size: 1.2rem;
   color: #7a7a7a;
+  display: inline-block;
+  margin-right: 15px;
 }
 
 
@@ -1425,6 +1435,7 @@ ul.componentes li {
   font-weight: bold;
   color: #41532b;
   margin-left: 1rem;
+  display: inline-block;
 }
 
 
@@ -1443,24 +1454,59 @@ ul.componentes li {
 }
 
 
+.evento{
+  overflow: hidden;
+=======
+
 
 
 .evento img {
   width: auto;
   height: auto;
+
   border-radius: 10px;
+}
+
+.evento img {
+  width: 100%;
   object-fit: cover;
+
+  transition: transform 0.3s ease;
+
   position: relative;
   transition: transform 0.5s ease;
   /* Suaviza la animación */
+
   display: block;
 }
 
 
 .evento:hover img {
+
+  transform: scale(1.03);
+
   transform: scale(1.1);
   /* Aplica zoom suave */
+
 }
+
+.evento_agenda{
+  position: relative;
+}
+
+.evento_agenda .titulo{
+  position: absolute;
+  bottom: 10px;
+  left: 25px;
+}
+
+.nombre_agenda h2.agenda-subtitulo, 
+.nombre_agenda h1.agenda-mes,
+.nombre_agenda .dia-evento .dia-semana,
+.nombre_agenda .dia-evento .numero-dia{
+  font-family: 'Melodrama';
+}
+
 
 
 @media (max-width: 480px) {
@@ -1475,6 +1521,24 @@ ul.componentes li {
     /* Ajuste opcional para pantallas pequeñas */
   }
 }
+
+
+.js_carrusel{
+  display: block !important;
+}
+.js_carrusel article{
+  display: inline-block;
+  width: calc(50% - 15px);
+  margin-right: 10px;
+}
+
+.js_carrusel .dot{
+width: 41px !important;
+height: 9px !important;
+border-radius: 10px !important;
+}
+/* Fin de mi_agenda */ 
+
 
 .agenda-carrusel {
   background-color: red;
@@ -1501,6 +1565,7 @@ ul.componentes li {
   font-weight: 3000;
   letter-spacing: -1.1%;
 }
+
 
 .day-name {
   font-family: 'Melodrama-Semibold';
