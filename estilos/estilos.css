@@ -3387,3 +3387,293 @@ body.modo-informacion .tambo-header:not(.header-solido) .titulo {
 }
 
 /*FIN ESTILOS PARA EVENTO ESPECIFICO XD*/
+
+/*INICIO CARD DE EVENTOS*/
+ .event-card-frame {
+  position: relative;
+  width: 308px;
+  height: 654px;
+  background-color: #ECECE4;
+}
+
+.event-card-frame .event-title-details {
+  position: absolute;
+  width: 241px;
+  top: 462px;
+  left: 15px;
+  font-family: "Raleway-SemiBold", Helvetica;
+  font-weight: 400;
+  color: var(--collection-1-secundario);
+  font-size: 33px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.event-card-frame .event-title-panic {
+  font-weight: 600;
+  color: #4c2634;
+}
+
+.event-card-frame .event-artist-music {
+  font-family: "Raleway-Regular", Helvetica;
+  color: #4c2634;
+  font-size: 24px;
+}
+
+.event-card-frame .spacing-line-1 {
+  font-weight: 600;
+  color: #4c2634;
+  font-size: 16px;
+}
+
+.event-card-frame .spacing-line-2 {
+  font-family: "Raleway-Regular", Helvetica;
+  color: #000000;
+  font-size: 17px;
+}
+
+.event-card-frame .spacing-line-3 {
+  font-weight: 600;
+  color: #4c2634;
+  font-size: 24px;
+}
+
+.event-card-frame .spacing-line-4 {
+  font-weight: 600;
+  color: #4c2634;
+  font-size: 14px;
+}
+
+.event-card-frame .spacing-line-5 {
+  font-family: "Raleway-Regular", Helvetica;
+  color: #000000;
+  font-size: 15px;
+}
+
+.event-card-frame .spacing-line-6 {
+  font-weight: 600;
+  color: #4c2634;
+  font-size: 10.6px;
+}
+
+.event-card-frame .event-details-overlap {
+  position: absolute;
+  width: 308px;
+  height: 440px;
+  top: 0;
+  left: 0;
+  background-image: url("../imagenes/imagen_card.jpg");
+  background-size: 100% 100%;
+}
+
+.event-card-frame .event-date-info {
+  display: flex;
+  width: 196px;
+  height: 54px;
+  align-items: center;
+  position: absolute;
+  top: 284px;
+  left: 15px;
+}
+
+.event-card-frame .event-day-number-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 45.18px;
+  height: 49.16px;
+  align-items: center;
+  justify-content: center;
+  gap: 6.64px;
+  position: relative;
+}
+
+.event-card-frame .event-day-number {
+  position: relative;
+  width: 33.88px;
+  height: 91.02px;
+  margin-top: -21.59px;
+  margin-bottom: -20.26px;
+  font-family: "Raleway-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 64px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.event-card-frame .event-date-group {
+  display: flex;
+  flex-direction: column;
+  width: 129.56px;
+  align-items: flex-start;
+  gap: 0.66px;
+  position: relative;
+  margin-left: -7.97px;
+}
+
+.event-card-frame .event-month-day {
+  display: flex;
+  height: 31.89px;
+  align-items: flex-end;
+  gap: 5.32px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+}
+
+.event-card-frame .event-month-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 21.92px;
+  align-items: center;
+  justify-content: center;
+  gap: 6.64px;
+  position: relative;
+  margin-top: -17.94px;
+}
+
+.event-card-frame .event-month-inner-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6.64px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.event-card-frame .event-month-name {
+  position: relative;
+  align-self: stretch;
+  height: 49.83px;
+  margin-top: -0.66px;
+  font-family: "Raleway-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 53.3px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.event-card-frame .event-date-text-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6.64px;
+  position: relative;
+  flex: 0 0 auto;
+  margin-top: -7.97px;
+  margin-right: -5.32px;
+}
+
+.event-card-frame .event-date-text {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6.64px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.event-card-frame .event-month-text {
+  position: relative;
+  width: 107.63px;
+  height: 39.86px;
+  margin-top: -0.66px;
+  font-family: "Raleway-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 42.6px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.event-card-frame .event-weekday-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6.64px;
+  padding: 0px 2.66px 0px 11.29px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.event-card-frame .event-weekday-name {
+  position: relative;
+  width: fit-content;
+  margin-top: -0.66px;
+  font-family: "Raleway-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 14.9px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.event-card-frame .event-location-time {
+  display: flex;
+  flex-direction: column;
+  width: 137px;
+  height: 51px;
+  align-items: flex-end;
+  justify-content: center;
+  position: absolute;
+  top: 349px;
+  left: 25px;
+}
+
+.event-card-frame .event-venue {
+  position: relative;
+  align-self: stretch;
+  height: 11.98px;
+  font-family: "Raleway-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 18.1px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.event-card-frame .event-time {
+  position: relative;
+  align-self: stretch;
+  font-family: "Raleway-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 18.1px;
+  text-align: right;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.event-card-frame .event-age-restriction {
+  position: absolute;
+  width: 68px;
+  top: 379px;
+  left: 229px;
+  font-family: "Raleway-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 16.9px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.event-card-frame .event-button {
+  position: absolute;
+  top: 605px;
+  left: 99px;
+  font-family: "Raleway-SemiBold", Helvetica;
+  font-weight: 600;
+  color: var(--collection-1-secundario);
+  font-size: 22px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+/*FIN CARD DE EVENTOS*/
