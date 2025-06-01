@@ -85,6 +85,20 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.getElementById("menu-toggle");
+  const blurOverlay = document.querySelector(".blur-overlay");
+
+  if (menuToggle && blurOverlay) {
+    menuToggle.addEventListener("change", () => {
+      if (menuToggle.checked) {
+        blurOverlay.classList.add("visible");
+      } else {
+        blurOverlay.classList.remove("visible");
+      }
+    });
+  }
+});
 
 
 document.addEventListener("DOMContentLoaded", () => {

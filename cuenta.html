@@ -42,54 +42,52 @@
         <!-- Aquí JS inserta el botón registrar o los iconos de usuario -->
     </header>
     <!--Fin de  HEADER -->
+    <!-- Overlay para el blur -->
+    <div class="blur-overlay"></div>
 
 <main class="cuenta-principal">
+ <section class="perfil-container">
+  <div class="perfil-texto">
+    <h2>Hola <span>ISABELA</span></h2>
+    <p class="campo">Nombre de usuario</p>
+    <p>Isabela Montiel</p>
+    <p class="campo">Correo electrónico</p>
+    <p>isamontiel@gmail.com</p>
+  </div>
 
-  <section class="perfil-izquierdo">
-    <img src="imagenes/avatar.jpeg" alt="Avatar usuario" />
-    <h3 class="usuario-nombre"> Isabela Montiel </h3>
-    <p class="ubicacion"><i class="fa fa-map-marker"></i> Bolivia</p>
-    <p class="email"><i class="fa fa-map-marker"></i> isamontiel@gmail.com</p>
+  <div class="perfil-imagen">
+    <img src="imagenes/avatar.jpeg" alt="Foto de usuario" />
+  </div>
 
-    
+  <div class="acciones">
+    <a href="mi_agenda.html" class="btn agenda">Ir a la agenda</a>
+    <button class="cerrar-sesion-btn">Cerrar sesión</button>
+  </div>
+</section>
 
-    <div class="botones-perfil">
-    <a href="mi_agenda.html" class="agenda-btn"><i class="fa fa-calendar"></i> Ir a Agenda</a>    </div>
-
-    <button class="cerrar-sesion-btn" >
-      Cerrar sesión
-    </button>
-  </section>
-
-  <section class="perfil-derecho">
-    <nav class="nav-pestanas">
-      <ul>
-        
-        <li>Reviews</li>
-        <li>Preferencias</li>
-      </ul>
-    </nav>
-
-    <div class="contenido-pestanas">
-      <div class="reviews">
-        <p>Contenido de Reviews aquí.</p>
+  <section class="reviews-container">
+    <h3>Reviews</h3>
+    <div class="review-cards">
+      <div class="review-card">
+        <p class="estrellas">☆☆☆☆☆</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        <div class="firma">Firma del usuario</div>
+        <div class="fecha">Fecha de publicación</div>
       </div>
-      <div class="preferencias">
-        <h4>Preferencias</h4>
-        <label><input type="checkbox" name="experiencia" value="aventura"> Interactiva</label><br>
-        <label><input type="checkbox" name="experiencia" value="cultural"> Contemplativa</label><br>
-        <label><input type="checkbox" name="experiencia" value="gastronomica"> Sensorial</label><br>
-        <label><input type="checkbox" name="experiencia" value="relajacion"> Ritual o Ancestral </label><br>
-        <label><input type="checkbox" name="experiencia" value="relajacion"> Formativa</label><br>
-        <label><input type="checkbox" name="experiencia" value="relajacion"> Experimentaciòn</label><br>
-
-
-
-        
+      <div class="review-card">
+        <p class="estrellas">☆☆☆☆☆</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        <div class="firma">Firma del usuario</div>
+        <div class="fecha">Fecha de publicación</div>
+      </div>
+      <div class="review-card">
+        <p class="estrellas">☆☆☆☆☆</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        <div class="firma">Firma del usuario</div>
+        <div class="fecha">Fecha de publicación</div>
       </div>
     </div>
   </section>
-
 </main>
 
     <!--pie de pagina-->
