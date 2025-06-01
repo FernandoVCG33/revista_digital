@@ -154,7 +154,7 @@ section {
 
 /* Contenedor principal del footer */
 .pie {
-  background-color:transparent;
+  background-color: transparent;
   height: 130px;
   color: var(--color-primary-purple);
   padding: 20px var(--spacing-xl) 20px;
@@ -167,10 +167,8 @@ section {
 
 
 
-.pie_home{
-  
+.pie_home {
   background-color: transparent;
-
 }
 
 .footer-home.pie {
@@ -179,7 +177,7 @@ section {
   left: 0;
   right: 0;
   z-index: 999;
-  border-top:0;
+  border-top: 0;
 
 }
 
@@ -288,17 +286,16 @@ section {
   .footer-social {
     display: none;
   }
-  
 
-  
-  .pie{
+
+
+  .pie {
     height: 82px;
-    padding-top: 5px;    
-    padding-bottom: 5px;  /
-    
+    padding-top: 5px;
+    padding-bottom: 5px;/
   }
 
-  .footer-content{
+  .footer-content {
     height: 61px;
   }
 
@@ -308,7 +305,8 @@ section {
     margin-bottom: 5px;
     margin-top: 0px;
   }
-  .footer-title{
+
+  .footer-title {
     font-size: 35px;
   }
 
@@ -329,14 +327,14 @@ section {
 }
 
 .footer-home .footer-nav a {
-  color: var(--color-primary); 
+  color: var(--color-primary);
 }
 
 .footer-home .footer-nav li:not(:last-child)::after {
-  background-color: var(--color-primary); 
+  background-color: var(--color-primary);
 }
 
-.footer-home .footer-copy{
+.footer-home .footer-copy {
   color: var(--color-primary)
 }
 
@@ -482,27 +480,30 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--color-primary); /* mejor que transparente si es fijo */
+  background-color: var(--color-primary);
+  /* mejor que transparente si es fijo */
   padding: var(--spacing-xl);
   width: 100%;
   height: 122px;
   position: fixed;
-  top: 0; 
+  top: 0;
   left: 0;
-  z-index: 999; 
+  z-index: 999;
   border-bottom: 2px solid var(--color-primary-purple);
 }
 
-.header_home{
+.header_home {
   background-color: transparent;
   border: none;
 }
+
 .header_home .titulo-container h1,
 .header_home .tambo-nav a {
   color: var(--color-primary);
   background-color: none;
 }
-.header_home > .titulo-container > h1{
+
+.header_home>.titulo-container>h1 {
   font-weight: normal;
 }
 
@@ -510,9 +511,10 @@ section {
   filter: brightness(0) invert(1);
 }
 
-.header_home > .menu-icon > span{
+.header_home>.menu-icon>span {
   background-color: var(--color-primary);
 }
+
 /* Contenedor para el título */
 .titulo-container {
   position: absolute;
@@ -648,7 +650,7 @@ h5 {
     align-items: center;
     justify-content: space-between;
     padding: var(--spacing-xl);
-    height: 58px; 
+    height: 58px;
     min-height: 58px;
     
 
@@ -663,12 +665,12 @@ h5 {
     z-index: 1;
   }
 
-    .titulo-container h1 {
+  .titulo-container h1 {
     font-size: 24px;
   }
-  
 
- .menu-icon {
+
+  .menu-icon {
     position: absolute;
     top: 16px;
     left: 20px;
@@ -680,6 +682,7 @@ h5 {
     transition: left 0.3s ease;
     z-index: 1000;
   }
+
   .tambo-nav {
     position: fixed;
     top: 0;
@@ -721,20 +724,21 @@ h5 {
     width: 157px;
   }
 
-   .nav-icons button {
+  .nav-icons button {
     width: 157px;
     height: 21px;
     padding: 0 16px;
     font-size: 12px;
     border-radius: 5px;
   }
+
   .tambo-nav a {
     color: var(--color-primary);
     font-size: 18px;
     text-decoration: none;
   }
 
-    #menuUserIcon {
+  #menuUserIcon {
     display: block;
     align-self: flex-start;
     margin-bottom: 40px;
@@ -745,7 +749,8 @@ h5 {
   .nav-icons a[href="cuenta.html"] {
     display: none;
   }
-   .header_home img {
+
+  .header_home img {
     filter: none;
   }
 
@@ -828,8 +833,8 @@ h5 {
 .cuenta-principal {
   margin: 130px;
   padding: 2rem;
-  color:var(--color-primary-purple);
-  
+  color: var(--color-primary-purple);
+
 }
 
 .perfil-container {
@@ -929,13 +934,13 @@ h5 {
   border-radius: 10px;
   margin: 0 auto;
   color: rgba(77, 77, 15, 1);
-  max-width: 1000px; 
+  max-width: 1000px;
 }
 
 .reviews-container h3 {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
-  font-weight:normal;
+  font-weight: normal;
   display: flex;
 
 }
@@ -957,6 +962,7 @@ h5 {
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
+
 .review-card {
   background-color: rgba(178, 178, 141, 1);
   padding: 1rem;
@@ -1008,20 +1014,21 @@ h5 {
 
 @media (max-width: 1000px) {
 
-    .cuenta-principal {
+  .cuenta-principal {
     margin: 0;
-    padding: 1.5rem; 
+    padding: 1.5rem;
   }
+
   .perfil-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 0;
-    
+
   }
 
   .perfil-imagen {
-    order: -1; 
+    order: -1;
     align-items: center;
     margin-top: -10px;
   }
@@ -1064,7 +1071,7 @@ h5 {
 
   .btn,
   .cerrar-sesion-btn {
-    width: 48%; 
+    width: 48%;
     font-size: 16px;
     height: 49px;
     align-items: center;
@@ -1079,8 +1086,9 @@ h5 {
   .review-cards {
     grid-template-columns: 1fr;
   }
- .review-card {
-    padding-bottom: 3rem; 
+
+  .review-card {
+    padding-bottom: 3rem;
   }
 
 
@@ -1166,7 +1174,8 @@ h5 {
 }
 
 .popup-form input {
-  font-family: "Raleway", sans-serif;;
+  font-family: "Raleway", sans-serif;
+  ;
   padding: 15px;
   font-size: 16px;
   border: none;
@@ -1187,7 +1196,8 @@ h5 {
 }
 
 .submit-btn {
-  font-family: "Raleway", sans-serif;;
+  font-family: "Raleway", sans-serif;
+  ;
   padding: 15px;
   font-size: 18px;
   background-color: #8C5067;
@@ -1198,7 +1208,8 @@ h5 {
 }
 
 .form-links {
-  font-family: "Raleway", sans-serif;;
+  font-family: "Raleway", sans-serif;
+  ;
   display: flex;
   justify-content: space-between;
   font-size: 14px;
@@ -1384,17 +1395,16 @@ h5 {
 
 .home_evento {
   width: 600px;
-  height: 250px;
+  height: 950px;
   color: white;
-  margin-left: 45px;
-  overflow: hidden;
+  margin-left: 65px;
   font-weight: lighter;
   margin-top: 250px;
-  margin-bottom: 250px;
+  margin-bottom: 150px;
 }
 
 .home_fecha {
-  font-size: 72px;
+  font-size: 150px;
   line-height: 1;
 }
 
@@ -1406,19 +1416,19 @@ h5 {
 }
 
 .home_mes {
-  font-size: 48px;
+  font-size: 120px;
 }
 
 .home_sabado {
-  font-size: 28px;
-  margin-top: -10px;
+  font-size: 58px;
+  margin-top: -40px;
 }
 
 .home_lugar_hora {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-top: 10px;
+  margin-top: -23px;
   font-size: 18px;
 }
 
@@ -1428,7 +1438,7 @@ h5 {
 }
 
 .home_hora {
- 
+
   padding: 4px 12px;
   border-radius: 4px;
   font-weight: bold;
@@ -1441,7 +1451,7 @@ ul.componentes {
   gap: 2rem;
   /* espacio entre los rectángulos */
   justify-content: center;
-  margin-bottom: 50px;
+  margin-bottom: 127px;
 }
 
 ul.componentes li {
@@ -1478,6 +1488,64 @@ ul.componentes li {
     width: 100%;
   }
 
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+  margin-top: -5px;
+}
+
+.botones_home {
+  margin-top: -254px;
+  margin-right: 20px;
+  display: block;
+  width: 456px;
+  height: 50px;
+  float: right;
+
+}
+
+.botones_home .botone_i {
+  color: var(--color-black);
+  font-family: "Raleway";
+  width: 258px;
+  height: 61px;
+  background-color: var(--color-white);
+  border-radius: 20px;
+  text-align: center;
+  line-height: 60px;
+  font-weight: 500;
+  font-size: 25px;
+}
+
+.botones_home .botone_e {
+  margin-top: 25px;
+  color: var(--color-black);
+  font-family: "Raleway";
+  width: 258px;
+  height: 61px;
+  background-color: rgba(255, 255, 255, 0.493);
+  border: 1px solid #000;
+  border-radius: 20px;
+  text-align: center;
+  line-height: 60px;
+  font-weight: 500;
+  font-size: 25px;
+}
+@media (width < 1044px){
+  .botone_e{
+    display: none;
+  }
+  .botone_i{
+    display: none;
+  }
+}
+@media (width < 556px) {
+  .home_fecha , .home_mes{
+    font-size: 100px;
+  }
 }
 
 /* Fin de banner */
@@ -1548,6 +1616,76 @@ ul.componentes li {
 
 /*fin de carruseld e eventos*/
 
+/*inicio de cards eventos*/
+.header_wrapp {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter details {
+  position: relative;
+}
+
+.filter summary {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.filter .icon-hamburger {
+  width: 20px;
+}
+
+.filter .icon-hamburger .line_1 {
+  width: 100%;
+  display: block;
+  height: 3px;
+  background-color: rgb(241, 5, 84);
+}
+
+.filter .icon-hamburger .line_2 {
+  width: 75%;
+  margin: 0 auto;
+  display: block;
+  height: 3px;
+  margin-top: 3px;
+  background-color: rgb(241, 5, 84);
+}
+
+.filter .icon-hamburger .line_3 {
+  width: 50%;
+  margin: 0 auto;
+  display: block;
+  height: 3px;
+  margin-top: 3px;
+  background-color: rgb(241, 5, 84);
+}
+
+.filter_wrapp {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: rgb(241, 5, 84);
+  min-width: 200px;
+  border-radius: 25px;
+  padding: 15px;
+}
+
+.filter_wrapp p {
+  margin: 0px;
+  color: white;
+}
+
+.filter_wrapp p+p {
+  margin-top: 10px;
+}
+
+/*fin de carsd eventos*/
+
+
 /* Inicio mi_agenda */
 
 
@@ -1581,11 +1719,11 @@ ul.componentes li {
 
 .encabezado-dia {
 
-display: flex;
-width: 1375px;
-max-width: 100%;
-justify-content: space-between;
-align-items: end;
+  display: flex;
+  width: 1375px;
+  max-width: 100%;
+  justify-content: space-between;
+  align-items: end;
   display: flex;
   width: 1375px;
   justify-content: space-between;
@@ -1626,7 +1764,7 @@ align-items: end;
 }
 
 
-.evento{
+.evento {
   overflow: hidden;
 }
 
@@ -1662,20 +1800,20 @@ align-items: end;
 
 }
 
-.evento_agenda{
+.evento_agenda {
   position: relative;
 }
 
-.evento_agenda .titulo{
+.evento_agenda .titulo {
   position: absolute;
   bottom: 10px;
   left: 25px;
 }
 
-.nombre_agenda h2.agenda-subtitulo, 
+.nombre_agenda h2.agenda-subtitulo,
 .nombre_agenda h1.agenda-mes,
 .nombre_agenda .dia-evento .dia-semana,
-.nombre_agenda .dia-evento .numero-dia{
+.nombre_agenda .dia-evento .numero-dia {
   font-family: 'Melodrama';
 }
 
@@ -1695,21 +1833,23 @@ align-items: end;
 }
 
 
-.js_carrusel{
+.js_carrusel {
   display: block !important;
 }
-.js_carrusel article{
+
+.js_carrusel article {
   display: inline-block;
   width: calc(50% - 15px);
   margin-right: 10px;
 }
 
-.js_carrusel .dot{
-width: 41px !important;
-height: 9px !important;
-border-radius: 10px !important;
+.js_carrusel .dot {
+  width: 41px !important;
+  height: 9px !important;
+  border-radius: 10px !important;
 }
-/* Fin de mi_agenda */ 
+
+/* Fin de mi_agenda */
 
 
 .agenda-carrusel {
@@ -1845,7 +1985,7 @@ body.modo-informacion .tambo-header:not(.header-solido) .titulo {
   opacity: 1;
 }
 
- /* ===== ESTRUCTURA LATERAL CON ÍNDICE ===== */
+/* ===== ESTRUCTURA LATERAL CON ÍNDICE ===== */
 .evento-lugar-nuevo,
 .evento-horarios-nuevo {
   display: flex;
@@ -1923,6 +2063,7 @@ body.modo-informacion .tambo-header:not(.header-solido) .titulo {
   text-align: right;
   padding-right: 3.5rem;
 }
+
 .imagen-lugar {
   margin-top: 90px;
   overflow: visible;
@@ -2169,8 +2310,15 @@ body.modo-informacion .tambo-header:not(.header-solido) .titulo {
 }
 
 @keyframes fadeFloat {
-  0% { opacity: 0.8; transform: translateY(0); }
-  100% { opacity: 1; transform: translateY(-5px); }
+  0% {
+    opacity: 0.8;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(-5px);
+  }
 }
 
 /* ==== MOODBOARD VISUAL ==== */
@@ -3238,4 +3386,4 @@ body.modo-informacion .tambo-header:not(.header-solido) .titulo {
   white-space: nowrap;
 }
 
- /*FIN ESTILOS PARA EVENTO ESPECIFICO XD*/
+/*FIN ESTILOS PARA EVENTO ESPECIFICO XD*/
