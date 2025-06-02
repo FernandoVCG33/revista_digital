@@ -874,6 +874,11 @@ h5 {
 .campo {
   margin-top: 1rem;
   color: #5f5f5f;
+  font-size: 33px;
+}
+
+.campo + p {
+  font-size: 27.65px;
 }
 
 .acciones {
@@ -896,6 +901,7 @@ h5 {
 }
 
 .btn.agenda {
+  margin-top: -70px;
   background-color: var(--color-secondary);
   color: var(--color-primary);
   font-weight: 500;
@@ -903,9 +909,11 @@ h5 {
 
 .cerrar-sesion-btn {
   background: transparent;
+
   border: 1px solid var(--color-primary-purple);
   color: var(--color-primary-purple);
   transition: all 0.3s ease-in-out;
+  margin-bottom: 179px;
 }
 
 .cerrar-sesion-btn:hover {
@@ -934,7 +942,9 @@ h5 {
   border-radius: 10px;
   margin: 0 auto;
   color: rgba(77, 77, 15, 1);
-  max-width: 1000px;
+  width: 100%;
+  padding: 54px 94px;
+  margin-top: 100px;
 }
 
 .reviews-container h3 {
@@ -1027,6 +1037,13 @@ h5 {
 
   }
 
+  .campo {
+    font-size: 19px;
+  }
+  .campo + p{
+    font-size: 16px;
+  }
+  
   .perfil-imagen {
     order: -1;
     align-items: center;
@@ -1079,8 +1096,20 @@ h5 {
     padding: 0.75rem;
   }
 
+  .cerrar-sesion-btn {
+    margin-bottom: 0;
+    margin-top: 0px;
+  }
+  .btn.agenda {
+  margin-top: 0px;
+}
+
+
   .reviews-container {
     border-radius: 14px;
+    margin-top: 70px;
+    padding: 39px 20px;
+    margin-bottom: 80px ;
   }
 
   .review-cards {
