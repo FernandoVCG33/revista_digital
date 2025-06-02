@@ -1519,6 +1519,9 @@ ul.componentes li {
 
 }
 
+
+
+
 .clearfix::after {
   content: "";
   display: table;
@@ -1575,6 +1578,17 @@ ul.componentes li {
   .home_fecha , .home_mes{
     font-size: 100px;
   }
+}
+
+@media (width < 580px)  {
+    .home_fecha , .home_mes{
+      font-size: 50px;
+    } 
+    .home_sabado{
+      margin-top: 2px;
+      margin-bottom: 15px;
+      font-size: 25px;
+    }
 }
 
 /* Fin de banner */
