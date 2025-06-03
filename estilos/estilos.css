@@ -1641,9 +1641,8 @@ ul.componentes li {
   font-size: 20pt;
   margin-top: 40px;
   width: 35%;
-  background-color: var(--color-primary-purple);
   font-weight: 200;
-  color: #ffffff;
+  color: black;
   padding: 25px 16px;
 }
 
@@ -1651,13 +1650,73 @@ ul.componentes li {
   font-size: 20pt;
   margin-top: 40px;
   width: 35%;
-  background-color: var(--color-primary-purple);
   font-weight: 200;
-  color: #ffffff;
+  color: black;
   padding: 25px 16px;
 }
 
 /*fin de carruseld e eventos*/
+
+/* Boton de filtros */
+
+.header_wrapp {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: auto 20px;
+}
+.filter details {
+  position: relative;
+}
+.filter summary {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.filter .icon-hamburger {
+  width: 20px;
+}
+.filter .icon-hamburger .line_1 {
+  width: 100%;
+  display: block;
+  height: 3px;
+  background-color: #4C2634;
+}
+.filter .icon-hamburger .line_2 {
+  width: 75%;
+  margin: 0 auto;
+  display: block;
+  height: 3px;
+  margin-top: 3px;
+  background-color: #4C2634;
+}
+.filter .icon-hamburger .line_3 {
+  width: 50%;
+  margin: 0 auto;
+  display: block;
+  height: 3px;
+  margin-top: 3px;
+  background-color: #4C2634;
+}
+.filter_wrapp {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #4C2634;
+  min-width: 200px;
+  border-radius: 25px;
+  padding: 15px;
+}
+.filter_wrapp p{
+  margin: 0px;
+  color: white;
+}
+.filter_wrapp p + p{
+  margin-top: 10px;
+  }
+
 
 /*inicio de cards eventos*/
 .header_wrapp {
@@ -1686,7 +1745,7 @@ ul.componentes li {
   width: 100%;
   display: block;
   height: 3px;
-  background-color: rgb(241, 5, 84);
+  background-color: #4C2634;
 }
 
 .filter .icon-hamburger .line_2 {
@@ -1695,7 +1754,7 @@ ul.componentes li {
   display: block;
   height: 3px;
   margin-top: 3px;
-  background-color: rgb(241, 5, 84);
+  background-color: #4C2634;
 }
 
 .filter .icon-hamburger .line_3 {
@@ -1704,14 +1763,14 @@ ul.componentes li {
   display: block;
   height: 3px;
   margin-top: 3px;
-  background-color: rgb(241, 5, 84);
+  background-color: #4C2634;
 }
 
 .filter_wrapp {
   position: absolute;
   top: 100%;
   right: 0;
-  background: rgb(241, 5, 84);
+  background: #4C2634;
   min-width: 200px;
   border-radius: 25px;
   padding: 15px;
@@ -1761,22 +1820,16 @@ ul.componentes li {
 
 
 .encabezado-dia {
-
-  display: flex;
-  width: 1375px;
+  width: 100%;
   max-width: 100%;
-  justify-content: space-between;
   align-items: end;
   display: flex;
-  width: 1375px;
   justify-content: space-between;
-  align-items: flex-start;
-
 }
 
 
 .dia-semana {
-  font-size: 1.2rem;
+  font-size: 2rem;
   color: #7a7a7a;
   display: inline-block;
   margin-right: 15px;
@@ -1784,9 +1837,9 @@ ul.componentes li {
 
 
 .numero-dia {
-  font-size: 3rem;
+  font-size: 5rem;
   font-weight: bold;
-  color: #41532b;
+  color: #4D4D0F;
   margin-left: 1rem;
   display: inline-block;
 }
@@ -1829,7 +1882,7 @@ ul.componentes li {
   position: relative;
   transition: transform 0.5s ease;
   /* Suaviza la animación */
-
+  border-radius: 4px;
   display: block;
 }
 
@@ -1837,14 +1890,26 @@ ul.componentes li {
 .evento:hover img {
 
   transform: scale(1.03);
-
   transform: scale(1.1);
+  border-radius: 15px;
+  object-fit: cover;
   /* Aplica zoom suave */
 
 }
 
 .evento_agenda {
   position: relative;
+}
+
+.titulo-mi_agenda{
+  position: absolute;
+  bottom: 10px;
+  left: 25px;
+  font-family: 'Melodrama';
+  font-size: 47px;
+  font-weight: var(--font-weight-normal);
+  color: var(--color-primary-purple);
+  margin: 0;
 }
 
 .evento_agenda .titulo {
@@ -1859,7 +1924,6 @@ ul.componentes li {
 .nombre_agenda .dia-evento .numero-dia {
   font-family: 'Melodrama';
 }
-
 
 
 @media (max-width: 480px) {
@@ -1891,6 +1955,102 @@ ul.componentes li {
   height: 9px !important;
   border-radius: 10px !important;
 }
+
+/*===========VENTANA EMERGENTE=========*/ 
+/* Ventana emergente base */
+.ventana_agenda {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Contenido de la ventana */
+.contenido_ventana_agenda {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: #f8f6ef;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: #0056b3;
+
+  width: auto;
+  max-width: 1000px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+
+/* Botón de cerrar */
+.cerrar {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Actividades */
+.actividad_agenda {
+  display:block;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 90px;
+}
+
+.actividad_agenda button{
+    margin-top: 10px;
+    background-color: #8d8e6a;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.actividad_agenda img {
+  width: 180px;
+  border-radius: 10px;
+}
+
+.detalle_agenda {
+  flex: 1;
+  display: flex;
+  gap: 1rem;
+}
+
+.detalle_agenda p {
+  padding: auto;
+}
+
+.tamano_texto {
+  padding:auto;
+
+}
+.detalle_agenda h4 {
+  font-family: 'Melodrama';
+  font-size: 1.5rem;
+}
+
+.detalle_agenda button {
+  margin-top: 10px;
+  background-color: #8d8e6a;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 
 /* Fin de mi_agenda */
 
