@@ -389,3 +389,36 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 /*FIN informacion.html */
 
+/* Cuenta */
+
+document.addEventListener("DOMContentLoaded", function () {
+  const editarBtn = document.querySelector('.editar-perfil');
+  const modoLectura = document.querySelector('.modo-lectura');
+  const modoEdicion = document.querySelector('.modo-edicion');
+  const accionesLectura = document.querySelector('.acciones-lectura');
+  const accionesEdicion = document.querySelector('.acciones-edicion');
+  const subirFotoBtn = document.querySelector('.subir-foto');
+  const cancelarBtn = document.querySelector('.cancelar-edicion');
+
+  editarBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    modoLectura.style.display = 'none';
+    modoEdicion.style.display = 'block';
+    accionesLectura.style.display = 'none';
+    accionesEdicion.style.display = 'flex';
+    subirFotoBtn.style.display = 'inline-block';
+
+    document.body.classList.add('modo-edicion-activa');
+  });
+
+  cancelarBtn.addEventListener('click', function () {
+    modoLectura.style.display = 'block';
+    modoEdicion.style.display = 'none';
+    accionesLectura.style.display = 'flex';
+    accionesEdicion.style.display = 'none';
+    subirFotoBtn.style.display = 'none';
+
+    document.body.classList.remove('modo-edicion-activa');
+  });
+});

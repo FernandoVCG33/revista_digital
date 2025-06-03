@@ -2,7 +2,6 @@
 @font-face {
   font-family: 'Melodrama';
   src: url('/tipografia_melodrama/Fonts/WEB/fonts/Melodrama-Bold.woff') format('woff');
-  src: url('/tipografia_melodrama/Fonts/WEB/fonts/Melodrama-Light.woff') format('woff');
 
   font-weight: lighter;
   font-display: swap;
@@ -881,14 +880,23 @@ h5 {
   font-size: 27.65px;
 }
 
+.editar-perfil {
+  display: inline-block;
+  margin-top: 28px;
+  color: var(--color-primary-purple);
+  text-decoration: none;
+  font-size: 25px;
+}
+
 .acciones {
   grid-column: 2;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: 1rem;
-  margin-top: -150px;
+  margin-top: -300px;
 }
+
 
 .btn,
 .cerrar-sesion-btn {
@@ -901,10 +909,14 @@ h5 {
 }
 
 .btn.agenda {
-  margin-top: -70px;
+  margin-top: 0px;
   background-color: var(--color-secondary);
   color: var(--color-primary);
   font-weight: 500;
+}
+
+.btn.agenda:hover{
+  background-color: var(--color-primary-purple);
 }
 
 .cerrar-sesion-btn {
@@ -917,7 +929,8 @@ h5 {
 }
 
 .cerrar-sesion-btn:hover {
-  background: #5a1d3d;
+  background: var(--color-secondary);
+  color: var(--color-primary);
 }
 
 .perfil-imagen {
@@ -925,8 +938,8 @@ h5 {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  align-self: start;
 }
-
 .perfil-imagen img {
   width: 325px;
   height: 325px;
@@ -1021,6 +1034,84 @@ h5 {
   font-size: 0.8rem;
 }
 
+.perfil-imagen .subir-foto {
+  margin-top: 1rem;
+  padding: 10px 20px;
+  font-size: 25px;
+  background-color: var(--color-secondary);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+  align-items: center;
+  margin-right: 90px;
+  
+  
+}
+
+.perfil-imagen .subir-foto:hover {
+  background-color: var(--color-primary-purple);
+  cursor: pointer;
+}
+
+
+/* Estilos para las acciones en modo edición */
+.acciones-edicion {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+  margin-top: -300px
+}
+
+.acciones-edicion button {
+  width: 210px;
+  height: 58px;
+  font-size: 25px;
+  padding: 10px;
+  border-radius: 12.5px;
+  cursor: pointer;
+  border: none;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+.acciones-edicion button.guardar-cambios {
+  background-color:var(--color-secondary); 
+  color: white;
+  width: 239px;
+  height: 58px;
+}
+.acciones-edicion button.guardar-cambios:hover{
+  background-color: var(--color-primary-purple);
+}
+
+.acciones-edicion button.cancelar-edicion {
+  background-color: transparent;
+  border: 1px solid var(--color-secondary);
+  color: var(--color-primary-purple);
+  font-weight: 400;
+}
+
+.acciones-edicion button.cancelar-edicion:hover {
+  background-color: var(--color-secondary);
+  color: white;
+}
+
+.modo-edicion input {
+  width: 540px;
+  height: 79.31px;
+  font-size: 24px;
+  padding: 0 1rem;
+  background-color: rgba(227, 227, 212, 1);
+  border-radius: 12px;
+  box-sizing: border-box;
+  font-family:var(--font-family-base);
+  border: 1px solid #e0e0e0;
+}
+
 
 @media (max-width: 1000px) {
 
@@ -1029,13 +1120,16 @@ h5 {
     padding: 1.5rem;
   }
 
-  .perfil-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 0;
+.perfil-container {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  align-items: start;
+  position: relative;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+}
 
-  }
 
   .campo {
     font-size: 19px;
@@ -1044,16 +1138,56 @@ h5 {
     font-size: 16px;
   }
   
-  .perfil-imagen {
-    order: -1;
-    align-items: center;
-    margin-top: -10px;
+.perfil-imagen {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 0;
+  text-align: center;
+}
+
+body.modo-edicion-activa .perfil-imagen {
+  align-items: center;
+}
+.perfil-imagen img {
+  width: 210px;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin: 0 auto;
+  display: block;  
+}
+.modo-edicion .perfil-imagen .subir-foto {
+  margin: 1rem auto 0; 
+}
+.perfil-imagen .subir-foto {
+    width: 123px;
+    height: 49px;
+    font-size: 16px;
+
+}
+
+ .editar-perfil {
+    font-size: 19.2px;
   }
 
-  .perfil-imagen img {
-    width: 119px;
-    height: 119px;
-  }
+.perfil-imagen .subir-foto {
+  margin-top: 1rem;
+  margin-right: 0;
+}
+
+body.modo-edicion-activa .perfil-imagen {
+  align-items: center;
+  text-align: center;
+  margin-left: 5px;
+}
+body.modo-edicion-activa .perfil-imagen .subir-foto {
+  margin: 1rem auto 0;
+  display: inline-block;
+}
 
 
   .perfil-texto {
@@ -1074,17 +1208,26 @@ h5 {
   .campo {
     text-align: left;
   }
+.acciones {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin-top: 2rem;
+}
 
-  .acciones {
-    order: 2;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    margin-top: 1.5rem;
-    margin-bottom: 2rem;
-    justify-content: center;
-  }
+.acciones-edicion button.guardar-cambios {
+  width: 171px;
+  height: 49px;
+  font-size: 16px;
+}
+
+.acciones-edicion button.cancelar-edicion {
+  width: 110px;
+  height: 49px;
+  font-size: 16px;
+}
 
   .btn,
   .cerrar-sesion-btn {
@@ -1129,7 +1272,16 @@ h5 {
     font-size: 0.85rem;
   }
 
+  .modo-edicion input {
+    width: 320px;
+    height: 46px;
+    font-size: 16px;
+  }
+
 }
+
+
+
 
 
 
