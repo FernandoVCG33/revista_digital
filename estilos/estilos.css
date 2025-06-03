@@ -2,7 +2,6 @@
 @font-face {
   font-family: 'Melodrama';
   src: url('/tipografia_melodrama/Fonts/WEB/fonts/Melodrama-Bold.woff') format('woff');
-  src: url('/tipografia_melodrama/Fonts/WEB/fonts/Melodrama-Light.woff') format('woff');
 
   font-weight: lighter;
   font-display: swap;
@@ -881,14 +880,23 @@ h5 {
   font-size: 27.65px;
 }
 
+.editar-perfil {
+  display: inline-block;
+  margin-top: 28px;
+  color: var(--color-primary-purple);
+  text-decoration: none;
+  font-size: 25px;
+}
+
 .acciones {
   grid-column: 2;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: 1rem;
-  margin-top: -150px;
+  margin-top: -300px;
 }
+
 
 .btn,
 .cerrar-sesion-btn {
@@ -901,10 +909,14 @@ h5 {
 }
 
 .btn.agenda {
-  margin-top: -70px;
+  margin-top: 0px;
   background-color: var(--color-secondary);
   color: var(--color-primary);
   font-weight: 500;
+}
+
+.btn.agenda:hover{
+  background-color: var(--color-primary-purple);
 }
 
 .cerrar-sesion-btn {
@@ -917,7 +929,8 @@ h5 {
 }
 
 .cerrar-sesion-btn:hover {
-  background: #5a1d3d;
+  background: var(--color-secondary);
+  color: var(--color-primary);
 }
 
 .perfil-imagen {
@@ -925,8 +938,8 @@ h5 {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  align-self: start;
 }
-
 .perfil-imagen img {
   width: 325px;
   height: 325px;
@@ -1021,6 +1034,84 @@ h5 {
   font-size: 0.8rem;
 }
 
+.perfil-imagen .subir-foto {
+  margin-top: 1rem;
+  padding: 10px 20px;
+  font-size: 25px;
+  background-color: var(--color-secondary);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+  align-items: center;
+  margin-right: 90px;
+  
+  
+}
+
+.perfil-imagen .subir-foto:hover {
+  background-color: var(--color-primary-purple);
+  cursor: pointer;
+}
+
+
+/* Estilos para las acciones en modo edición */
+.acciones-edicion {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+  margin-top: -300px
+}
+
+.acciones-edicion button {
+  width: 210px;
+  height: 58px;
+  font-size: 25px;
+  padding: 10px;
+  border-radius: 12.5px;
+  cursor: pointer;
+  border: none;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+.acciones-edicion button.guardar-cambios {
+  background-color:var(--color-secondary); 
+  color: white;
+  width: 239px;
+  height: 58px;
+}
+.acciones-edicion button.guardar-cambios:hover{
+  background-color: var(--color-primary-purple);
+}
+
+.acciones-edicion button.cancelar-edicion {
+  background-color: transparent;
+  border: 1px solid var(--color-secondary);
+  color: var(--color-primary-purple);
+  font-weight: 400;
+}
+
+.acciones-edicion button.cancelar-edicion:hover {
+  background-color: var(--color-secondary);
+  color: white;
+}
+
+.modo-edicion input {
+  width: 540px;
+  height: 79.31px;
+  font-size: 24px;
+  padding: 0 1rem;
+  background-color: rgba(227, 227, 212, 1);
+  border-radius: 12px;
+  box-sizing: border-box;
+  font-family:var(--font-family-base);
+  border: 1px solid #e0e0e0;
+}
+
 
 @media (max-width: 1000px) {
 
@@ -1029,13 +1120,16 @@ h5 {
     padding: 1.5rem;
   }
 
-  .perfil-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 0;
+.perfil-container {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  align-items: start;
+  position: relative;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+}
 
-  }
 
   .campo {
     font-size: 19px;
@@ -1045,16 +1139,63 @@ h5 {
     font-size: 16px;
   }
 
+
   .perfil-imagen {
     order: -1;
     align-items: center;
     margin-top: -10px;
   }
+  
+.perfil-imagen {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 0;
+  text-align: center;
+}
 
-  .perfil-imagen img {
-    width: 119px;
-    height: 119px;
+body.modo-edicion-activa .perfil-imagen {
+  align-items: center;
+}
+.perfil-imagen img {
+  width: 210px;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin: 0 auto;
+  display: block;  
+}
+.modo-edicion .perfil-imagen .subir-foto {
+  margin: 1rem auto 0; 
+}
+.perfil-imagen .subir-foto {
+    width: 123px;
+    height: 49px;
+    font-size: 16px;
+
+}
+
+ .editar-perfil {
+    font-size: 19.2px;
   }
+
+.perfil-imagen .subir-foto {
+  margin-top: 1rem;
+  margin-right: 0;
+}
+
+body.modo-edicion-activa .perfil-imagen {
+  align-items: center;
+  text-align: center;
+  margin-left: 5px;
+}
+body.modo-edicion-activa .perfil-imagen .subir-foto {
+  margin: 1rem auto 0;
+  display: inline-block;
+}
 
 
   .perfil-texto {
@@ -1075,17 +1216,26 @@ h5 {
   .campo {
     text-align: left;
   }
+.acciones {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin-top: 2rem;
+}
 
-  .acciones {
-    order: 2;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    margin-top: 1.5rem;
-    margin-bottom: 2rem;
-    justify-content: center;
-  }
+.acciones-edicion button.guardar-cambios {
+  width: 171px;
+  height: 49px;
+  font-size: 16px;
+}
+
+.acciones-edicion button.cancelar-edicion {
+  width: 110px;
+  height: 49px;
+  font-size: 16px;
+}
 
   .btn,
   .cerrar-sesion-btn {
@@ -1131,7 +1281,16 @@ h5 {
     font-size: 0.85rem;
   }
 
+  .modo-edicion input {
+    width: 320px;
+    height: 46px;
+    font-size: 16px;
+  }
+
 }
+
+
+
 
 
 
@@ -2063,6 +2222,27 @@ body.modo-informacion .tambo-header:not(.header-solido) .titulo {
   opacity: 1;
 }
 
+.flecha_hero {
+width: 261px;
+}
+
+.flecha_hero .flecha_vector {
+  position: relative;
+  margin-top: 970px;
+  margin-left: 925px;
+  width: 47.5px;
+  height: 53.5px;
+}
+
+.flecha_hero .linea_vector {
+  position: relative;
+  margin-top: 470px;
+  margin-left: 820px;
+  width: 100%;
+  height: 1px;
+  object-fit: cover;
+}
+
 /* ===== ESTRUCTURA LATERAL CON ÍNDICE ===== */
 .evento-lugar-nuevo,
 .evento-horarios-nuevo {
@@ -2095,8 +2275,16 @@ body.modo-informacion .tambo-header:not(.header-solido) .titulo {
 }
 
 .columna-indice li.activo {
-  color: #8C5067;
+  transition: color 0.5s ease, transform 0.5s ease;
+  opacity: 0.4;
+  transform: scale(0.95);
   font-weight: bold;
+}
+
+.columna-indice li.activo.encendido {
+  opacity: 1;
+  transform: scale(1.1);
+  color: #8C5067;
 }
 
 .linea-vertical {
@@ -2153,13 +2341,22 @@ body.modo-informacion .tambo-header:not(.header-solido) .titulo {
 }
 
 .google-maps-link {
-  margin-top: 70px;
+  margin-top: 100px;
+  margin-left: 500px;
+  display: inline-flex;
   text-align: center;
   gap: 8px;
   font-size: 30px;
   text-decoration: none;
   color: #4D0F26;
   font-weight: 500;
+}
+
+.gps-icon {
+  /* Quita márgenes grandes */
+  margin-left: 0;
+  top: auto;
+  height: auto;
 }
 
 /* ===== HORARIOS ===== */
@@ -2370,33 +2567,21 @@ body.modo-informacion .tambo-header:not(.header-solido) .titulo {
 }
 
 /* ==== FRASE CENTRAL ANIMADA ==== */
-.evento-frase-central {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: var(--spacing-xxl) var(--spacing-xl);
-  background-color: transparent;
-}
-
 .frase-final {
   font-family: "Raleway", sans-serif;
   font-size: 60px;
-  font-weight: 300;
+  font-weight: 700;
   text-align: center;
-  color: #B5AEB2;
-  animation: fadeFloat 5s ease-in-out infinite alternate;
+  color: #B5AEB2; /* color base gris */
 }
 
-@keyframes fadeFloat {
-  0% {
-    opacity: 0.8;
-    transform: translateY(0);
-  }
+.frase-final span {
+  color: #B5AEB2;
+  transition: color 0.3s ease;
+}
 
-  100% {
-    opacity: 1;
-    transform: translateY(-5px);
-  }
+.frase-final span.relleno {
+  color: #8C5067; /* color relleno */
 }
 
 /* ==== MOODBOARD VISUAL ==== */
@@ -3112,6 +3297,182 @@ body.modo-informacion .tambo-header:not(.header-solido) .titulo {
 }
 
 /* parte final */
+
+/* --- SECCIÓN DEL POP-UP DE COMENTARIOS (comentario-seccion) --- */
+.comentario-seccion {
+  display: none; /* Inicialmente oculto */
+  position: fixed; /* Fijo en la ventana del navegador */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centra el pop-up */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  /* Ajustes para que sea responsivo */
+  width: 90vw; /* El 90% del ancho del viewport */
+  max-width: 1200px; /* Un máximo para que no se extienda demasiado en pantallas muy grandes */
+  height: auto; /* Altura automática basada en el contenido */
+  min-height: 385px; /* Altura mínima original como referencia */
+  padding: 3% 5%; /* Padding responsivo basado en porcentajes */
+  gap: 10px;
+  background-color: #c1b1b480;
+}
+
+.comentario-seccion__contenedor {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Ocupa todo el ancho disponible del pop-up */
+  height: auto; /* Altura automática */
+  min-height: 385px; /* Altura mínima original */
+  align-items: flex-end;
+  gap: 4px;
+  padding: 25px 34px 34px; /* Mantenemos el padding original aquí, pero puedes hacerlo responsivo también */
+  position: relative;
+  /* margin-left y margin-right pueden eliminarse o ajustarse si el contenedor es el 100% */
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #F7F7EC;
+}
+
+.comentario-seccion__cerrar-icono {
+  position: relative;
+  width: 13.5px; /* Estos iconos suelen ser de tamaño fijo, pero considera usar 'em' si el tamaño del texto cambia */
+  height: 13.5px;
+  margin-top: -0.75px;
+  margin-right: -0.75px;
+}
+
+.comentario-seccion__contenido {
+  display: flex;
+  flex-direction: column;
+  height: auto; /* Altura automática */
+  min-height: 267px; /* Altura mínima original */
+  align-items: flex-start;
+  justify-content: center;
+  gap: 26px;
+  padding: 10px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+}
+
+.comentario-seccion__texto-recordatorio {
+  position: relative;
+  width: 100%; /* Ocupa el ancho disponible */
+  height: auto; /* Altura automática */
+  /* font-size y line-height se pueden ajustar con 'vw' o 'clamp()' para mayor fluidez */
+  font-size: clamp(20px, 2.5vw, 33.5px); /* Ajusta el tamaño de la fuente según el viewport */
+  margin-top: -6.04px;
+  font-family: 'Melodrama';
+  font-weight: bolder;
+  color: #4C2634;
+  letter-spacing: var(--melodrama-h2-medium-letter-spacing);
+  line-height: var(--melodrama-h2-medium-line-height);
+  white-space: normal; /* Cambiado a normal para que el texto fluya */
+  font-style: var(--melodrama-h2-medium-font-style);
+}
+
+.comentario-seccion__estrellas {
+  display: inline-flex;
+  align-items: center;
+  gap: 5.24px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.comentario-seccion__estrella--1,
+.comentario-seccion__estrella--2,
+.comentario-seccion__estrella--3,
+.comentario-seccion__estrella--4,
+.comentario-seccion__estrella--5 {
+  position: relative;
+  width: 1.5vw; /* Tamaño de las estrellas responsivo */
+  height: 1.5vw; /* Mantener la proporción */
+  max-width: 18.88px; /* Tamaño máximo para que no sean enormes */
+  max-height: 18.87px;
+  margin-top: -0.39px;
+  margin-bottom: -0.39px;
+}
+
+.comentario-seccion__entrada-wrapper {
+  display: inline-flex;
+  height: auto; /* Altura automática */
+  min-height: 143px; /* Altura mínima */
+  align-items: flex-start;
+  gap: 32px;
+  position: relative;
+  margin-bottom: -5.04px;
+  width: 100%; /* Ocupa todo el ancho disponible */
+}
+
+.comentario-seccion__usuario-icono {
+  position: relative;
+  width: 36px; /* Iconos de tamaño fijo suelen estar bien */
+  height: 36px;
+  margin-top: -0.75px;
+  margin-left: -0.75px;
+  flex-shrink: 0; /* Evita que se encoja */
+}
+
+.comentario-seccion__texto-opinion {
+  position: relative;
+  width: calc(100% - 36px - 32px); /* Ancho dinámico: 100% del contenedor menos el icono y el gap */
+  height: auto; /* Altura automática */
+  min-height: 143px; /* Altura mínima original */
+  margin-top: -1.00px;
+  font-family: var(--raleway-p-font-family);
+  font-weight: var(--raleway-p-font-weight);
+  color: #4c26344c;
+  font-size: clamp(12px, 1.2vw, 14.8px); /* Tamaño de fuente responsivo */
+  letter-spacing: var(--raleway-p-letter-spacing);
+  line-height: var(--raleway-p-line-height);
+  font-style: var(--raleway-p-font-style);
+}
+
+.comentario-seccion__boton-enviar-wrapper {
+  display: flex;
+  width: 20%; /* Ancho del botón responsivo */
+  min-width: 180px; /* Ancho mínimo para que sea legible */
+  max-width: 227px; /* Ancho máximo original */
+  height: 46px; /* Altura del botón se mantiene fija o se puede hacer responsiva con 'em' */
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 0; /* Padding responsivo horizontalmente */
+  position: relative;
+  margin-bottom: -7.00px;
+  background-color: var(--collection-1-variante);
+  border-radius: 10px;
+  align-self: center; /* Centrar el botón si el contenedor es más grande */
+  left: 300px;
+}
+
+.comentario-seccion__boton-enviar {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  margin-top: -2.50px;
+  margin-bottom: -0.50px;
+  background-color: #8C5067;
+  color: #ffffff;
+  font-size: clamp(16px, 1.5vw, 20px); /* Tamaño de fuente responsivo */
+  white-space: nowrap;
+  border-radius: 10px;
+  width: 227px;
+  height: 46px;
+}
+
+
+/* Overlay para el pop-up */
+.overlay {
+  display: none; /* Inicialmente oculto */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+  z-index: 999; /* Detrás del pop-up pero delante del contenido */
+}
 
 .main-wrapper-new {
   background-color: #F7F7EC;
