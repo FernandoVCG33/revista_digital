@@ -258,5 +258,134 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+  document.addEventListener("DOMContentLoaded", () => {
+    const activos = document.querySelectorAll(".columna-indice li.activo");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("encendido");
+        }
+      });
+    }, {
+      threshold: 0.5 // El 50% del elemento debe estar visible
+    });
+
+    activos.forEach(activo => observer.observe(activo));
+  });
+
+  document.addEventListener("DOMContentLoaded", () => {
+  const frase = document.querySelector(".frase-final");
+  const nodes = Array.from(frase.childNodes);
+
+  frase.innerHTML = "";
+
+  nodes.forEach(node => {
+    if (node.nodeName === "BR") {
+      frase.appendChild(document.createElement("br"));
+    } else {
+      node.textContent.split("").forEach(letra => {
+        const span = document.createElement("span");
+        span.textContent = letra;
+        frase.appendChild(span);
+      });
+    }
+  });
+
+  const spans = frase.querySelectorAll("span");
+
+  // Función para animar letras
+  function animarLetras() {
+    spans.forEach((span, i) => {
+      setTimeout(() => {
+        span.classList.add("relleno");
+      }, i * 50);
+    });
+  }
+
+  // Observer para detectar visibilidad
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animarLetras();
+        obs.unobserve(entry.target); // animar solo una vez
+      }
+    });
+  }, { threshold: 0.5 });
+
+  observer.observe(frase);
+});
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const commentsSection = document.getElementById('comments-section');
+    const commentPopup = document.getElementById('comment-popup');
+    const openPopupButton = document.getElementById('open-comment-popup');
+    const closePopupButton = document.getElementById('close-comment-popup');
+    let overlay; // Para el overlay de fondo
+
+    // Función para crear y mostrar el overlay
+    function showOverlay() {
+      if (!overlay) {
+        overlay = document.createElement('div');
+        overlay.classList.add('overlay');
+        document.body.appendChild(overlay);
+        overlay.addEventListener('click', closePopup); // Cerrar al hacer clic en el overlay
+      }
+      overlay.style.display = 'block';
+    }
+
+    // Función para ocultar el overlay
+    function hideOverlay() {
+      if (overlay) {
+        overlay.style.display = 'none';
+      }
+    }
+
+    // Función para abrir el pop-up
+    function openPopup() {
+      commentPopup.style.display = 'flex'; // 'flex' porque así lo tienes en tu CSS para display
+      showOverlay();
+      document.body.style.overflow = 'hidden'; // Evita el scroll del fondo
+    }
+
+    // Función para cerrar el pop-up
+    function closePopup() {
+      commentPopup.style.display = 'none';
+      hideOverlay();
+      document.body.style.overflow = ''; // Restaura el scroll del fondo
+    }
+
+    // Evento para abrir el pop-up con el botón "Comentar"
+    if (openPopupButton) {
+      openPopupButton.addEventListener('click', openPopup);
+    }
+
+    // Evento para cerrar el pop-up con el icono de cerrar
+    if (closePopupButton) {
+      closePopupButton.addEventListener('click', closePopup);
+    }
+
+    // Funcionalidad de Intersection Observer para el scroll automático
+    if (commentsSection) {
+      const observerOptions = {
+        root: null, // El viewport es el root
+        rootMargin: '0px',
+        threshold: 0.5 // Cuando al menos el 50% de la sección esté visible
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // La sección de comentarios está visible
+            openPopup();
+            // Desconectar el observer una vez que se muestra el pop-up para que no se repita
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      observer.observe(commentsSection);
+    }
+  });
 /*FIN informacion.html */
 
