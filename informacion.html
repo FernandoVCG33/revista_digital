@@ -29,9 +29,6 @@
 
         <!-- Íconos de notificación y cuenta -->
         <div class="nav-icons">
-            <a href="#">
-                <img src="imagenes/bell.png" alt="Notificaciones" class="icon-img">
-            </a>
             <a href="cuenta.html">
                 <img src="imagenes/user.png" alt="Cuenta" class="icon-img">
             </a>
@@ -55,6 +52,9 @@
     <p class="hero-categoria">Música</p>
   </div>
 
+  <!-- Flecha -->
+   <div class="flecha_hero"><img class="flecha_vector" src="imagenes/flecha_hero.png"/><img class="linea_vector" src="imagenes/linea_hero.png"/></div>
+
   <!-- Indicadores -->
   <div class="carrusel-indicadores">
     <span class="dot activo"></span>
@@ -74,7 +74,6 @@
       <li>Cuanto</li>
       <li>Quienes</li>
     </ul>
-    <div class="linea-vertical"></div>
   </div>
 
   <div class="contenido-lugar">
@@ -83,7 +82,7 @@
     <p class="descripcion-lugar1">En la calle Genaro Sanjinés, esquina de la Indaburo, a media cuadra de la plaza Murillo</p>
     <img class="imagen-lugar" src="imagenes/imagen_tetromunicipal.jpg" alt="Teatro Municipal">
     <a href="https://www.google.com/maps" target="_blank" class="google-maps-link">
-      <img src="#" alt="" class="gps-icon"> Google maps
+      <img src="imagenes/icono gps.png" alt="" class="gps-icon"> Google maps
     </a>
   </div>
 </section>
@@ -98,7 +97,6 @@
       <li>Cuanto</li>
       <li>Quienes</li>
     </ul>
-    <div class="linea-vertical"></div>
   </div>
 
   <div class="contenido-horarios">
@@ -129,7 +127,6 @@
       <li>Cuanto</li>
       <li>Quienes</li>
     </ul>
-    <div class="linea-vertical"></div>
   </div>
 
   <div class="contenido-transporte">
@@ -159,7 +156,6 @@
       <li class="activo">Cuanto</li>
       <li>Quienes</li>
     </ul>
-    <div class="linea-vertical"></div>
   </div>
 
   <div class="contenido-precios">
@@ -638,9 +634,31 @@
             </div>
           </div>
         </div>
-        <div class="comment-button-wrapper-new"><div class="comment-button-new">Comentar</div></div>
+        <div class="comment-button-wrapper-new"><div class="comment-button-new" id="open-comment-popup">Comentar</div></div>
       </div>
     </div>
+    <div class="comentario-seccion" id="comment-popup">
+  <div class="comentario-seccion__contenedor">
+    <img class="comentario-seccion__cerrar-icono" src="imagenes/xcomentarios.png" id="close-comment-popup" />
+    <div class="comentario-seccion__contenido">
+      <p class="comentario-seccion__texto-recordatorio">No olvides dejar también el tuyo!</p>
+      <div class="comentario-seccion__estrellas">
+        <img class="comentario-seccion__estrella--1" src="imagenes/estrella_comentarios.png" />
+        <img class="comentario-seccion__estrella--2" src="imagenes/estrella_comentarios.png" />
+        <img class="comentario-seccion__estrella--3" src="imagenes/estrella_comentarios.png" />
+        <img class="comentario-seccion__estrella--4" src="imagenes/estrella_comentarios.png" />
+        <img class="comentario-seccion__estrella--5" src="imagenes/estrella_comentarios.png" />
+      </div>
+      <div class="comentario-seccion__entrada-wrapper">
+        <img class="comentario-seccion__usuario-icono" src="imagenes/perfil_comentarios.png" />
+        <p class="comentario-seccion__texto-opinion">Agrega tu opinión del evento y mi guía!</p>
+      </div>
+    </div>
+    <div class="comentario-seccion__boton-enviar-wrapper">
+      <div class="comentario-seccion__boton-enviar" id="close-comment-popup">Enviar</div>
+    </div>
+  </div>
+</div>
     <div class="final-section-new">
       <div class="final-message-new">Y terminamos!<br />Gracias por acompañarme</div>
       <div class="navigation-buttons-new">
