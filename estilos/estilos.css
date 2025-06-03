@@ -87,27 +87,27 @@ body {
 /*Animacion home*/
 @keyframes banner_home_1 {
   0% {
-    background: url(../imagenes/Bannerf1.png) center no-repeat scroll;
+    background: url(../imagenes/BannerF-1.png) center no-repeat scroll;
     background-size: cover;
   }
 
   25% {
-    background: url(../imagenes/Bannerf2.png) center no-repeat scroll;
+    background: url(../imagenes/BannerF-2.png) center no-repeat scroll;
     background-size: cover;
   }
 
   50% {
-    background: url(../imagenes/Bannerf3.png) center no-repeat scroll;
+    background: url(../imagenes/BannerF-3.png) center no-repeat scroll;
     background-size: cover;
   }
 
   75% {
-    background: url(../imagenes/Bannerf4.png) center no-repeat scroll;
+    background: url(../imagenes/BannerF-4.png) center no-repeat scroll;
     background-size: cover;
   }
 
   scroll 100% {
-    background: url(../imagenes/Bannerf1.png) center no-repeat scroll;
+    background: url(../imagenes/BannerF-1.png) center no-repeat scroll;
     background-size: cover;
   }
 
@@ -276,11 +276,11 @@ section {
 }
 
 @media (max-width: 1000px) {
-  
+
   footer {
-  position: relative;
-  z-index: 1;
-}
+    position: relative;
+    z-index: 1;
+  }
 
   .footer-nav-container,
   .footer-social {
@@ -626,7 +626,7 @@ h5 {
   cursor: pointer;
   z-index: 1001;
   padding: 10px;
-  
+
 }
 
 .menu-icon span {
@@ -652,7 +652,7 @@ h5 {
     padding: var(--spacing-xl);
     height: 58px;
     min-height: 58px;
-    
+
 
   }
 
@@ -704,7 +704,7 @@ h5 {
     padding: 0;
     margin: 0;
   }
-  
+
 
   .menu-toggle:checked+.menu-icon+.tambo-nav {
     left: 0;
@@ -877,7 +877,7 @@ h5 {
   font-size: 33px;
 }
 
-.campo + p {
+.campo+p {
   font-size: 27.65px;
 }
 
@@ -1040,10 +1040,11 @@ h5 {
   .campo {
     font-size: 19px;
   }
-  .campo + p{
+
+  .campo+p {
     font-size: 16px;
   }
-  
+
   .perfil-imagen {
     order: -1;
     align-items: center;
@@ -1100,16 +1101,17 @@ h5 {
     margin-bottom: 0;
     margin-top: 0px;
   }
+
   .btn.agenda {
-  margin-top: 0px;
-}
+    margin-top: 0px;
+  }
 
 
   .reviews-container {
     border-radius: 14px;
     margin-top: 70px;
     padding: 39px 20px;
-    margin-bottom: 80px ;
+    margin-bottom: 80px;
   }
 
   .review-cards {
@@ -1403,7 +1405,7 @@ h5 {
 .banner {
   width: 100%;
   height: 100vh;
-  background: url(../imagenes/Bannerf1.png) no-repeat center scroll;
+  background: url(../imagenes/BannerF-1.png) no-repeat center scroll;
   background-size: cover;
   animation: banner_home_1 12s infinite ease-in-out;
 }
@@ -1503,11 +1505,14 @@ ul.componentes li {
   cursor: pointer;
 }
 
+ul.componentes li:nth-child(1) {
+  background-color: #BABA2B;
+}
+
+
+
 @media (width <=880px) {
-  .banner {
-    width: 100%;
-    height: 850px;
-  }
+  
 
   .carrusel {
     width: 100%;
@@ -1566,7 +1571,8 @@ ul.componentes li {
   font-weight: 500;
   font-size: 25px;
 }
-@media (width < 1044px){
+
+@media (580px < width < 836px) {
   .botone_e{
     display: none;
   }
@@ -1574,21 +1580,50 @@ ul.componentes li {
     display: none;
   }
 }
+
 @media (width < 556px) {
-  .home_fecha , .home_mes{
+
+  .home_fecha,
+  .home_mes {
     font-size: 100px;
   }
 }
 
-@media (width < 580px)  {
-    .home_fecha , .home_mes{
-      font-size: 50px;
-    } 
-    .home_sabado{
-      margin-top: 2px;
-      margin-bottom: 15px;
-      font-size: 25px;
-    }
+@media (width < 580px) {
+  .home_evento{
+    margin-left: 29px;
+    margin-top: 333px;
+  }
+  .botones_home{
+    
+    height: 310px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-end;
+  }
+  .botones_home .botone_e {
+    width: 85px;
+    height: 25px;
+    font-size: 7px;
+    line-height: 21px;
+  }
+
+  .botones_home .botone_i {
+    width: 85px;
+    height: 25px;
+    font-size: 7px;
+    line-height: 21px;
+  }
+  .home_fecha,
+  .home_mes {
+    font-size: 50px;
+  }
+
+  .home_sabado {
+    margin-top: 2px;
+    margin-bottom: 15px;
+    font-size: 25px;
+  }
 }
 
 /* Fin de banner */
@@ -3007,7 +3042,8 @@ body.modo-informacion .tambo-header:not(.header-solido) .titulo {
   position: relative;
   width: fit-content;
   margin-top: -1.00px;
-  font-family: "Raleway", sans-serif;;
+  font-family: "Raleway", sans-serif;
+  ;
   color: #4D4D0F;
   font-size: 40px;
   text-align: center;
@@ -3344,8 +3380,10 @@ body.modo-informacion .tambo-header:not(.header-solido) .titulo {
   background-color: #1A0D11;
   display: flex;
   flex-direction: column;
-  width: 100%;  /* ✅ usa todo el ancho de su contenedor padre (1440px) */
-  height: 903px; /* o el alto que quieras */
+  width: 100%;
+  /* ✅ usa todo el ancho de su contenedor padre (1440px) */
+  height: 903px;
+  /* o el alto que quieras */
   align-items: center;
   gap: 39px;
   padding: 300px 0;
@@ -3432,7 +3470,7 @@ body.modo-informacion .tambo-header:not(.header-solido) .titulo {
 /*FIN ESTILOS PARA EVENTO ESPECIFICO XD*/
 
 /*INICIO CARD DE EVENTOS*/
- .event-card-frame {
+.event-card-frame {
   position: relative;
   width: 308px;
   height: 654px;
@@ -3719,4 +3757,5 @@ body.modo-informacion .tambo-header:not(.header-solido) .titulo {
   line-height: normal;
   white-space: nowrap;
 }
+
 /*FIN CARD DE EVENTOS*/

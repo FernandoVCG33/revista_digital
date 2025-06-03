@@ -186,15 +186,55 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 /*Banner del home */
-const botones = document.querySelectorAll('.componentes li');
-const banner = document.querySelector('.banner');
+const eventos = [
+  {
+    fecha: "31",
+    mes: "Mayo",
+    dia: "Sábado",
+    lugar: "Teatro Municipal",
+    hora: "20:00"
+  },
+  {
+    fecha: "1",
+    mes: "Junio",
+    dia: "Domingo",
+    lugar: "Teatro Nuna",
+    hora: "21:00"
+  },
+  {
+    fecha: "7",
+    mes: "Junio",
+    dia: "Viernes",
+    lugar: "Teatro Municipal",
+    hora: "20:00"
+  },
+  {
+    fecha: "4",
+    mes: "Junio",
+    dia: "Miércoles",
+    lugar: "Museo Nacional de Arte",
+    hora: "14:00"
+  }
+];
 
-botones.forEach(boton => {
-  boton.addEventListener('click', () => {
-    const nuevaImagen = boton.getAttribute('data-image');
-    banner.style.backgroundImage = nuevaImagen;
-  });
-});
+let index = 0;
+const botones = document.querySelectorAll(".componentes li");
+function actualizarEvento() {
+  const e = eventos[index];
+  document.getElementById("fecha").textContent = e.fecha;
+  document.getElementById("mes").textContent = e.mes;
+  document.getElementById("dia").textContent = e.dia;
+  document.getElementById("lugar").textContent = e.lugar;
+  document.getElementById("hora").textContent = e.hora;
+   botones.forEach((btn, i) => {
+      btn.style.backgroundColor = i === index ? "#BABA2B" : "#d9d9d9";
+    });
+
+  index = (index + 1) % eventos.length;
+}
+actualizarEvento();
+// sincroniza con 16s / 4 = 4s por evento
+setInterval(actualizarEvento, 2900);
 /*fin de banner de home */
 
 /*inicio banner evento especifico */
