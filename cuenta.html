@@ -47,22 +47,46 @@
 
 <main class="cuenta-principal">
  <section class="perfil-container">
-  <div class="perfil-texto">
+<!-- MODO LECTURA -->
+   <div class="perfil-texto">
     <h2>Hola <span>ISABELA</span></h2>
-    <p class="campo">Nombre de usuario</p>
-    <p>Isabela Montiel</p>
-    <p class="campo">Correo electrónico</p>
-    <p>isamontiel@gmail.com</p>
+
+    <div class="datos-perfil">
+      <div class="modo-lectura">
+        <p class="campo">Nombre de usuario</p>
+        <p style="margin-bottom: 28px;">Isabela Montiel</p>
+
+        <p class="campo">Correo electrónico</p>
+        <p style="margin-bottom: 28px;">isamontiel@gmail.com</p>
+
+        <a href="#" class="editar-perfil">Editar perfil ✎</a>
+      </div>
+
+      <form id="perfil-form" class="modo-edicion" style="display: none;">
+        <label class="campo">Nombre de usuario</label>
+        <input type="text" name="nombre" value="Isabela Montiel" style="margin-bottom: 28px;" />
+
+        <label class="campo">Correo electrónico</label>
+        <input type="email" name="correo" value="isamontiel@gmail.com" style="margin-bottom: 28px;" />
+      </form>
+    </div>
   </div>
 
   <div class="perfil-imagen">
     <img src="imagenes/avatar.jpeg" alt="Foto de usuario" />
+    <button class="subir-foto" style="display: none;">Subir foto</button>
   </div>
 
-  <div class="acciones">
+  <div class="acciones acciones-lectura">
     <a href="mi_agenda.html" class="btn agenda">Ir a la agenda</a>
     <button class="cerrar-sesion-btn">Cerrar sesión</button>
   </div>
+
+  <div class="acciones acciones-edicion" style="display: none;">
+    <button type="submit" form="perfil-form" class="guardar-cambios">Guardar cambios</button>
+    <button type="button" class="cancelar-edicion">Cancelar</button>
+  </div>
+
 </section>
 
   <section class="reviews-container">
@@ -70,21 +94,21 @@
     <div class="review-cards">
       <div class="review-card">
         <p class="estrellas">☆☆☆☆☆</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-        <div class="firma">Firma del usuario</div>
-        <div class="fecha">Fecha de publicación</div>
+        <p>La experiencia fue realmente cautivadora, con una energía que se sentía en cada momento. La calidad y la dedicación de quienes participaron se notaron claramente, dejando una impresión muy positiva.</p>
+        <div class="firma">Isabela Montiel</div>
+        <div class="fecha">05/01/2025</div>
       </div>
       <div class="review-card">
         <p class="estrellas">☆☆☆☆☆</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-        <div class="firma">Firma del usuario</div>
-        <div class="fecha">Fecha de publicación</div>
+        <p>La experiencia fue realmente inolvidable desde el primer momento. La dedicación y profesionalismo de todos los involucrados se reflejaron en cada detalle, desde la coordinación hasta la ejecución. La atmósfera creada logró conectar con el público de una manera muy genuina, transmitiendo emociones profundas y dejando una sensación de asombro y admiración.</p>
+        <div class="firma">Isabela Montiel</div>
+        <div class="fecha">20/03/2025</div>
       </div>
       <div class="review-card">
         <p class="estrellas">☆☆☆☆☆</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-        <div class="firma">Firma del usuario</div>
-        <div class="fecha">Fecha de publicación</div>
+        <p>La muestra fue una experiencia profundamente inspiradora. Cada obra parecía dialogar con el espectador desde un lugar íntimo, con una curaduría cuidadosamente pensada que guiaba el recorrido sin imponerlo. Los contrastes entre estilos, técnicas y temáticas generaban una narrativa fluida y llena de matices, que invitaba no solo a observar, sino a detenerse, reflexionar y sentir.</p>
+        <div class="firma">Isabela Montiel</div>
+        <div class="fecha">02/06/2025</div>
       </div>
     </div>
   </section>
