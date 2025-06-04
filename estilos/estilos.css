@@ -2275,13 +2275,15 @@ ul.componentes li:nth-child(1) {
     cursor: pointer;
 }
 
-.actividad_agenda img {
-  width: 180px;
-  border-radius: 10px;
+.imagen_evento{
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  border-radius: 8px;
+  object-fit: cover;
 }
 
 .detalle_agenda {
-  flex: 1;
   display: flex;
   gap: 1rem;
 }
