@@ -2169,6 +2169,9 @@ ul.componentes li:nth-child(1) {
   color: var(--color-primary-purple);
   margin: 0;
 }
+.texto_imagen_agenda{
+  color: white;
+}
 
 .evento_agenda .titulo {
   position: absolute;
