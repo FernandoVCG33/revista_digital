@@ -1872,6 +1872,7 @@ ul.componentes li:nth-child(1) {
   align-items: center;
   padding: auto 20px;
 }
+
 .filter details {
   position: relative;
 }
@@ -1880,6 +1881,7 @@ ul.componentes li:nth-child(1) {
   display: flex;
   gap: 20px;
   align-items: center;
+  right: 50px;  
 }
 .filter .icon-hamburger {
   width: 20px;
@@ -1922,7 +1924,55 @@ ul.componentes li:nth-child(1) {
 .filter_wrapp p + p{
   margin-top: 10px;
   }
+.filtro_agenda {
+  position: fixed;
+  right: 50px;
+  width: 300px;
+  background-color: #4a2334;
+  padding: 20px;
+  border-radius: 10px;
+  color: #fff;
+  --font-family-base: "Raleway", sans-serif;
+  z-index: 1000;
+  overflow-y: auto;
+}
 
+.filtro_agenda h3 {
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.filtro_agenda label {
+  display: block;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #eee;
+  gap: 10px;
+}
+
+.filtro_agenda input[type="checkbox"] {
+  margin-right: 10px;
+  accent-color: #cde641; /* Verde claro como en la imagen */
+  transform: scale(1.2);
+}
+
+.btn_aplicar {
+  margin-top: 20px;
+  width: 100%;
+  background-color: #a05c7b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn_aplicar:hover {
+  background-color: #c582a1;
+}
 
 /*inicio de cards eventos*/
 .header_wrapp {
@@ -1941,6 +1991,7 @@ ul.componentes li:nth-child(1) {
   display: flex;
   gap: 20px;
   align-items: center;
+  right: 50px;
 }
 
 .filter .icon-hamburger {
@@ -2068,6 +2119,7 @@ ul.componentes li:nth-child(1) {
 
 .evento {
   overflow: hidden;
+  border-radius: 15px;
 }
 
 
