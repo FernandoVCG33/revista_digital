@@ -2,6 +2,7 @@
 @font-face {
   font-family: 'Melodrama';
   src: url('/tipografia_melodrama/Fonts/WEB/fonts/Melodrama-Bold.woff') format('woff');
+  src: url('/tipografia_melodrama/Fonts/WEB/fonts/Melodrama-Light.woff') format('woff');
 
   font-weight: lighter;
   font-display: swap;
@@ -2554,16 +2555,16 @@ width: 261px;
 }
 
 .tabla-horarios th {
-  background-color: var(--color-secondary-green-light);
-  color: var(--color-primary-purple);
+  background-color: #BABA2B;
+  color: #4D4D0F;
   padding: var(--spacing-sm);
   vertical-align: middle;
-  text-align: center;
+  text-align: right;
   font-weight: var(--font-weight-normal);
 }
 
 .tabla-horarios td {
-  background-color: #dadb6a9f;
+  background-color: #DADA60;
   color: var(--color-primary-purple);
   padding: var(--spacing-sm);
   border-bottom: 1px solid #d5d666;
@@ -2612,21 +2613,67 @@ width: 261px;
 }
 
 .tabla-transporte th {
-  background-color: var(--color-secondary-green-light);
-  color: var(--color-primary-purple);
+  background-color: #BABA2B;
+  color: #4D4D0F;
   padding: var(--spacing-sm);
   vertical-align: middle;
-  text-align: center;
+  text-align: right;
   font-weight: var(--font-weight-normal);
 }
 
 .tabla-transporte td {
-  background-color: #dadb6a9f;
+  background-color: #DADA60;
   color: var(--color-primary-purple);
   padding: var(--spacing-sm);
   border-bottom: 1px solid #d5d666;
   vertical-align: middle;
   text-align: center;
+}
+
+.framet {
+  margin-top: 500px;
+  margin-left: 380px;
+  display: flex;
+  flex-direction: column;
+  width: 634px;
+  align-items: flex-start;
+}
+
+.framet .div-wrappert {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.framet .text-wrappert {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  color: #40400E;
+  font-size: 30px;
+  letter-spacing: var(--raleway-h4-medium-letter-spacing);
+  line-height: var(--raleway-h4-medium-line-height);
+  white-space: nowrap;
+  font-style: var(--raleway-h4-medium-font-style);
+}
+
+.framet .servicio-de-bus {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  color: #40400E;
+  font-size: 20px;
+  letter-spacing: var(--raleway-h5-letter-spacing);
+  line-height: 2;
+  font-style: var(--raleway-h5-font-style);
 }
 
 /* ==== PRECIOS ==== */
@@ -2670,16 +2717,16 @@ width: 261px;
 }
 
 .tabla-precios th {
-  background-color: var(--color-secondary-green-light);
-  color: var(--color-primary-purple);
+  background-color: #BABA2B;
+  color: #4D4D0F;
   padding: var(--spacing-sm);
   vertical-align: middle;
-  text-align: center;
+  text-align: right;
   font-weight: var(--font-weight-normal);
 }
 
 .tabla-precios td {
-  background-color: #dadb6a9f;
+  background-color: #DADA60;
   color: var(--color-primary-purple);
   padding: var(--spacing-sm);
   border-bottom: 1px solid #d5d666;
@@ -3387,8 +3434,7 @@ width: 261px;
   position: relative;
   width: fit-content;
   margin-top: -1.00px;
-  font-family: "Raleway", sans-serif;
-  ;
+  font-family: "Raleway", sans-serif;;
   color: #4D4D0F;
   font-size: 40px;
   text-align: center;
@@ -3901,10 +3947,8 @@ width: 261px;
   background-color: #1A0D11;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  /* ✅ usa todo el ancho de su contenedor padre (1440px) */
-  height: 903px;
-  /* o el alto que quieras */
+  width: 100%;  /* ✅ usa todo el ancho de su contenedor padre (1440px) */
+  height: 903px; /* o el alto que quieras */
   align-items: center;
   gap: 39px;
   padding: 300px 0;
