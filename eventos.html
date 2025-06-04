@@ -112,110 +112,235 @@
     <!--Fin de  HEADER -->
     <!-- Main basico "propuesta"-->
     <main>
-    <section>
-        <div class="header_wrapp">
-        <h2 class="eventostitulo">Eventos</h2>
         <div class="filter">
-            <details>
-                <summary>
-                    <p>Explorar o filtrar</p>
-                    <div class="icon-hamburger">
-                        <span class="line_1"></span>
-                        <span class="line_2"></span>
-                        <span class="line_3"></span>
+
+
+
+            <section>
+                <div class="header_wrapp">
+                    <h2 class="eventostitulo">Eventos</h2>
+                    <details>
+                    <summary>
+                        <p>Explorar o filtrar</p>
+                        <div class="icon-hamburger">
+                            <span class="line_1"></span>
+                            <span class="line_2"></span>
+                            <span class="line_3"></span>
+                        </div>
+                    </summary>
+                    <div class="filtro_agenda">
+                        <h3>Evento</h3>
+                        <label><input type="checkbox"> Teatro</label>
+                        <label><input type="checkbox"> Exposiciones</label>
+                        <label><input type="checkbox"> Danza</label>
+                        <label><input type="checkbox"> Música</label>
+
+                        <h3>Precios</h3>
+                        <label><input type="checkbox"> Menos de 20Bs</label>
+                        <label><input type="checkbox"> Entre 20Bs y 80Bs</label>
+                        <label><input type="checkbox"> Más de 80Bs</label>
+
+                        <h3>Fechas</h3>
+                        <label><input type="checkbox"> Esta semana</label>
+                        <label><input type="checkbox"> Este mes</label>
+                        <label><input type="checkbox"> Para el próximo mes</label>
+
+                        <button class="btn_aplicar">Aplicar</button>
                     </div>
-                </summary>
-                <div>
-                  <div class="filtro_agenda">
-                    <h3>Evento</h3>
-                    <label><input type="checkbox"> Teatro</label>
-                    <label><input type="checkbox"> Exposiciones</label>
-                    <label><input type="checkbox"> Danza</label>
-                    <label><input type="checkbox"> Música</label>
-
-                    <h3>Precios</h3>
-                    <label><input type="checkbox"> Menos de 20Bs</label>
-                    <label><input type="checkbox"> Entre 20Bs y 80Bs</label>
-                    <label><input type="checkbox"> Más de 80Bs</label>
-
-                    <h3>Fechas</h3>
-                    <label><input type="checkbox"> Esta semana</label>
-                    <label><input type="checkbox"> Este mes</label>
-                    <label><input type="checkbox"> Para el próximo mes</label>
-
-                    <button class="btn_aplicar">Aplicar</button>
-                  </div>  
+                </details>
                 </div>
-            </details>
-        </div>
-    </div>
-<div class="event-card-frame">
-  <p class="event-title-details">
-    <span class="event-title-panic">Pánico<br /></span>
-    <span class="event-artist-music">Con: Manuel García <br />Música<br /></span>
-    <span class="spacing-line-1">&nbsp;&nbsp;<br /></span>
-    <span class="spacing-line-2"><br /></span>
-    <span class="spacing-line-3">&nbsp;&nbsp; <br /></span>
-    <span class="spacing-line-4"><br /><br /></span>
-    <span class="spacing-line-5"><br /></span>
-    <span class="spacing-line-6"><br /><br /><br /></span>
-  </p>
-  <div class="event-details-overlap">
-    <div class="event-date-info">
-      <div class="event-day-number-wrapper"><div class="event-day-number">2</div></div>
-      <div class="event-date-group">
-        <div class="event-month-day">
-          <div class="event-month-wrapper">
-            <div class="event-month-inner-wrapper"><div class="event-month-name">1</div></div>
-          </div>
-          <div class="event-date-text-wrapper">
-            <div class="event-date-text"><div class="event-month-text">Mayo</div></div>
-          </div>
-        </div>
-        <div class="event-weekday-wrapper"><div class="event-weekday-name">Miércoles</div></div>
-      </div>
-    </div>
-    <div class="event-location-time">
-      <div class="event-venue">Teatro Municipal</div>
-      <div class="event-time">19:00</div>
-    </div>
-    <div class="event-age-restriction">+8 años</div>
-  </div>
-  <div class="event-button" onclick="location.href='informacion.html'">Ir a evento</div>
-</div>
-        </section>
-
-            <h3 class="proximos_eventos">Proximos eventos</h3>
-            <!--inicio de Carrusel de eventos-->
-            <section class="carrusel_eventos">
-                <div class="card_eve">
-                    <div class="over"></div>
-                    <div class="titulo">
-                        <h3>Borges</h3>
-                        <h5>Adriana mendes</h5>
-                    </div>
-                    <div class="especificaciones">
-                        <div class="fecha">
-                            <strong>3</strong>
-                            <div class="mas">
-                                <div class="mayo">
-                                    <p>1 Mayo</p>
+                
+                <!--Iniciocarrusel de cards de eventos-->
+                <div class="carrusel_eventos_cards">
+                    <div class="event-card-frame">
+                        <p class="event-title-details">
+                            <span class="event-title-panic">Altiplano<br /></span>
+                            <span class="event-artist-music">Con: Fusión Band <br />Música<br /></span>
+                            <span class="spacing-line-1">&nbsp;&nbsp;<br /></span>
+                            <span class="spacing-line-2"><br /></span>
+                            <span class="spacing-line-3">&nbsp;&nbsp; <br /></span>
+                            <span class="spacing-line-4"><br /><br /></span>
+                            <span class="spacing-line-5"><br /></span>
+                            <span class="spacing-line-6"><br /><br /><br /></span>
+                        </p>
+                        <div class="event-details-overlap ">
+                            <div class="event-date-info">
+                                <div class="event-day-number-wrapper">
+                                    <div class="event-day-number">3</div>
+                                </div>
+                                <div class="event-date-group">
+                                    <div class="event-month-day">
+                                        <div class="event-month-wrapper">
+                                            <div class="event-month-inner-wrapper">
+                                                <div class="event-month-name">1</div>
+                                            </div>
+                                        </div>
+                                        <div class="event-date-text-wrapper">
+                                            <div class="event-date-text">
+                                                <div class="event-month-text">Mayo</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="event-weekday-wrapper">
+                                        <div class="event-weekday-name">Miércoles</div>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="event-location-time">
+                                <div class="event-venue">Teatro Municipal</div>
+                                <div class="event-time">20:00</div>
+                            </div>
+                            <div class="event-age-restriction">+8 años</div>
                         </div>
-                        <div class="detalles">
-                            <ul>
-                                <li><strong>Teatro Municipal</strong></li>
-                                <li><strong>19:00</strong></li>
-                            </ul>
+                        <div class="event-button" onclick="location.href='informacion.html'">Ir a evento
                         </div>
                     </div>
+                    <div class="event-card-frame">
+                        <p class="event-title-details">
+                            <span class="event-title-panic">Vistiendo memorias<br /></span>
+                            <span class="event-artist-music">Con: ELVIRA ESPEJO
+                                <br />Exposición<br /></span>
+                            <span class="spacing-line-1">&nbsp;&nbsp;<br /></span>
+                            <span class="spacing-line-2"><br /></span>
+                            <span class="spacing-line-3">&nbsp;&nbsp; <br /></span>
+                            <span class="spacing-line-4"><br /><br /></span>
+                            <span class="spacing-line-5"><br /></span>
+                            <span class="spacing-line-6"><br /><br /><br /></span>
+                        </p>
+                        <div class="event-details-overlap card_evento_2">
+                            <div class="event-date-info">
+                                <div class="event-day-number-wrapper">
+                                    <div class="event-day-number"></div>
+                                </div>
+                                <div class="event-date-group">
+                                    <div class="event-month-day">
+                                        <div class="event-month-wrapper">
+                                            <div class="event-month-inner-wrapper">
+                                                <div class="event-month-name">1</div>
+                                            </div>
+                                        </div>
+                                        <div class="event-date-text-wrapper">
+                                            <div class="event-date-text">
+                                                <div class="event-month-text">Mayo</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="event-weekday-wrapper">
+                                        <div class="event-weekday-name">Sábado</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="event-location-time">
+                                <div class="event-venue">Teatro Municipal</div>
+                                <div class="event-time">17:00</div>
+                            </div>
+                            <div class="event-age-restriction">+18 años</div>
+                        </div>
+                        <div class="event-button" onclick="location.href='informacion.html'">Ir a evento
+                        </div>
+                    </div>
+                    <div class="event-card-frame">
+                        <p class="event-title-details">
+                            <span class="event-title-panic">Pánico<br /></span>
+                            <span class="event-artist-music">Con: Manuel García
+                                <br />Música<br /></span>
+                            <span class="spacing-line-1">&nbsp;&nbsp;<br /></span>
+                            <span class="spacing-line-2"><br /></span>
+                            <span class="spacing-line-3">&nbsp;&nbsp; <br /></span>
+                            <span class="spacing-line-4"><br /><br /></span>
+                            <span class="spacing-line-5"><br /></span>
+                            <span class="spacing-line-6"><br /><br /><br /></span>
+                        </p>
+                        <div class="event-details-overlap">
+                            <div class="event-date-info">
+                                <div class="event-day-number-wrapper">
+                                    <div class="event-day-number">2</div>
+                                </div>
+                                <div class="event-date-group">
+                                    <div class="event-month-day">
+                                        <div class="event-month-wrapper">
+                                            <div class="event-month-inner-wrapper">
+                                                <div class="event-month-name">1</div>
+                                            </div>
+                                        </div>
+                                        <div class="event-date-text-wrapper">
+                                            <div class="event-date-text">
+                                                <div class="event-month-text">Mayo</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="event-weekday-wrapper">
+                                        <div class="event-weekday-name">Miércoles</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="event-location-time">
+                                <div class="event-venue">Teatro Municipal</div>
+                                <div class="event-time">19:00</div>
+                            </div>
+                            <div class="event-age-restriction">+8 años</div>
+                        </div>
+                        <div class="event-button" onclick="location.href='informacion.html'">Ir a evento
+                        </div>
+                    </div>
+                    <div class="event-card-frame">
+                        <p class="event-title-details">
+                            <span class="event-title-panic">Vivas Sonoridades<br /></span>
+                            <span class="event-artist-music">Con: <br />Música<br /></span>
+                            <span class="spacing-line-1">&nbsp;&nbsp;<br /></span>
+                            <span class="spacing-line-2"><br /></span>
+                            <span class="spacing-line-3">&nbsp;&nbsp; <br /></span>
+                            <span class="spacing-line-4"><br /><br /></span>
+                            <span class="spacing-line-5"><br /></span>
+                            <span class="spacing-line-6"><br /><br /><br /></span>
+                        </p>
+                        <div class="event-details-overlap">
+                            <div class="event-date-info">
+                                <div class="event-day-number-wrapper">
+                                    <div class="event-day-number">2</div>
+                                </div>
+                                <div class="event-date-group">
+                                    <div class="event-month-day">
+                                        <div class="event-month-wrapper">
+                                            <div class="event-month-inner-wrapper">
+                                                <div class="event-month-name">7</div>
+                                            </div>
+                                        </div>
+                                        <div class="event-date-text-wrapper">
+                                            <div class="event-date-text">
+                                                <div class="event-month-text">Mayo</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="event-weekday-wrapper">
+                                        <div class="event-weekday-name">Miércoles</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="event-location-time">
+                                <div class="event-venue">Teatro Municipal</div>
+                                <div class="event-time">19:00</div>
+                            </div>
+                            <div class="event-age-restriction">+8 años</div>
+                        </div>
+                        <div class="event-button" onclick="location.href='informacion.html'">Ir a evento
+                        </div>
+                    </div>
+                </div>
+                <!--Fin de Carrusel de cards de eventos-->
+            </section>
+
+            <h3 class="proximos_eventos">Proximos eventos</h3>
+            <!--inicio de Carrusel de proximos  eventos-->
+            <section class="carrusel_eventos">
+                <div class="card_eve ev1">
+                    
                 </div>
                 <div class="card_eve ev2">
                     <div class="over"></div>
                     <div class="titulo">
-                        <h3>Pascal</h3>
-                        <h5>Ramon Perez</h5>
+                        <h3>BORGES</h3>
+                        <h5>Ariadna Mendes</h5>
                     </div>
                     <div class="especificaciones">
                         <div class="fecha">
@@ -237,8 +362,8 @@
                 <div class="card_eve ev3 ">
                     <div class="over"></div>
                     <div class="titulo">
-                        <h3>Monedas</h3>
-                        <h5>Edwin Rojas</h5>
+                        <h3>SENTIDO</h3>
+                        <h5>Maria Mercado</h5>
                     </div>
                     <div class="especificaciones">
                         <div class="fecha">
