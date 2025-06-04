@@ -133,13 +133,40 @@
         <p class="dia-semana">Jueves</p>
         <p class="numero-dia">08</p>
         </div>
-        <a href="#" class="ver-actividades">Ver actividades</a>
+        <a href="#" class="ver-actividades" onclick="abrirVentanaAgenda()">Ver actividades</a>
+        <div id="ventana-agenda" class="ventana_agenda">
+          <div class="contenido_ventana_agenda">
+            <span class="cerrar" onclick="cerrarVentanaAgenda()">&times;</span>
+            
+            <div class="actividad_agenda">
+              <div class="detalle_agenda">
+                <p class="tamano_texto">
+                  La obra TIEMPOS DE PAZ será presentada en el prestigioso Teatro Municipal Alberto Saavedra Pérez, un espacio cultural de gran relevancia que acoge algunas de las expresiones artísticas más destacadas de la ciudad.
+                </p>
+                <h4>5:30 pm: TIEMPOS DE PAZ</h4>
+                <img src="imagenes/jueves 08-1.jpg" alt="Danza" />
+              </div>
+              <button>Iniciar guía</button>
+            </div>
+           
+            <div class="actividad_agenda">
+              <div class="detalle_agenda">
+                <p class="tamano_texto">
+                  La obra TIEMPOS DE PAZ será presentada en el prestigioso Teatro Municipal Alberto Saavedra Pérez, un espacio cultural de gran relevancia que acoge algunas de las expresiones artísticas más destacadas de la ciudad.
+                </p>
+                <h4>5:30 pm: TIEMPOS DE PAZ</h4>
+                <img src="imagenes/jueves 08-1.jpg" alt="Danza" />
+              </div>
+              <button>Iniciar guía</button>
+            </div>
+          </div>
+      </div>
       </div>
       <div class="galeria-eventos">
         <article class="evento">
           <div class="evento_agenda">
           <img src="imagenes/jueves 08-1.jpg" alt="Danza contemporánea" />
-          <div class="titulo">
+          <div class="titulo-mi_agenda">
               <h3>Borges</h3>
               <h5>Ariadna Mendez</h5>
           </div>
@@ -265,4 +292,20 @@
   <!--Fin de pie de pagina-->
   <script src="Script/funciones.js"></script>
 </body>
+<script>
+  function abrirVentanaAgenda() {
+    document.getElementById('ventana-agenda').style.display = 'block';
+  }
+
+  function cerrarVentanaAgenda() {
+    document.getElementById('ventana-agenda').style.display = 'none';
+  }
+
+  window.onclick = function (event) {
+    const ventana = document.getElementById('ventana-agenda');
+    if (event.target === ventana) {
+      ventana.style.display = 'none';
+    }
+  };
+</script>
 </html>
