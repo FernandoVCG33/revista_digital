@@ -1,13 +1,24 @@
 /* FUENTE */
 @font-face {
   font-family: 'Melodrama';
-  src: url('/tipografia_melodrama/Fonts/WEB/fonts/Melodrama-Bold.woff') format('woff');
   src: url('/tipografia_melodrama/Fonts/WEB/fonts/Melodrama-Light.woff') format('woff');
 
   font-weight: lighter;
+  font-weight: 300;
   font-display: swap;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Melodrama';
+  src: url('/tipografia_melodrama/Fonts/WEB/fonts/Melodrama-Bold.woff') format('woff');
+
+  font-weight: bolder;
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+
 
 :root {
   /*  Colores */
@@ -203,7 +214,7 @@ section {
 
 .footer-title {
   font-family: 'Melodrama';
-  font-weight: bolder;
+  font-weight: 700;
   font-size: var(--font-size-titulo);
 }
 
@@ -527,7 +538,7 @@ section {
 .titulo {
   font-family: 'Melodrama';
   font-size: 47px;
-  font-weight: var(--font-weight-normal);
+  font-weight: 700;
   color: var(--color-primary-purple);
   margin: 0;
 }
