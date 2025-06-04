@@ -180,62 +180,243 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+/* === funciones.js === */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    // --- LÓGICA PARA INDEX.HTML ---
+    // Verificamos si existe un elemento que solo esté en index.html, por ejemplo, el ID 'fecha'
+    if (document.getElementById("fecha")) {
+        const eventos = [
+            {
+                fecha: "31",
+                mes: "Mayo",
+                dia: "Sábado",
+                lugar: "Teatro Municipal",
+                hora: "20:00"
+            },
+            {
+                fecha: "1",
+                mes: "Junio",
+                dia: "Domingo",
+                lugar: "Teatro Nuna",
+                hora: "21:00"
+            },
+            {
+                fecha: "7",
+                mes: "Junio",
+                dia: "Viernes",
+                lugar: "Teatro Municipal",
+                hora: "20:00"
+            },
+            {
+                fecha: "4",
+                mes: "Junio",
+                dia: "Miércoles",
+                lugar: "Museo Nacional de Arte",
+                hora: "14:00"
+            }
+        ];
+
+        let index = 0;
+        const botones = document.querySelectorAll(".componentes li");
+
+        function actualizarEvento() {
+            const e = eventos[index];
+            document.getElementById("fecha").textContent = e.fecha;
+            document.getElementById("mes").textContent = e.mes;
+            document.getElementById("dia").textContent = e.dia;
+            document.getElementById("lugar").textContent = e.lugar;
+            document.getElementById("hora").textContent = e.hora;
+            botones.forEach((btn, i) => {
+                btn.style.backgroundColor = i === index ? "#BABA2B" : "#d9d9d9";
+            });
+            index = (index + 1) % eventos.length;
+        }
+
+        actualizarEvento();
+        setInterval(actualizarEvento, 2900);
+    }
+
+    // --- LÓGICA PARA INFORMACION.HTML ---
+    // Verificamos si la página tiene la clase 'modo-informacion' en el body
+    if (document.body.classList.contains("modo-informacion")) {
+
+        /*inicio banner evento especifico */
+        const slides = document.querySelectorAll('.evento-hero-carrusel .slide');
+        const dots = document.querySelectorAll('.carrusel-indicadores .dot');
+        let current = 0;
+
+        if (slides.length > 0) {
+            setInterval(() => {
+                slides[current].classList.remove('activo');
+                dots[current].classList.remove('activo');
+                current = (current + 1) % slides.length;
+                slides[current].classList.add('activo');
+                dots[current].classList.add('activo');
+            }, 2000);
+        }
+        /*fin banner evento especifico */
 
 
+        /*INICIO informacion.html */
+        const header = document.querySelector(".tambo-header");
+        const heroCarrusel = document.querySelector(".evento-hero-carrusel");
+
+        function verificarTransparencia() {
+            if (!heroCarrusel || !header) return; // Asegúrate de que los elementos existen
+            const heroBottom = heroCarrusel.getBoundingClientRect().bottom;
+            if (heroBottom <= 1050) {
+                header.classList.add("header-solido");
+            } else {
+                header.classList.remove("header-solido");
+            }
+        }
+
+        if (heroCarrusel && header) { // Solo añadir listeners si los elementos existen
+            window.addEventListener("scroll", verificarTransparencia);
+            verificarTransparencia();
+        }
 
 
+        const hero = document.querySelector(".evento-hero-carrusel");
 
-/*Banner del home */
-const eventos = [
-  {
-    fecha: "31",
-    mes: "Mayo",
-    dia: "Sábado",
-    lugar: "Teatro Municipal",
-    hora: "20:00"
-  },
-  {
-    fecha: "1",
-    mes: "Junio",
-    dia: "Domingo",
-    lugar: "Teatro Nuna",
-    hora: "21:00"
-  },
-  {
-    fecha: "7",
-    mes: "Junio",
-    dia: "Viernes",
-    lugar: "Teatro Municipal",
-    hora: "20:00"
-  },
-  {
-    fecha: "4",
-    mes: "Junio",
-    dia: "Miércoles",
-    lugar: "Museo Nacional de Arte",
-    hora: "14:00"
-  }
-];
+        const ajustarHeader = () => {
+            if (!header || !hero) return; // Asegúrate de que los elementos existen
+            if (window.scrollY > hero.offsetHeight - 100) {
+                header.classList.remove("header-transparente");
+                header.style.borderBottom = "5px solid #4C2634"; // vuelve el borde
+            } else {
+                header.classList.add("header-transparente");
+                header.style.borderBottom = "none"; // quita el borde
+            }
+        };
 
-let index = 0;
-const botones = document.querySelectorAll(".componentes li");
-function actualizarEvento() {
-  const e = eventos[index];
-  document.getElementById("fecha").textContent = e.fecha;
-  document.getElementById("mes").textContent = e.mes;
-  document.getElementById("dia").textContent = e.dia;
-  document.getElementById("lugar").textContent = e.lugar;
-  document.getElementById("hora").textContent = e.hora;
-   botones.forEach((btn, i) => {
-      btn.style.backgroundColor = i === index ? "#BABA2B" : "#d9d9d9";
-    });
+        if (header && hero) { // Solo añadir listeners si los elementos existen
+            window.addEventListener("scroll", ajustarHeader);
+            ajustarHeader(); // Ejecuta una vez al cargar
+        }
 
-  index = (index + 1) % eventos.length;
-}
-actualizarEvento();
-// sincroniza con 16s / 4 = 4s por evento
-setInterval(actualizarEvento, 2900);
-/*fin de banner de home */
+
+        const activos = document.querySelectorAll(".columna-indice li.activo");
+        if (activos.length > 0) {
+            const observerIndex = new IntersectionObserver((entries) => { // Renombrado para evitar conflicto
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("encendido");
+                    }
+                });
+            }, {
+                threshold: 0.5
+            });
+            activos.forEach(activo => observerIndex.observe(activo));
+        }
+
+        const frase = document.querySelector(".frase-final");
+        if (frase) { // Solo si la frase existe
+            const nodes = Array.from(frase.childNodes);
+            frase.innerHTML = "";
+
+            nodes.forEach(node => {
+                if (node.nodeName === "BR") {
+                    frase.appendChild(document.createElement("br"));
+                } else {
+                    node.textContent.split("").forEach(letra => {
+                        const span = document.createElement("span");
+                        span.textContent = letra;
+                        frase.appendChild(span);
+                    });
+                }
+            });
+
+            const spans = frase.querySelectorAll("span");
+
+            function animarLetras() {
+                spans.forEach((span, i) => {
+                    setTimeout(() => {
+                        span.classList.add("relleno");
+                    }, i * 50);
+                });
+            }
+
+            const observerFrase = new IntersectionObserver((entries, obs) => { // Renombrado para evitar conflicto
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animarLetras();
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            observerFrase.observe(frase);
+        }
+
+        const commentsSection = document.getElementById('comments-section');
+        const openPopupButton = document.getElementById('open-comment-popup');
+
+        // Solo inicializar el pop-up si los elementos base existen en esta página
+        if (commentsSection || openPopupButton) {
+            const commentPopup = document.getElementById('comment-popup');
+            const closePopupButton = document.getElementById('close-comment-popup');
+            let overlay;
+
+            function showOverlay() {
+                if (!overlay) {
+                    overlay = document.createElement('div');
+                    overlay.classList.add('overlay');
+                    document.body.appendChild(overlay);
+                    overlay.addEventListener('click', closePopup);
+                }
+                overlay.style.display = 'block';
+            }
+
+            function hideOverlay() {
+                if (overlay) {
+                    overlay.style.display = 'none';
+                }
+            }
+
+            function openPopup() {
+                if (commentPopup) { // Asegúrate de que el pop-up existe
+                    commentPopup.style.display = 'flex';
+                    showOverlay();
+                    document.body.style.overflow = 'hidden';
+                }
+            }
+
+            function closePopup() {
+                if (commentPopup) { // Asegúrate de que el pop-up existe
+                    commentPopup.style.display = 'none';
+                    hideOverlay();
+                    document.body.style.overflow = '';
+                }
+            }
+
+            if (openPopupButton) {
+                openPopupButton.addEventListener('click', openPopup);
+            }
+            if (closePopupButton) {
+                closePopupButton.addEventListener('click', closePopup);
+            }
+
+            if (commentsSection) {
+                const observerComments = new IntersectionObserver((entries, observer) => { // Renombrado para evitar conflicto
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            openPopup();
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    root: null,
+                    rootMargin: '0px',
+                    threshold: 0.5
+                });
+                observerComments.observe(commentsSection);
+            }
+        }
+        /*FIN informacion.html */
+    }
+});
 
 /*inicio banner evento especifico */
 document.addEventListener("DOMContentLoaded", () => {
