@@ -4197,6 +4197,514 @@ body.modo-informacion .tambo-header:not(.header-solido) .titulo {
   white-space: nowrap;
 }
 
+/* MEDIA QUERY EVENTOS ESPECIFICOS */
+@media screen and (max-width: 480px) {
+  /* HERO */
+  .hero-texto {
+    left: 20px;
+    bottom: 100px;
+    font-size: 12px;
+    text-align: left;
+  }
+
+  .hero-titulo {
+    font-size: 60px;
+  }
+
+  .hero-subtitulo {
+    font-size: 25px;
+  }
+
+  .hero-categoria {
+    font-size: 20px;
+  }
+
+  .flecha_hero {
+    display: none;
+  }
+  .carrusel-indicadores {
+    bottom: 10px;
+  }
+
+  .dot {
+    width: 16px;
+    height: 4px;
+  }
+
+  .flecha_hero {
+    display: none;
+  }
+
+  /* ESTRUCTURA CON ÍNDICE */
+  .evento-lugar-nuevo,
+  .evento-horarios-nuevo,
+  .evento-transporte-nuevo,
+  .evento-precios-nuevo,
+  .evento-edad-nuevo {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .columna-indice {
+    width: 100%;
+    padding: 0;
+    margin: 2rem 0;
+    text-align: center;
+  }
+
+  .columna-indice ul {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .columna-indice li {
+    font-size: 16pt;
+  }
+
+  .linea-vertical {
+    display: none;
+  }
+
+  /* CONTENIDOS GENERALES */
+  .contenido-lugar,
+  .contenido-horarios,
+  .contenido-transporte,
+  .contenido-precios,
+  .contenido-edad {
+    margin-left: 0;
+    margin-top: 0;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  .subtitulo-lugar,
+  .subtitulo-horarios,
+  .subtitulo-transporte,
+  .subtitulo-precios,
+  .subtitulo-edad {
+    font-size: 40px;
+    text-align: center;
+    padding-right: 0;
+  }
+
+  .descripcion-lugar,
+  .descripcion-lugar1,
+  .descripcion-horarios,
+  .descripcion-transporte,
+  .descripcion-precios,
+  .descripcion-edad,
+  .mensaje-edad {
+    font-size: 18px;
+    text-align: center;
+    padding-right: 0;
+  }
+
+  .imagen-lugar {
+    width: 100%;
+    height: auto;
+    padding-right: 0;
+  }
+
+  .google-maps-link {
+    margin: 2rem auto;
+    justify-content: center;
+    font-size: 18px;
+  }
+
+  .tabla-horarios,
+  .tabla-transporte,
+  .tabla-precios {
+    width: 100%;
+    float: none;
+    padding-right: 0;
+    height: auto;
+    font-size: 16pt;
+  }
+
+  .framet {
+    margin: 3rem auto;
+    width: 90%;
+    padding: 0 1rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .framet .text-wrappert {
+    font-size: 20px;
+  }
+
+  .framet .servicio-de-bus {
+    font-size: 16px;
+  }
+
+  /* FRASE CENTRAL */
+  .frase-final {
+    font-size: 32px;
+    padding: 1rem;
+  }
+
+  /* MOODBOARD */
+  .moodboard-titulo {
+    font-size: 36px;
+    padding-left: 1rem;
+    text-align: center;
+  }
+
+  .moodboard-subtitulo {
+    font-size: 20px;
+    padding-left: 1rem;
+    text-align: center;
+  }
+
+  .moodboard-grid {
+    grid-template-columns: 1fr;
+    transform: none;
+    margin: 1rem auto;
+    padding: 0 1rem;
+  }
+
+  .moodboard-grid-wrapper {
+    padding-left: 0;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+  }
+
+  .contenido .overlap-group-wrapper,
+  .contenido .overlap-group {
+    width: 100%;
+    height: auto;
+    position: static; /* Sin posiciones relativas o absolutas */
+    top: auto;
+    left: auto;
+  }
+
+  /* Flechas: solo ocultar si afectan visualmente, evita superponer */
+  .contenido .arrow,
+  .contenido .arrow-2,
+  .contenido .arrow-3,
+  .contenido .img {
+    display: none;
+  }
+
+  /* Textos y párrafos, respetando flujo natural */
+  .contenido .text-wrapper,
+  .contenido .text-wrapper-2,
+  .contenido .text-wrapper-3,
+  .contenido .text-wrapper-4,
+  .contenido .text-wrapper-5,
+  .contenido .text-wrapper-6,
+  .contenido .div,
+  .contenido .p {
+    width: 100%;
+    padding: 0.5rem 0;
+    font-size: 16px;
+    line-height: 1.4;
+    text-align: center;
+    position: static;
+  }
+
+  /* Frames y wrappers */
+  .contenido .frame,
+  .contenido .frame-wrapper,
+  .contenido .div-wrapper,
+  .contenido [class^="frame-"] {
+    width: 100%;
+    margin: 1.5rem 0;
+    padding: 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    position: static;
+    top: auto;
+    left: auto;
+  }
+
+  /* Ordenar específicamente frame-9 para que esté al inicio */
+  .contenido .frame-9 {
+    order: -1;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  /* Ajuste textos dentro de frases */
+  .contenido .se-escuchaban-sus,
+  .contenido .se-escuchaban-sus-2,
+  .contenido .se-escuchaban-sus-3,
+  .contenido .se-escuchaban-sus-4 {
+    width: 100%;
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  /* Imágenes en 100% ancho sin superposición */
+  .contenido [class^="rectangle"],
+  .contenido .rectangle,
+  .contenido .rectangle-2,
+  .contenido .rectangle-3,
+  .contenido .rectangle-4,
+  .contenido .rectangle-5,
+  .contenido .rectangle-6,
+  .contenido .rectangle-7,
+  .contenido .rectangle-8,
+  .contenido .rectangle-9,
+  .contenido .rectangle-10 {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    position: static;
+    left: auto;
+  }
+
+  /* Textos asociados a imágenes */
+  .contenido .entra-por-te-va-a,
+  .contenido .entra-por-te-va-a-2,
+  .contenido .entra-por-te-va-a-3,
+  .contenido .entra-por-te-va-a-4,
+  .contenido .entra-por-te-va-a-5,
+  .contenido .entra-por-te-va-a-6,
+  .contenido .entra-por-te-va-a-7,
+  .contenido .entra-por-te-va-a-8,
+  .contenido .entra-por-te-va-a-9,
+  .contenido .entra-por-te-va-a-10 {
+    width: 100%;
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: center;
+    padding: 0.5rem 0.75rem;
+    position: static;
+    top: auto;
+    left: auto;
+  }
+
+  .contenido .entra-por-te-va-a-wrapper {
+    width: 100%;
+    padding: 0 0.75rem;
+    position: static;
+  }
+
+  /* Textos adicionales */
+  .contenido .text-wrapper-7,
+  .contenido .text-wrapper-8,
+  .contenido .text-wrapper-9,
+  .contenido .text-wrapper-10 {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  /* Títulos principales */
+  .contenido .lugar,
+  .contenido .entre-la-calle-y-la {
+    font-size: 24px;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .contenido .entre-la-calle-y-la-wrapper {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .comentario-seccion {
+    width: 95vw;
+    max-width: none;
+    min-height: auto;
+    padding: 5% 4%;
+  }
+
+  .comentario-seccion__contenedor {
+    padding: 15px 20px 20px;
+    min-height: auto;
+    align-items: stretch;
+  }
+
+  .comentario-seccion__cerrar-icono {
+    width: 20px;
+    height: 20px;
+    margin-top: 0;
+    margin-right: 0;
+  }
+
+  .comentario-seccion__contenido {
+    gap: 15px;
+    padding: 5px;
+    min-height: auto;
+  }
+
+  .comentario-seccion__texto-recordatorio {
+    font-size: clamp(16px, 4vw, 24px);
+    line-height: 1.2;
+    margin-top: 0;
+    white-space: normal;
+  }
+
+  .comentario-seccion__estrellas {
+    gap: 3px;
+  }
+
+  .comentario-seccion__estrella--1,
+  .comentario-seccion__estrella--2,
+  .comentario-seccion__estrella--3,
+  .comentario-seccion__estrella--4,
+  .comentario-seccion__estrella--5 {
+    width: 12vw;
+    height: 12vw;
+    max-width: 24px;
+    max-height: 24px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .comentario-seccion__entrada-wrapper {
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 0;
+    width: 100%;
+  }
+
+  .comentario-seccion__usuario-icono {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto;
+    flex-shrink: 0;
+  }
+
+  .comentario-seccion__texto-opinion {
+    width: 100%;
+    min-height: auto;
+    font-size: clamp(12px, 3vw, 16px);
+    color: #4c26344c;
+    margin-top: 0;
+  }
+
+  .comentario-seccion__boton-enviar-wrapper {
+    width: 100%;
+    min-width: auto;
+    max-width: none;
+    height: 50px;
+    margin-bottom: 10px;
+    left: 0;
+    justify-content: center;
+    padding: 0 10px;
+  }
+
+  .comentario-seccion__boton-enviar {
+    width: 100%;
+    height: 50px;
+    font-size: clamp(14px, 4vw, 18px);
+    margin: 0;
+  }
+
+  /* Overlay para móvil */
+  .overlay {
+    display: block;
+  }
+
+  /* Ajustes para main-wrapper-new y secciones relacionadas */
+  .main-wrapper-new {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .main-wrapper-new .inner-container-new {
+    width: 100%;
+    min-height: auto;
+    overflow-x: hidden;
+  }
+
+  .main-wrapper-new .overlap-group-new {
+    width: 100%;
+    min-height: auto;
+    top: 0;
+    left: 0;
+    background-color: var(--collection-1-fondo);
+  }
+
+  .main-wrapper-new .top-frame-new {
+    width: 100%;
+    padding: 5px;
+    justify-content: center;
+    left: 0;
+    top: 0;
+  }
+
+  .main-wrapper-new .cafe-visit-text-new,
+  .main-wrapper-new .friends-quote-text-new,
+  .main-wrapper-new .comments-title-new {
+    width: 100%;
+    text-align: center;
+    font-size: clamp(18px, 5vw, 32px);
+  }
+
+  .main-wrapper-new .friends-quote-wrapper-new,
+  .main-wrapper-new .comments-section-new {
+    width: 100%;
+    margin-top: 30px;
+    left: 0;
+    padding: 0 10px;
+  }
+
+  .main-wrapper-new .comments-grid-new {
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .main-wrapper-new .comments-column-new,
+  .main-wrapper-new .comments-column-alt-new {
+    width: 100%;
+    align-items: center;
+  }
+
+  .main-wrapper-new .comment-card-new {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .main-wrapper-new .final-section-new {
+    padding: 100px 10px;
+    height: auto;
+    gap: 20px;
+  }
+
+  .main-wrapper-new .final-message-new {
+    font-size: clamp(24px, 8vw, 48px);
+    line-height: 1.2;
+  }
+
+  .main-wrapper-new .navigation-buttons-new {
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .main-wrapper-new .button-wrapper-new {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* FIN MEDIA QUERY EVENTOS ESPECIFICOS */
+
 /*FIN ESTILOS PARA EVENTO ESPECIFICO XD*/
 
 /*INICIO CARRUSEL DE CARDS EVENTOS*/
