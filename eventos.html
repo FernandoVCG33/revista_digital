@@ -130,20 +130,15 @@
                     </summary>
                     <div class="filtro_agenda">
                         <h3>Evento</h3>
-                        <label><input type="checkbox"> Teatro</label>
-                        <label><input type="checkbox"> Exposiciones</label>
-                        <label><input type="checkbox"> Danza</label>
-                        <label><input type="checkbox"> Música</label>
-
-                        <h3>Precios</h3>
-                        <label><input type="checkbox"> Menos de 20Bs</label>
-                        <label><input type="checkbox"> Entre 20Bs y 80Bs</label>
-                        <label><input type="checkbox"> Más de 80Bs</label>
+                        <label><input type="checkbox" value="Teatro"> Teatro</label>
+                        <label><input type="checkbox" value="Exposiciones"> Exposiciones</label>
+                        <label><input type="checkbox" value="Danza"> Danza</label>
+                        <label><input type="checkbox" value="Música"> Música</label>
 
                         <h3>Fechas</h3>
-                        <label><input type="checkbox"> Esta semana</label>
-                        <label><input type="checkbox"> Este mes</label>
-                        <label><input type="checkbox"> Para el próximo mes</label>
+                        <label><input type="checkbox" value="esta_semana"> Esta semana</label>
+                        <label><input type="checkbox" value="este_mes"> Este mes</label>
+                        <label><input type="checkbox" value="proximo_mes"> Para el próximo mes</label>
 
                         <button class="btn_aplicar">Aplicar</button>
                     </div>
@@ -152,8 +147,7 @@
                 
                 <!--Iniciocarrusel de cards de eventos-->
                 <div class="carrusel_eventos_cards">
-                    <div class="event-card-frame">
-                        <p class="event-title-details">
+                    <div class="event-card-frame" data-evento-id="1" data-type="Música" data-date="2025-05-01">
                             <span class="event-title-panic">Altiplano<br /></span>
                             <span class="event-artist-music">Con: Fusión Band <br />Música<br /></span>
                             <span class="spacing-line-1">&nbsp;&nbsp;<br /></span>
@@ -195,7 +189,7 @@
                         <div class="event-button" onclick="location.href='informacion.html'">Ir a evento
                         </div>
                     </div>
-                    <div class="event-card-frame">
+                        <div class="event-card-frame" data-evento-id="2" data-type="Exposiciones" data-date="2025-05-01">
                         <p class="event-title-details">
                             <span class="event-title-panic">Vistiendo memorias<br /></span>
                             <span class="event-artist-music">Con: ELVIRA ESPEJO
@@ -239,7 +233,7 @@
                         <div class="event-button" onclick="location.href='informacion.html'">Ir a evento
                         </div>
                     </div>
-                    <div class="event-card-frame">
+                        <div class="event-card-frame" data-evento-id="3" data-type="Música" data-date="2025-05-01">
                         <p class="event-title-details">
                             <span class="event-title-panic">Pánico<br /></span>
                             <span class="event-artist-music">Con: Manuel García
@@ -283,7 +277,7 @@
                         <div class="event-button" onclick="location.href='informacion.html'">Ir a evento
                         </div>
                     </div>
-                    <div class="event-card-frame">
+                    <div class="event-card-frame" data-evento-id="4" data-type="Música" data-date="2025-05-07">
                         <p class="event-title-details">
                             <span class="event-title-panic">Vivas Sonoridades<br /></span>
                             <span class="event-artist-music">Con: <br />Música<br /></span>

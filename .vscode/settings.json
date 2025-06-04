@@ -1,3 +1,35 @@
-{
-    "liveServer.settings.port": 5508
-}
+[
+  {
+    "id": 1,
+    "titulo": "Altiplano",
+    "tipo": "Música",
+    "artista": "Fusión Band",
+    "fecha": "2025-05-03",
+    "hora": "20:00",
+    "lugar": "Teatro Municipal",
+    "edad": "+8",
+    "imagen": "imagenes/altiplano.jpg"
+  },
+  {
+        "id": 2,
+    "titulo": "Vistiendo memorias",
+    "tipo": "Exposiciones",
+    "artista": "Elvira Espejo",
+    "fecha": "2025-05-01",
+    "hora": "17:00",
+    "lugar": "Teatro Municipal",
+    "edad": "+18",
+    "imagen": "imagenes/vistiendo.jpg"
+  },
+  {
+        "id": 3,
+    "titulo": "Pánico",
+    "tipo": "Música",
+    "artista": "Manuel García",
+    "fecha": "2025-05-02",
+    "hora": "19:00",
+    "lugar": "Teatro Municipal",
+    "edad": "+8",
+    "imagen": "imagenes/panico.jpg"
+  }
+]
