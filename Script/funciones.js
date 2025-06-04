@@ -643,3 +643,43 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.classList.remove('modo-edicion-activa');
   });
 });
+
+
+/*EVENTO*/
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const btnAplicar = document.querySelector('.btn_aplicar');
+
+  btnAplicar.addEventListener('click', () => {
+    const tiposSeleccionados = [...document.querySelectorAll('.filtro_agenda input[type=checkbox]')]
+      .filter(chk => chk.checked && ["Teatro", "Exposiciones", "Danza", "Música"].includes(chk.value))
+      .map(chk => chk.value);
+
+    const fechasSeleccionadas = [...document.querySelectorAll('.filtro_agenda input[type=checkbox]')]
+      .filter(chk => chk.checked && ["esta_semana", "este_mes", "proximo_mes"].includes(chk.value))
+      .map(chk => chk.value);
+
+    function cumpleFiltroFecha(eventoId) {
+      if (fechasSeleccionadas.length === 0) return true;
+
+      for (const filtro of fechasSeleccionadas) {
+        if (filtro === "esta_semana" && eventoId === "1") return true;
+        if (filtro === "este_mes" && (eventoId === "2" || eventoId === "3")) return true;
+        if (filtro === "proximo_mes" && (eventoId === "4" || eventoId === "5")) return true; // puedes agregar ids
+      }
+      return false;
+    }
+
+    const eventos = document.querySelectorAll('.event-card-frame');
+    eventos.forEach(evento => {
+      const tipoEvento = evento.getAttribute('data-type');
+      const eventoId = evento.getAttribute('data-evento-id');
+
+      const tipoOk = tiposSeleccionados.length === 0 || tiposSeleccionados.includes(tipoEvento);
+      const fechaOk = cumpleFiltroFecha(eventoId);
+
+      evento.style.display = (tipoOk && fechaOk) ? '' : 'none';
+    });
+  });
+});
