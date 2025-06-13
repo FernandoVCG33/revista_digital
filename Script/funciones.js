@@ -1,33 +1,4 @@
-//Cuenta pestañas y preferencias
-document.addEventListener("DOMContentLoaded", function () {
-  const tabs = document.querySelectorAll('.nav-pestanas ul li');
-  const reviews = document.querySelector('.reviews');
-  const preferencias = document.querySelector('.preferencias');
 
-  // Inicial mostrar solo Reviews con clase activa
-  reviews.classList.add('activa');
-  preferencias.classList.remove('activa');
-  tabs[0].classList.add('activa');
-
-  tabs.forEach((tab, index) => {
-    tab.addEventListener('click', () => {
-      // Quitar activa de todas las tabs y contenidos
-      tabs.forEach(t => t.classList.remove('activa'));
-      reviews.classList.remove('activa');
-      preferencias.classList.remove('activa');
-
-      // Activar la tab clickeada
-      tab.classList.add('activa');
-
-      // Mostrar el contenido correspondiente
-      if (index === 0) {
-        reviews.classList.add('activa');
-      } else if (index === 1) {
-        preferencias.classList.add('activa');
-      }
-    });
-  });
-});
 
 //Redirige el formulario y cambia el boton por los iconos
 document.addEventListener("DOMContentLoaded", () => {
@@ -650,6 +621,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener('DOMContentLoaded', () => {
   const btnAplicar = document.querySelector('.btn_aplicar');
+  
+  if (!btnAplicar) return;
 
   btnAplicar.addEventListener('click', () => {
     const tiposSeleccionados = [...document.querySelectorAll('.filtro_agenda input[type=checkbox]')]
@@ -660,26 +633,286 @@ document.addEventListener('DOMContentLoaded', () => {
       .filter(chk => chk.checked && ["esta_semana", "este_mes", "proximo_mes"].includes(chk.value))
       .map(chk => chk.value);
 
-    function cumpleFiltroFecha(eventoId) {
-      if (fechasSeleccionadas.length === 0) return true;
+    function cumpleFiltroFecha(fechaEventoStr) {
+      if (!fechaEventoStr || fechasSeleccionadas.length === 0) return true;
+
+      const hoy = new Date();
+      const fechaEvento = new Date(fechaEventoStr);
 
       for (const filtro of fechasSeleccionadas) {
-        if (filtro === "esta_semana" && eventoId === "1") return true;
-        if (filtro === "este_mes" && (eventoId === "2" || eventoId === "3")) return true;
-        if (filtro === "proximo_mes" && (eventoId === "4" || eventoId === "5")) return true; // puedes agregar ids
+        if (filtro === "esta_semana") {
+          const inicioSemana = new Date(hoy);
+          inicioSemana.setDate(hoy.getDate() - hoy.getDay());
+          const finSemana = new Date(inicioSemana);
+          finSemana.setDate(inicioSemana.getDate() + 6);
+          if (fechaEvento >= inicioSemana && fechaEvento <= finSemana) return true;
+        }
+        if (filtro === "este_mes") {
+          if (fechaEvento.getMonth() === hoy.getMonth() &&
+              fechaEvento.getFullYear() === hoy.getFullYear()) return true;
+        }
+        if (filtro === "proximo_mes") {
+          const proximo = new Date(hoy);
+          proximo.setMonth(hoy.getMonth() + 1);
+          if (fechaEvento.getMonth() === proximo.getMonth() &&
+              fechaEvento.getFullYear() === proximo.getFullYear()) return true;
+        }
       }
       return false;
     }
 
     const eventos = document.querySelectorAll('.event-card-frame');
+
     eventos.forEach(evento => {
       const tipoEvento = evento.getAttribute('data-type');
-      const eventoId = evento.getAttribute('data-evento-id');
+      const fechaEvento = evento.getAttribute('data-date');
 
       const tipoOk = tiposSeleccionados.length === 0 || tiposSeleccionados.includes(tipoEvento);
-      const fechaOk = cumpleFiltroFecha(eventoId);
+      const fechaOk = cumpleFiltroFecha(fechaEvento);
 
       evento.style.display = (tipoOk && fechaOk) ? '' : 'none';
     });
   });
+
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const eventosData = [
+{
+  "id": 1,
+  "tipo": "Música",
+  "fecha": "2025-06-21",
+  "titulo": "Pánico",
+  "artista": "Manuel García",
+  "categoria": "Música",
+  "diaNumero": "21",
+  "mesNombre": "Mayo",
+  "diaSemana": "Miercoles",
+  "lugar": "Teatro Municipal",
+  "hora": "19:00",
+  "edad": "+8 años",
+  "imagen": "imagenes/cardpanico.png",
+  "enlace": "informacion.html"
+},
+{
+  "id": 2,
+  "tipo": "Música",
+  "fecha": "2025-07-02",
+  "titulo": "Armadura",
+  "artista": "Ecos del Metal",
+  "categoria": "Música",
+  "diaNumero": "02",
+  "mesNombre": "Junio",
+  "diaSemana": "Lunes",
+  "lugar": "Teatro Municipal",
+  "hora": "20:00",
+  "edad": "+12 años",
+  "imagen": "imagenes/cardarma.jpg",
+  "enlace": "informacion.html"
+},
+{
+  "id": 3,
+  "tipo": "Música",
+  "fecha": "2025-07-01",
+  "titulo": "Ritmos del ande",
+  "artista": "Altiplano",
+  "categoria": "Música",
+  "diaNumero": "01",
+  "mesNombre": "Junio",
+  "diaSemana": "Domingo",
+  "lugar": "Teatro Nuna",
+  "hora": "19:30",
+  "edad": "+12 años",
+  "imagen": "imagenes/cardritmos.jpg",
+  "enlace": "altiplano.html"
+},      
+{
+  "id": 4,
+  "tipo": "Música",
+  "fecha": "2025-07-27",
+  "titulo": "El Pesanervios XXV",
+  "artista": "Grillo Villegas",
+  "categoria": "Música",
+  "diaNumero": "27",
+  "mesNombre": "Junio",
+  "diaSemana": "Viernes",
+  "lugar": "Chuquiago Marka",
+  "hora": "20:00",
+  "edad": "+8 años",
+  "imagen": "imagenes/cardpasa.jpg",
+  "enlace": "Pesanervios.html"
+},
+{
+  "id": 5,
+  "tipo": "Danza",
+  "fecha": "2025-06-01",
+  "titulo": "Danzaría",
+  "artista": "",
+  "categoria": "Danza",
+  "diaNumero": "01",
+  "mesNombre": "Junio",
+  "diaSemana": "Domingo",
+  "lugar": "Espacio Kúu Inti",
+  "hora": "17:00",
+  "edad": "Todo público",
+  "imagen": "imagenes/carddanza.jpg",
+  "enlace": "evento_7.html"
+},
+{
+  "id": 6,
+  "tipo": "Danza",
+  "fecha": "2025-07-07",
+  "titulo": "Dream On",
+  "artista": "Play Pole Dance & Danza Aérea",
+  "categoria": "Danza",
+  "diaNumero": "07",
+  "mesNombre": "Junio",
+  "diaSemana": "Sábado",
+  "lugar": "Teatro Nuna",
+  "hora": "19:30",
+  "edad": "+8 años",
+  "imagen": "imagenes/carddream.png",
+  "enlace": "dream_on.html"
+},
+{
+  "id": 7,
+  "tipo": "Exposiciones",
+  "fecha": "2025-07-02",
+  "titulo": "Crianza Mutua",
+  "artista": "Elvira Espejo",
+  "categoria": "Exposición",
+  "diaNumero": "",
+  "mesNombre": "Lunes a Viernes",
+  "diaSemana": "",
+  "lugar": "Museo MUSEF",
+  "hora": "8:30",
+  "edad": "Todo Público",
+  "imagen": "imagenes/cardcrian.png",
+  "enlace": "vistiendomemorias.html"
+},
+{
+  "id": 8,
+  "tipo": "Exposiciones",
+  "fecha": "2025-07-02",
+  "titulo": "Vivassonoridades",
+  "artista": "",
+  "categoria": "Exposición",
+  "diaNumero": "",
+  "mesNombre": "Lunes a Viernes",
+  "diaSemana": "",
+  "lugar": "Museo MUSEF",
+  "hora": "8:30",
+  "edad": "Todo Público",
+  "imagen": "imagenes/cardsono.png",
+  "enlace": "vivas_sonoridades.html"
+},                      
+{
+  "id": 9,
+  "tipo": "Teatro",
+  "fecha": "2025-07-26",
+  "titulo": "Cholicienta",
+  "artista": "Elenco artístico Laude",
+  "categoria": "Teatro",
+  "diaNumero": "26",
+  "mesNombre": "Junio",
+  "diaSemana": "Jueves",
+  "lugar": "Teatro 6 de Agosto",
+  "hora": "19:00",
+  "edad": "+8 años",
+  "imagen": "imagenes/cardcholi.png",
+  "enlace": "chococienta.html"
+}, 
+{
+  "id": 10,
+  "tipo": "Teatro",
+  "fecha": "2025-07-13",
+  "titulo": "Mentiras Drags",
+  "artista": "",
+  "categoria": "Teatro",
+  "diaNumero": "13",
+  "mesNombre": "Junio",
+  "diaSemana": "Viernes",
+  "lugar": "Teatro Municipal",
+  "hora": "19:30",
+  "edad": "+12 años",
+  "imagen": "imagenes/cardmentira.png",
+  "enlace": "mentirasdrags.html"
+}
+  ];
+
+  const track = document.querySelector('.carousel-track');
+  if (!track) {
+    console.warn("No se encontró");
+    return;
+  }
+
+  eventosData.forEach(evento => {
+    const card = document.createElement('div');
+    card.classList.add('event-card-frame');
+    card.setAttribute('data-type', evento.tipo);
+    card.setAttribute('data-date', evento.fecha);
+
+  card.innerHTML = `
+    <p class="event-title-details">
+      <span class="event-title-panic">${evento.titulo}<br /></span>
+      <span class="event-artist-music">Con: ${evento.artista}<br />${evento.categoria}<br /></span>
+    </p>
+    <div class="event-details-overlap" style="background-image: url('${evento.imagen}');">
+      <div class="event-date-info">
+        <div class="event-day-number-wrapper">
+          <div class="event-day-number">${evento.diaNumero}</div>
+        </div>
+        <div class="event-date-group">
+          <div class="event-month-day">
+            <div class="event-month-wrapper">
+              <div class="event-month-inner-wrapper">
+              </div>
+            </div>
+            <div class="event-date-text-wrapper">
+              <div class="event-date-text">
+                <div class="event-month-text">${evento.mesNombre}</div>
+              </div>
+            </div>
+          </div>
+          <div class="event-weekday-wrapper">
+            <div class="event-weekday-name">${evento.diaSemana}</div>
+          </div>
+        </div>
+      </div>
+      <div class="event-location-time">
+        <div class="event-venue">${evento.lugar}</div>
+        <div class="event-time">${evento.hora}</div>
+      </div>
+      <div class="event-age-restriction">${evento.edad}</div>
+    </div>
+    <div class="event-button" onclick="location.href='${evento.enlace}'">Ir a evento</div>
+  `;
+
+    track.appendChild(card);
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const track = document.querySelector('.carousel-track');
+  const prevButton = document.querySelector('.carousel-button.prev');
+  const nextButton = document.querySelector('.carousel-button.next');
+
+  let scrollAmount = 0;
+  const scrollStep = 320;
+
+  prevButton.addEventListener('click', () => {
+    scrollAmount -= scrollStep;
+    if (scrollAmount < 0) scrollAmount = 0;
+    track.style.transform = `translateX(-${scrollAmount}px)`;
+  });
+
+  nextButton.addEventListener('click', () => {
+    scrollAmount += scrollStep;
+    const maxScroll = track.scrollWidth - track.clientWidth;
+    if (scrollAmount > maxScroll) scrollAmount = maxScroll;
+    track.style.transform = `translateX(-${scrollAmount}px)`;
+  });
+});
+
+
+
