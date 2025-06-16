@@ -671,6 +671,7 @@ h5 {
     padding: var(--spacing-xl);
     height: 58px;
     min-height: 58px;
+    padding-right: 80px;
 
 
   }
@@ -678,7 +679,7 @@ h5 {
   .titulo-container {
     position: absolute;
     top: 55%;
-    left: 30%;
+    left: 20%;
     transform: translate(-50%, -50%);
     margin: 0;
     z-index: 1;
@@ -692,7 +693,7 @@ h5 {
   .menu-icon {
     position: absolute;
     top: 16px;
-    left: 20px;
+    right: 20px;
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -705,12 +706,12 @@ h5 {
   .tambo-nav {
     position: fixed;
     top: 0;
-    left: -100%;
-    width: 350px;
+    right: -100%;
+    width: 262px;
     height: 100vh;
     background-color: var(--color-primary-purple);
-    padding: 100px 20px 20px;
-    transition: left 0.3s ease;
+    padding: 100px 20px 80px;
+    transition: right 0.3s ease;
     z-index: 999;
     flex-direction: column;
     align-items: flex-start;
@@ -726,16 +727,14 @@ h5 {
 
 
   .menu-toggle:checked+.menu-icon+.tambo-nav {
-    left: 0;
+    right: 0;
   }
 
   .menu-toggle:checked+.menu-icon span {
     background-color: white;
   }
 
-  .menu-toggle:checked+.menu-icon {
-    left: 280px;
-  }
+
 
   .nav-icons {
     margin-left: auto;
@@ -744,11 +743,11 @@ h5 {
   }
 
   .nav-icons button {
-    width: 157px;
-    height: 21px;
+    width: 107px;
+    height: 32px;
     padding: 0 16px;
     font-size: 12px;
-    border-radius: 5px;
+    border-radius: 38px;
   }
 
   .tambo-nav a {
@@ -808,11 +807,11 @@ h5 {
     max-width: 400px;
     object-fit: cover;
     margin-bottom: 16px;
-    transition: none; /* Desactiva el efecto hover en móvil */
+    transition: none; 
   }
 
   .prox img:hover {
-    width: 90%; /* Evita el agrandamiento en hover */
+    width: 90%; 
     filter: none;
     opacity: 1;
   }
@@ -2018,7 +2017,7 @@ ul.componentes li:nth-child(1) {
 }
 
 .filtro_agenda label {
-  display: block;
+  display: flex;
   align-items: center;
   margin-bottom: 10px;
   cursor: pointer;
@@ -2062,13 +2061,6 @@ ul.componentes li:nth-child(1) {
   position: relative;
 }
 
-.filter summary {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  right: 50px;
-}
 
 .filter .icon-hamburger {
   width: 20px;
@@ -2119,21 +2111,32 @@ ul.componentes li:nth-child(1) {
 }
 
 @media (max-width: 768px) {
+  .header_wrapp {
+    display: flex;
+    justify-content: flex-end; 
+    padding: 0 20px;
+  }
+
+  .filter {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
 
   .filter summary {
-    list-style: none;
     display: flex;
-    gap: 12px; /* menos espacio para que quepa mejor */
     align-items: center;
+    gap: 12px;
     cursor: pointer;
-    margin-left: auto; /* empuja summary a la derecha */
-    white-space: nowrap; /* evita que se divida en 2 filas */
-    padding: 0 12px;
-    width: auto; /* sin ancho fijo */
+    padding: 0 0 30px 12px;
+    white-space: nowrap;
+    list-style: none;
+    margin-left: auto;
+    margin-right: 0;
   }
 
   .filter .icon-hamburger {
-    width: 42px;  /* tamaño hamburguesa móvil */
+    width: 23px;
     height: 33px;
     display: flex;
     flex-direction: column;
@@ -2144,11 +2147,13 @@ ul.componentes li:nth-child(1) {
   .filter .icon-hamburger .line_1,
   .filter .icon-hamburger .line_2,
   .filter .icon-hamburger .line_3 {
-    height: 4px;
+    height: 1,5px;
     background-color: #4C2634;
     border-radius: 2px;
     display: block;
   }
+
+
 
   .filter .icon-hamburger .line_1 {
     width: 100%;
@@ -2605,7 +2610,32 @@ body.modo-informacion .tambo-header:not(.header-solido) .titulo {
 }
 
 /* COLUMNA DE SECCIONES LATERALES */
+
 .columna-indice {
+    transition: opacity 0.3s ease;
+    position: fixed;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    z-index: 100;
+}
+
+.columna-indice a {
+    color: var(--color-gray-400);
+    text-decoration: none;
+    font-size: 25pt;
+    transition: all 0.3s ease;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.columna-indice a:hover,
+.columna-indice a.activo {
+    color: #8C5067;
+    transform: scale(1.1);
+}
+
+/*.columna-indice {
   margin-top: 200px;
   margin-bottom: 400px;
   width: 120px;
@@ -2637,7 +2667,7 @@ body.modo-informacion .tambo-header:not(.header-solido) .titulo {
   opacity: 1;
   transform: scale(1.1);
   color: #8C5067;
-}
+}*/
 
 .linea-vertical {
   position: absolute;
@@ -4270,7 +4300,7 @@ body.modo-informacion .tambo-header:not(.header-solido) .titulo {
   white-space: nowrap;
 }
 
-/* MEDIA QUERY EVENTOS ESPECIFICOS */
+/* ERY EVENTOS ESPECIFMEDIA QUICOS */
 @media screen and (max-width: 480px) {
   /* HERO */
   .hero-texto {
@@ -4938,7 +4968,7 @@ body.modo-informacion .tambo-header:not(.header-solido) .titulo {
   justify-content: center;
   gap: 6.64px;
   position: relative;
-  margin-top: -17.94px;
+  margin-top: -27.94px;
 }
 
 .event-card-frame .event-month-inner-wrapper {
@@ -4999,6 +5029,7 @@ body.modo-informacion .tambo-header:not(.header-solido) .titulo {
   letter-spacing: 0;
   line-height: normal;
   white-space: nowrap;
+  margin-left: 40px;
 }
 
 .event-card-frame .event-weekday-wrapper {
@@ -5021,6 +5052,7 @@ body.modo-informacion .tambo-header:not(.header-solido) .titulo {
   font-size: 14.9px;
   letter-spacing: 0;
   line-height: normal;
+  margin-top: 8px;
 }
 
 .event-card-frame .event-location-time {

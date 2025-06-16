@@ -687,7 +687,7 @@ document.addEventListener("DOMContentLoaded", () => {
   "diaNumero": "21",
   "mesNombre": "Mayo",
   "diaSemana": "Miercoles",
-  "lugar": "Teatro Municipal",
+  "lugar": "Teatro <br>Municipal",
   "hora": "19:00",
   "edad": "+8 años",
   "imagen": "imagenes/cardpanico.png",
@@ -703,7 +703,7 @@ document.addEventListener("DOMContentLoaded", () => {
   "diaNumero": "02",
   "mesNombre": "Junio",
   "diaSemana": "Lunes",
-  "lugar": "Teatro Municipal",
+  "lugar": "Teatro<br> Municipal",
   "hora": "20:00",
   "edad": "+12 años",
   "imagen": "imagenes/cardarma.jpg",
@@ -719,7 +719,7 @@ document.addEventListener("DOMContentLoaded", () => {
   "diaNumero": "01",
   "mesNombre": "Junio",
   "diaSemana": "Domingo",
-  "lugar": "Teatro Nuna",
+  "lugar": "Teatro <br>Nuna",
   "hora": "19:30",
   "edad": "+12 años",
   "imagen": "imagenes/cardritmos.jpg",
@@ -767,7 +767,7 @@ document.addEventListener("DOMContentLoaded", () => {
   "diaNumero": "07",
   "mesNombre": "Junio",
   "diaSemana": "Sábado",
-  "lugar": "Teatro Nuna",
+  "lugar": "Teatro <br>Nuna",
   "hora": "19:30",
   "edad": "+8 años",
   "imagen": "imagenes/carddream.png",
@@ -781,9 +781,9 @@ document.addEventListener("DOMContentLoaded", () => {
   "artista": "Elvira Espejo",
   "categoria": "Exposición",
   "diaNumero": "",
-  "mesNombre": "Lunes a Viernes",
+  "mesNombre": "Lun - Vier",
   "diaSemana": "",
-  "lugar": "Museo MUSEF",
+  "lugar": "Museo<br> MUSEF",
   "hora": "8:30",
   "edad": "Todo Público",
   "imagen": "imagenes/cardcrian.png",
@@ -793,13 +793,13 @@ document.addEventListener("DOMContentLoaded", () => {
   "id": 8,
   "tipo": "Exposiciones",
   "fecha": "2025-07-02",
-  "titulo": "Vivassonoridades",
+  "titulo": "Vivas sonoridades",
   "artista": "",
   "categoria": "Exposición",
   "diaNumero": "",
-  "mesNombre": "Lunes a Viernes",
+  "mesNombre": "Lun - Vier",
   "diaSemana": "",
-  "lugar": "Museo MUSEF",
+  "lugar": "Museo<br> MUSEF",
   "hora": "8:30",
   "edad": "Todo Público",
   "imagen": "imagenes/cardsono.png",
@@ -820,7 +820,152 @@ document.addEventListener("DOMContentLoaded", () => {
   "edad": "+8 años",
   "imagen": "imagenes/cardcholi.png",
   "enlace": "chococienta.html"
-}, 
+},
+{
+  "id": 11,
+  "tipo": "Teatro",
+  "fecha": "2025-06-18",
+  "titulo": "El coloradito de Aplomo",
+  "artista": "Sergio Ríos",
+  "categoria": "Teatro",
+  "diaNumero": "18",
+  "mesNombre": "Mayo",
+  "diaSemana": "Miércoles",
+  "lugar": "Teatro<br> Municipal",
+  "hora": "19:00",
+  "edad": "Todo Público",
+  "imagen": "imagenes/coloradito.png",
+  "enlace": "mentirasdrags.html"
+},
+{
+  "id": 12,
+  "tipo": "Teatro",
+  "fecha": "2025-07-13",
+  "titulo": "Los del 14b",
+  "artista": "Iván Cornejo",
+  "categoria": "Teatro",
+  "diaNumero": "13",
+  "mesNombre": "Junio",
+  "diaSemana": "Viernes",
+  "lugar": "Teatro <br>Municipal",
+  "hora": "19:30",
+  "edad": "Todo Público",
+  "imagen": "imagenes/14b.png",
+  "enlace": "mentirasdrags.html"
+},
+{
+  "id": 13,
+  "tipo": "Música",
+  "fecha": "2025-07-12",
+  "titulo": "Matheus y amigos",
+  "artista": "Matheus Fonseca",
+  "categoria": "Música",
+  "diaNumero": "12",
+  "mesNombre": "Junio",
+  "diaSemana": "Sábado",
+  "lugar": "Teatro <br>Nuna",
+  "hora": "20:00",
+  "edad": "Todo Público",
+  "imagen": "imagenes/matheus.png",
+  "enlace": "mentirasdrags.html"
+},
+{
+  "id": 14,
+  "tipo": "Exposiciones",
+  "fecha": "2025-07-13",
+  "titulo": "Pieles objetos y cuerpo",
+  "artista": "Varinia Oros",
+  "categoria": "Exposición",
+  "diaNumero": "",
+  "mesNombre": "Lun-Vier",
+  "diaSemana": "",
+  "lugar": "Teatro<br> MUSEF",
+  "hora": "8:30",
+  "edad": "Todo Público",
+  "imagen": "imagenes/pieles.png",
+  "enlace": "pieles.html"
+},
+{
+  "id": 15,
+  "tipo": "Música",
+  "fecha": "2025-07-29",
+  "titulo": "Savia Andina",
+  "artista": "Savia Andina",
+  "categoria": "Música",
+  "diaNumero": "29",
+  "mesNombre": "Junio",
+  "diaSemana": "Sabado",
+  "lugar": "Teatro <br> Nuna",
+  "hora": "20:00",
+  "edad": "Todo Público",
+  "imagen": "imagenes/savia.png",
+  "enlace": "mentirasdrags.html"
+},
+{
+  "id": 16,
+  "tipo": "Exposiciones",
+  "fecha": "2025-07-13",
+  "titulo": "Trascender",
+  "artista": "Douglas Rivera",
+  "categoria": "Exposición",
+  "diaNumero": "",
+  "mesNombre": "Lun-Vier",
+  "diaSemana": "",
+  "lugar": "Fundación <br> Patiño",
+  "hora": "10:00",
+  "edad": "Todo Público",
+  "imagen": "imagenes/buen.png",
+  "imagen": "imagenes/trascender.png",
+  "enlace": "mentirasdrags.html"
+},
+{
+  "id": 17,
+  "tipo": "Teatro",
+  "fecha": "2025-07-10",
+  "titulo": "Un Buen morir",
+  "artista": "Elías Cohen",
+  "categoria": "Teatro",
+  "diaNumero": "13",
+  "mesNombre": "Junio",
+  "diaSemana": "Martes",
+  "lugar": "Teatro <br> Nuna",
+  "hora": "19:30",
+  "edad": "Todo Público",
+  "imagen": "imagenes/buen.png",
+  "enlace": "mentirasdrags.html"
+},
+{
+  "id": 18,
+  "tipo": "Exposiciones",
+  "fecha": "2025-07-13",
+  "titulo": "Vistiendo Memorias",
+  "artista": "Elvira Espejo",
+  "categoria": "Exposición",
+  "diaNumero": "",
+  "mesNombre": "Lun-Vier",
+  "diaSemana": "Viernes",
+  "lugar": "Teatro <br> MUSEF",
+  "hora": "8:30",
+  "edad": "Todo Público",
+  "imagen": "imagenes/vistiendo.png",
+  "enlace": "mentirasdrags.html"
+},
+{
+  "id": 19,
+  "tipo": "Teatro",
+  "fecha": "2025-07-13",
+  "titulo": "Mentiras Drags",
+  "artista": "",
+  "categoria": "Teatro",
+  "diaNumero": "13",
+  "mesNombre": "Junio",
+  "diaSemana": "Viernes",
+  "lugar": "Teatro Municipal",
+  "hora": "19:30",
+  "edad": "+12 años",
+  "imagen": "imagenes/cardmentira.png",
+  "enlace": "mentirasdrags.html"
+},
 {
   "id": 10,
   "tipo": "Teatro",
@@ -836,7 +981,24 @@ document.addEventListener("DOMContentLoaded", () => {
   "edad": "+12 años",
   "imagen": "imagenes/cardmentira.png",
   "enlace": "mentirasdrags.html"
-}
+},
+{
+  "id": 10,
+  "tipo": "Teatro",
+  "fecha": "2025-07-13",
+  "titulo": "Mentiras Drags",
+  "artista": "",
+  "categoria": "Teatro",
+  "diaNumero": "13",
+  "mesNombre": "Junio",
+  "diaSemana": "Viernes",
+  "lugar": "Teatro Municipal",
+  "hora": "19:30",
+  "edad": "+12 años",
+  "imagen": "imagenes/cardmentira.png",
+  "enlace": "mentirasdrags.html"
+},
+
   ];
 
   const track = document.querySelector('.carousel-track');
@@ -854,7 +1016,7 @@ document.addEventListener("DOMContentLoaded", () => {
   card.innerHTML = `
     <p class="event-title-details">
       <span class="event-title-panic">${evento.titulo}<br /></span>
-      <span class="event-artist-music">Con: ${evento.artista}<br />${evento.categoria}<br /></span>
+      <span class="event-artist-music"> ${evento.artista}<br />${evento.categoria}<br /></span>
     </p>
     <div class="event-details-overlap" style="background-image: url('${evento.imagen}');">
       <div class="event-date-info">
@@ -914,5 +1076,52 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+/*------------------------------------------------------*/
+// Seleccionar elementos
+const secciones = document.querySelectorAll('section[id]');
+const itemsIndice = document.querySelectorAll('.columna-indice li a');
+const columnaIndice = document.querySelector('.columna-indice');
+const moodboardSection = document.querySelector('.evento-frase-central');
 
+// Ocultar el menú inicialmente
+columnaIndice.style.opacity = '0';
 
+// Función para manejar el scroll
+function manejarScroll() {
+    // Obtener posición vertical actual
+    const scrollPos = window.scrollY || window.pageYOffset;
+    
+    // Obtener posición del moodboard
+    const moodboardTop = moodboardSection.offsetTop;
+    
+    // Mostrar/ocultar el menú según la posición
+    if (scrollPos > 900 && scrollPos < moodboardTop - 1) {
+        columnaIndice.style.opacity = '1';
+        
+        // Resaltar texto del menú correspondiente a la sección visible
+        secciones.forEach((seccion) => {
+            const seccionTop = seccion.offsetTop - 200;
+            const seccionBottom = seccionTop + seccion.offsetHeight;
+            
+            if (scrollPos >= seccionTop && scrollPos < seccionBottom) {
+                // Quitar clase activo de todos los items
+                itemsIndice.forEach(item => {
+                    item.classList.remove('activo');
+                });
+                
+                // Añadir clase activo al item correspondiente
+                const idSeccion = seccion.getAttribute('id');
+                const itemCorrespondiente = document.querySelector(`.columna-indice a[href="#${idSeccion}"]`);
+                if (itemCorrespondiente) {
+                    itemCorrespondiente.classList.add('activo');
+                }
+            }
+        });
+    } else {
+        columnaIndice.style.opacity = '0';
+    }
+}
+
+// Escuchar eventos de scroll
+window.addEventListener('scroll', manejarScroll);
+window.addEventListener('load', manejarScroll); // Ejecutar al cargar la página
