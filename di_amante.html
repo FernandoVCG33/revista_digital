@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/reset.css">
+    <link rel="stylesheet" href="estilos/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title> Categorias</title>
+</head>
+<body class="modo-informacion">
+    <!-- HEADER -->
+    <header class="tambo-header">
+        <!-- Título centrado -->
+        <div class="titulo-container">
+            <h1 class="titulo">Tambo</h1>
+        </div>
+
+         <!-- Menú hamburguesa -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <!-- NAV con secciones culturales -->
+        <nav class="tambo-nav">
+            <div id="menuUserIcon">
+                <a href="cuenta.html">
+                <img src="imagenes/user2.png" alt="Usuario" class="icon-img" />
+                </a>
+            </div>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="eventos.html">Eventos</a></li>
+                <li><a href="mi_agenda.html">Mi Agenda</a></li>
+            </ul>            
+        </nav>
+        <!-- Zona donde el JS inserta el botón o los iconos -->
+        <div class="nav-icons" id="zona-usuario"></div>
+        <!-- Aquí JS inserta el botón registrar o los iconos de usuario -->
+    </header>
+    <!--Fin de  HEADER -->
+    
+    <main>
+    <section>
+<article>
+<!-- CARRUSEL HERO INICIAL CORREGIDO -->
+<section class="evento-hero-carrusel">
+  <div class="slide activo" style="background-image: url('imagenes/di_amante1.jpg');"></div>
+  <div class="slide" style="background-image: url('imagenes/di_amante2.jpg');"></div>
+  <div class="slide" style="background-image: url('imagenes/di_amante3.jpg');"></div>
+
+  <!-- Texto común visible en todas las imágenes -->
+  <div class="hero-texto">
+    <h1 class="hero-titulo">DI AMANTE</h1>
+    <h2 class="hero-subtitulo">PONCHO MONJE</h2>
+    <p class="hero-categoria">Música</p>
+  </div>
+
+  <!-- Flecha -->
+   <div class="flecha_hero"><img class="flecha_vector" src="imagenes/flecha_hero.png"/><img class="linea_vector" src="imagenes/linea_hero.png"/></div>
+
+  <!-- Indicadores -->
+  <div class="carrusel-indicadores">
+    <span class="dot activo"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+</section>
+
+
+<div class="columna-indice">
+          <ul>
+             <li><a href="#donde">Donde</a></li>
+             <li><a href="#cuando">Cuando</a></li>
+              <li><a href="#como">Como</a></li>
+              <li><a href="#cuanto">Cuanto</a></li>
+              <li><a href="#quienes">Quienes</a></li>
+          </ul>
+</div>
+
+<!-- LUGAR -->
+   <section id="donde" class="evento-lugar-nuevo container"></section>
+
+  <div class="contenido-lugar">
+    <h2 class="subtitulo-lugar">Lugar</h2>
+    <p class="descripcion-lugar">Teatro Nuna - Enla calle 21 de Calacoto, casi llegando al número 8509,</p>
+    <p class="descripcion-lugar1">en plena Zona Sur de La Paz.</p>
+    <img class="imagen-lugar" src="imagenes/dream_on4.jpg" alt="Teatro Municipal">
+    <a href="https://www.google.com/maps" target="_blank" class="google-maps-link">
+      <img src="imagenes/icono gps.png" alt="" class="gps-icon"> Google maps
+    </a>
+  </div>
+</section>
+
+<!-- HORARIOS -->
+  <section  id="cuando" class="evento-horarios-nuevo container"></section>
+
+  <div class="contenido-horarios">
+    <h2 class="subtitulo-horarios">Horarios</h2>
+    <p class="descripcion-horarios">Tienes chance de ir en estos horarios</p>
+    <table class="tabla-horarios">
+      <thead>
+        <tr>
+          <th colspan="3">Presentación nocturna!</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Viernes</td><td>6 de junio</td><td>20:00</td></tr>
+        <tr><td colspan="3">Una única oportunidad amistad, no te la puedes perder!</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- TRANSPORTE -->
+     <section id="como" class="evento-transporte-nuevo container"></section>
+
+  <div class="contenido-transporte">
+    <h2 class="subtitulo-transporte">Transporte</h2>
+    <p class="descripcion-transporte">Para que no te me estreses</p>
+
+    <table class="tabla-transporte">
+      <thead>
+        <tr><th colspan="2">Toma un mini, te conviene!</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Tomar de</td><td>La línea de minibús Obrajes o San Miguel</td></tr>
+        <tr><td>Transbordo</td><td>A la Línea verde (estaciones Irpavi)</td></tr>
+        <tr><td>Quedarse en</td><td>Calle 21 de Calacoto y caminar al teatro</td></tr>
+      </tbody>
+    </table>
+        <div class="framet">
+      <div class="div-wrappert"><div class="text-wrappert">También puedes tomar :</div></div>
+      <div class="div-wrappert">
+        <p class="servicio-de-bus">
+             - Cualquier minibús que pase por la Av. Ballivián y diga “Calacoto”<br />   - Taxi o transporte por aplicación (rápido y directo)<br />   - Si te animas, ¡una buena caminata desde la Av. Costanera también funciona!
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRECIOS -->
+    <section id="cuanto" class="evento-precios-nuevo container"></section>
+
+  <div class="contenido-precios">
+    <h2 class="subtitulo-precios">Precios</h2>
+    <p class="descripcion-precios">Que no te duela el bolsillo, la entrada cuesta:</p>
+
+    <table class="tabla-precios">
+      <thead>
+        <tr><th colspan="3">Según el sitio web podríamos pagar</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>General</td><td>Bs. 50</td>
+        <tr><td>Graderia</td><td>Bs. 50</td><td>Preventa exclusiva<br>en redes sociales<br>de Poncho</td></tr>
+        <tr><td>Mesa</td><td>Bs. 80</td>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+
+<!-- RESTRICCIONES DE EDAD -->
+  <section id="quienes" class="evento-edad-nuevo container"></section>
+
+  <div class="contenido-edad">
+    <h2 class="subtitulo-edad">Restricciones de edad</h2>
+    <p class="descripcion-edad">No digo que no puedas...pero no te van a dejar entrar</p>
+    <p class="mensaje-edad">¡Todos pueden entrar! No tienes<br>cómo zafarte.</p>
+  </div>
+</section>
+
+<!-- FRASE CENTRAL -->
+<section class="evento-frase-central">
+  <h2 class="frase-final">Despéjate un cacho,<br>vamos juntos!</h2>
+</section>
+
+<!-- MOODBOARD VISUAL -->
+<section class="evento-moodboard-nuevo container">
+  <h2 class="moodboard-titulo">¿Aun no te convence?</h2>
+  <p class="moodboard-subtitulo">Mira todo lo que hay!</p>
+<div class="moodboard-grid-wrapper">
+<div class="moodboard-grid">
+  <div class="mood-item"><img src="imagenes/di_amante4.jpg" /></div>
+  <div class="mood-item"><img src="imagenes/di_amante5.jpg" /></div>
+  <div class="mood-item"><img src="imagenes/di_amante6.jpg" /></div>
+  <div class="mood-item tall"><img src="imagenes/di_amante7.jpg" /></div>
+  <div class="mood-item"><img src="imagenes/di_amante8.jpg" /></div>
+  <div class="mood-item wide"><img src="imagenes/di_amante9.jpg" /></div>
+  <div class="mood-item wide"><img src="imagenes/di_amante10.jpg" /></div>
+  <div class="mood-item"><img src="imagenes/di_amante11.jpg" /></div>
+  <div class="mood-item tall"><img src="imagenes/di_amante12.jpg" /></div>
+  <div class="mood-item tall"><img src="imagenes/di_amante13.jpg" /></div>
+  <div class="mood-item"><img src="imagenes/di_amante14.jpg" /></div>
+  <div class="mood-item"><img src="imagenes/di_amante15.jpg" /></div>
+  <div class="mood-item"><img src="imagenes/di_amante16.jpg" /></div>
+  <div class="mood-item wide"><img src="imagenes/di_amante17.jpg" /></div>
+    <!-- Repite con diferentes clases según la orientación de la imagen -->
+</div>
+</div>
+</section>
+
+<!-- GUÍA DEL EVENTO -->
+ <section>
+      <div class="contenido">
+      <div class="overlap-group-wrapper">
+        <div class="overlap-group">
+          <img class="arrow" src="imagenes/arrow1.png" />
+          <img class="img" src="imagenes/arrow2.png" />
+          <img class="arrow-2" src="imagenes/arrow3.png" />
+          <img class="arrow-3" src="imagenes/arrow4.png" />
+          <div class="text-wrapper">Te recomiendo...</div>
+          <div class="div">Te recomiendo...</div>
+          <p class="p">Ya que estamos aquí, sabias que...</p>
+          <p class="text-wrapper-2">Ya que estamos aquí, sabias que...</p>
+          <p class="text-wrapper-3">Según se comenta sobre la obra...</p>
+          <p class="text-wrapper-4">Según se comenta sobre la obra...</p>
+          <div class="text-wrapper-5">Además el equipo detrás...</div>
+          <div class="text-wrapper-6">Además el equipo detrás...</div>
+          <div class="se-escuchaban-sus">
+            <div class="frame">
+              <p class="se-escuchaban-sus-2">
+                “Quería hacer un disco que suene a cuerpo, a deseo, a ganas de no soltarse”, comentó entre ensayo y ensayo.
+              </p>
+            </div>
+          </div>
+          <div class="frame-wrapper">
+            <div class="frame">
+              <p class="se-escuchaban-sus-3">
+                "Queremos celebrar la sensibilidad de quienes transforman la música y la luz en experiencias que se transmiten más allá del sonido."
+            </div>
+          </div>
+          <div class="frame-2">
+            <img class="rectangle" src="imagenes/dream_on19.jpg" />
+            <div class="component">
+              <div class="entra-por-te-va-a">
+                <p class="entra-por-te-va-a-2">
+                  <span class="span">Lo mejor es llegar con tiempo y dejarte guiar por la música que ya empieza a sentirse desde la vereda, ell Teatro NUNA está en plena Calle 21 de Calacoto, así que es fácil ubicarlo, pero no te confíes, que a esa hora la zona sur se llena, y no querrás perderte ni una nota. Vas a ver cómo, mientras te acercas, algo dentro tuyo también empieza a moverse.</span>
+                </p>
+              </div>
+              <img class="rectangle-2" src="imagenes/dream_on20.jpg" />
+            </div>
+          </div>
+          <div class="frame-3">
+            <img class="rectangle" src="imagenes/di_amante20.jpg" />
+            <div class="component">
+              <div class="entra-por-te-va-a-wrapper">
+                <p class="entra-por-te-va-a-3">
+                  <span class="span">
+                    Apenas empieza, personas cuentan que se sienten medio atrapados y un poco confundidos, porque no saben si reírse, llorar o abrazar a alguien. Hay canciones, sí, pero entre una y otra se cuelan historias que parece que las hubiera sacado de tu cabeza, o de la de alguien que amaste.
+                  </span>
+                </p>
+              </div>
+              <img class="rectangle-3" src="imagenes/di_amante21.jpg" />
+            </div>
+          </div>
+          <div class="frame-4">
+            <img class="rectangle" src="imagenes/di_amante24.jpg" />
+            <div class="component">
+              <div class="entra-por-te-va-a-wrapper">
+                <p class="entra-por-te-va-a-4">
+                  Y ojo, el diseño de luces fue creado especialmente para este concierto por Álvaro Quispe, un obsesivo de las atmósferas, dicen que calibró cada color con la emoción de cada canción, nada está ahí por casualidad.
+                </p>
+              </div>
+              <img class="rectangle-3" src="imagenes/di_amante25.jpg" />
+            </div>
+          </div>
+          <div class="div-wrapper">
+            <div class="frame">
+              <p class="se-escuchaban-sus-4">
+                <span class="text-wrapper-9">Una actriz una vez aseguró que escuchó a su yo del pasado recitándole una línea desde el camerino. ¿Delirio escénico? Tal vez. ¿Magia escénica? Seguro.</span>
+              </p>
+            </div>
+          </div>
+          <div class="frame-5">
+            <img class="rectangle-4" src="imagenes/di_amante18.jpg" />
+            <div class="component-2">
+              <div class="entra-por-te-va-a-5">
+                <p class="entra-por-te-va-a-6">
+                  <span class="span"
+                    >Poncho Monje llega con Di-Amante, su primer álbum como solista, y no viene solo, trae una banda brutal y un setlist que es puro viaje. Dice que este proyecto es su manera de hablar del amor sin clichés, de la intensidad sin filtros.</span
+                  >
+                </p>
+              </div>
+              <img class="rectangle-5" src="imagenes/di_amante19.jpg" />
+            </div>
+          </div>
+          <div class="frame-6">
+            <img class="rectangle-6" src="imagenes/dream_on25.jpg" />
+            <div class="frame-7">
+              <img class="rectangle-7" src="imagenes/dream_on26.jpg" />
+              <div class="entra-por-te-va-a-7">
+                <p class="entra-por-te-va-a-8">
+                  El Teatro NUNA guarda secretos que no están en el libreto, cada función deja un eco, cada aplauso una huella.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="frame-8">
+            <img class="rectangle-6" src="imagenes/di_amante22.jpg" />
+            <div class="frame-7">
+              <img class="rectangle-7" src="imagenes/di_amante23.jpg" />
+              <div class="entra-por-te-va-a-7">
+                <p class="entra-por-te-va-a-9">
+                  <span class="span">
+                    La banda que acompaña a Poncho es una joya, músicos con recorrido, sensibilidad y groove del bueno. Entre ellos está Lucía Gutiérrez, en sintetizadores y coros, que dicen que tiene el poder de hacerte flotar con una sola nota.</span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="frame-9">
+            <div class="lugar-wrapper"><div class="lugar">Te explico el evento!</div></div>
+            <div class="entre-la-calle-y-la-wrapper"><div class="entre-la-calle-y-la">Guía de acompañamiento</div></div>
+          </div>
+          <div class="frame-10">
+            <img class="rectangle-8" src="imagenes/dream_on21.jpg" />
+            <div class="component-2">
+              <div class="entra-por-te-va-a-5">
+                <p class="entra-por-te-va-a-6">
+                  <span class="span"
+                    >El Teatro NUNA no es cualquier espacio, fue pensado como un lugar para que el arte respire sin pedir permiso, se dice que quienes pisan ese escenario dejan una parte de su alma colgada entre los focos.
+</span
+                  >
+                </p>
+              </div>
+              <img class="rectangle-9" src="imagenes/dream_on22.jpg" />
+            </div>
+          </div>
+          <div class="frame-11">
+            <img class="rectangle-10" src="imagenes/dream_on23.jpg" />
+            <div class="component">
+              <div class="entra-por-te-va-a-wrapper">
+                <p class="entra-por-te-va-a-10">
+                  <span class="span">Y por si te pica la curiosidad, las butacas de gradería tienen más historia que muchos festivales, si sientes que algo te abraza cuando tomes asiento, no te asustes, es el espíritu del arte independiente haciéndote mimo.
+</span>
+                </p>
+              </div>
+              <img class="rectangle-3" src="imagenes/dream_on24.jpg" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-wrapper-new">
+  <div class="inner-container-new">
+    <div class="overlap-group-new">
+      <div class="top-frame-new">
+        <p class="cafe-visit-text-new">
+          Te recomiendo buscar asiento con buen ángulo si te puedes acomodar al medio, hazlo, porque la acústica es una locura.
+        </p>
+      </div>
+      <div class="friends-quote-wrapper-new"><p class="friends-quote-text-new">Por ultimo mira lo que dicen mis otros amigos</p></div>
+      <div class="comments-section-new">
+        <div class="comments-header-container-new">
+          <div class="comments-title-new">Comentarios</div>
+          <div class="comments-grid-new">
+            <div class="comments-column-new">
+              <div class="comment-card-new">
+                <div class="user-rating-new">
+                  <img class="rating-icon-new" src="imagenes/estrella.png" />
+                  <img class="rating-icon-new" src="imagenes/estrella.png" />
+                  <img class="rating-icon-new" src="imagenes/estrella.png" />
+                  <img class="rating-icon-new" src="imagenes/estrella.png" />
+                  <img class="rating-icon-new" src="imagenes/estrella.png" />
+                </div>
+                <div class="comment-content-new">
+                  <div class="comment-text-container-new">
+                    <p class="comment-text-new">
+                      Increíble lo que se vivió anoche. Manuel tiene una forma de conectar con la gente que te deja
+                      con la piel erizada. La puesta en escena, los músicos, todo impecable. ¡Gracias por venir a La
+                      Paz!
+                    </p>
+                  </div>
+                  <div class="comment-meta-new">
+                    <div class="comment-author-new">lunar.lila88</div>
+                    <div class="comment-date-new">23&nbsp;&nbsp;mayo - 2025</div>
+                  </div>
+                </div>
+              </div>
+              <div class="comment-card-new">
+                <div class="user-rating-new">
+                  <img class="rating-icon-new" src="imagenes/estrella.png" />
+                  <img class="rating-icon-new" src="imagenes/estrella.png" />
+                  <img class="rating-icon-new" src="imagenes/estrella.png" />
+                  <img class="rating-icon-new" src="imagenes/estrella.png" />
+                  <img class="rating-icon-alt-new" src="imagenes/estrella2.png" />
+                </div>
+                <div class="comment-content-new">
+                  <div class="comment-text-container-new">
+                    <p class="comment-text-new">
+                      Fue como una terapia musical. Salí renovado, pensando en letras, imágenes, momentos. Manuel
+                      tiene ese poder raro de hacerte sentir acompañado incluso en lo que no sabías que te dolía.
+                      Gracias por eso.
+                    </p>
+                  </div>
+                  <div class="comment-meta-new">
+                    <div class="comment-author-new">andres_silente</div>
+                    <div class="comment-date-new">23&nbsp;&nbsp;mayo - 2025</div>
+                  </div>
+                </div>
+              </div>
+              <div class="comment-card-new">
+                <div class="user-rating-new">
+                  <img class="rating-icon-new" src="imagenes/estrella.png" />
+                  <img class="rating-icon-new" src="imagenes/estrella.png" />
+                  <img class="rating-icon-new" src="imagenes/estrella.png" />
+                  <img class="rating-icon-new" src="imagenes/estrella.png" />
+                  <img class="rating-icon-new" src="imagenes/estrella.png" />
+                </div>
+                <div class="comment-content-new">
+                  <div class="comment-text-container-new">
+                    <p class="comment-text-new">
+                      Nunca había visto a Manuel en vivo, y honestamente no esperaba que fuera tan potente. Me voló
+                      la cabeza cómo traduce la intensidad del disco Pánico a una puesta en escena tan precisa. No
+                      hay nada de show vacío ni espectáculo por espectáculo. Cada canción tiene peso, tiene
+                      intención, y te arrastra con ella. Los músicos están en un nivel altísimo, cada arreglo tiene
+                      alma. Y me conmovió mucho ver al staff trabajar con tanta dedicación detrás del escenario, sin
+                      protagonismo, pero siendo clave para que todo fluyera con una naturalidad que uno, como
+                      espectador, agradece profundamente
+                    </p>
+                  </div>
+                  <div class="comment-meta-new">
+                    <div class="comment-author-new">esteban.en.transito</div>
+                    <div class="comment-date-new">Fecha de publicación</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="comments-column-new">
+              <div class="comment-card-new">
+                <div class="user-rating-new">
+                  <img class="rating-icon-new" src="imagenes/estrella.png" />
+                  <img class="rating-icon-new" src="imagenes/estrella.png" />
+                  <img class="rating-icon-new" src="imagenes/estrella.png" />
+                  <img class="rating-icon-new" src="imagenes/estrella.png" />
+                  <img class="rating-icon-alt-new" src="imagenes/estrella2.png" />
+                </div>
+                <div class="comment-content-new">
+                  <div class="comment-text-container-new">
+                    <p class="comment-text-new">
+                      Aún no supero lo de anoche. Qué manera de interpretar, de transmitir tanto con cada canción.
+                      ‘Pánico’ en vivo es otra cosa, mucho más visceral, más intensa. Y el público estaba tan
+                      conectado que parecía un solo corazón latiendo con cada tema. De verdad, gracias Manuel por
+                      esa entrega tan honesta.
+                    </p>
+                  </div>
+                  <div class="comment-meta-new">
+                    <div class="comment-author-new">karenruido</div>
+                    <div class="comment-date-new">24&nbsp;&nbsp;mayo - 2025</div>
+                  </div>
+                </div>
+              </div>
+              <div class="comment-card-new">
+                <div class="user-rating-new">
+                  <img class="rating-icon-new" src="imagenes/estrella.png" />
+                  <img class="rating-icon-new" src="imagenes/estrella.png" />
+                  <img class="rating-icon-new" src="imagenes/estrella.png" />
+                  <img class="rating-icon-new" src="imagenes/estrella.png" />
+                  <img class="rating-icon-new" src="imagenes/estrella.png" />
+                </div>
+                <div class="comment-content-new">
+                  <div class="comment-text-container-new">
+                    <p class="comment-text-new">
+                      Lloré con ‘Te doy una canción’. Era como si la cantara solo para mí.
+                    </p>
+                  </div>
+                  <div class="comment-meta-new">
+                    <div class="comment-author-new">miguel.tierraadentro</div>
+                    <div class="comment-date-new">24&nbsp;&nbsp;mayo - 2025</div>
+                  </div>
+                </div>
+              </div>
+              <div class="comment-card-new">
+                <div class="user-rating-new">
+                  <img class="rating-icon-new" src="imagenes/estrella.png" />
+                  <img class="rating-icon-new" src="imagenes/estrella.png" />
+                  <img class="rating-icon-new" src="imagenes/estrella.png" />
+                  <img class="rating-icon-new" src="imagenes/estrella.png" />
+                  <img class="rating-icon-new" src="imagenes/estrella.png" />
+                </div>
+                <div class="comment-content-new">
+                  <div class="comment-text-container-new">
+                    <p class="comment-text-new">
+                      Fui con mi mamá, que es fan de Manuel hace años, y salí yo también absolutamente tocado por el
+                      show. Es increíble cómo logra atravesar generaciones con letras tan profundas y arreglos tan
+                      bien hechos. Lo que más me impactó fue cómo una sala entera podía pasar del silencio absoluto
+                      al estallido de aplausos en segundos. No es fácil lograr eso, y él lo hace sin esfuerzo
+                      aparente, solo con autenticidad. Lo sentí muy presente, muy humano, muy generoso. Y eso se
+                      contagió. A la salida todos hablaban bajito, como si no quisiéramos romper el hechizo. Qué
+                      hermoso regalo nos hizo anoche.
+                    </p>
+                  </div>
+                  <div class="comment-meta-new">
+                    <div class="comment-author-new">marce.nocturna</div>
+                    <div class="comment-date-new">23&nbsp;&nbsp;mayo - 2025</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="comments-column-alt-new">
+              <div class="comment-card-new">
+                <div class="user-rating-new">
+                  <img class="rating-icon-new" src="imagenes/estrella.png" />
+                  <img class="rating-icon-new" src="imagenes/estrella.png" />
+                  <img class="rating-icon-new" src="imagenes/estrella.png" />
+                  <img class="rating-icon-new" src="imagenes/estrella.png" />
+                  <img class="rating-icon-new" src="imagenes/estrella.png" />
+                </div>
+                <div class="comment-content-new">
+                  <div class="comment-text-container-new">
+                    <p class="comment-text-new">
+                      El juego de luces y las proyecciones visuales fueron un complemento perfecto. Nada distraía,
+                      todo sumaba. Se notaba que hay una visión artística clara detrás del show, y que el equipo la
+                      supo ejecutar con mucho cuidado.
+                    </p>
+                  </div>
+                  <div class="comment-meta-new">
+                    <div class="comment-author-new">valechispas</div>
+                    <div class="comment-date-new">23&nbsp;&nbsp;mayo - 2025</div>
+                  </div>
+                </div>
+              </div>
+              <div class="comment-card-new">
+                <div class="user-rating-new">
+                  <img class="rating-icon-new" src="imagenes/estrella.png" />
+                  <img class="rating-icon-new" src="imagenes/estrella.png" />
+                  <img class="rating-icon-new" src="imagenes/estrella.png" />
+                  <img class="rating-icon-new" src="imagenes/estrella.png" />
+                  <img class="rating-icon-alt-new" src="imagenes/estrella2.png" />
+                </div>
+                <div class="comment-content-new">
+                  <div class="comment-text-container-new">
+                    <p class="comment-text-new">
+                      Fui sin muchas expectativas y salí con el alma llena. No solo por la música —que fue
+                      increíble—, sino por la atmósfera que se creó. El Teatro Municipal se sentía íntimo, como si
+                      estuviéramos en una sesión privada. Todo fluyó tan natural, desde las luces hasta el sonido.
+                      Se notaba el cariño con el que montaron todo.
+                    </p>
+                  </div>
+                  <div class="comment-meta-new">
+                    <div class="comment-author-new">ritmo.inverso</div>
+                    <div class="comment-date-new">24&nbsp;&nbsp;mayo - 2025</div>
+                  </div>
+                </div>
+              </div>
+              <div class="comment-card-new">
+                <div class="user-rating-new">
+                  <img class="rating-icon-new" src="imagenes/estrella.png" />
+                  <img class="rating-icon-new" src="imagenes/estrella.png" />
+                  <img class="rating-icon-new" src="imagenes/estrella.png" />
+                  <img class="rating-icon-new" src="imagenes/estrella.png" />
+                  <img class="rating-icon-new" src="imagenes/estrella.png" />
+                </div>
+                <div class="comment-content-new">
+                  <div class="comment-text-container-new">
+                    <p class="comment-text-new">
+                      Hay conciertos que se te olvidan al día siguiente, y hay otros que te quedan como tatuaje
+                      emocional. Lo de Manuel García en La Paz fue de esos segundos. Una narrativa impecable, un
+                      recorrido emocional que nos hizo pasar por la melancolía, la ternura, la rabia, la
+                      esperanza... todo eso en poco más de una hora. Salí temblando, literal. Me tocó, me revolvió,
+                      me sanó un poquito. No puedo dejar de pensar en lo importante que es tener estos espacios
+                      donde el arte se hace con tanto respeto, tanto compromiso y tanto amor por la audiencia. Qué
+                      necesario.
+                    </p>
+                  </div>
+                  <div class="comment-meta-new">
+                    <div class="comment-author-new">cincolunas_</div>
+                    <div class="comment-date-new">24&nbsp;&nbsp;mayo - 2025</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="comment-button-wrapper-new"><div class="comment-button-new" id="open-comment-popup">Comentar</div></div>
+      </div>
+    </div>
+    <div class="comentario-seccion" id="comment-popup">
+  <div class="comentario-seccion__contenedor">
+    <img class="comentario-seccion__cerrar-icono" src="imagenes/xcomentarios.png" id="close-comment-popup" />
+    <div class="comentario-seccion__contenido">
+      <p class="comentario-seccion__texto-recordatorio">No olvides dejar también el tuyo!</p>
+      <div class="comentario-seccion__estrellas">
+        <img class="comentario-seccion__estrella--1" src="imagenes/estrella_comentarios.png" />
+        <img class="comentario-seccion__estrella--2" src="imagenes/estrella_comentarios.png" />
+        <img class="comentario-seccion__estrella--3" src="imagenes/estrella_comentarios.png" />
+        <img class="comentario-seccion__estrella--4" src="imagenes/estrella_comentarios.png" />
+        <img class="comentario-seccion__estrella--5" src="imagenes/estrella_comentarios.png" />
+      </div>
+      <div class="comentario-seccion__entrada-wrapper">
+        <img class="comentario-seccion__usuario-icono" src="imagenes/perfil_comentarios.png" />
+        <p class="comentario-seccion__texto-opinion">Agrega tu opinión del evento y mi guía!</p>
+      </div>
+    </div>
+    <div class="comentario-seccion__boton-enviar-wrapper">
+      <div class="comentario-seccion__boton-enviar" id="close-comment-popup">Enviar</div>
+    </div>
+  </div>
+</div>
+    <div class="final-section-new">
+      <div class="final-message-new">Y terminamos!<br />Gracias por acompañarme</div>
+      <div class="navigation-buttons-new">
+        <div class="button-wrapper-new"><div class="button-primary-new" onclick="location.href='index.html'">Volver al inicio</div></div>
+        <div class="button-wrapper-new"><div class="button-secondary-new" onclick="location.href='eventos.html'">Explorar más</div></div>
+        <div class="button-wrapper-new"><div class="button-tertiary-new" onclick="location.href='eventos.html'">Eventos similares</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+ </section>
+    </main>
+
+        
+    <!--pie de pagina-->
+    <footer class="pie">
+        <div class="footer-content">
+            <!-- Logo -->
+            <div class="footer-logo">
+                <h1 class="footer-title">Tambo</h1>
+            </div>
+
+            <!-- Navegación -->
+            <div class="footer-nav-container">
+            <ul class="footer-nav">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="eventos/eventos.html">Eventos</a></li>
+                <li><a href="mi_agenda.html">Mi Agenda</a></li>
+                <li><a href="categorias.html">Categorías</a></li>
+
+
+            </ul>
+            </div>
+
+            <!-- Redes sociales -->
+            <div class="footer-social">
+
+            <img src="imagenes/Github.png" alt="Github" >
+            <img src="imagenes/X.png" alt="X">
+            <img src="imagenes/instagram.png" alt="instagram">
+            <img src="imagenes/facebook.png" alt="facebook" >
+
+
+            </div>
+        </div>
+
+        <!-- ⬇️ Este bloque ahora está fuera del "footer-content" ⬇️ -->
+        <div class="footer-copy">
+            © 2025 Tambo - Guía Cultural Paceña
+        </div>
+    </footer>
+    <!--Fin de pie de pagina-->
+    <script src="Script/funciones.js"></script>
+        <!-- Ventana emergente login/registro -->
+    <div class="popup-container" id="popupContainer" style="display: none;">
+        <div class="popup">
+            <span class="close-btn" id="closeBtn">&times;</span>
+            <h1 class="popup-title">Tambo</h1>
+            <h2 class="popup-subtitle" id="popupSubtitle">Bienvenido de vuelta!</h2>
+
+            <div class="tab-buttons">
+                <button id="loginTab" class="tab-button active">Ingresar</button>
+                <button id="registerTab" class="tab-button">Registrarse</button>
+            </div>
+
+            <form id="loginForm" class="popup-form">
+                <input type="text" placeholder="Username/Email" required />
+                <div class="password-wrapper">
+                    <input type="password" placeholder="Contraseña" required />
+                    <span class="toggle-password">&#128065;</span>
+                </div>
+                <button type="submit" class="submit-btn">Ingresar</button>
+                <div class="form-links">
+                    <a href="#">Olvide mi contraseña</a>
+                </div>
+                <div class="divider">
+                    <hr /><span>Otros métodos</span>
+                    <hr />
+                </div>
+                <div id="otros-metodos" class="iconos-sociales">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/google.svg" alt="Google"
+                        class="icono-social" data-tab="social-login" />
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/facebook.svg" alt="Facebook"
+                        class="icono-social" data-tab="social-login" />
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg" alt="Instagram"
+                        class="icono-social" data-tab="social-login" />
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/x.svg" alt="X" class="icono-social"
+                        data-tab="social-login" />
+                </div>
+
+            </form>
+
+            <form id="registerForm" class="popup-form hidden">
+                <input type="text" placeholder="Nombre completo" required />
+                <input type="email" placeholder="Correo electrónico" required />
+                <input type="password" placeholder="Contraseña" required />
+                <button type="submit" class="submit-btn">Registrarse</button>
+                <div class="divider">
+                    <hr /><span>Otros métodos</span>
+                    <hr />
+                </div>
+                <div id="otros-metodos" class="iconos-sociales">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/google.svg" alt="Google"
+                        class="icono-social" data-tab="social-login" />
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/facebook.svg" alt="Facebook"
+                        class="icono-social" data-tab="social-login" />
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg" alt="Instagram"
+                        class="icono-social" data-tab="social-login" />
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/x.svg" alt="X" class="icono-social"
+                        data-tab="social-login" />
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
