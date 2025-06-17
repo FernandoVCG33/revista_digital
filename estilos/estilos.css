@@ -1797,6 +1797,14 @@ ul.componentes li:nth-child(1) {
   }
 }
 
+.eventos_galeria {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
+  gap: 1.5rem;
+  padding: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
 /* Fin de banner */
 /*inicio de carrusel ventos*/
 .carrusel_eventos {
@@ -2051,24 +2059,77 @@ ul.componentes li:nth-child(1) {
 
 /* ========== TITULAR ========== */
 .agenda-header {
-  text-align: left;
-  padding: 3rem 2rem 1rem;
+  width: 633px;
+  height: 405px;
+  padding: 28px 14px;
+  align-items: flex-start;
+  gap: 10px;
+  flex-shrink: 0;  
 }
 
 
 .agenda-subtitulo {
-  font-size: 1.2rem;
-  color: #7a4e67;
+  font-family: 'Melodrama';
+  font-size: 47.78px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: -0.526px;
+  color: #8C5067;
 }
 
 
 .agenda-mes {
-  font-size: 6rem;
-  font-weight: 800;
+  font-family: 'Melodrama';
+  font-size: 300px;
+  font-style: normal;
+  font-weight: 600;
   color: #471b2f;
-  margin-top: -10px;
+  line-height: normal;
 }
 
+.agenda-vacia{
+  width: 1440px;
+  height: 1142px;
+  display: flex;
+  width: 1064px;
+  flex-direction: column;
+  align-items: center;
+  gap: 27px;
+  margin: auto;
+  margin-top: 200px;
+}
+
+.mensaje{
+  width: 1064px;
+  font-family: 'Raleway';
+  font-size: 39.81px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -0.438px;
+}
+
+.boton-visitar{
+  color: var(--fondo, #F7F7EC);
+  font-family: 'Raleway';
+  font-size: 19.2px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -0.211px;
+  display: flex;
+  align-items: flex-start;
+  border-radius: 10px;
+  background: var(--grisesv3, #878762);
+  display: flex;
+  height: 46px;
+  padding: 10px 30px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+}
 
 /* ========== SECCIÓN POR DÍA ========== */
 .dia-evento {
@@ -4176,8 +4237,13 @@ width: 261px;
   height: 440px;
   top: 0;
   left: 0;
-  background-image: url("../imagenes/imagen_card.jpg");
   background-size: 100% 100%;
+}
+.evento01{
+  background-image: url("../imagenes/imagen_card.jpg");
+}
+.evento02{
+  background-image: url("../imagenes/evento02.jpg");
 }
 
 .event-card-frame .event-date-info {
