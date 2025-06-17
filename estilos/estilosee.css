@@ -560,7 +560,7 @@ body.modo-informacion .tambo-header:not(.header-solido) .titulo {
   line-height: 1.5;
 }
 .imagen-lugar {
-  margin-top: 30px;
+  padding-top: 40px;
   overflow: visible;
   width: calc(100% - 1rem);
   height: 200px;
@@ -569,7 +569,7 @@ body.modo-informacion .tambo-header:not(.header-solido) .titulo {
   padding-right: 1rem;
 }
 .google-maps-link {
-  margin-top: 30px;
+  padding-top: 40px;
   display: inline-flex;
   text-align: center;
   gap: 8px;
@@ -1848,7 +1848,7 @@ body.modo-informacion .tambo-header:not(.header-solido) .titulo {
 }
 .main-wrapper-new .comment-text-new {
   position: relative;
-  width: 330px;
+  width: 300px;
   margin-top: -1.00px;
   font-family: "Raleway", sans-serif;
   font-weight: 400;
@@ -2438,13 +2438,13 @@ body.modo-informacion .tambo-header:not(.header-solido) .titulo {
   .subtitulo-transporte {
     font-size: 50px; 
     padding-right: 1rem;
-    text-align: center; 
+    text-align: right; 
   }
 
   .descripcion-transporte {
     font-size: 18px; 
     padding-right: 1rem;
-    text-align: center; 
+    text-align: right; 
     line-height: 1.4; 
   }
 

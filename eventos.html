@@ -109,8 +109,9 @@
             </form>
         </div>
     </div>
-    <!-- Main basico "propuesta"-->
+<!-- Main basico "propuesta"-->
     <main>
+    
         <div class="filter">
 
 
@@ -155,9 +156,10 @@
             </section>
 
     </main>
+    <div class="blur-overlay-menu" id="blurOverlay"></div>
 
     <!--pie de pagina-->
-    <footer class="pie">
+    <footer class="pie">    
         <div class="footer-content">
             <!-- Logo -->
             <div class="footer-logo">
@@ -193,7 +195,19 @@
             © 2025 Tambo - Guía Cultural Paceña
         </div>
     </footer>
-    <!--Fin de pie de pagina-->
-    <script src="Script/funciones.js"></script>
 </body>
+<script src="Script/funciones.js"></script>
+<script>
+    const details = document.querySelector("details");
+    const blurOverlay = document.getElementById("blurOverlay");
+
+    details.addEventListener("toggle", () => {
+    if (details.open) {
+        blurOverlay.classList.add("active");
+  }  else {
+    blurOverlay.classList.remove("active");
+  }
+});
+</script>
+
 </html>
