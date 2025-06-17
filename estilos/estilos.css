@@ -1046,7 +1046,8 @@ h5 {
 }
 
 .firma {
-  left: 1rem;
+  right: 1rem;
+  left: auto;
 }
 
 .fecha {
@@ -1260,12 +1261,14 @@ h5 {
     justify-content: flex-start;
     gap: 1rem;
     margin-top: 2rem;
+    margin-left: -15px;
   }
 
   .acciones-edicion button.guardar-cambios {
     width: 171px;
     height: 49px;
     font-size: 16px;
+    margin-left: 0px;
   }
 
   .acciones-edicion button.cancelar-edicion {
@@ -1317,6 +1320,7 @@ h5 {
     margin-top: 0.25rem;
     font-size: 0.85rem;
   }
+  
 
   .modo-edicion input {
     width: 320px;
@@ -1548,7 +1552,7 @@ h5 {
   display: flex;
   align-items: flex-star;
   width: 90%;
-  color: var(--color-primary);
+  color: var(--color-black);
 }
 
 .mas {
@@ -4299,6 +4303,8 @@ body.modo-informacion .tambo-header:not(.header-solido) .titulo {
   line-height: normal;
   white-space: nowrap;
 }
+
+/* ERY EVENTOS ESPECIFMEDIA QUICOS */
 
 /* ERY EVENTOS ESPECIFMEDIA QUICOS */
 @media screen and (max-width: 480px) {
