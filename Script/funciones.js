@@ -155,238 +155,238 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    // --- LÓGICA PARA INDEX.HTML ---
-    // Verificamos si existe un elemento que solo esté en index.html, por ejemplo, el ID 'fecha'
-    if (document.getElementById("fecha")) {
-        const eventos = [
-            {
-                fecha: "31",
-                mes: "Mayo",
-                dia: "Sábado",
-                lugar: "Teatro Municipal",
-                hora: "20:00"
-            },
-            {
-                fecha: "1",
-                mes: "Junio",
-                dia: "Domingo",
-                lugar: "Teatro Nuna",
-                hora: "21:00"
-            },
-            {
-                fecha: "7",
-                mes: "Junio",
-                dia: "Viernes",
-                lugar: "Teatro Municipal",
-                hora: "20:00"
-            },
-            {
-                fecha: "4",
-                mes: "Junio",
-                dia: "Miércoles",
-                lugar: "Museo Nacional de Arte",
-                hora: "14:00"
-            }
-        ];
+  // --- LÓGICA PARA INDEX.HTML ---
+  // Verificamos si existe un elemento que solo esté en index.html, por ejemplo, el ID 'fecha'
+  if (document.getElementById("fecha")) {
+    const eventos = [
+      {
+        fecha: "31",
+        mes: "Mayo",
+        dia: "Sábado",
+        lugar: "Teatro Municipal",
+        hora: "20:00"
+      },
+      {
+        fecha: "1",
+        mes: "Junio",
+        dia: "Domingo",
+        lugar: "Teatro Nuna",
+        hora: "21:00"
+      },
+      {
+        fecha: "7",
+        mes: "Junio",
+        dia: "Viernes",
+        lugar: "Teatro Municipal",
+        hora: "20:00"
+      },
+      {
+        fecha: "4",
+        mes: "Junio",
+        dia: "Miércoles",
+        lugar: "Museo Nacional de Arte",
+        hora: "14:00"
+      }
+    ];
 
-        let index = 0;
-        const botones = document.querySelectorAll(".componentes li");
+    let index = 0;
+    const botones = document.querySelectorAll(".componentes li");
 
-        function actualizarEvento() {
-            const e = eventos[index];
-            document.getElementById("fecha").textContent = e.fecha;
-            document.getElementById("mes").textContent = e.mes;
-            document.getElementById("dia").textContent = e.dia;
-            document.getElementById("lugar").textContent = e.lugar;
-            document.getElementById("hora").textContent = e.hora;
-            botones.forEach((btn, i) => {
-                btn.style.backgroundColor = i === index ? "#BABA2B" : "#d9d9d9";
-            });
-            index = (index + 1) % eventos.length;
-        }
-
-        actualizarEvento();
-        setInterval(actualizarEvento, 2900);
+    function actualizarEvento() {
+      const e = eventos[index];
+      document.getElementById("fecha").textContent = e.fecha;
+      document.getElementById("mes").textContent = e.mes;
+      document.getElementById("dia").textContent = e.dia;
+      document.getElementById("lugar").textContent = e.lugar;
+      document.getElementById("hora").textContent = e.hora;
+      botones.forEach((btn, i) => {
+        btn.style.backgroundColor = i === index ? "#BABA2B" : "#d9d9d9";
+      });
+      index = (index + 1) % eventos.length;
     }
 
-    // --- LÓGICA PARA INFORMACION.HTML ---
-    // Verificamos si la página tiene la clase 'modo-informacion' en el body
-    if (document.body.classList.contains("modo-informacion")) {
+    actualizarEvento();
+    setInterval(actualizarEvento, 2900);
+  }
 
-        /*inicio banner evento especifico */
-        const slides = document.querySelectorAll('.evento-hero-carrusel .slide');
-        const dots = document.querySelectorAll('.carrusel-indicadores .dot');
-        let current = 0;
+  // --- LÓGICA PARA INFORMACION.HTML ---
+  // Verificamos si la página tiene la clase 'modo-informacion' en el body
+  if (document.body.classList.contains("modo-informacion")) {
 
-        if (slides.length > 0) {
-            setInterval(() => {
-                slides[current].classList.remove('activo');
-                dots[current].classList.remove('activo');
-                current = (current + 1) % slides.length;
-                slides[current].classList.add('activo');
-                dots[current].classList.add('activo');
-            }, 2000);
-        }
-        /*fin banner evento especifico */
+    /*inicio banner evento especifico */
+    const slides = document.querySelectorAll('.evento-hero-carrusel .slide');
+    const dots = document.querySelectorAll('.carrusel-indicadores .dot');
+    let current = 0;
 
-
-        /*INICIO informacion.html */
-        const header = document.querySelector(".tambo-header");
-        const heroCarrusel = document.querySelector(".evento-hero-carrusel");
-
-        function verificarTransparencia() {
-            if (!heroCarrusel || !header) return; // Asegúrate de que los elementos existen
-            const heroBottom = heroCarrusel.getBoundingClientRect().bottom;
-            if (heroBottom <= 1050) {
-                header.classList.add("header-solido");
-            } else {
-                header.classList.remove("header-solido");
-            }
-        }
-
-        if (heroCarrusel && header) { // Solo añadir listeners si los elementos existen
-            window.addEventListener("scroll", verificarTransparencia);
-            verificarTransparencia();
-        }
-
-
-        const hero = document.querySelector(".evento-hero-carrusel");
-
-        const ajustarHeader = () => {
-            if (!header || !hero) return; // Asegúrate de que los elementos existen
-            if (window.scrollY > hero.offsetHeight - 100) {
-                header.classList.remove("header-transparente");
-                header.style.borderBottom = "5px solid #4C2634"; // vuelve el borde
-            } else {
-                header.classList.add("header-transparente");
-                header.style.borderBottom = "none"; // quita el borde
-            }
-        };
-
-        if (header && hero) { // Solo añadir listeners si los elementos existen
-            window.addEventListener("scroll", ajustarHeader);
-            ajustarHeader(); // Ejecuta una vez al cargar
-        }
-
-
-        const activos = document.querySelectorAll(".columna-indice li.activo");
-        if (activos.length > 0) {
-            const observerIndex = new IntersectionObserver((entries) => { // Renombrado para evitar conflicto
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("encendido");
-                    }
-                });
-            }, {
-                threshold: 0.5
-            });
-            activos.forEach(activo => observerIndex.observe(activo));
-        }
-
-        const frase = document.querySelector(".frase-final");
-        if (frase) { // Solo si la frase existe
-            const nodes = Array.from(frase.childNodes);
-            frase.innerHTML = "";
-
-            nodes.forEach(node => {
-                if (node.nodeName === "BR") {
-                    frase.appendChild(document.createElement("br"));
-                } else {
-                    node.textContent.split("").forEach(letra => {
-                        const span = document.createElement("span");
-                        span.textContent = letra;
-                        frase.appendChild(span);
-                    });
-                }
-            });
-
-            const spans = frase.querySelectorAll("span");
-
-            function animarLetras() {
-                spans.forEach((span, i) => {
-                    setTimeout(() => {
-                        span.classList.add("relleno");
-                    }, i * 50);
-                });
-            }
-
-            const observerFrase = new IntersectionObserver((entries, obs) => { // Renombrado para evitar conflicto
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        animarLetras();
-                        obs.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.5 });
-            observerFrase.observe(frase);
-        }
-
-        const commentsSection = document.getElementById('comments-section');
-        const openPopupButton = document.getElementById('open-comment-popup');
-
-        // Solo inicializar el pop-up si los elementos base existen en esta página
-        if (commentsSection || openPopupButton) {
-            const commentPopup = document.getElementById('comment-popup');
-            const closePopupButton = document.getElementById('close-comment-popup');
-            let overlay;
-
-            function showOverlay() {
-                if (!overlay) {
-                    overlay = document.createElement('div');
-                    overlay.classList.add('overlay');
-                    document.body.appendChild(overlay);
-                    overlay.addEventListener('click', closePopup);
-                }
-                overlay.style.display = 'block';
-            }
-
-            function hideOverlay() {
-                if (overlay) {
-                    overlay.style.display = 'none';
-                }
-            }
-
-            function openPopup() {
-                if (commentPopup) { // Asegúrate de que el pop-up existe
-                    commentPopup.style.display = 'flex';
-                    showOverlay();
-                    document.body.style.overflow = 'hidden';
-                }
-            }
-
-            function closePopup() {
-                if (commentPopup) { // Asegúrate de que el pop-up existe
-                    commentPopup.style.display = 'none';
-                    hideOverlay();
-                    document.body.style.overflow = '';
-                }
-            }
-
-            if (openPopupButton) {
-                openPopupButton.addEventListener('click', openPopup);
-            }
-            if (closePopupButton) {
-                closePopupButton.addEventListener('click', closePopup);
-            }
-
-            if (commentsSection) {
-                const observerComments = new IntersectionObserver((entries, observer) => { // Renombrado para evitar conflicto
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            openPopup();
-                            observer.unobserve(entry.target);
-                        }
-                    });
-                }, {
-                    root: null,
-                    rootMargin: '0px',
-                    threshold: 0.5
-                });
-                observerComments.observe(commentsSection);
-            }
-        }
-        /*FIN informacion.html */
+    if (slides.length > 0) {
+      setInterval(() => {
+        slides[current].classList.remove('activo');
+        dots[current].classList.remove('activo');
+        current = (current + 1) % slides.length;
+        slides[current].classList.add('activo');
+        dots[current].classList.add('activo');
+      }, 2000);
     }
+    /*fin banner evento especifico */
+
+
+    /*INICIO informacion.html */
+    const header = document.querySelector(".tambo-header");
+    const heroCarrusel = document.querySelector(".evento-hero-carrusel");
+
+    function verificarTransparencia() {
+      if (!heroCarrusel || !header) return; // Asegúrate de que los elementos existen
+      const heroBottom = heroCarrusel.getBoundingClientRect().bottom;
+      if (heroBottom <= 1050) {
+        header.classList.add("header-solido");
+      } else {
+        header.classList.remove("header-solido");
+      }
+    }
+
+    if (heroCarrusel && header) { // Solo añadir listeners si los elementos existen
+      window.addEventListener("scroll", verificarTransparencia);
+      verificarTransparencia();
+    }
+
+
+    const hero = document.querySelector(".evento-hero-carrusel");
+
+    const ajustarHeader = () => {
+      if (!header || !hero) return; // Asegúrate de que los elementos existen
+      if (window.scrollY > hero.offsetHeight - 100) {
+        header.classList.remove("header-transparente");
+        header.style.borderBottom = "5px solid #4C2634"; // vuelve el borde
+      } else {
+        header.classList.add("header-transparente");
+        header.style.borderBottom = "none"; // quita el borde
+      }
+    };
+
+    if (header && hero) { // Solo añadir listeners si los elementos existen
+      window.addEventListener("scroll", ajustarHeader);
+      ajustarHeader(); // Ejecuta una vez al cargar
+    }
+
+
+    const activos = document.querySelectorAll(".columna-indice li.activo");
+    if (activos.length > 0) {
+      const observerIndex = new IntersectionObserver((entries) => { // Renombrado para evitar conflicto
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("encendido");
+          }
+        });
+      }, {
+        threshold: 0.5
+      });
+      activos.forEach(activo => observerIndex.observe(activo));
+    }
+
+    const frase = document.querySelector(".frase-final");
+    if (frase) { // Solo si la frase existe
+      const nodes = Array.from(frase.childNodes);
+      frase.innerHTML = "";
+
+      nodes.forEach(node => {
+        if (node.nodeName === "BR") {
+          frase.appendChild(document.createElement("br"));
+        } else {
+          node.textContent.split("").forEach(letra => {
+            const span = document.createElement("span");
+            span.textContent = letra;
+            frase.appendChild(span);
+          });
+        }
+      });
+
+      const spans = frase.querySelectorAll("span");
+
+      function animarLetras() {
+        spans.forEach((span, i) => {
+          setTimeout(() => {
+            span.classList.add("relleno");
+          }, i * 50);
+        });
+      }
+
+      const observerFrase = new IntersectionObserver((entries, obs) => { // Renombrado para evitar conflicto
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            animarLetras();
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+      observerFrase.observe(frase);
+    }
+
+    const commentsSection = document.getElementById('comments-section');
+    const openPopupButton = document.getElementById('open-comment-popup');
+
+    // Solo inicializar el pop-up si los elementos base existen en esta página
+    if (commentsSection || openPopupButton) {
+      const commentPopup = document.getElementById('comment-popup');
+      const closePopupButton = document.getElementById('close-comment-popup');
+      let overlay;
+
+      function showOverlay() {
+        if (!overlay) {
+          overlay = document.createElement('div');
+          overlay.classList.add('overlay');
+          document.body.appendChild(overlay);
+          overlay.addEventListener('click', closePopup);
+        }
+        overlay.style.display = 'block';
+      }
+
+      function hideOverlay() {
+        if (overlay) {
+          overlay.style.display = 'none';
+        }
+      }
+
+      function openPopup() {
+        if (commentPopup) { // Asegúrate de que el pop-up existe
+          commentPopup.style.display = 'flex';
+          showOverlay();
+          document.body.style.overflow = 'hidden';
+        }
+      }
+
+      function closePopup() {
+        if (commentPopup) { // Asegúrate de que el pop-up existe
+          commentPopup.style.display = 'none';
+          hideOverlay();
+          document.body.style.overflow = '';
+        }
+      }
+
+      if (openPopupButton) {
+        openPopupButton.addEventListener('click', openPopup);
+      }
+      if (closePopupButton) {
+        closePopupButton.addEventListener('click', closePopup);
+      }
+
+      if (commentsSection) {
+        const observerComments = new IntersectionObserver((entries, observer) => { // Renombrado para evitar conflicto
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              openPopup();
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          root: null,
+          rootMargin: '0px',
+          threshold: 0.5
+        });
+        observerComments.observe(commentsSection);
+      }
+    }
+    /*FIN informacion.html */
+  }
 });
 
 /*inicio banner evento especifico */
@@ -450,23 +450,23 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-  document.addEventListener("DOMContentLoaded", () => {
-    const activos = document.querySelectorAll(".columna-indice li.activo");
+document.addEventListener("DOMContentLoaded", () => {
+  const activos = document.querySelectorAll(".columna-indice li.activo");
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("encendido");
-        }
-      });
-    }, {
-      threshold: 0.5 // El 50% del elemento debe estar visible
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("encendido");
+      }
     });
-
-    activos.forEach(activo => observer.observe(activo));
+  }, {
+    threshold: 0.5 // El 50% del elemento debe estar visible
   });
 
-  document.addEventListener("DOMContentLoaded", () => {
+  activos.forEach(activo => observer.observe(activo));
+});
+
+document.addEventListener("DOMContentLoaded", () => {
   const frase = document.querySelector(".frase-final");
   const nodes = Array.from(frase.childNodes);
 
@@ -508,77 +508,77 @@ document.addEventListener("DOMContentLoaded", function () {
   observer.observe(frase);
 });
 
-  document.addEventListener('DOMContentLoaded', () => {
-    const commentsSection = document.getElementById('comments-section');
-    const commentPopup = document.getElementById('comment-popup');
-    const openPopupButton = document.getElementById('open-comment-popup');
-    const closePopupButton = document.getElementById('close-comment-popup');
-    let overlay; // Para el overlay de fondo
+document.addEventListener('DOMContentLoaded', () => {
+  const commentsSection = document.getElementById('comments-section');
+  const commentPopup = document.getElementById('comment-popup');
+  const openPopupButton = document.getElementById('open-comment-popup');
+  const closePopupButton = document.getElementById('close-comment-popup');
+  let overlay; // Para el overlay de fondo
 
-    // Función para crear y mostrar el overlay
-    function showOverlay() {
-      if (!overlay) {
-        overlay = document.createElement('div');
-        overlay.classList.add('overlay');
-        document.body.appendChild(overlay);
-        overlay.addEventListener('click', closePopup); // Cerrar al hacer clic en el overlay
-      }
-      overlay.style.display = 'block';
+  // Función para crear y mostrar el overlay
+  function showOverlay() {
+    if (!overlay) {
+      overlay = document.createElement('div');
+      overlay.classList.add('overlay');
+      document.body.appendChild(overlay);
+      overlay.addEventListener('click', closePopup); // Cerrar al hacer clic en el overlay
     }
+    overlay.style.display = 'block';
+  }
 
-    // Función para ocultar el overlay
-    function hideOverlay() {
-      if (overlay) {
-        overlay.style.display = 'none';
-      }
+  // Función para ocultar el overlay
+  function hideOverlay() {
+    if (overlay) {
+      overlay.style.display = 'none';
     }
+  }
 
-    // Función para abrir el pop-up
-    function openPopup() {
-      commentPopup.style.display = 'flex'; // 'flex' porque así lo tienes en tu CSS para display
-      showOverlay();
-      document.body.style.overflow = 'hidden'; // Evita el scroll del fondo
-    }
+  // Función para abrir el pop-up
+  function openPopup() {
+    commentPopup.style.display = 'flex'; // 'flex' porque así lo tienes en tu CSS para display
+    showOverlay();
+    document.body.style.overflow = 'hidden'; // Evita el scroll del fondo
+  }
 
-    // Función para cerrar el pop-up
-    function closePopup() {
-      commentPopup.style.display = 'none';
-      hideOverlay();
-      document.body.style.overflow = ''; // Restaura el scroll del fondo
-    }
+  // Función para cerrar el pop-up
+  function closePopup() {
+    commentPopup.style.display = 'none';
+    hideOverlay();
+    document.body.style.overflow = ''; // Restaura el scroll del fondo
+  }
 
-    // Evento para abrir el pop-up con el botón "Comentar"
-    if (openPopupButton) {
-      openPopupButton.addEventListener('click', openPopup);
-    }
+  // Evento para abrir el pop-up con el botón "Comentar"
+  if (openPopupButton) {
+    openPopupButton.addEventListener('click', openPopup);
+  }
 
-    // Evento para cerrar el pop-up con el icono de cerrar
-    if (closePopupButton) {
-      closePopupButton.addEventListener('click', closePopup);
-    }
+  // Evento para cerrar el pop-up con el icono de cerrar
+  if (closePopupButton) {
+    closePopupButton.addEventListener('click', closePopup);
+  }
 
-    // Funcionalidad de Intersection Observer para el scroll automático
-    if (commentsSection) {
-      const observerOptions = {
-        root: null, // El viewport es el root
-        rootMargin: '0px',
-        threshold: 0.5 // Cuando al menos el 50% de la sección esté visible
-      };
+  // Funcionalidad de Intersection Observer para el scroll automático
+  if (commentsSection) {
+    const observerOptions = {
+      root: null, // El viewport es el root
+      rootMargin: '0px',
+      threshold: 0.5 // Cuando al menos el 50% de la sección esté visible
+    };
 
-      const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            // La sección de comentarios está visible
-            openPopup();
-            // Desconectar el observer una vez que se muestra el pop-up para que no se repita
-            observer.unobserve(entry.target);
-          }
-        });
-      }, observerOptions);
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // La sección de comentarios está visible
+          openPopup();
+          // Desconectar el observer una vez que se muestra el pop-up para que no se repita
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
 
-      observer.observe(commentsSection);
-    }
-  });
+    observer.observe(commentsSection);
+  }
+});
 /*FIN informacion.html */
 
 /* Cuenta */
@@ -621,7 +621,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener('DOMContentLoaded', () => {
   const btnAplicar = document.querySelector('.btn_aplicar');
-  
+
   if (!btnAplicar) return;
 
   btnAplicar.addEventListener('click', () => {
@@ -649,13 +649,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         if (filtro === "este_mes") {
           if (fechaEvento.getMonth() === hoy.getMonth() &&
-              fechaEvento.getFullYear() === hoy.getFullYear()) return true;
+            fechaEvento.getFullYear() === hoy.getFullYear()) return true;
         }
         if (filtro === "proximo_mes") {
           const proximo = new Date(hoy);
           proximo.setMonth(hoy.getMonth() + 1);
           if (fechaEvento.getMonth() === proximo.getMonth() &&
-              fechaEvento.getFullYear() === proximo.getFullYear()) return true;
+            fechaEvento.getFullYear() === proximo.getFullYear()) return true;
         }
       }
       return false;
@@ -677,327 +677,327 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 document.addEventListener("DOMContentLoaded", () => {
   const eventosData = [
-{
-  "id": 1,
-  "tipo": "Música",
-  "fecha": "2025-06-21",
-  "titulo": "Pánico",
-  "artista": "Manuel García",
-  "categoria": "Música",
-  "diaNumero": "21",
-  "mesNombre": "Mayo",
-  "diaSemana": "Miercoles",
-  "lugar": "Teatro <br>Municipal",
-  "hora": "19:00",
-  "edad": "+8 años",
-  "imagen": "imagenes/cardpanico.png",
-  "enlace": "informacion.html"
-},
-{
-  "id": 2,
-  "tipo": "Música",
-  "fecha": "2025-07-02",
-  "titulo": "Armadura",
-  "artista": "Ecos del Metal",
-  "categoria": "Música",
-  "diaNumero": "02",
-  "mesNombre": "Junio",
-  "diaSemana": "Lunes",
-  "lugar": "Teatro<br> Municipal",
-  "hora": "20:00",
-  "edad": "+12 años",
-  "imagen": "imagenes/cardarma.jpg",
-  "enlace": "informacion.html"
-},
-{
-  "id": 3,
-  "tipo": "Música",
-  "fecha": "2025-07-01",
-  "titulo": "Ritmos del ande",
-  "artista": "Altiplano",
-  "categoria": "Música",
-  "diaNumero": "01",
-  "mesNombre": "Junio",
-  "diaSemana": "Domingo",
-  "lugar": "Teatro <br>Nuna",
-  "hora": "19:30",
-  "edad": "+12 años",
-  "imagen": "imagenes/cardritmos.jpg",
-  "enlace": "altiplano.html"
-},      
-{
-  "id": 4,
-  "tipo": "Música",
-  "fecha": "2025-07-27",
-  "titulo": "El Pesanervios XXV",
-  "artista": "Grillo Villegas",
-  "categoria": "Música",
-  "diaNumero": "27",
-  "mesNombre": "Junio",
-  "diaSemana": "Viernes",
-  "lugar": "Chuquiago Marka",
-  "hora": "20:00",
-  "edad": "+8 años",
-  "imagen": "imagenes/cardpasa.jpg",
-  "enlace": "Pesanervios.html"
-},
-{
-  "id": 5,
-  "tipo": "Danza",
-  "fecha": "2025-06-01",
-  "titulo": "Danzaría",
-  "artista": "",
-  "categoria": "Danza",
-  "diaNumero": "01",
-  "mesNombre": "Junio",
-  "diaSemana": "Domingo",
-  "lugar": "Espacio Kúu Inti",
-  "hora": "17:00",
-  "edad": "Todo público",
-  "imagen": "imagenes/carddanza.jpg",
-  "enlace": "evento_7.html"
-},
-{
-  "id": 6,
-  "tipo": "Danza",
-  "fecha": "2025-07-07",
-  "titulo": "Dream On",
-  "artista": "Play Pole Dance & Danza Aérea",
-  "categoria": "Danza",
-  "diaNumero": "07",
-  "mesNombre": "Junio",
-  "diaSemana": "Sábado",
-  "lugar": "Teatro <br>Nuna",
-  "hora": "19:30",
-  "edad": "+8 años",
-  "imagen": "imagenes/carddream.png",
-  "enlace": "dream_on.html"
-},
-{
-  "id": 7,
-  "tipo": "Exposiciones",
-  "fecha": "2025-07-02",
-  "titulo": "Crianza Mutua",
-  "artista": "Elvira Espejo",
-  "categoria": "Exposición",
-  "diaNumero": "",
-  "mesNombre": "Lun - Vier",
-  "diaSemana": "",
-  "lugar": "Museo<br> MUSEF",
-  "hora": "8:30",
-  "edad": "Todo Público",
-  "imagen": "imagenes/cardcrian.png",
-  "enlace": "vistiendomemorias.html"
-},
-{
-  "id": 8,
-  "tipo": "Exposiciones",
-  "fecha": "2025-07-02",
-  "titulo": "Vivas sonoridades",
-  "artista": "",
-  "categoria": "Exposición",
-  "diaNumero": "",
-  "mesNombre": "Lun - Vier",
-  "diaSemana": "",
-  "lugar": "Museo<br> MUSEF",
-  "hora": "8:30",
-  "edad": "Todo Público",
-  "imagen": "imagenes/cardsono.png",
-  "enlace": "vivas_sonoridades.html"
-},                      
-{
-  "id": 9,
-  "tipo": "Teatro",
-  "fecha": "2025-07-26",
-  "titulo": "Cholicienta",
-  "artista": "Elenco artístico Laude",
-  "categoria": "Teatro",
-  "diaNumero": "26",
-  "mesNombre": "Junio",
-  "diaSemana": "Jueves",
-  "lugar": "Teatro 6 de Agosto",
-  "hora": "19:00",
-  "edad": "+8 años",
-  "imagen": "imagenes/cardcholi.png",
-  "enlace": "chococienta.html"
-},
-{
-  "id": 11,
-  "tipo": "Teatro",
-  "fecha": "2025-06-18",
-  "titulo": "El coloradito de Aplomo",
-  "artista": "Sergio Ríos",
-  "categoria": "Teatro",
-  "diaNumero": "18",
-  "mesNombre": "Mayo",
-  "diaSemana": "Miércoles",
-  "lugar": "Teatro<br> Municipal",
-  "hora": "19:00",
-  "edad": "Todo Público",
-  "imagen": "imagenes/coloradito.png",
-  "enlace": "mentirasdrags.html"
-},
-{
-  "id": 12,
-  "tipo": "Teatro",
-  "fecha": "2025-07-13",
-  "titulo": "Los del 14b",
-  "artista": "Iván Cornejo",
-  "categoria": "Teatro",
-  "diaNumero": "13",
-  "mesNombre": "Junio",
-  "diaSemana": "Viernes",
-  "lugar": "Teatro <br>Municipal",
-  "hora": "19:30",
-  "edad": "Todo Público",
-  "imagen": "imagenes/14b.png",
-  "enlace": "mentirasdrags.html"
-},
-{
-  "id": 13,
-  "tipo": "Música",
-  "fecha": "2025-07-12",
-  "titulo": "Matheus y amigos",
-  "artista": "Matheus Fonseca",
-  "categoria": "Música",
-  "diaNumero": "12",
-  "mesNombre": "Junio",
-  "diaSemana": "Sábado",
-  "lugar": "Teatro <br>Nuna",
-  "hora": "20:00",
-  "edad": "Todo Público",
-  "imagen": "imagenes/matheus.png",
-  "enlace": "mentirasdrags.html"
-},
-{
-  "id": 14,
-  "tipo": "Exposiciones",
-  "fecha": "2025-07-13",
-  "titulo": "Pieles objetos y cuerpo",
-  "artista": "Varinia Oros",
-  "categoria": "Exposición",
-  "diaNumero": "",
-  "mesNombre": "Lun-Vier",
-  "diaSemana": "",
-  "lugar": "Teatro<br> MUSEF",
-  "hora": "8:30",
-  "edad": "Todo Público",
-  "imagen": "imagenes/pieles.png",
-  "enlace": "pieles.html"
-},
-{
-  "id": 15,
-  "tipo": "Música",
-  "fecha": "2025-07-29",
-  "titulo": "Savia Andina",
-  "artista": "Savia Andina",
-  "categoria": "Música",
-  "diaNumero": "29",
-  "mesNombre": "Junio",
-  "diaSemana": "Sabado",
-  "lugar": "Teatro <br> Nuna",
-  "hora": "20:00",
-  "edad": "Todo Público",
-  "imagen": "imagenes/savia.png",
-  "enlace": "mentirasdrags.html"
-},
-{
-  "id": 16,
-  "tipo": "Exposiciones",
-  "fecha": "2025-07-13",
-  "titulo": "Trascender",
-  "artista": "Douglas Rivera",
-  "categoria": "Exposición",
-  "diaNumero": "",
-  "mesNombre": "Lun-Vier",
-  "diaSemana": "",
-  "lugar": "Fundación <br> Patiño",
-  "hora": "10:00",
-  "edad": "Todo Público",
-  "imagen": "imagenes/buen.png",
-  "imagen": "imagenes/trascender.png",
-  "enlace": "mentirasdrags.html"
-},
-{
-  "id": 17,
-  "tipo": "Teatro",
-  "fecha": "2025-07-10",
-  "titulo": "Un Buen morir",
-  "artista": "Elías Cohen",
-  "categoria": "Teatro",
-  "diaNumero": "13",
-  "mesNombre": "Junio",
-  "diaSemana": "Martes",
-  "lugar": "Teatro <br> Nuna",
-  "hora": "19:30",
-  "edad": "Todo Público",
-  "imagen": "imagenes/buen.png",
-  "enlace": "mentirasdrags.html"
-},
-{
-  "id": 18,
-  "tipo": "Exposiciones",
-  "fecha": "2025-07-13",
-  "titulo": "Vistiendo Memorias",
-  "artista": "Elvira Espejo",
-  "categoria": "Exposición",
-  "diaNumero": "",
-  "mesNombre": "Lun-Vier",
-  "diaSemana": "Viernes",
-  "lugar": "Teatro <br> MUSEF",
-  "hora": "8:30",
-  "edad": "Todo Público",
-  "imagen": "imagenes/vistiendo.png",
-  "enlace": "mentirasdrags.html"
-},
-{
-  "id": 19,
-  "tipo": "Teatro",
-  "fecha": "2025-07-13",
-  "titulo": "Mentiras Drags",
-  "artista": "",
-  "categoria": "Teatro",
-  "diaNumero": "13",
-  "mesNombre": "Junio",
-  "diaSemana": "Viernes",
-  "lugar": "Teatro Municipal",
-  "hora": "19:30",
-  "edad": "+12 años",
-  "imagen": "imagenes/cardmentira.png",
-  "enlace": "mentirasdrags.html"
-},
-{
-  "id": 10,
-  "tipo": "Teatro",
-  "fecha": "2025-07-13",
-  "titulo": "Mentiras Drags",
-  "artista": "",
-  "categoria": "Teatro",
-  "diaNumero": "13",
-  "mesNombre": "Junio",
-  "diaSemana": "Viernes",
-  "lugar": "Teatro Municipal",
-  "hora": "19:30",
-  "edad": "+12 años",
-  "imagen": "imagenes/cardmentira.png",
-  "enlace": "mentirasdrags.html"
-},
-{
-  "id": 10,
-  "tipo": "Teatro",
-  "fecha": "2025-07-13",
-  "titulo": "Mentiras Drags",
-  "artista": "",
-  "categoria": "Teatro",
-  "diaNumero": "13",
-  "mesNombre": "Junio",
-  "diaSemana": "Viernes",
-  "lugar": "Teatro Municipal",
-  "hora": "19:30",
-  "edad": "+12 años",
-  "imagen": "imagenes/cardmentira.png",
-  "enlace": "mentirasdrags.html"
-},
+    {
+      "id": 1,
+      "tipo": "Música",
+      "fecha": "2025-06-21",
+      "titulo": "Pánico",
+      "artista": "Manuel García",
+      "categoria": "Música",
+      "diaNumero": "21",
+      "mesNombre": "Mayo",
+      "diaSemana": "Miercoles",
+      "lugar": "Teatro <br>Municipal",
+      "hora": "19:00",
+      "edad": "+8 años",
+      "imagen": "imagenes/cardpanico.png",
+      "enlace": "informacion.html"
+    },
+    {
+      "id": 2,
+      "tipo": "Música",
+      "fecha": "2025-07-02",
+      "titulo": "Armadura",
+      "artista": "Ecos del Metal",
+      "categoria": "Música",
+      "diaNumero": "02",
+      "mesNombre": "Junio",
+      "diaSemana": "Lunes",
+      "lugar": "Teatro<br> Municipal",
+      "hora": "20:00",
+      "edad": "+12 años",
+      "imagen": "imagenes/cardarma.jpg",
+      "enlace": "informacion.html"
+    },
+    {
+      "id": 3,
+      "tipo": "Música",
+      "fecha": "2025-07-01",
+      "titulo": "Ritmos del ande",
+      "artista": "Altiplano",
+      "categoria": "Música",
+      "diaNumero": "01",
+      "mesNombre": "Junio",
+      "diaSemana": "Domingo",
+      "lugar": "Teatro <br>Nuna",
+      "hora": "19:30",
+      "edad": "+12 años",
+      "imagen": "imagenes/cardritmos.jpg",
+      "enlace": "altiplano.html"
+    },
+    {
+      "id": 4,
+      "tipo": "Música",
+      "fecha": "2025-07-27",
+      "titulo": "El Pesanervios XXV",
+      "artista": "Grillo Villegas",
+      "categoria": "Música",
+      "diaNumero": "27",
+      "mesNombre": "Junio",
+      "diaSemana": "Viernes",
+      "lugar": "Chuquiago Marka",
+      "hora": "20:00",
+      "edad": "+8 años",
+      "imagen": "imagenes/cardpasa.jpg",
+      "enlace": "Pesanervios.html"
+    },
+    {
+      "id": 5,
+      "tipo": "Danza",
+      "fecha": "2025-06-01",
+      "titulo": "Danzaría",
+      "artista": "",
+      "categoria": "Danza",
+      "diaNumero": "01",
+      "mesNombre": "Junio",
+      "diaSemana": "Domingo",
+      "lugar": "Espacio Kúu Inti",
+      "hora": "17:00",
+      "edad": "Todo público",
+      "imagen": "imagenes/carddanza.jpg",
+      "enlace": "evento_7.html"
+    },
+    {
+      "id": 6,
+      "tipo": "Danza",
+      "fecha": "2025-07-07",
+      "titulo": "Dream On",
+      "artista": "Play Pole Dance & Danza Aérea",
+      "categoria": "Danza",
+      "diaNumero": "07",
+      "mesNombre": "Junio",
+      "diaSemana": "Sábado",
+      "lugar": "Teatro <br>Nuna",
+      "hora": "19:30",
+      "edad": "+8 años",
+      "imagen": "imagenes/carddream.png",
+      "enlace": "dream_on.html"
+    },
+    {
+      "id": 7,
+      "tipo": "Exposiciones",
+      "fecha": "2025-07-02",
+      "titulo": "Crianza Mutua",
+      "artista": "Elvira Espejo",
+      "categoria": "Exposición",
+      "diaNumero": "",
+      "mesNombre": "Lun - Vier",
+      "diaSemana": "",
+      "lugar": "Museo<br> MUSEF",
+      "hora": "8:30",
+      "edad": "Todo Público",
+      "imagen": "imagenes/cardcrian.png",
+      "enlace": "vistiendomemorias.html"
+    },
+    {
+      "id": 8,
+      "tipo": "Exposiciones",
+      "fecha": "2025-07-02",
+      "titulo": "Vivas sonoridades",
+      "artista": "",
+      "categoria": "Exposición",
+      "diaNumero": "",
+      "mesNombre": "Lun - Vier",
+      "diaSemana": "",
+      "lugar": "Museo<br> MUSEF",
+      "hora": "8:30",
+      "edad": "Todo Público",
+      "imagen": "imagenes/cardsono.png",
+      "enlace": "vivas_sonoridades.html"
+    },
+    {
+      "id": 9,
+      "tipo": "Teatro",
+      "fecha": "2025-07-26",
+      "titulo": "Cholicienta",
+      "artista": "Elenco artístico Laude",
+      "categoria": "Teatro",
+      "diaNumero": "26",
+      "mesNombre": "Junio",
+      "diaSemana": "Jueves",
+      "lugar": "Teatro 6 de Agosto",
+      "hora": "19:00",
+      "edad": "+8 años",
+      "imagen": "imagenes/cardcholi.png",
+      "enlace": "chococienta.html"
+    },
+    {
+      "id": 11,
+      "tipo": "Teatro",
+      "fecha": "2025-06-18",
+      "titulo": "El coloradito de Aplomo",
+      "artista": "Sergio Ríos",
+      "categoria": "Teatro",
+      "diaNumero": "18",
+      "mesNombre": "Mayo",
+      "diaSemana": "Miércoles",
+      "lugar": "Teatro<br> Municipal",
+      "hora": "19:00",
+      "edad": "Todo Público",
+      "imagen": "imagenes/coloradito.png",
+      "enlace": "mentirasdrags.html"
+    },
+    {
+      "id": 12,
+      "tipo": "Teatro",
+      "fecha": "2025-07-13",
+      "titulo": "Los del 14b",
+      "artista": "Iván Cornejo",
+      "categoria": "Teatro",
+      "diaNumero": "13",
+      "mesNombre": "Junio",
+      "diaSemana": "Viernes",
+      "lugar": "Teatro <br>Municipal",
+      "hora": "19:30",
+      "edad": "Todo Público",
+      "imagen": "imagenes/14b.png",
+      "enlace": "mentirasdrags.html"
+    },
+    {
+      "id": 13,
+      "tipo": "Música",
+      "fecha": "2025-07-12",
+      "titulo": "Matheus y amigos",
+      "artista": "Matheus Fonseca",
+      "categoria": "Música",
+      "diaNumero": "12",
+      "mesNombre": "Junio",
+      "diaSemana": "Sábado",
+      "lugar": "Teatro <br>Nuna",
+      "hora": "20:00",
+      "edad": "Todo Público",
+      "imagen": "imagenes/matheus.png",
+      "enlace": "mentirasdrags.html"
+    },
+    {
+      "id": 14,
+      "tipo": "Exposiciones",
+      "fecha": "2025-07-13",
+      "titulo": "Pieles objetos y cuerpo",
+      "artista": "Varinia Oros",
+      "categoria": "Exposición",
+      "diaNumero": "",
+      "mesNombre": "Lun-Vier",
+      "diaSemana": "",
+      "lugar": "Teatro<br> MUSEF",
+      "hora": "8:30",
+      "edad": "Todo Público",
+      "imagen": "imagenes/pieles.png",
+      "enlace": "pieles.html"
+    },
+    {
+      "id": 15,
+      "tipo": "Música",
+      "fecha": "2025-07-29",
+      "titulo": "Savia Andina",
+      "artista": "Savia Andina",
+      "categoria": "Música",
+      "diaNumero": "29",
+      "mesNombre": "Junio",
+      "diaSemana": "Sabado",
+      "lugar": "Teatro <br> Nuna",
+      "hora": "20:00",
+      "edad": "Todo Público",
+      "imagen": "imagenes/savia.png",
+      "enlace": "mentirasdrags.html"
+    },
+    {
+      "id": 16,
+      "tipo": "Exposiciones",
+      "fecha": "2025-07-13",
+      "titulo": "Trascender",
+      "artista": "Douglas Rivera",
+      "categoria": "Exposición",
+      "diaNumero": "",
+      "mesNombre": "Lun-Vier",
+      "diaSemana": "",
+      "lugar": "Fundación <br> Patiño",
+      "hora": "10:00",
+      "edad": "Todo Público",
+      "imagen": "imagenes/buen.png",
+      "imagen": "imagenes/trascender.png",
+      "enlace": "mentirasdrags.html"
+    },
+    {
+      "id": 17,
+      "tipo": "Teatro",
+      "fecha": "2025-07-10",
+      "titulo": "Un Buen morir",
+      "artista": "Elías Cohen",
+      "categoria": "Teatro",
+      "diaNumero": "13",
+      "mesNombre": "Junio",
+      "diaSemana": "Martes",
+      "lugar": "Teatro <br> Nuna",
+      "hora": "19:30",
+      "edad": "Todo Público",
+      "imagen": "imagenes/buen.png",
+      "enlace": "mentirasdrags.html"
+    },
+    {
+      "id": 18,
+      "tipo": "Exposiciones",
+      "fecha": "2025-07-13",
+      "titulo": "Vistiendo Memorias",
+      "artista": "Elvira Espejo",
+      "categoria": "Exposición",
+      "diaNumero": "",
+      "mesNombre": "Lun-Vier",
+      "diaSemana": "Viernes",
+      "lugar": "Teatro <br> MUSEF",
+      "hora": "8:30",
+      "edad": "Todo Público",
+      "imagen": "imagenes/vistiendo.png",
+      "enlace": "mentirasdrags.html"
+    },
+    {
+      "id": 19,
+      "tipo": "Teatro",
+      "fecha": "2025-07-13",
+      "titulo": "Mentiras Drags",
+      "artista": "",
+      "categoria": "Teatro",
+      "diaNumero": "13",
+      "mesNombre": "Junio",
+      "diaSemana": "Viernes",
+      "lugar": "Teatro Municipal",
+      "hora": "19:30",
+      "edad": "+12 años",
+      "imagen": "imagenes/cardmentira.png",
+      "enlace": "mentirasdrags.html"
+    },
+    {
+      "id": 10,
+      "tipo": "Teatro",
+      "fecha": "2025-07-13",
+      "titulo": "Mentiras Drags",
+      "artista": "",
+      "categoria": "Teatro",
+      "diaNumero": "13",
+      "mesNombre": "Junio",
+      "diaSemana": "Viernes",
+      "lugar": "Teatro Municipal",
+      "hora": "19:30",
+      "edad": "+12 años",
+      "imagen": "imagenes/cardmentira.png",
+      "enlace": "mentirasdrags.html"
+    },
+    {
+      "id": 10,
+      "tipo": "Teatro",
+      "fecha": "2025-07-13",
+      "titulo": "Mentiras Drags",
+      "artista": "",
+      "categoria": "Teatro",
+      "diaNumero": "13",
+      "mesNombre": "Junio",
+      "diaSemana": "Viernes",
+      "lugar": "Teatro Municipal",
+      "hora": "19:30",
+      "edad": "+12 años",
+      "imagen": "imagenes/cardmentira.png",
+      "enlace": "mentirasdrags.html"
+    },
 
   ];
 
@@ -1013,7 +1013,7 @@ document.addEventListener("DOMContentLoaded", () => {
     card.setAttribute('data-type', evento.tipo);
     card.setAttribute('data-date', evento.fecha);
 
-  card.innerHTML = `
+    card.innerHTML = `
     <p class="event-title-details">
       <span class="event-title-panic">${evento.titulo}<br /></span>
       <span class="event-artist-music"> ${evento.artista}<br />${evento.categoria}<br /></span>
@@ -1088,40 +1088,57 @@ columnaIndice.style.opacity = '0';
 
 // Función para manejar el scroll
 function manejarScroll() {
-    // Obtener posición vertical actual
-    const scrollPos = window.scrollY || window.pageYOffset;
-    
-    // Obtener posición del moodboard
-    const moodboardTop = moodboardSection.offsetTop;
-    
-    // Mostrar/ocultar el menú según la posición
-    if (scrollPos > 900 && scrollPos < moodboardTop - 1) {
-        columnaIndice.style.opacity = '1';
-        
-        // Resaltar texto del menú correspondiente a la sección visible
-        secciones.forEach((seccion) => {
-            const seccionTop = seccion.offsetTop - 200;
-            const seccionBottom = seccionTop + seccion.offsetHeight;
-            
-            if (scrollPos >= seccionTop && scrollPos < seccionBottom) {
-                // Quitar clase activo de todos los items
-                itemsIndice.forEach(item => {
-                    item.classList.remove('activo');
-                });
-                
-                // Añadir clase activo al item correspondiente
-                const idSeccion = seccion.getAttribute('id');
-                const itemCorrespondiente = document.querySelector(`.columna-indice a[href="#${idSeccion}"]`);
-                if (itemCorrespondiente) {
-                    itemCorrespondiente.classList.add('activo');
-                }
-            }
+  // Obtener posición vertical actual
+  const scrollPos = window.scrollY || window.pageYOffset;
+
+  // Obtener posición del moodboard
+  const moodboardTop = moodboardSection.offsetTop;
+
+  // Mostrar/ocultar el menú según la posición
+  if (scrollPos > 900 && scrollPos < moodboardTop - 1) {
+    columnaIndice.style.opacity = '1';
+
+    // Resaltar texto del menú correspondiente a la sección visible
+    secciones.forEach((seccion) => {
+      const seccionTop = seccion.offsetTop - 200;
+      const seccionBottom = seccionTop + seccion.offsetHeight;
+
+      if (scrollPos >= seccionTop && scrollPos < seccionBottom) {
+        // Quitar clase activo de todos los items
+        itemsIndice.forEach(item => {
+          item.classList.remove('activo');
         });
-    } else {
-        columnaIndice.style.opacity = '0';
-    }
+
+        // Añadir clase activo al item correspondiente
+        const idSeccion = seccion.getAttribute('id');
+        const itemCorrespondiente = document.querySelector(`.columna-indice a[href="#${idSeccion}"]`);
+        if (itemCorrespondiente) {
+          itemCorrespondiente.classList.add('activo');
+        }
+      }
+    });
+  } else {
+    columnaIndice.style.opacity = '0';
+  }
 }
 
 // Escuchar eventos de scroll
 window.addEventListener('scroll', manejarScroll);
 window.addEventListener('load', manejarScroll); // Ejecutar al cargar la página
+/*Inicio de cambio de botones*/
+const urls = [
+  "chuwa.html",
+  "altiplano.html",
+  "dream_on.html",
+  "lugubre.html"
+];
+
+let index = 0;
+
+setInterval(() => {
+  index = (index + 1) % urls.length;
+  const link = document.getElementById("link");
+  link.href = urls[index];
+  link.textContent = `Ir a ${urls[index]}`;
+}, 1000); 
+/*Fin de cambiode botones*/ 
