@@ -1680,7 +1680,7 @@ h5 {
 }
 
 .home_icono_ubicacion::before {
-  content: "📍";
+  content: " ";
   margin-right: 4px;
 }
 
@@ -1832,6 +1832,7 @@ ul.componentes li:nth-child(1) {
     height: 25px;
     font-size: 7px;
     line-height: 21px;
+    margin-bottom: -15px;
   }
 
   .home_fecha,
@@ -2805,6 +2806,7 @@ body.modo-informacion .tambo-header:not(.header-solido) .titulo {
   height: 400px;
   font-size: 25pt;
   font-family: "Raleway", sans-serif;
+  border-collapse: collapse;
 }
 
 .tabla-horarios th {
@@ -2824,7 +2826,14 @@ body.modo-informacion .tambo-header:not(.header-solido) .titulo {
   vertical-align: middle;
   text-align: center;
 }
-
+.tabla-horarios .celda{
+  background-color: #BABA2B;
+  border-top: 1px solid white;
+}
+.tabla-precios .sin{
+  background: transparent;
+  border: none;
+}
 /* ==== TRANSPORTE ==== */
 .evento-transporte-nuevo {
   display: flex;
