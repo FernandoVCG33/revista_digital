@@ -1358,9 +1358,9 @@ h5 {
 
 .popup {
   background-color: #F7F7EC;
-  padding: 40px;
+  padding: 30px;
   width: 90%;
-  max-width: 400px;
+  max-width: 450px;
   border-radius: 10px;
   font-family: 'Raleway', sans-serif;
   color: #fff;
@@ -1378,6 +1378,7 @@ h5 {
 .popup-subtitle {
   color: #4C2634;
   font-family: 'Melodrama', serif;
+  font-weight:var(--font-weight-light);
   font-size: 22px;
   margin: 10px 0 30px;
 }
@@ -1417,9 +1418,9 @@ h5 {
   padding: 15px;
   font-size: 16px;
   border: none;
-  border-radius: 4px;
-  background-color: #5c4452;
-  color: #ffffff;
+  background-color:transparent;
+  color: var(--color-primary-purple);
+  border: 1.5px solid var(--color-primary-purple);
 }
 
 .password-wrapper {
@@ -1475,6 +1476,7 @@ h5 {
   justify-content: center;
   gap: 25px;
   margin-top: 10px;
+  filter: brightness(0) saturate(100%) invert(27%) sepia(18%) saturate(1279%) hue-rotate(297deg) brightness(92%) contrast(91%);
 }
 
 .icono-social {
