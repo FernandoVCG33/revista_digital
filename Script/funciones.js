@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /*Inicio de cambio de botones*/
   const enlaces = [
-    "chuwa.html",
+    "bicentenario.html",
     "evento36.html",
     "informacion.html",
     "evento37.html"
@@ -1073,7 +1073,7 @@ document.addEventListener("DOMContentLoaded", () => {
   "diaNumero": "14",
   "mesNombre": "Junio",
   "diaSemana": "Sábado",
-  "lugar": "Teatro Municipal",
+  "lugar": "Teatro <br> Municipal",
   "hora": "20:00",
   "edad": "+12",
   "imagen": "imagenes/cardmentira.png",
