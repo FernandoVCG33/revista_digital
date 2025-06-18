@@ -1012,7 +1012,7 @@ document.addEventListener("DOMContentLoaded", () => {
   "lugar": "Teatro Nuna",
   "hora": "20:00",
   "edad": "Todo Público",
-  "imagen": "imagenes/cardmentira.png",
+  "imagen": "imagenes/chillan17.jpg",
   "enlace": "chillan_lasilla.html"
 },  
 {
@@ -1028,7 +1028,7 @@ document.addEventListener("DOMContentLoaded", () => {
   "lugar": "Teatro Municipal",
   "hora": "19:30",
   "edad": "Todo Público",
-  "imagen": "imagenes/cardmentira.png",
+  "imagen": "imagenes/wara17.jpg",
   "enlace": "wara_en_concierto.html"
 },  
 {
@@ -1140,7 +1140,7 @@ document.addEventListener("DOMContentLoaded", () => {
   "lugar": "Teatro Nuna",
   "hora": "20:00",
   "edad": "Todo Público",
-  "imagen": "imagenes/cardmentira.png",
+  "imagen": "imagenes/di_amante15.jpg",
   "enlace": "di_amante.html"
 },
 {
@@ -1172,8 +1172,8 @@ document.addEventListener("DOMContentLoaded", () => {
   "lugar": "Museo MUSEF",
   "hora": "8:30",
   "edad": "Todo Público",
-  "imagen": "imagenes/cardmentira.png",
-  "enlace": "el_aletastro.html" /* Falta el link */
+  "imagen": "imagenes/pariti18.jpg",
+  "enlace": "pariti_markatpacha.html" /* Falta el link */
 },
 {
   "id": 31,
@@ -1188,7 +1188,7 @@ document.addEventListener("DOMContentLoaded", () => {
   "lugar": "Teatro Nuna",
   "hora": "20:00",
   "edad": "Todo Público",
-  "imagen": "imagenes/cardmentira.png",
+  "imagen": "imagenes/florecimiento15.jpg",
   "enlace": "el_florecimiento.html"
 },
 {
@@ -1268,7 +1268,7 @@ document.addEventListener("DOMContentLoaded", () => {
   "lugar": "Teatro Municipal",
   "hora": "19:30",
   "edad": "Todo Público",
-  "imagen": "imagenes/cardmentira.png",
+  "imagen": "imagenes/lugubre15.jpg",
   "enlace": "lugubre.html"
 },
   ];
