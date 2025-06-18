@@ -63,6 +63,7 @@
             <h1 class="hero-titulo">EL COLORADITO DE APLOMO</h1>
             <h2 class="hero-subtitulo">SERGIO RÍOS</h2>
             <p class="hero-categoria">Teatro</p>
+            <button class="boton-agregar-agenda">Agregar a la agenda</button>
           </div>
 
           <!-- Flecha -->
@@ -865,11 +866,11 @@
                     </div>
                     <div class="comentario-seccion__entrada-wrapper">
                       <img class="comentario-seccion__usuario-icono" src="imagenes/perfil_comentarios.png" />
-                      <p class="comentario-seccion__texto-opinion">Agrega tu opinión del evento y mi guía!</p>
+                      <p class="comentario-seccion__texto-opinion" contenteditable="true">Agrega tu opinión del evento y mi guía!</p>
                     </div>
                   </div>
                   <div class="comentario-seccion__boton-enviar-wrapper">
-                    <div class="comentario-seccion__boton-enviar" id="close-comment-popup">Enviar</div>
+                    <div class="comentario-seccion__boton-enviar" id="send-comment">Enviar</div>
                   </div>
                 </div>
               </div>
@@ -993,6 +994,30 @@
       </form>
     </div>
   </div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const botones = document.querySelectorAll(".boton-agregar-agenda");
+
+    botones.forEach((boton) => {
+      boton.addEventListener("click", () => {
+        const agregado = boton.classList.toggle("agregado");
+
+        if (agregado) {
+          boton.innerHTML = '<span class="icono-check"></span> Agregado en la agenda';
+        } else {
+          boton.textContent = "Agregar a la agenda";
+        }
+      });
+    });
+  });
+    const botonEnviarComentario = document.getElementById("send-comment");
+    if (botonEnviarComentario) {
+      botonEnviarComentario.addEventListener("click", function () {
+        const popup = document.getElementById("comment-popup");
+        if (popup) popup.style.display = "none";
+      });
+    }
+</script>
 </body>
 
 </html>
