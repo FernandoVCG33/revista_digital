@@ -1,180 +1,259 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos/reset.css">
-    <link rel="stylesheet" href="estilos/estilos.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title> Categorias</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilos/reset.css">
+  <link rel="stylesheet" href="estilos/estilosee.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <title> Categorias</title>
 </head>
 <body class="modo-informacion">
-    <!-- HEADER -->
-    <header class="tambo-header">
-        <!-- Título centrado -->
-        <div class="titulo-container">
-            <h1 class="titulo">Tambo</h1>
-        </div>
+  <!-- HEADER -->
+  <header class="tambo-header">
+    <!-- Título centrado -->
+    <div class="titulo-container">
+        <h1 class="titulo">Tambo</h1>
+    </div>
 
-         <!-- Menú hamburguesa -->
-        <input type="checkbox" id="menu-toggle" class="menu-toggle">
-        <label for="menu-toggle" class="menu-icon">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
+    <!-- Menú hamburguesa -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
 
-        <!-- NAV con secciones culturales -->
-        <nav class="tambo-nav">
-            <div id="menuUserIcon">
-                <a href="cuenta.html">
-                <img src="imagenes/user2.png" alt="Usuario" class="icon-img" />
-                </a>
-            </div>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="eventos.html">Eventos</a></li>
-                <li><a href="mi_agenda.html">Mi Agenda</a></li>
-            </ul>            
-        </nav>
-        <!-- Zona donde el JS inserta el botón o los iconos -->
-        <div class="nav-icons" id="zona-usuario"></div>
-        <!-- Aquí JS inserta el botón registrar o los iconos de usuario -->
-    </header>
+    <!-- NAV con secciones culturales -->
+    <nav class="tambo-nav">
+      <div id="menuUserIcon">
+        <a href="cuenta.html">
+          <img src="imagenes/user2.png" alt="Usuario" class="icon-img" />
+        </a>
+      </div>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="eventos.html">Eventos</a></li>
+        <li><a href="mi_agenda.html">Mi Agenda</a></li>
+      </ul>            
+    </nav>
+    <!-- Zona donde el JS inserta el botón o los iconos -->
+    <div class="nav-icons" id="zona-usuario"></div>
+    <!-- Aquí JS inserta el botón registrar o los iconos de usuario -->
+  </header>
     <!--Fin de  HEADER -->
     
-    <main>
+  <main>
     <section>
-<article>
-<!-- CARRUSEL HERO INICIAL CORREGIDO -->
-<section class="evento-hero-carrusel">
-  <div class="slide activo" style="background-image: url('imagenes/chillan1.jpg');"></div>
-  <div class="slide" style="background-image: url('imagenes/chillan2.jpg');"></div>
-  <div class="slide" style="background-image: url('imagenes/chillan3.jpg');"></div>
+      <article>
+        <!-- CARRUSEL HERO INICIAL CORREGIDO -->
+        <section class="evento-hero-carrusel">
+          <div class="slide activo" style="background-image: url('imagenes/chillan1.jpg');"></div>
+          <div class="slide" style="background-image: url('imagenes/chillan2.jpg');"></div>
+          <div class="slide" style="background-image: url('imagenes/chillan3.jpg');"></div>
 
-  <!-- Texto común visible en todas las imágenes -->
-  <div class="hero-texto">
-    <h1 class="hero-titulo">CHILLÁN LA SILLA DEL SOL</h1>
-    <h2 class="hero-subtitulo">CARLOS CORDERO</h2>
-    <p class="hero-categoria">Teatro</p>
-  </div>
+          <!-- Texto común visible en todas las imágenes -->
+          <div class="hero-texto">
+            <h1 class="hero-titulo">CHILLÁN LA SILLA DEL SOL</h1>
+            <h2 class="hero-subtitulo">CARLOS CORDERO</h2>
+            <p class="hero-categoria">Teatro</p>
+            <button class="boton-agregar-agenda">Agregar a la agenda</button>
+          </div>
 
-  <!-- Flecha -->
-   <div class="flecha_hero"><img class="flecha_vector" src="imagenes/flecha_hero.png"/><img class="linea_vector" src="imagenes/linea_hero.png"/></div>
+          <!-- Flecha -->
+          <div class="flecha_hero"><img class="flecha_vector" src="imagenes/flecha_hero.png"/><img class="linea_vector" src="imagenes/linea_hero.png"/></div>
 
-  <!-- Indicadores -->
-  <div class="carrusel-indicadores">
-    <span class="dot activo"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-  </div>
-</section>
+          <!-- Indicadores -->
+          <div class="carrusel-indicadores">
+            <span class="dot activo"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </section>
 
 
-<div class="columna-indice">
-          <ul>
-             <li><a href="#donde">Donde</a></li>
-             <li><a href="#cuando">Cuando</a></li>
+
+        <div class="columna-indice">
+            <ul>
+              <li><a href="#donde">Donde</a></li>
+              <li><a href="#cuando">Cuando</a></li>
               <li><a href="#como">Como</a></li>
               <li><a href="#cuanto">Cuanto</a></li>
               <li><a href="#quienes">Quienes</a></li>
-          </ul>
-</div>
+            </ul>
+          </div>
+          
+        <!-- LUGAR -->
+        <section id="donde" class="evento-lugar-nuevo container">
+        <!-- <div class="columna-indice">
+            <ul>
+              <li>Donde</li>
+              <li>Cuando</li>
+              <li>Como</li>
+              <li>Cuanto</li>
+              <li>Quienes</li>
+            </ul>
+          </div>-->
 
-  <!-- LUGAR -->
-  <section id="donde" class="evento-lugar-nuevo container"></section>
+          <div class="contenido-lugar">
+            <h2 class="subtitulo-lugar">Lugar</h2>
+            <p class="descripcion-lugar">Teatro Nuna - Enla calle 21 de Calacoto, casi llegando al número 8509,</p>
+            <p class="descripcion-lugar1">en plena Zona Sur de La Paz.</p>
+            <img class="imagen-lugar" src="imagenes/dream_on4.jpg" alt="Teatro Municipal">
+            <a href="https://www.google.com/maps" target="_blank" class="google-maps-link">
+              <img src="imagenes/icono gps.png" alt="" class="gps-icon"> Google maps
+            </a>
+          </div>
+        </section>
 
-  <div class="contenido-lugar">
-    <h2 class="subtitulo-lugar">Lugar</h2>
-    <p class="descripcion-lugar">Teatro Nuna - Enla calle 21 de Calacoto, casi llegando al número 8509,</p>
-    <p class="descripcion-lugar1">en plena Zona Sur de La Paz.</p>
-    <img class="imagen-lugar" src="imagenes/dream_on4.jpg" alt="Teatro Municipal">
-    <a href="https://www.google.com/maps" target="_blank" class="google-maps-link">
-      <img src="imagenes/icono gps.png" alt="" class="gps-icon"> Google maps
-    </a>
-  </div>
-</section>
+        <!-- HORARIOS -->
+        <section  id="cuando" class="evento-horarios-nuevo container">
+          <!--<div class="columna-indice">
+            <ul>
+              <li>Donde</li>
+              <li class="activo">Cuando</li>
+              <li>Como</li>
+              <li>Cuanto</li>
+              <li>Quienes</li>
+            </ul>
+          </div>-->
 
-<!-- HORARIOS -->
-  <section  id="cuando" class="evento-horarios-nuevo container"></section>
+          <div class="contenido-horarios">
+            <h2 class="subtitulo-horarios">Horarios</h2>
+            <p class="descripcion-horarios">Tienes chance de ir en estos horarios</p>
+            <table class="tabla-horarios">
+              <thead>
+                <tr>
+                  <th colspan="3">¡Presentación nocturna!</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Sábado</td>
+                  <td>29 de junio</td>
+                  <td>20:00</td>
+                </tr>
+                <tr>
+                  <td colspan="3">Una única oportunidad amistad, ¡No te la puedes perder!</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
 
-  <div class="contenido-horarios">
-    <h2 class="subtitulo-horarios">Horarios</h2>
-    <p class="descripcion-horarios">Tienes chance de ir en estos horarios</p>
-    <table class="tabla-horarios">
-      <thead>
-        <tr>
-          <th colspan="3">Presentación nocturna!</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>Sábado</td><td>29 de junio</td><td>20:00</td></tr>
-        <tr><td colspan="3">Una única oportunidad amistad, no te la puedes perder!</td></tr>
-      </tbody>
-    </table>
-  </div>
-</section>
+        <!-- TRANSPORTE -->
+        <section id="como" class="evento-transporte-nuevo container">
+          <!--<div class="columna-indice">
+            <ul>
+              <li>Donde</a></li>
+              <li>Cuando</a></li>
+              <li>Como</a></li>
+              <li>Cuanto</a></li>
+              <li>Quienes</li>
+            </ul>
+          </div>-->
 
-<!-- TRANSPORTE -->
-    <section id="como" class="evento-transporte-nuevo container"></section>
+          <div class="contenido-transporte">
+            <h2 class="subtitulo-transporte">Transporte</h2>
+            <p class="descripcion-transporte">Para que no te me estreses</p>
 
-  <div class="contenido-transporte">
-    <h2 class="subtitulo-transporte">Transporte</h2>
-    <p class="descripcion-transporte">Para que no te me estreses</p>
+            <table class="tabla-transporte">
+              <thead>
+                <tr>
+                  <th colspan="2">Toma un mini, te conviene!</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Tomar de</td>
+                  <td>La línea de minibús Obrajes o San Miguel</td>
+                </tr>
+                <tr>
+                  <td>Transbordo</td>
+                  <td>A la Línea verde (estación Irpavi)</td>
+                </tr>
+                <tr>
+                  <td>Quedarse en</td>
+                  <td>Calle 21 de Calacoto y caminar al teatro</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="framet">
+              <div class="div-wrappert">
+                <div class="text-wrappert">También puedes tomar:</div>
+              </div>
+              <div class="div-wrappert">
+                <p class="servicio-de-bus">
+                  - Cualquier minibús que pase por la Av. Ballivián y diga “Calacoto”<br>
+                  - Taxi o transporte por aplicación (rápido y directo)<br>
+                  - Si te animas, ¡una buena caminata desde la Av. Costanera también funciona!
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
 
-    <table class="tabla-transporte">
-      <thead>
-        <tr><th colspan="2">Toma un mini, te conviene!</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Tomar de</td><td>La línea de minibús Obrajes o San Miguel</td></tr>
-        <tr><td>Transbordo</td><td>A la Línea verde (estaciones Irpavi)</td></tr>
-        <tr><td>Quedarse en</td><td>Calle 21 de Calacoto y caminar al teatro</td></tr>
-      </tbody>
-    </table>
-        <div class="framet">
-      <div class="div-wrappert"><div class="text-wrappert">También puedes tomar :</div></div>
-      <div class="div-wrappert">
-        <p class="servicio-de-bus">
-             - Cualquier minibús que pase por la Av. Ballivián y diga “Calacoto”<br />   - Taxi o transporte por aplicación (rápido y directo)<br />   - Si te animas, ¡una buena caminata desde la Av. Costanera también funciona!
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+        <!-- PRECIOS -->
+        <section id="cuanto" class="evento-precios-nuevo container">
+          <!--<div class="columna-indice">
+            <ul>
+              <li>Donde</li>
+              <li>Cuando</li>
+              <li>Como</li>
+              <li class="activo">Cuanto</li>
+              <li>Quienes</li>
+            </ul>
+          </div>-->
 
-<!-- PRECIOS -->
-    <section id="cuanto" class="evento-precios-nuevo container"></section>
+          <div class="contenido-precios">
+            <h2 class="subtitulo-precios">Precios</h2>
+            <p class="descripcion-precios">Que no te duela el bolsillo, la entrada cuesta:</p>
 
-  <div class="contenido-precios">
-    <h2 class="subtitulo-precios">Precios</h2>
-    <p class="descripcion-precios">Que no te duela el bolsillo, la entrada cuesta:</p>
+            <table class="tabla-precios">
+              <thead>
+                <tr>
+                  <th colspan="3">Según el sitio web podríamos pagar</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Preventa</td>
+                  <td>Bs. 40</td>
+                <tr>
+                  <td>Regular</td>
+                  <td>Bs. 50</td>
+                  <td>Descuento en<br>preventa</td>
+                </tr>
+                <tr>
+                  <td>Mesa</td>
+                  <td>Bs. 70</td>
 
-    <table class="tabla-precios">
-      <thead>
-        <tr><th colspan="3">Según el sitio web podríamos pagar</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Preventa</td><td>Bs. 40</td>
-        <tr><td>Regular</td><td>Bs. 50</td><td>Y los niños<br>pequeños<br>entran gratis!</td></tr>
-        <tr><td>Mesa</td><td>Bs. 70</td>
-      </tbody>
-    </table>
-  </div>
-</section>
+              </tbody>
+            </table>
+          </div>
+        </section>
 
 
-<!-- RESTRICCIONES DE EDAD -->
-  <section id="quienes" class="evento-edad-nuevo container"></section>
+        <!-- RESTRICCIONES DE EDAD -->
+        <section id="quienes" class="evento-edad-nuevo container">
+          <!--<div class="columna-indice">
+            <ul>
+              <li>Donde</li>
+              <li>Cuando</li>
+              <li>Como</li>
+              <li>Cuanto</li>
+              <li class="activo">Quienes</li>
+            </ul>
+          </div>-->
 
-  <div class="contenido-edad">
-    <h2 class="subtitulo-edad">Restricciones de edad</h2>
-    <p class="descripcion-edad">No digo que no puedas...pero no te van a dejar entrar</p>
-    <p class="mensaje-edad">Este evento no tiene restricciones<br>de edad! No tienes excusa</p>
-  </div>
-</section>
+          <div class="contenido-edad">
+            <h2 class="subtitulo-edad">Restricciones de edad</h2>
+            <p class="descripcion-edad">No digo que no puedas...pero no te van a dejar entrar</p>
+            <p class="mensaje-edad">¡Este evento no tiene restricciones<br>de edad! No tienes excusa</p>
+          </div>
+        </section>
 
 <!-- FRASE CENTRAL -->
 <section class="evento-frase-central">
@@ -348,6 +427,158 @@
         </div>
       </div>
     </div>
+
+<div class="celular">
+<div class="lugar">Te explico el evento!</div>
+<div class="text-wrapper">Te recomiendo...</div>
+<div class="frame-2">
+  <img class="rectangle" src="imagenes/altiplano_exp.jpg" />
+  <div class="component">
+    <div class="entra-por-te-va-a">
+      <p class="entra-por-te-va-a-2">
+Si quieres vivir esta experiencia en su mejor versión, lo recomendable es llegar al menos media hora antes. El Teatro Nuna tiene un ambiente tan íntimo que cada rincón se siente especial, pero si te toca gradería, el punto medio al centro es clave para disfrutar tanto del sonido como del juego de luces. Si estás en mesa, simplemente relájate. ¿Un consejo? El café de la entrada es buenísimo!
+      </p>
+    </div>
+  </div>
+<img class="rectangle-2" src="imagenes/altiplano_exp2.jpg" />
+</div>
+
+
+
+<p class="p">Ya que estamos aquí, sabias que...</p>
+<div class="frame-10">
+  <img class="rectangle-8" src="imagenes/altiplano_exp3.jpg" />
+  <div class="component-2">
+    <div class="entra-por-te-va-a-5">
+      <p class="entra-por-te-va-a-6">
+      <span class="text-wrapper-8">Este teatro es de esos lugares</span>
+      <span class="span">que no necesitan grandes letreros para hacerse notar. Su fachada sobria guarda uno de los espacios culturales más queridos del sur paceño.
+      </span>
+      </p>
+    </div>
+    <img class="rectangle-9" src="imagenes/altiplano_exp4.jpg" />
+  </div>
+</div>
+
+<div class="div-wrapper">
+  <div class="frame">
+    <p class="se-escuchaban-sus-4">
+    <span class="text-wrapper-9">Su acústica es tan buena</span>
+    <span class="text-wrapper-10">que muchos músicos locales e internacionales </span>
+    <span class="text-wrapper-9">
+      lo prefieren para sus conciertos íntimos. No hay rincón donde el sonido no se escuche claro.
+    </span>
+    </p>
+  </div>
+</div>
+
+<div class="frame-11">
+  <img class="rectangle-10" src="imagenes/altiplano_exp5.jpg" />
+  <div class="component">
+    <div class="entra-por-te-va-a-wrapper">
+      <p class="entra-por-te-va-a-10">
+Dicen que tocar en el Nuna es como tocar en casa. El escenario está tan cerca del público que cualquier mínima emoción se nota. Los músicos aman eso.
+      </p>
+    </div>
+    <img class="rectangle-3" src="imagenes/altiplano_exp6.jpg" />
+  </div>
+</div>
+
+<div class="frame-6">
+  <img class="rectangle-6" src="imagenes/altiplano_exp7.jpg" />
+  <div class="frame-7">
+    <img class="rectangle-6" src="imagenes/altiplano_exp8.jpg" />
+    <div class="entra-por-te-va-a-7">
+      <p class="entra-por-te-va-a-8">
+        Una curiosidad: su nombre “Nuna” significa “alma” en quechua. Y sí, después de un concierto aquí, uno siente que el alma salió a pasear.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
+<p class="text-wrapper-3">Según se comenta sobre la obra...</p>
+<div class="frame-5">
+  <img class="rectangle-4" src="imagenes/chillan18.jpg" />
+  <div class="component-2">
+    <div class="entra-por-te-va-a-5">
+      <p class="entra-por-te-va-a-6">
+      <span class="text-wrapper-8">“Chillán, la silla del sol”</span>
+      <span class="span">es una obra escrita y dirigida por Carlos Hugo Cordero Carraffa, que pone en escena un episodio poco conocido de la historia latinoamericana con una mirada íntima y reflexiva. La pieza indaga en los dilemas del exilio y el poder.
+</span>
+      </p>
+    </div>
+    <img class="rectangle-5" src="imagenes/chillan19.jpg"/>
+  </div>
+</div>
+
+<div class="se-escuchaban-sus">
+  <div class="frame">
+    <p class="se-escuchaban-sus-2">
+      “La obra no busca hacer un juicio histórico, sino provocar preguntas sobre la soledad del poder y la redención posible en el otro.”
+    </p>
+  </div>
+</div>
+
+<div class="frame-3">
+  <img class="rectangle" src="imagenes/chillan20.jpg" />
+  <div class="component">
+    <div class="entra-por-te-va-a-wrapper">
+      <p class="entra-por-te-va-a-3">
+      <span class="text-wrapper-8">El público salió con las emociones agitadas,</span>
+      <span class="span">
+        como después de un buen terremoto musical. Algunos encontraron en las letras un eco de su propia historia, otros simplemente fueron a gritar y terminaron llorando.
+      </span>
+      <span class="text-wrapper-8"></span>
+      <span class="span"></span>
+      </p>
+    </div>
+    <img class="rectangle-3" src="imagenes/chillan21.jpg" />
+  </div>
+</div>
+
+
+<div class="text-wrapper-5">Además el equipo detrás...</div>
+  <div class="frame-8">
+  <img class="rectangle-6" src="imagenes/chillan22.jpg" />
+  <div class="frame-7">
+    <img class="rectangle-7" src="imagenes/chillan23.jpg" />
+    <div class="entra-por-te-va-a-7">
+      <p class="entra-por-te-va-a-9">
+      <span class="text-wrapper-8"></span>
+      <span class="span">
+      Esta puesta en escena cobra vida gracias al trabajo del elenco compuesto por Raúl “Pitín” Gómez, Daniela Lema, Luis Caballero y Ramiro Mendoza, quienes encarnan con precisión las tensiones políticas y personales del relato.
+      </span>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="frame-wrapper">
+  <div class="frame">
+    <p class="se-escuchaban-sus-3">
+      “Trabajamos desde la contención, desde el silencio. Chillán es más una atmósfera que una cárcel, y en ese espacio, cada gesto cuenta.”
+    </p>
+  </div>
+</div>
+
+<div class="frame-4">
+  <img class="rectangle" src="imagenes/chillan24.jpg" />
+  <div class="component">
+    <div class="entra-por-te-va-a-wrapper">
+      <p class="entra-por-te-va-a-4">
+        La dirección de Carlos Hugo Cordero logra equilibrar historia y dramaturgia con una propuesta escénica sobria, donde el diálogo se convierte en un campo de batalla ético y emocional.
+      </p>
+    </div>
+    <img class="rectangle-3" src="imagenes/chillan25.jpg" />
+  </div>
+</div>
+
+
+
+
+</div>
 
     <div class="main-wrapper-new">
   <div class="inner-container-new">
@@ -597,11 +828,11 @@
       </div>
       <div class="comentario-seccion__entrada-wrapper">
         <img class="comentario-seccion__usuario-icono" src="imagenes/perfil_comentarios.png" />
-        <p class="comentario-seccion__texto-opinion">Agrega tu opinión del evento y mi guía!</p>
+        <p class="comentario-seccion__texto-opinion" contenteditable="true">Agrega tu opinión del evento y mi guía!</p>
       </div>
     </div>
     <div class="comentario-seccion__boton-enviar-wrapper">
-      <div class="comentario-seccion__boton-enviar" id="close-comment-popup">Enviar</div>
+      <div class="comentario-seccion__boton-enviar" id="send-comment">Enviar</div>
     </div>
   </div>
 </div>
@@ -719,5 +950,29 @@
             </form>
         </div>
     </div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const botones = document.querySelectorAll(".boton-agregar-agenda");
+
+    botones.forEach((boton) => {
+      boton.addEventListener("click", () => {
+        const agregado = boton.classList.toggle("agregado");
+
+        if (agregado) {
+          boton.innerHTML = '<span class="icono-check"></span> Agregado en la agenda';
+        } else {
+          boton.textContent = "Agregar a la agenda";
+        }
+      });
+    });
+  });
+    const botonEnviarComentario = document.getElementById("send-comment");
+    if (botonEnviarComentario) {
+      botonEnviarComentario.addEventListener("click", function () {
+        const popup = document.getElementById("comment-popup");
+        if (popup) popup.style.display = "none";
+      });
+    }
+</script>
 </body>
 </html>
