@@ -2228,7 +2228,84 @@ ul.componentes li:nth-child(1) {
   color: #471b2f;
   margin-top: -10px;
 }
+/*agenda vacia*/
+.agenda-header {
+    display: flex;
+    width: 633px;
+    height: 433px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    left: 20px;
+    top: 197px;
+}
 
+
+.agenda-subtitulo {
+    color: var(--variante, #8C5067);
+    /* Melodrama H1 */
+    font-family: 'Melodrama';
+    font-size: 47.78px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 47.78px */
+    letter-spacing: -0.526px;
+    margin: 0%;
+}
+
+
+.agenda-mes {
+    display: flex;
+    height: 230px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    color: var(--secundario, #4C2634);
+    font-family: 'Melodrama';
+    font-size: 300px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: auto;
+}
+
+.agenda-vacia{
+    top: 647px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 27px;
+    margin-top: 170px;
+}
+
+.mensaje{
+    color: var(--grisesv3, #878762);
+    font-family: 'Raleway';
+    font-size: 39.81px;
+    font-style: normal;
+    letter-spacing: -0.438px;
+    margin: 0%;
+    text-align: center;
+}
+
+.boton-visitar{
+    display: inline;
+    
+    align-items: center;
+    color: var(--fondo, #F7F7EC);
+    font-family: 'Raleway';
+    font-size: 19.2px;
+    font-style: normal;
+    padding-bottom: 14px;
+    border-radius: 10px;
+    background-color: var(--grisesv3, #878762);
+    margin: 0%;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 30px;
+    text-align: center;
+}
+/*fin de agenda vacia*/
 
 /* ========== SECCIÓN POR DÍA ========== */
 .dia-evento {
