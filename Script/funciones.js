@@ -21,6 +21,23 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+/*Inicio de cambio de botones*/
+  const enlaces = [
+    "chuwa.html",
+    "evento36.html",
+    "informacion.html",
+    "evento37.html"
+  ];
+
+  let i = 0;
+  const link = document.getElementById("eventos_index");
+
+  setInterval(() => {
+    i = (i + 1) % enlaces.length; // Avanza y reinicia en 0 al llegar al final
+    link.href = enlaces[i];
+  }, 3000); // 4000 ms = 4 segundos
+/*Fin de cambiode botones*/ 
+
 
 //cierra sesiòn y vuelve al inicio
 document.addEventListener("DOMContentLoaded", () => {
@@ -1125,20 +1142,3 @@ function manejarScroll() {
 // Escuchar eventos de scroll
 window.addEventListener('scroll', manejarScroll);
 window.addEventListener('load', manejarScroll); // Ejecutar al cargar la página
-/*Inicio de cambio de botones*/
-const urls = [
-  "chuwa.html",
-  "altiplano.html",
-  "dream_on.html",
-  "lugubre.html"
-];
-
-let index = 0;
-
-setInterval(() => {
-  index = (index + 1) % urls.length;
-  const link = document.getElementById("link");
-  link.href = urls[index];
-  link.textContent = `Ir a ${urls[index]}`;
-}, 1000); 
-/*Fin de cambiode botones*/ 
