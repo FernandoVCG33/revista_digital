@@ -118,112 +118,132 @@
     <!--Fin de  HEADER -->
     
     <!-- CONTENIDO PRINCIPAL -->
-  <main class="nombre_agenda">
-    <!-- TÍTULO -->
-    <section class="agenda-header">
-      <h2 class="agenda-subtitulo">Agenda</h2>
-      <h1 class="agenda-mes">Mayo</h1>
-    </section>
+    <article class="agenda-header">
+        <p class="agenda-subtitulo">Tu agenda de</p>
+        <p class="agenda-mes">Mayo</p>
+    </article>
 
+<!-- Jueves 08 de Junio-->
 
-    <!-- EVENTO DEL JUEVES 08 -->
-    <section class="dia-evento">
-      <div class="encabezado-dia">
-        <div>
-        <p class="dia-semana">Jueves</p>
-        <p class="numero-dia">08</p>
+<section class="fecha-dia">
+  <div class="info-dia">
+    <span class="dia">Jueves</span>
+    <span class="numero">08</span>
+  </div>
+
+  <a href="#" class="ver-actividades" onclick="abrirVentanaAgenda()">Ver actividades</a>
+
+  <div id="ventana-agenda" class="ventana_agenda">
+    <div class="contenido_ventana_agenda" id="contenedorAgenda">
+      <span class="cerrar" onclick="cerrarVentanaAgenda()">&times;</span>
+    </div>
+  </div>
+</section>
+
+<div class="galeria-eventos js_carrusel" data-flickity='{ "cellAlign": "left"}'>
+  <article class="evento">
+    <div class="evento_agenda">
+      <img src="imagenes/jueves 08-1.jpg" alt="Danza contemporánea" />
+      <div class="titulo-mi_agenda">
+        <h3 class="texto_imagen_agenda">BORGUES</h3>
+        <h5 class="texto_imagen_agenda">Ariadna Mendez</h5>
+      </div>
+    </div>
+  </article>
+  <article class="evento">
+    <div class="evento_agenda">
+      <img src="imagenes/jueves 08-2.jpg" alt="Danza contemporánea" />
+      <div class="titulo-mi_agenda">
+        <h3 class="texto_imagen_agenda">DANZARIA</h3>
+        <h5 class="texto_imagen_agenda">All that Jazz</h5>
+      </div>
+    </div>
+  </article>
+  <article class="evento">
+    <div class="evento_agenda">
+      <img src="imagenes/viernes 23-1.jpg" alt="Danza contemporánea" />
+      <div class="titulo-mi_agenda">
+        <h3 class="texto_imagen_agenda">BARBELLA</h3>
+        <h5 class="texto_imagen_agenda">Bolivia Arte</h5>
+      </div>
+    </div>
+  </article>
+</div>
+
+<!-- JavaScript para cargar dinámicamente las actividades -->
+<script>
+  const actividades = [
+    {
+      hora: "5:30 pm",
+      titulo: "TIEMPOS DE PAZ",
+      descripcion: "La obra TIEMPOS DE PAZ será presentada en el prestigioso Teatro Municipal Alberto Saavedra Pérez, un espacio cultural de gran relevancia que acoge algunas de las expresiones artísticas más destacadas de la ciudad.",
+      imagen: "imagenes/jueves 08-2.jpg"
+    },
+    {
+      hora: "6:00 pm",
+      titulo: "CONCIERTO ANDINO",
+      descripcion: "Un viaje sonoro a través de los ritmos tradicionales andinos, con artistas invitados desde Potosí y Oruro.",
+      imagen: "imagenes/jueves 08-3.jpg"
+    },
+  ];
+
+  const contenedor = document.getElementById("contenedorAgenda");
+
+  actividades.forEach((actividad) => {
+    const actividadHTML = `
+      <div class="actividad_agenda">
+        <div class="detalle_agenda">
+          <p class="tamano_texto">${actividad.descripcion}</p>
+          <h4>${actividad.hora}: ${actividad.titulo}</h4>
+          <img src="${actividad.imagen}" alt="Imagen del evento" class="imagen_evento" />
         </div>
-        <a href="#" class="ver-actividades" onclick="abrirVentanaAgenda()">Ver actividades</a>
+        <button>Iniciar guía</button>
+      </div>
+    `;
+    contenedor.insertAdjacentHTML("beforeend", actividadHTML);
+  });
+</script>
+
+
+    <!-- EVENTO DEL MARTES 13 DE MAYO -->
+
+    <section class="fecha-dia">
+      <div class="info-dia">
+        <span class="dia">Martes</span>
+        <span class="numero">13</span>
+      </div>
+      <a href="#" class="ver-actividades" onclick="abrirVentanaAgenda()">Ver actividades</a>
         <div id="ventana-agenda" class="ventana_agenda">
           <div class="contenido_ventana_agenda">
             <span class="cerrar" onclick="cerrarVentanaAgenda()">&times;</span>
             
-            <div class="actividad_agenda">
-              <div class="detalle_agenda">
-                <p class="tamano_texto">
-                  La obra TIEMPOS DE PAZ será presentada en el prestigioso Teatro Municipal Alberto Saavedra Pérez, un espacio cultural de gran relevancia que acoge algunas de las expresiones artísticas más destacadas de la ciudad.
-                </p>
-                <h4>5:30 pm: TIEMPOS DE PAZ</h4>
-                <img src="imagenes/jueves 08-1.jpg" alt="Danza" class="imagen_evento" />
+              <div class="actividad_agenda">
+                <div class="detalle_agenda">
+                  <p class="tamano_texto">
+                    La obra TIEMPOS DE PAZ será presentada en el prestigioso Teatro Municipal Alberto Saavedra Pérez, un espacio cultural de gran relevancia que acoge algunas de las expresiones artísticas más destacadas de la ciudad.
+                  </p>
+                  <h4>5:30 pm: TIEMPOS DE PAZ</h4>
+                  <img src="imagenes/Octavia.jpg" alt="Danza" class="imagen_evento" />
+                </div>
+                <button>Iniciar guía</button>
               </div>
-              <button>Iniciar guía</button>
-            </div>
-           
-            <div class="actividad_agenda">
-              <div class="detalle_agenda">
-                <p class="tamano_texto">
-                  La obra TIEMPOS DE PAZ será presentada en el prestigioso Teatro Municipal Alberto Saavedra Pérez, un espacio cultural de gran relevancia que acoge algunas de las expresiones artísticas más destacadas de la ciudad.
-                </p>
-                <h4>5:30 pm: TIEMPOS DE PAZ</h4>
-                <img src="imagenes/jueves 08-1.jpg" alt="Danza" />
-              </div>
-              <button>Iniciar guía</button>
-            </div>
-          </div>
-      </div>
-      </div>
-      <div class="galeria-eventos">
-        <article class="evento">
-          <div class="evento_agenda">
-          <img src="imagenes/jueves 08-1.jpg" alt="Danza contemporánea" />
-          <div class="titulo-mi_agenda">
-              <h3 class="texto_imagen_agenda">Borges</h3>
-              <h5 class="texto_imagen_agenda">Ariadna Mendez</h5>
-          </div>
-          </div>
-        </article>
-        <article class="evento">
-          <div class="evento_agenda">
-          <img src="imagenes/jueves 08-2.jpg" alt="Danza contemporánea" />
-          <div class="titulo-mi_agenda">
-              <h3 class="texto_imagen_agenda">DANZARIA</h3>
-              <h5 class="texto_imagen_agenda">All that Jazz</h5>
-          </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- EVENTO DEL MARTES 13 -->
-    <section class="dia-evento">
-      <div class="encabezado-dia">
-        <div>
-        <p class="dia-semana">Martes</p>
-        <p class="numero-dia">13</p>
-        </div>
-        <a href="#" class="ver-actividades" onclick="abrirVentanaAgenda()">Ver actividades</a>
-        <div id="ventana-agenda" class="ventana_agenda">
-          <div class="contenido_ventana_agenda">
-            <span class="cerrar" onclick="cerrarVentanaAgenda()">&times;</span>
             
-            <div class="actividad_agenda">
-              <div class="detalle_agenda">
-                <p class="tamano_texto">
-                  La obra TIEMPOS DE PAZ será presentada en el prestigioso Teatro Municipal Alberto Saavedra Pérez, un espacio cultural de gran relevancia que acoge algunas de las expresiones artísticas más destacadas de la ciudad.
-                </p>
-                <h4>5:30 pm: TIEMPOS DE PAZ</h4>
-                <img src="imagenes/martes 13-1.jpg" alt="Danza"/>
+              <div class="actividad_agenda">
+                <div class="detalle_agenda">
+                  <p class="tamano_texto">
+                    La obra TIEMPOS DE PAZ será presentada en el prestigioso Teatro Municipal Alberto Saavedra Pérez, un espacio cultural de gran relevancia que acoge algunas de las expresiones artísticas más destacadas de la ciudad.
+                  </p>
+                  <h4>5:30 pm: TIEMPOS DE PAZ</h4>
+                  <img src="imagenes/Octavia.jpg" alt="Danza" />
+                </div>
+                <button>Iniciar guía</button>
               </div>
-              <button>Iniciar guía</button>
-            </div>
-           
-            <div class="actividad_agenda">
-              <div class="detalle_agenda">
-                <p class="tamano_texto">
-                  La obra TIEMPOS DE PAZ será presentada en el prestigioso Teatro Municipal Alberto Saavedra Pérez, un espacio cultural de gran relevancia que acoge algunas de las expresiones artísticas más destacadas de la ciudad.
-                </p>
-                <h4>5:30 pm: TIEMPOS DE PAZ</h4>
-                <img src="imagenes/martes 13-2.jpg" alt="Danza" />
-              </div>
-              <button>Iniciar guía</button>
-            </div>
           </div>
-      </div>
-      </div>
-      <div class="galeria-eventos">
+    </section>
+      <div class="galeria-eventos js_carrusel" data-flickity='{ "cellAlign": "left"}'>
         <article class="evento">
           <div class="evento_agenda">
-          <img src="imagenes/martes 13-1.jpg" alt="Danza contemporánea" />
+          <img src="imagenes/foto1.jpg" alt="Danza contemporánea" />
           <div class="titulo-mi_agenda">
               <h3 class="texto_imagen_agenda">DIAMANTE</h3>
               <h5 class="texto_imagen_agenda">Poncho Monje</h5>
@@ -232,71 +252,195 @@
         </article>
         <article class="evento">
           <div class="evento_agenda">
-          <img src="imagenes/martes 13-2.jpg" alt="Danza contemporánea" />
+            <img src="imagenes/foto1.jpg" alt="Danza contemporánea" />
+            <div class="titulo-mi_agenda">
+                <h3 class="texto_imagen_agenda">BARBELLA</h3>
+                <h5 class="texto_imagen_agenda">Elenco Artistico Laude</h5>
+            </div>
+          </div>
+        </article>
+      </div>    
+
+    <!--EVENTO DEL 21 de JUNIO-->
+
+    <section class="fecha-dia">
+      <div class="info-dia">
+        <span class="dia">Miércoles</span>
+        <span class="numero">21</span>
+      </div>
+      <a href="#" class="ver-actividades" onclick="abrirVentanaAgenda()">Ver actividades</a>
+        <div id="ventana-agenda" class="ventana_agenda">
+          <div class="contenido_ventana_agenda">
+            <span class="cerrar" onclick="cerrarVentanaAgenda()">&times;</span>
+            
+            <div class="actividad_agenda">
+              <div class="detalle_agenda">
+                <p class="tamano_texto">
+                  El artista Manuel García piensa que es de sus mejores álbumes! A parte por lo que dijo el último mes, parece estar realmente emocionado, literalmente dijo por sus redes...
+                </p>
+                <h4>5:30 pm: TIEMPOS DE PAZ</h4>
+                <img src="imagenes/miercoles 21-1.png" alt="Danza" class="imagen_evento" />
+              </div>
+              <button>Iniciar guía</button>
+            </div>
+           
+            <div class="actividad_agenda">
+              <div class="detalle_agenda">
+                <p class="tamano_texto">
+                  La obra TIEMPOS DE PAZ será presentada en el prestigioso Teatro Municipal Alberto Saavedra Pérez, un espacio cultural de gran relevancia que acoge algunas de las expresiones artísticas más destacadas de la ciudad.
+                </p>
+                <h4>5:30 pm: TIEMPOS DE PAZ</h4>
+                <img src="imagenes/viernes 23-2.jpg" alt="Danza" />
+              </div>
+              <button>Iniciar guía</button>
+            </div>
+          </div>
+    </section>
+      <div class="galeria-eventos js_carrusel" data-flickity='{ "cellAlign": "left"}'>
+        <article class="evento">
+          <div class="evento_agenda">
+          <img src="imagenes/miercoles 21-1.png" alt="Danza contemporánea" />
           <div class="titulo-mi_agenda">
-              <h3 class="texto_imagen_agenda">BARBELLA</h3>
-              <h5 class="texto_imagen_agenda">Flenco Artístico Laude</h5>
+              <h3 class="texto_imagen_agenda">SENTIDO</h3>
+              <h5 class="texto_imagen_agenda">Maria Mercado</h5>
           </div>
           </div>
         </article>
+        <article class="evento">
+          <div class="evento_agenda">
+            <img src="imagenes/miercoles 21-2.jpg" alt="Danza contemporánea" />
+            <div class="titulo-mi_agenda">
+                <h3 class="texto_imagen_agenda">PANICO</h3>
+                <h5 class="texto_imagen_agenda">Manuel Garcia</h5>
+            </div>
+          </div>
+        </article>
+        <article class="evento">
+          <div class="evento_agenda">
+            <img src="imagenes/miercoles 21-1.png" alt="Danza contemporánea" />
+            <div class="titulo-mi_agenda">
+                <h3 class="texto_imagen_agenda">CHOLICIENTA</h3>
+                <h5 class="texto_imagen_agenda">Elenco Artistico Laude</h5>
+            </div>
+          </div>
+        </article>        
+      </div>        
+
+    <!--EVENTO DEL 23 de JUNIO--> 
+
+    <section class="fecha-dia">
+      <div class="info-dia">
+        <span class="dia">Viernes</span>
+        <span class="numero">23</span>
       </div>
+      <a href="#" class="ver-actividades" onclick="abrirVentanaAgenda()">Ver actividades</a>
+        <div id="ventana-agenda" class="ventana_agenda">
+          <div class="contenido_ventana_agenda">
+            <span class="cerrar" onclick="cerrarVentanaAgenda()">&times;</span>
+            
+            <div class="actividad_agenda">
+              <div class="detalle_agenda">
+                <p class="tamano_texto">
+                  La obra TIEMPOS DE PAZ será presentada en el prestigioso Teatro Municipal Alberto Saavedra Pérez, un espacio cultural de gran relevancia que acoge algunas de las expresiones artísticas más destacadas de la ciudad.
+                </p>
+                <h4>5:30 pm: TIEMPOS DE PAZ</h4>
+                <img src="imagenes/viernes 23-1.jpg" alt="Danza" class="imagen_evento" />
+              </div>
+              <button>Iniciar guía</button>
+            </div>
+           
+            <div class="actividad_agenda">
+              <div class="detalle_agenda">
+                <p class="tamano_texto">
+                  La obra TIEMPOS DE PAZ será presentada en el prestigioso Teatro Municipal Alberto Saavedra Pérez, un espacio cultural de gran relevancia que acoge algunas de las expresiones artísticas más destacadas de la ciudad.
+                </p>
+                <h4>5:30 pm: TIEMPOS DE PAZ</h4>
+                <img src="imagenes/viernes 23-2.jpg" alt="Danza" class="imagen_evento" />
+              </div>
+              <button>Iniciar guía</button>
+            </div>
+
+            <div class="actividad_agenda">
+              <div class="detalle_agenda">
+                <p class="tamano_texto">
+                  La obra TIEMPOS DE PAZ será presentada en el prestigioso Teatro Municipal Alberto Saavedra Pérez, un espacio cultural de gran relevancia que acoge algunas de las expresiones artísticas más destacadas de la ciudad.
+                </p>
+                <h4>5:30 pm: TIEMPOS DE PAZ</h4>
+                <img src="imagenes/viernes 23-1.jpg" alt="Danza" />
+              </div>
+              <button>Iniciar guía</button>
+            </div>
+
+            <div class="actividad_agenda">
+              <div class="detalle_agenda">
+                <p class="tamano_texto">
+                  La obra TIEMPOS DE PAZ será presentada en el prestigioso Teatro Municipal Alberto Saavedra Pérez, un espacio cultural de gran relevancia que acoge algunas de las expresiones artísticas más destacadas de la ciudad.
+                </p>
+                <h4>5:30 pm: TIEMPOS DE PAZ</h4>
+                <img src="imagenes/viernes 23-2.jpg" alt="Danza" />
+              </div>
+              <button>Iniciar guía</button>
+            </div>
+          </div>
     </section>
+      <div class="galeria-eventos js_carrusel" data-flickity='{ "cellAlign": "left"}'>
+        <article class="evento">
+          <div class="evento_agenda">
+          <img src="imagenes/viernes 23-1.jpg" alt="Danza contemporánea" />
+          <div class="titulo-mi_agenda">
+              <h3 class="texto_imagen_agenda">RITMOS DEL ANDE Y EL ALMA</h3>
+              <h5 class="texto_imagen_agenda">Altiplano Fusión Band</h5>
+          </div>
+          </div>
+        </article>
+        <article class="evento">
+          <div class="evento_agenda">
+            <img src="imagenes/viernes 23-2.jpg" alt="Danza contemporánea" />
+            <div class="titulo-mi_agenda">
+                <h3 class="texto_imagen_agenda">ECOS DEL METAL ANDINO</h3>
+                <h5 class="texto_imagen_agenda">Armadura</h5>
+            </div>
+          </div>
+        </article>        
+      </div>   
 
-      <!-- EVENTO DEL MIERCOLES 21 -->
-    <section class="dia-evento">
-      <div class="encabezado-dia">
-        <div>
-        <p class="dia-semana">Miercoles</p>
-        <p class="numero-dia">21</p>
-        </div>
-        <a href="#" class="ver-actividades">Ver actividades</a>
+    <!-- EVENTO DEL LUNES 26 de JUNIO -->
+
+    <section class="fecha-dia">
+      <div class="info-dia">
+        <span class="dia">Lunes</span>
+        <span class="numero">26</span>
       </div>
-      <div class="galeria-eventos">
-        <article class="evento">
-          <img src="imagenes/miercoles 21-1.png" alt="Concierto" />
-        </article>
-        <article class="evento">
-          <img src="imagenes/miercoles 21-2.jpg" alt="Feria artesanal" />
-        </article>
-      </div>
+      <a href="#" class="ver-actividades" onclick="abrirVentanaAgenda()">Ver actividades</a>
+        <div id="ventana-agenda" class="ventana_agenda">
+          <div class="contenido_ventana_agenda">
+            <span class="cerrar" onclick="cerrarVentanaAgenda()">&times;</span>
+            
+            <div class="actividad_agenda">
+              <div class="detalle_agenda">
+                <p class="tamano_texto">
+                  La obra TIEMPOS DE PAZ será presentada en el prestigioso Teatro Municipal Alberto Saavedra Pérez, un espacio cultural de gran relevancia que acoge algunas de las expresiones artísticas más destacadas de la ciudad.
+                </p>
+                <h4>5:30 pm: TIEMPOS DE PAZ</h4>
+                <img src="imagenes/lunes 26-1.png" alt="Danza" class="imagen_evento" />
+              </div>
+              <button>Iniciar guía</button>
+            </div>
+
+          </div>
     </section>
-
-
-        <!-- EVENTO DEL VIERNES 23 -->
-    <section class="dia-evento">
-      <div class="encabezado-dia">
-        <div>
-        <p class="dia-semana">Viernes</p>
-        <p class="numero-dia">23</p>
-        </div>
-        <a href="#" class="ver-actividades">Ver actividades</a>
-      </div>
-      <div class="galeria-eventos">
+      <div class="galeria-eventos js_carrusel" data-flickity='{ "cellAlign": "left"}'>
         <article class="evento">
-          <img src="imagenes/viernes 23-1.jpg" alt="Exposición fotografica" />
-        </article>
-        <article class="evento">
-          <img src="imagenes/viernes 23-2.jpg" alt="Danza Folklorica" />
-        </article>
-      </div>
-    </section>
+          <div class="evento_agenda">
+          <img src="imagenes/lunes 26-1.png" alt="Danza contemporánea" />
+          <div class="titulo-mi_agenda">
+              <h3 class="texto_imagen_agenda">EL PESANERVIOS XXV</h3>
+              <h5 class="texto_imagen_agenda">Grillo Villegas</h5>
+          </div>
+          </div>
+        </article>    
+      </div>       
 
-
-            <!-- EVENTO DEL LUNES 26 -->
-    <section class="dia-evento">
-      <div class="encabezado-dia">
-        <div>
-        <p class="dia-semana">Lunes</p>
-        <p class="numero-dia">26</p>
-        </div>
-        <a href="#" class="ver-actividades">Ver actividades</a>
-      </div>
-      <div class="galeria-eventos">
-        <article class="evento">
-          <img src="imagenes/lunes 26-1.png" alt="Concierto" />
-        </article>
-      </div>
-    </section>
   </main>
   <!--pie de pagina-->
   <footer class="pie">

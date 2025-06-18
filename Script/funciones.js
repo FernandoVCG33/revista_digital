@@ -1049,7 +1049,7 @@ document.addEventListener("DOMContentLoaded", () => {
 },
 {
   "id": 23,
-  "tipo": "Exposición",
+  "tipo": "Exposiciones",
   "fecha": "2025-06",
   "titulo": 'LA CHUWA DEL CIELO',
   "artista": "",
@@ -1113,7 +1113,7 @@ document.addEventListener("DOMContentLoaded", () => {
 },
 {
   "id": 27,
-  "tipo": "Exposición",
+  "tipo": "Exposiciones",
   "fecha": "2025-06-28",
   "titulo": 'CHACHA WARMI',
   "artista": "",
@@ -1161,7 +1161,7 @@ document.addEventListener("DOMContentLoaded", () => {
 },
 {
   "id": 30,
-  "tipo": "Exposición",
+  "tipo": "Exposiciones",
   "fecha": "",
   "titulo": "PARITI MARKA'ATPACHA",
   "artista": "",
@@ -1193,7 +1193,7 @@ document.addEventListener("DOMContentLoaded", () => {
 },
 {
   "id": 36,
-  "tipo": "Exposición",
+  "tipo": "Exposiciones",
   "fecha": "2025-06-19",
   "titulo": 'IV ENCUENTRO CERÁMICA',
   "artista": "Equipo de MUSEF",
@@ -1209,7 +1209,7 @@ document.addEventListener("DOMContentLoaded", () => {
 },
 {
   "id": 37,
-  "tipo": "Exposición",
+  "tipo": "Exposiciones",
   "fecha": "2025-06-19",
   "titulo": 'LAS QILLQAS DEL CUERPO Y EL ALMA',
   "artista": "Jorge Quisbert",
@@ -1225,7 +1225,7 @@ document.addEventListener("DOMContentLoaded", () => {
 },
 {
   "id": 38,
-  "tipo": "Exposición",
+  "tipo": "Exposiciones",
   "fecha": "2025-06-19",
   "titulo": 'LENGUAJE Y POÉTICAS',
   "artista": "Equipo de MUSEF",
