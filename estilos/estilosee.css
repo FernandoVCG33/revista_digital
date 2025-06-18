@@ -460,6 +460,57 @@ body.modo-informacion .tambo-header:not(.header-solido) .titulo {
   margin-top: var(--spacing-md);
   font-size: 30px
 }
+
+/* BOTON AGREGAR AGENDA */
+.boton-agregar-agenda {
+  position: absolute;
+  bottom: -150px;
+  right: -700px;
+  padding: 24px 100px;
+  background-color: white;
+  color: black;
+  font-family: 'Raleway', sans-serif;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Estado cuando ya fue agregado */
+.boton-agregar-agenda.agregado {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid white;
+}
+
+/* Icono check */
+.boton-agregar-agenda .icono-check {
+  width: 16px;
+  height: 16px;
+  border: 2px solid white;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+}
+
+.boton-agregar-agenda .icono-check::after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 4px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+/* FIN BOTON AGREGAR AGENDA */
+
 /* Indicadores */
 .carrusel-indicadores {
   position: absolute;
@@ -1503,7 +1554,6 @@ body.modo-informacion .tambo-header:not(.header-solido) .titulo {
   padding: 3% 5%;
   /* Padding responsivo basado en porcentajes */
   gap: 10px;
-  background-color: #c1b1b480;
 }
 .comentario-seccion__contenedor {
   display: flex;
