@@ -463,10 +463,11 @@ body.modo-informacion .tambo-header:not(.header-solido) .titulo {
 
 /* BOTON AGREGAR AGENDA */
 .boton-agregar-agenda {
-  position: absolute;
-  bottom: -150px;
-  right: -700px;
-  padding: 24px 100px;
+  position: sticky;
+  bottom: 2rem; /* se mantiene visible al fondo del contenedor mientras haya espacio */
+  margin-left: auto; /* empuja el botón hacia la derecha */
+  margin-right: 5rem; /* distancia del borde derecho */
+  padding: 1.5rem 6rem;
   background-color: white;
   color: black;
   font-family: 'Raleway', sans-serif;
@@ -479,6 +480,7 @@ body.modo-informacion .tambo-header:not(.header-solido) .titulo {
   display: flex;
   align-items: center;
   gap: 8px;
+  width: max-content; /* evita que el botón se estire o encoja por su contenedor */
 }
 
 /* Estado cuando ya fue agregado */
